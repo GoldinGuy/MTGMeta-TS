@@ -72,7 +72,7 @@ var format_json: FormatJson = {
 	unique_cards_parsed: 0
 };
 
-function card_names(deck: Deck): Array<String> {
+function cardNames(deck: Deck): Array<String> {
 	let names: Array<String> = [];
 	for (var card in deck) {
 		names.push(card[1]);
@@ -80,7 +80,7 @@ function card_names(deck: Deck): Array<String> {
 	return names;
 }
 
-function most_common_cards(deck: Deck, k: number): Array<String> {
+function mostCommonCards(deck: Deck, k: number): Array<String> {
 	deck = deck.sort((a, b) => a[0] - b[0]).reverse();
 	let card_names: Array<string> = [];
 	for (var card in deck.slice(0, k)) {
@@ -92,7 +92,7 @@ function most_common_cards(deck: Deck, k: number): Array<String> {
 	return card_names;
 }
 
-function decks_by_idx(
+function decksByIdx(
 	idx: number,
 	decks_indexes: Array<[Deck, number]>
 ): Array<[Deck, number]> {
@@ -104,19 +104,6 @@ function decks_by_idx(
 	}
 	return indexes;
 }
-
-// function decks_by_idx(
-// 	idx: number,
-// 	decks_indexes: Map<number, [Deck, number]>
-// ): Array<[Deck, number]> {
-// 	let indexes: Array<[Deck, number]> = [];
-// 	for (const [label, [deck, index]] of decks_indexes.entries()) {
-// 		if (index == idx) {
-// 			indexes.push([deck, index]);
-// 		}
-// 	}
-// 	return indexes;
-// }
 
 // function apparition_ratio(card_name: String, decks_labels) {
 // 	var label_count = Array(NUM_CLUSTERS).fill(0);
@@ -143,10 +130,6 @@ function distance(x, y) {
 	return Math.sqrt(d);
 }
 
-// function intersection(arr1, arr2) {
-// 	return arr1.filter(value => arr2.includes(value));
-// }
-
 function intersect(a1, a2) {
 	let a3 = [...a1, ...a2];
 	console.log(a3);
@@ -155,21 +138,13 @@ function intersect(a1, a2) {
 	});
 }
 
-// function zip(a1, a2) {
-// 	var args = [].slice.call(a1, a2);
-// 	var shortest =
-// 		args.length == 0
-// 			? []
-// 			: args.reduce(function (a, b) {
-// 					return a.length < b.length ? a : b;
-// 			  });
-
-// 	return shortest.map(function (_, i) {
-// 		return args.map(function (array) {
-// 			return array[i];
-// 		});
-// 	});
-// }
+function zipDeck(a1: Array<Deck>, a2: Array<number>): Array<[Deck, number]> {
+	var deck_zip: Array<[Deck, number]> = [];
+	for (var j = 0; j < a1.length; j++) {
+		deck_zip.push([a1[j], a2[j]]);
+	}
+	return deck_zip;
+}
 
 function set(arr): Array<string> {
 	return Object.keys(
@@ -231,16 +206,12 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	// console.log(JSON.stringify(deck_vectors));
 	// var res = skmeans(deck_vectors, NUM_CLUSTERS);
 	var kmeans: Kmeans = skmeans(deck_vectors, NUM_CLUSTERS, "kmpp");
-	// var deck_zip: Map<number, [Deck, number]> = ((decks: Array<Deck>, idxs: Array<number>) => decks.map((k, i) => [k, idxs[i]]));
 
-	var deck_zip: Array<[Deck, number]> = [];
-	for (var j = 0; j < decks.length; j++) {
-		deck_zip.push([decks[j], kmeans.idxs[j]]);
-	}
+	var deck_zip: Array<[Deck, number]> = zipDeck(decks, kmeans.idxs);
 
 	var card_counts: Array<[number, number]> = [];
 	for (var i in [...Array(NUM_CLUSTERS).keys()]) {
-		card_counts.push([parseInt(i), decks_by_idx(parseInt(i), deck_zip).length]);
+		card_counts.push([parseInt(i), decksByIdx(parseInt(i), deck_zip).length]);
 	}
 
 	var total_instances: number = 0;
@@ -252,19 +223,10 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	for (var i in [...Array(NUM_CLUSTERS).keys()]) {
 		// Instead of simply taking the intersection of all the decks in a cluster, which could lead to archetype staples being excluded due to variance, this method involves taking every deck in the cluster, finding the most common cards (or archetype staples), and then using those to define the cluster
 		var card_set: Array<Array<string>> = [];
-		for (var deck_item of decks_by_idx(parseInt(i), deck_zip)) {
-			card_set.push(set(most_common_cards(deck_item[0], 40)));
+		for (var deck_item of decksByIdx(parseInt(i), deck_zip)) {
+			card_set.push(set(mostCommonCards(deck_item[0], 40)));
 		}
 		let card_list: Array<string> = Array.prototype.concat.apply([], card_set);
-		// console.log(card_set);
-		// var card_list = set(card_set);
-		// let card_list = card_set[0];
-		// var count_cards = {};
-
-		// for (var j = 0; j < card_list.length; j++) {
-		// 	var num = card_list[j];
-		// 	count_cards[num] = count_cards[num] ? count_cards[num] + 1 : 1;
-		// }
 
 		let count_cards = card_list.reduce((a, b) => {
 			a[b] = (a[b] || 0) + 1;
