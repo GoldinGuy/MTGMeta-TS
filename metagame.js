@@ -174,34 +174,32 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		total_instances += a[1];
 	});
 
+	// FOR EACH CLUSTER
 	for (var idx in [...Array(NUM_CLUSTERS).keys()]) {
-		// var card_set = set(
-		// 	most_common_cards(decks_by_idx(idx, decks_indexes)[0][0], 40)
-		// );
-		// console.log(decks_by_idx(idx, decks_indexes)[0] + "\n");
-		// console.log(card_set + "\n");
+		// Instead of simply taking the intersection of all the decks in a cluster, which could lead to archetype staples being excluded due to variance, this method involves taking every deck in the cluster, finding the most common cards (or archetype staples), and then using those to define the cluster
 		var card_set = [];
 		for (var deck of decks_by_idx(idx, decks_indexes)) {
-			// card_set = intersect(card_set, set(most_common_cards(deck[0], 40)));
 			card_set.push(set(most_common_cards(deck[0], 40)));
 		}
 		card_set = [].concat.apply([], card_set);
-		let counts = card_set.reduce((a, c) => {
-			a[c] = (a[c] || 0) + 1;
+		let count_cards = card_set.reduce((a, b) => {
+			a[b] = (a[b] || 0) + 1;
 			return a;
 		}, {});
-		console.log(counts);
-		// let representativeCards = Math.max(...Object.values(counts));
-		let mostFrequent = counts
-			.sort(function (a, b) {
-				return b - a;
+
+		var sorted_cards = Object.keys(count_cards)
+			.map(function (k) {
+				return [k, count_cards[k]];
 			})
-			.slice(0, 3);
-		let representativeCards = Object.keys(counts).filter(
-			k => counts[k] === mostFrequent
-		);
-		card_set = mostFrequent;
-		console.log(card_set);
+			.sort(function (a, b) {
+				return b[1] - a[1];
+			});
+
+		var cluster = [];
+		for (var card of sorted_cards.slice(0, 20)) {
+			cluster.push(card[0]);
+		}
+		console.log(cluster);
 
 		var cluster_name = "Unknown";
 		var best_fit_deck = { deck: [], sb: [] };
