@@ -162,12 +162,12 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
             .sort(function (a, b) {
             return b[1] - a[1];
         });
-        console.log(sorted_cards);
-        // var cluster = [];
-        // for (var card_item of sorted_cards.slice(0, 20)) {
-        // 	cluster.push(card_item[0]);
-        // }
-        // console.log(cluster);
+        // console.log(sorted_cards);
+        var cluster = [];
+        for (var card_item of sorted_cards.slice(0, 20)) {
+            cluster.push(card_item[0]);
+        }
+        console.log(cluster);
         var cluster_name = "Unknown";
         var best_fit_deck = { deck: [], sb: [] };
         var max_similar_cards = 0;

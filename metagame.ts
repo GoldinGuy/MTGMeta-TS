@@ -240,13 +240,13 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 			.sort(function (a, b) {
 				return b[1] - a[1];
 			});
-		console.log(sorted_cards);
+		// console.log(sorted_cards);
 
-		// var cluster = [];
-		// for (var card_item of sorted_cards.slice(0, 20)) {
-		// 	cluster.push(card_item[0]);
-		// }
-		// console.log(cluster);
+		var cluster: Array<String> = [];
+		for (var card_item of sorted_cards.slice(0, 20)) {
+			cluster.push(card_item[0]);
+		}
+		console.log(cluster);
 
 		var cluster_name = "Unknown";
 		var best_fit_deck = { deck: [], sb: [] };
