@@ -203,7 +203,7 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		var label_count: Array<number> = Array(NUM_CLUSTERS).fill(0);
 		for (const [label, [deck, id]] of deck_zip.entries()) {
 			for (var card in decks) {
-				if (card[1].includes(card_name)) {
+				if (card.includes(card_name)) {
 					label_count[id] += 1;
 				}
 			}
@@ -268,7 +268,7 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		console.log(
 			"\nCluster #" + i + " (" + deck_archetype.archetype_name + ") :"
 		);
-		console.log(deck_archetype.top_cards);
+		console.log(JSON.stringify(deck_archetype.top_cards));
 		format_json.archetypes.push(deck_archetype);
 	}
 
@@ -289,7 +289,7 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		return closest_cards;
 	}
 
-	function versatile_cards(k: number) {
+	function versatileCards(k: number) {
 		var variances: Array<[string, number]> = [];
 		for (var name in cards_w_ignore) {
 			let versatility = 0;
@@ -309,29 +309,32 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		return versatile_cards;
 	}
 
-	// function common_decks(card):
-	//     common_decks = []
-	//     apps = apparition_ratio(card)
-	//     i = 0
-	//     while i < NUM_CLUSTERS:
-	//         if (apps[0][i] * 100) > 15:
-	//             common_decks.append(format_json['archetypes'][i]['archetype_name'])
-	//         i += 1
-	//     return common_decks
+	function commonDecks(card: string) {
+		var common_decks: Array<String> = [];
+		let apps = apparationRatio(card);
+		let i = 0;
+		while (i < NUM_CLUSTERS) {
+			if (apps[0][i] * 100 > 15) {
+				common_decks.push(format_json["archetypes"][i]["archetype_name"]);
+			}
+			i += 1;
+		}
+		return common_decks;
+	}
 
 	//  Determine top cards in format
-	for (var card_dict in unique_cards.splice(0, NUM_TOP_VERS)) {
-		let card_name = list(card_dict.keys())[0];
-		let quantity = list(card_dict.values())[0];
-
+	unique_cards.sort((a, b) => b.quantity - a.quantity);
+	for (var card_dict of unique_cards.splice(0, NUM_TOP_VERS)) {
+		let card_name = card_dict.card_name.toString();
+		let quantity = card_dict.quantity;
 		var top_card: TopCard = {
 			card_name: card_name,
-			common_archetypes: common_decks(card_name),
-			cards_found_with: closest_cards(card_name, 8),
+			common_archetypes: commonDecks(card_name),
+			cards_found_with: closestCards(card_name, 8),
 			total_instances: quantity,
-			percentage_of_total_cards: "{:.2%}".format(quantity / len(cards_w_ig))
+			percentage_of_total_cards:
+				((quantity / cards_w_ignore.length) * 100).toFixed(2) + "%"
 		};
-
 		format_json["format_top_cards"].push(top_card);
 	}
 
