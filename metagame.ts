@@ -91,8 +91,8 @@ function mostCommonCards(deck: Deck, k: number): Array<String> {
 	return card_names;
 }
 
-function distance(x, y) {
-	let d = 0.0;
+function distance(x: Array<number>, y: Array<number>): number {
+	let d: number = 0.0;
 	for (const [z, elem] of x.entries()) {
 		d += (elem - y[z]) * (elem - y[z]);
 	}
@@ -115,14 +115,14 @@ function zipDeck(a1: Array<Deck>, a2: Array<number>): Array<[Deck, number]> {
 	return deck_zip;
 }
 
-// function set(arr): Array<string> {
-// 	return Object.keys(
-// 		arr.reduce(function (seen, val) {
-// 			seen[val] = true;
-// 			return seen;
-// 		}, {})
-// 	);
-// }
+function set(arr): Array<string> {
+	return Object.keys(
+		arr.reduce(function (seen, val) {
+			seen[val] = true;
+			return seen;
+		}, {})
+	);
+}
 
 fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	err: string,
@@ -161,7 +161,7 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	};
 
 	// Determine "deck vectors" - translate mtg decks to a format that can be used for KM++
-	function deck_to_vector(input_deck: Deck): Array<number> {
+	function deckToVector(input_deck: Deck): Array<number> {
 		var v: Array<number> = Array(all_cards.length).fill(0);
 		for (const [x, name] of all_cards.entries()) {
 			for (const [idx, card] of input_deck.entries()) {
@@ -174,7 +174,7 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	}
 	var deck_vectors: Array<Array<number>> = [];
 	for (var deck of decks) {
-		deck_vectors.push(deck_to_vector(deck));
+		deck_vectors.push(deckToVector(deck));
 	}
 	// Determine meta using K-Means++ clustering
 	var kmeans: Kmeans = skmeans(deck_vectors, NUM_CLUSTERS, "kmpp");
@@ -199,16 +199,16 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		return indexes;
 	}
 
-	function apparationRatio(card_name: string) {
+	function apparationRatio(card_name: string): [Array<number>, number] {
 		var label_count: Array<number> = Array(NUM_CLUSTERS).fill(0);
 		for (const [label, [deck, id]] of deck_zip.entries()) {
-			for (var card in decks) {
-				if (card.includes(card_name)) {
+			for (var card of deck) {
+				if (card[1].includes(card_name)) {
 					label_count[id] += 1;
 				}
 			}
 		}
-		let total_apps = new Set(label_count).size;
+		let total_apps = set(label_count).length;
 		let labels: Array<number> = [];
 		for (var count of label_count) {
 			labels.push(count / total_apps);
@@ -219,9 +219,9 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	// FOR EACH CLUSTER
 	for (let i in [...Array(NUM_CLUSTERS).keys()]) {
 		// Define cluster - Instead of taking the intersection of all the decks in a cluster, which could lead to archetype staples being excluded due to variance, this method involves taking every deck in the cluster and finding the most common cards (or archetype staples)
-		var card_set: Array<Set<String>> = [];
+		var card_set: Array<Array<string>> = [];
 		for (let deck_item of decksByIdx(parseInt(i))) {
-			card_set.push(new Set(mostCommonCards(deck_item[0], 40)));
+			card_set.push(set(mostCommonCards(deck_item[0], 40)));
 		}
 		let card_list: Array<string> = Array.prototype.concat.apply([], card_set);
 		let count_cards = card_list.reduce((a, b) => {
@@ -265,23 +265,25 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 				}
 			}
 		}
-		console.log(
-			"\nCluster #" + i + " (" + deck_archetype.archetype_name + ") :"
-		);
-		console.log(JSON.stringify(deck_archetype.top_cards));
+		// console.log(
+		// 	"\nCluster #" + i + " (" + deck_archetype.archetype_name + ") :"
+		// );
+		// console.log(JSON.stringify(deck_archetype.top_cards));
 		format_json.archetypes.push(deck_archetype);
 	}
 
 	function closestCards(a_card: string, b: number) {
-		let this_card = apparationRatio(a_card)[0];
+		console.log("a_card" + a_card);
+		let a_card_app = apparationRatio(a_card)[0];
 		var distances: Array<[String, number]> = [];
-		for (var name in cards_w_ignore) {
-			let dist = distance(apparationRatio(name)[0], this_card);
+		for (var name of cards_w_ignore) {
+			let dist = distance(apparationRatio(name.toString())[0], a_card_app);
 			distances.push([name, dist]);
 		}
 		distances.sort((a, b) => b[1] - a[1]);
+		console.log(distances);
 		var closest_cards: Array<String> = [];
-		for (var [card_name, dist] of distances.slice(0, b)) {
+		for (const [card_name, dist] of distances.slice(0, b)) {
 			if (card_name != a_card) {
 				closest_cards.push(card_name);
 			}
@@ -335,6 +337,7 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 			percentage_of_total_cards:
 				((quantity / cards_w_ignore.length) * 100).toFixed(2) + "%"
 		};
+		console.log(top_card);
 		format_json["format_top_cards"].push(top_card);
 	}
 
