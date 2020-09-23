@@ -1,30 +1,168 @@
 {
     "archetypes": [
         {
+            "archetype_name": "Humans",
+            "top_cards": [
+                "Cavern of Souls",
+                "Aether Vial",
+                "Prized Amalgam",
+                "Creeping Chill",
+                "Narcomoeba",
+                "Waterlogged Grove",
+                "Horizon Canopy",
+                "Ancient Ziggurat",
+                "Phantasmal Image",
+                "Unclaimed Territory",
+                "Noble Hierarch",
+                "Polluted Delta",
+                "Thalia, Guardian of Thraben",
+                "Bloodstained Mire",
+                "Meddling Mage",
+                "Thalia's Lieutenant",
+                "Mantis Rider",
+                "Kitesail Freebooter",
+                "Champion of the Parish",
+                "Reflector Mage"
+            ],
+            "instances": 49,
+            "metagame_percentage": "15.46%",
+            "best_fit_deck": {
+                "main": [
+                    {
+                        "name": "Waterlogged Grove",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Unclaimed Territory",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Thalia, Guardian of Thraben",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Thalia's Lieutenant",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Snow-Covered Plains",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Snow-Covered Island",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Reflector Mage",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Phantasmal Image",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Noble Hierarch",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Militia Bugler",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Meddling Mage",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Mantis Rider",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Kitesail Freebooter",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Horizon Canopy",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Deputy of Detention",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Champion of the Parish",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Cavern of Souls",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Ancient Ziggurat",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Aether Vial",
+                        "quantity": 4
+                    }
+                ],
+                "sb": [
+                    {
+                        "name": "Plague Engineer",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Mirran Crusader",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Dismember",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Deputy of Detention",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Damping Sphere",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Collector Ouphe",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Auriok Champion",
+                        "quantity": 3
+                    }
+                ]
+            }
+        },
+        {
             "archetype_name": "Eldrazi Tron",
             "top_cards": [
+                "Matter Reshaper",
+                "Reality Smasher",
                 "Urza's Power Plant",
+                "Eldrazi Temple",
                 "Expedition Map",
                 "Urza's Mine",
                 "Karn, the Great Creator",
-                "Blast Zone",
-                "Urza's Tower",
-                "Walking Ballista",
-                "Ghost Quarter",
                 "Chalice of the Void",
-                "Eldrazi Temple",
-                "Reality Smasher",
+                "Blast Zone",
                 "All Is Dust",
                 "Cavern of Souls",
-                "Matter Reshaper",
                 "Thought-Knot Seer",
+                "Urza's Tower",
+                "Walking Ballista",
                 "Ugin, the Ineffable",
-                "Dismember",
                 "Wastes",
+                "Ghost Quarter",
+                "Dismember",
                 "Warping Wail",
                 "Endbringer"
             ],
-            "metagame_percentage": "13.25%",
+            "instances": 31,
+            "metagame_percentage": "9.78%",
             "best_fit_deck": {
                 "main": [
                     {
@@ -173,30 +311,196 @@
             }
         },
         {
+            "archetype_name": "Sultai Death's Shadow",
+            "top_cards": [
+                "Blood Crypt",
+                "Temur Battle Rage",
+                "Thoughtseize",
+                "Street Wraith",
+                "Fatal Push",
+                "Inquisition of Kozilek",
+                "Death's Shadow",
+                "Dismember",
+                "Mishra's Bauble",
+                "Stubborn Denial",
+                "Polluted Delta",
+                "Watery Grave",
+                "Tarmogoyf",
+                "Verdant Catacombs",
+                "Overgrown Tomb",
+                "Breeding Pool",
+                "Once Upon a Time",
+                "Bloodstained Mire",
+                "Drown in the Loch",
+                "Nurturing Peatland"
+            ],
+            "instances": 30,
+            "metagame_percentage": "9.46%",
+            "best_fit_deck": {
+                "main": [
+                    {
+                        "name": "Watery Grave",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Verdant Catacombs",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Thoughtseize",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Thought Scour",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Temur Battle Rage",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Tarmogoyf",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Swamp",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Stubborn Denial",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Street Wraith",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Polluted Delta",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Overgrown Tomb",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Once Upon a Time",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Oko, Thief of Crowns",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Nurturing Peatland",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Mishra's Bauble",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Inquisition of Kozilek",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Gurmag Angler",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Fatal Push",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Drown in the Loch",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Dismember",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Death's Shadow",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Breeding Pool",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Bloodstained Mire",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Blood Crypt",
+                        "quantity": 1
+                    }
+                ],
+                "sb": [
+                    {
+                        "name": "Veil of Summer",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Surgical Extraction",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Plague Engineer",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Oko, Thief of Crowns",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Mystical Dispute",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Drown in the Loch",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Disdainful Stroke",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Damping Sphere",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Assassin's Trophy",
+                        "quantity": 1
+                    }
+                ]
+            }
+        },
+        {
             "archetype_name": "Bant Snow Control",
             "top_cards": [
+                "Snow-Covered Plains",
                 "Path to Exile",
-                "Hallowed Fountain",
+                "Breeding Pool",
+                "Oko, Thief of Crowns",
+                "Snow-Covered Island",
                 "Flooded Strand",
                 "Force of Negation",
-                "Misty Rainforest",
-                "Snow-Covered Plains",
                 "Snow-Covered Forest",
-                "Breeding Pool",
-                "Snow-Covered Island",
-                "Ice-Fang Coatl",
                 "Teferi, Time Raveler",
+                "Ice-Fang Coatl",
+                "Hallowed Fountain",
                 "Jace, the Mind Sculptor",
+                "Misty Rainforest",
                 "Temple Garden",
-                "Oko, Thief of Crowns",
-                "Field of Ruin",
-                "Mana Leak",
                 "Arcum's Astrolabe",
+                "Mana Leak",
+                "Field of Ruin",
                 "Snapcaster Mage",
                 "Supreme Verdict",
-                "Spell Pierce"
+                "Celestial Colonnade"
             ],
-            "metagame_percentage": "9.15%",
+            "instances": 26,
+            "metagame_percentage": "8.20%",
             "best_fit_deck": {
                 "main": [
                     {
@@ -205,14 +509,10 @@
                     },
                     {
                         "name": "Teferi, Time Raveler",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Supreme Verdict",
                         "quantity": 2
                     },
                     {
-                        "name": "Spell Pierce",
+                        "name": "Supreme Verdict",
                         "quantity": 2
                     },
                     {
@@ -229,7 +529,7 @@
                     },
                     {
                         "name": "Snapcaster Mage",
-                        "quantity": 2
+                        "quantity": 3
                     },
                     {
                         "name": "Path to Exile",
@@ -237,15 +537,7 @@
                     },
                     {
                         "name": "Oko, Thief of Crowns",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Mystical Dispute",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Mystic Sanctuary",
-                        "quantity": 1
+                        "quantity": 4
                     },
                     {
                         "name": "Misty Rainforest",
@@ -253,7 +545,7 @@
                     },
                     {
                         "name": "Mana Leak",
-                        "quantity": 2
+                        "quantity": 4
                     },
                     {
                         "name": "Jace, the Mind Sculptor",
@@ -280,12 +572,16 @@
                         "quantity": 4
                     },
                     {
+                        "name": "Dovin's Veto",
+                        "quantity": 1
+                    },
+                    {
                         "name": "Cryptic Command",
                         "quantity": 2
                     },
                     {
                         "name": "Celestial Colonnade",
-                        "quantity": 1
+                        "quantity": 2
                     },
                     {
                         "name": "Breeding Pool",
@@ -294,10 +590,6 @@
                     {
                         "name": "Arcum's Astrolabe",
                         "quantity": 4
-                    },
-                    {
-                        "name": "Archmage's Charm",
-                        "quantity": 1
                     }
                 ],
                 "sb": [
@@ -306,27 +598,19 @@
                         "quantity": 3
                     },
                     {
-                        "name": "Timely Reinforcements",
+                        "name": "Surgical Extraction",
                         "quantity": 2
                     },
                     {
-                        "name": "Rest in Peace",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Mystical Dispute",
+                        "name": "Supreme Verdict",
                         "quantity": 1
                     },
                     {
-                        "name": "Dovin's Veto",
+                        "name": "Pulse of Murasa",
                         "quantity": 1
                     },
                     {
-                        "name": "Disdainful Stroke",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Damping Sphere",
+                        "name": "Engineered Explosives",
                         "quantity": 1
                     },
                     {
@@ -335,7 +619,522 @@
                     },
                     {
                         "name": "Celestial Purge",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Ashiok, Dream Render",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Aether Gust",
                         "quantity": 1
+                    }
+                ]
+            }
+        },
+        {
+            "archetype_name": "Infect",
+            "top_cards": [
+                "Once Upon a Time",
+                "Noble Hierarch",
+                "Windswept Heath",
+                "Breeding Pool",
+                "Waterlogged Grove",
+                "Might of Old Krosa",
+                "Blighted Agent",
+                "Inkmoth Nexus",
+                "Scale Up",
+                "Oko, Thief of Crowns",
+                "Distortion Strike",
+                "Blossoming Defense",
+                "Glistener Elf",
+                "Vines of Vastwood",
+                "Spellskite",
+                "Pendelhaven",
+                "Misty Rainforest",
+                "Dryad Arbor",
+                "Spell Pierce",
+                "Wooded Foothills"
+            ],
+            "instances": 18,
+            "metagame_percentage": "5.68%",
+            "best_fit_deck": {
+                "main": [
+                    {
+                        "name": "Wooded Foothills",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Windswept Heath",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Waterlogged Grove",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Vines of Vastwood",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Verdant Catacombs",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Spellskite",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Spell Pierce",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Scale Up",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Pendelhaven",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Once Upon a Time",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Oko, Thief of Crowns",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Noble Hierarch",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Misty Rainforest",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Might of Old Krosa",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Inkmoth Nexus",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Glistener Elf",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Forest",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Dryad Arbor",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Distortion Strike",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Dismember",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Breeding Pool",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Blossoming Defense",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Blighted Agent",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Become Immense",
+                        "quantity": 1
+                    }
+                ],
+                "sb": [
+                    {
+                        "name": "Veil of Summer",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Spell Pierce",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Oko, Thief of Crowns",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Nature's Claim",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Mystical Dispute",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Distortion Strike",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Dismember",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Ceremonious Rejection",
+                        "quantity": 2
+                    }
+                ]
+            }
+        },
+        {
+            "archetype_name": "Jund",
+            "top_cards": [
+                "Thoughtseize",
+                "Inquisition of Kozilek",
+                "Fatal Push",
+                "Lightning Bolt",
+                "Bloodstained Mire",
+                "Blood Crypt",
+                "Kolaghan's Command",
+                "Verdant Catacombs",
+                "Scavenging Ooze",
+                "Nurturing Peatland",
+                "Liliana of the Veil",
+                "Blackcleave Cliffs",
+                "Tarmogoyf",
+                "Maelstrom Pulse",
+                "Overgrown Tomb",
+                "Assassin's Trophy",
+                "Dark Confidant",
+                "Marsh Flats",
+                "Bloodbraid Elf",
+                "Stomping Ground"
+            ],
+            "instances": 17,
+            "metagame_percentage": "5.36%",
+            "best_fit_deck": {
+                "main": [
+                    {
+                        "name": "Wrenn and Six",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Wooded Foothills",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Verdant Catacombs",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Thoughtseize",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Tarmogoyf",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Swamp",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Stomping Ground",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Scavenging Ooze",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Raging Ravine",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Overgrown Tomb",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Nurturing Peatland",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Mountain",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Maelstrom Pulse",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Liliana of the Veil",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Lightning Bolt",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Kolaghan's Command",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Inquisition of Kozilek",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Forest",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Fatal Push",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Dark Confidant",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Bloodstained Mire",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Bloodbraid Elf",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Blood Crypt",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Blackcleave Cliffs",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Barren Moor",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Assassin's Trophy",
+                        "quantity": 3
+                    }
+                ],
+                "sb": [
+                    {
+                        "name": "Tireless Tracker",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Plague Engineer",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Leyline of the Void",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Fulminator Mage",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Collector Ouphe",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Collective Brutality",
+                        "quantity": 2
+                    }
+                ]
+            }
+        },
+        {
+            "archetype_name": "Blue-Red Tempo",
+            "top_cards": [
+                "Opt",
+                "Snapcaster Mage",
+                "Force of Negation",
+                "Mystic Sanctuary",
+                "Cryptic Command",
+                "Serum Visions",
+                "Flooded Strand",
+                "Scalding Tarn",
+                "Lightning Bolt",
+                "Archmage's Charm",
+                "Steam Vents",
+                "Blood Moon",
+                "Remand",
+                "Polluted Delta",
+                "Magmatic Sinkhole",
+                "Jace, the Mind Sculptor",
+                "Mana Leak",
+                "Spell Pierce",
+                "Brazen Borrower // Petty Theft",
+                "Path to Exile"
+            ],
+            "instances": 16,
+            "metagame_percentage": "5.05%",
+            "best_fit_deck": {
+                "main": [
+                    {
+                        "name": "Thing in the Ice // Awoken Horror",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Sulfur Falls",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Steam Vents",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Spell Snare",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Spell Pierce",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Snow-Covered Mountain",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Snow-Covered Island",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Snapcaster Mage",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Serum Visions",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Scalding Tarn",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Remand",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Ral, Izzet Viceroy",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Polluted Delta",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Opt",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Mystic Sanctuary",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Misty Rainforest",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Mana Leak",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Magmatic Sinkhole",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Lightning Bolt",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Jace, the Mind Sculptor",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Force of Negation",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Flooded Strand",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Flame Slash",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Desolate Lighthouse",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Cryptic Command",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Blood Moon",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Abrade",
+                        "quantity": 1
+                    }
+                ],
+                "sb": [
+                    {
+                        "name": "Surgical Extraction",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Roast",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Relic of Progenitus",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Mystical Dispute",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Keranos, God of Storms",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Engineered Explosives",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Dragon's Claw",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Ceremonious Rejection",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Blood Moon",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Ashiok, Dream Render",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Anger of the Gods",
+                        "quantity": 2
                     }
                 ]
             }
@@ -343,28 +1142,29 @@
         {
             "archetype_name": "Burn",
             "top_cards": [
-                "Wooded Foothills",
                 "Lightning Bolt",
-                "Stomping Ground",
-                "Arid Mesa",
-                "Bloodstained Mire",
+                "Wooded Foothills",
                 "Monastery Swiftspear",
-                "Sacred Foundry",
+                "Lava Spike",
                 "Goblin Guide",
                 "Searing Blaze",
+                "Arid Mesa",
+                "Bloodstained Mire",
+                "Sacred Foundry",
                 "Eidolon of the Great Revel",
-                "Lava Spike",
-                "Boros Charm",
                 "Rift Bolt",
+                "Boros Charm",
                 "Lightning Helix",
                 "Skewer the Critics",
+                "Skullcrack",
                 "Sunbaked Canyon",
                 "Inspiring Vantage",
-                "Copperline Gorge",
-                "Skullcrack",
-                "Snow-Covered Mountain"
+                "Fiery Islet",
+                "Stomping Ground",
+                "Scalding Tarn"
             ],
-            "metagame_percentage": "9.15%",
+            "instances": 16,
+            "metagame_percentage": "5.05%",
             "best_fit_deck": {
                 "main": [
                     {
@@ -477,178 +1277,31 @@
             }
         },
         {
-            "archetype_name": "Blue-Green(-Black) Artifacts",
-            "top_cards": [
-                "Snow-Covered Island",
-                "Misty Rainforest",
-                "Arcum's Astrolabe",
-                "Breeding Pool",
-                "Oko, Thief of Crowns",
-                "Snow-Covered Forest",
-                "Polluted Delta",
-                "Mox Opal",
-                "Urza, Lord High Artificer",
-                "Mishra's Bauble",
-                "Gilded Goose",
-                "Cryptic Command",
-                "Scalding Tarn",
-                "Flooded Strand",
-                "Engineered Explosives",
-                "Mystic Sanctuary",
-                "Metallic Rebuke",
-                "Watery Grave",
-                "Ice-Fang Coatl",
-                "Emry, Lurker of the Loch"
-            ],
-            "metagame_percentage": "8.83%",
-            "best_fit_deck": {
-                "main": [
-                    {
-                        "name": "Urza, Lord High Artificer",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Snow-Covered Island",
-                        "quantity": 5
-                    },
-                    {
-                        "name": "Snow-Covered Forest",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Scalding Tarn",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Polluted Delta",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Pithing Needle",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Oko, Thief of Crowns",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Mystic Sanctuary",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Mox Opal",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Misty Rainforest",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Mishra's Bauble",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Metallic Rebuke",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Ice-Fang Coatl",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Gilded Goose",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Flooded Strand",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Engineered Explosives",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Emry, Lurker of the Loch",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Cryptic Command",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Breeding Pool",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Arcum's Astrolabe",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Archmage's Charm",
-                        "quantity": 4
-                    }
-                ],
-                "sb": [
-                    {
-                        "name": "Veil of Summer",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Nature's Claim",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Mystical Dispute",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Grafdigger's Cage",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Dismember",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Damping Sphere",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Ceremonious Rejection",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Ashiok, Dream Render",
-                        "quantity": 2
-                    }
-                ]
-            }
-        },
-        {
             "archetype_name": "Amulet Titan",
             "top_cards": [
-                "Once Upon a Time",
-                "Snow-Covered Forest",
-                "Primeval Titan",
-                "Summoner's Pact",
-                "Field of the Dead",
-                "Castle Garenbrig",
-                "Ancient Stirrings",
-                "Cavern of Souls",
                 "Selesnya Sanctuary",
-                "Gemstone Mine",
-                "Azusa, Lost but Seeking",
-                "Tolaria West",
-                "Vesuva",
                 "Simic Growth Chamber",
-                "Sunhome, Fortress of the Legion",
-                "Engineered Explosives",
+                "Azusa, Lost but Seeking",
+                "Summoner's Pact",
                 "Amulet of Vigor",
+                "Gemstone Mine",
+                "Once Upon a Time",
                 "Sakura-Tribe Scout",
+                "Primeval Titan",
+                "Tolaria West",
+                "Snow-Covered Forest",
+                "Vesuva",
+                "Sunhome, Fortress of the Legion",
+                "Boros Garrison",
                 "Slayers' Stronghold",
-                "Boros Garrison"
+                "Cavern of Souls",
+                "Field of the Dead",
+                "Ancient Stirrings",
+                "Engineered Explosives",
+                "Radiant Fountain"
             ],
-            "metagame_percentage": "8.20%",
+            "instances": 14,
+            "metagame_percentage": "4.42%",
             "best_fit_deck": {
                 "main": [
                     {
@@ -813,534 +1466,31 @@
             }
         },
         {
-            "archetype_name": "Infect",
+            "archetype_name": "Sultai Urza",
             "top_cards": [
-                "Noble Hierarch",
-                "Windswept Heath",
-                "Once Upon a Time",
-                "Breeding Pool",
-                "Wooded Foothills",
-                "Waterlogged Grove",
-                "Misty Rainforest",
-                "Dryad Arbor",
-                "Blighted Agent",
-                "Distortion Strike",
-                "Blossoming Defense",
-                "Glistener Elf",
-                "Might of Old Krosa",
-                "Pendelhaven",
-                "Inkmoth Nexus",
-                "Vines of Vastwood",
-                "Spell Pierce",
-                "Spellskite",
-                "Scale Up",
-                "Oko, Thief of Crowns"
-            ],
-            "metagame_percentage": "7.89%",
-            "best_fit_deck": {
-                "main": [
-                    {
-                        "name": "Wooded Foothills",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Windswept Heath",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Waterlogged Grove",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Vines of Vastwood",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Verdant Catacombs",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Spellskite",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Spell Pierce",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Scale Up",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Pendelhaven",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Once Upon a Time",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Oko, Thief of Crowns",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Noble Hierarch",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Misty Rainforest",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Might of Old Krosa",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Inkmoth Nexus",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Glistener Elf",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Forest",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Dryad Arbor",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Distortion Strike",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Dismember",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Breeding Pool",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Blossoming Defense",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Blighted Agent",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Become Immense",
-                        "quantity": 1
-                    }
-                ],
-                "sb": [
-                    {
-                        "name": "Veil of Summer",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Spell Pierce",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Oko, Thief of Crowns",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Nature's Claim",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Mystical Dispute",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Distortion Strike",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Dismember",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Ceremonious Rejection",
-                        "quantity": 2
-                    }
-                ]
-            }
-        },
-        {
-            "archetype_name": "Untitled",
-            "top_cards": [
-                "Snow-Covered Mountain",
-                "Teferi, Time Raveler",
-                "Hallowed Fountain",
-                "Path to Exile",
-                "Field of Ruin",
-                "Flooded Strand",
-                "Lightning Bolt",
-                "Manamorphose",
-                "Temple Garden",
-                "Breeding Pool",
-                "Windswept Heath",
-                "Waterlogged Grove",
+                "Arcum's Astrolabe",
                 "Snow-Covered Island",
-                "Celestial Colonnade",
-                "Batterskull",
-                "Aether Vial",
-                "Force of Negation",
-                "Stoneforge Mystic",
-                "Brazen Borrower // Petty Theft",
-                "Opt"
-            ],
-            "metagame_percentage": "5.68%",
-            "best_fit_deck": {
-                "main": [
-                    {
-                        "name": "Windswept Heath",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Waterlogged Grove",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Temple Garden",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Teferi, Time Raveler",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Sword of Feast and Famine",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Stoneforge Mystic",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Spell Queller",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Snow-Covered Plains",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Snow-Covered Island",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Snow-Covered Forest",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Prismatic Vista",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Path to Exile",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Oko, Thief of Crowns",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Noble Hierarch",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Misty Rainforest",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Mana Leak",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Jace, the Mind Sculptor",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Ice-Fang Coatl",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Horizon Canopy",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Hallowed Fountain",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Gilded Goose",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Force of Negation",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Flooded Strand",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Field of Ruin",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Breeding Pool",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Brazen Borrower // Petty Theft",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Batterskull",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Arcum's Astrolabe",
-                        "quantity": 3
-                    }
-                ],
-                "sb": [
-                    {
-                        "name": "Veil of Summer",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Timely Reinforcements",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Supreme Verdict",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Mystical Dispute",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Engineered Explosives",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Dismember",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Disdainful Stroke",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Damping Sphere",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Celestial Purge",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Ashiok, Dream Render",
-                        "quantity": 2
-                    }
-                ]
-            }
-        },
-        {
-            "archetype_name": "Jund",
-            "top_cards": [
-                "Thoughtseize",
-                "Inquisition of Kozilek",
-                "Fatal Push",
-                "Lightning Bolt",
-                "Bloodstained Mire",
-                "Blood Crypt",
-                "Kolaghan's Command",
-                "Verdant Catacombs",
-                "Scavenging Ooze",
-                "Nurturing Peatland",
-                "Liliana of the Veil",
-                "Blackcleave Cliffs",
-                "Tarmogoyf",
-                "Maelstrom Pulse",
-                "Overgrown Tomb",
-                "Assassin's Trophy",
-                "Dark Confidant",
-                "Marsh Flats",
-                "Bloodbraid Elf",
-                "Stomping Ground"
-            ],
-            "metagame_percentage": "5.36%",
-            "best_fit_deck": {
-                "main": [
-                    {
-                        "name": "Wrenn and Six",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Wooded Foothills",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Verdant Catacombs",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Thoughtseize",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Tarmogoyf",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Swamp",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Stomping Ground",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Scavenging Ooze",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Raging Ravine",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Overgrown Tomb",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Nurturing Peatland",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Mountain",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Maelstrom Pulse",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Liliana of the Veil",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Lightning Bolt",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Kolaghan's Command",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Inquisition of Kozilek",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Forest",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Fatal Push",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Dark Confidant",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Bloodstained Mire",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Bloodbraid Elf",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Blood Crypt",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Blackcleave Cliffs",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Barren Moor",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Assassin's Trophy",
-                        "quantity": 3
-                    }
-                ],
-                "sb": [
-                    {
-                        "name": "Tireless Tracker",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Plague Engineer",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Leyline of the Void",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Fulminator Mage",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Collector Ouphe",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Collective Brutality",
-                        "quantity": 2
-                    }
-                ]
-            }
-        },
-        {
-            "archetype_name": "Sultai Death's Shadow",
-            "top_cards": [
-                "Stubborn Denial",
-                "Temur Battle Rage",
-                "Tarmogoyf",
-                "Verdant Catacombs",
-                "Thoughtseize",
-                "Polluted Delta",
+                "Urza, Lord High Artificer",
                 "Mishra's Bauble",
-                "Street Wraith",
-                "Fatal Push",
-                "Death's Shadow",
-                "Once Upon a Time",
-                "Dismember",
-                "Watery Grave",
-                "Inquisition of Kozilek",
-                "Blood Crypt",
-                "Oko, Thief of Crowns",
-                "Overgrown Tomb",
+                "Misty Rainforest",
+                "Mox Opal",
+                "Polluted Delta",
                 "Breeding Pool",
-                "Nurturing Peatland",
-                "Drown in the Loch"
+                "Oko, Thief of Crowns",
+                "Snow-Covered Forest",
+                "Gilded Goose",
+                "Engineered Explosives",
+                "Watery Grave",
+                "Emry, Lurker of the Loch",
+                "Flooded Strand",
+                "Metallic Rebuke",
+                "Thopter Foundry",
+                "Snow-Covered Swamp",
+                "Cryptic Command",
+                "Sword of the Meek"
             ],
-            "metagame_percentage": "4.73%",
+            "instances": 14,
+            "metagame_percentage": "4.42%",
             "best_fit_deck": {
                 "main": [
                     {
@@ -1348,55 +1498,59 @@
                         "quantity": 1
                     },
                     {
-                        "name": "Verdant Catacombs",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Traverse the Ulvenwald",
+                        "name": "Urza, Lord High Artificer",
                         "quantity": 4
                     },
                     {
                         "name": "Thoughtseize",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Temur Battle Rage",
                         "quantity": 2
                     },
                     {
-                        "name": "Tarmogoyf",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Swamp",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Stubborn Denial",
+                        "name": "Thoughtcast",
                         "quantity": 3
                     },
                     {
-                        "name": "Street Wraith",
+                        "name": "Thopter Foundry",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Sword of the Meek",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Snow-Covered Swamp",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Snow-Covered Island",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Snow-Covered Forest",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Prismatic Vista",
                         "quantity": 4
                     },
                     {
                         "name": "Polluted Delta",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Overgrown Tomb",
                         "quantity": 1
                     },
                     {
-                        "name": "Once Upon a Time",
-                        "quantity": 3
-                    },
-                    {
                         "name": "Oko, Thief of Crowns",
-                        "quantity": 2
+                        "quantity": 4
                     },
                     {
-                        "name": "Nurturing Peatland",
+                        "name": "Nihil Spellbomb",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Mox Opal",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Misty Rainforest",
                         "quantity": 4
                     },
                     {
@@ -1404,206 +1558,70 @@
                         "quantity": 4
                     },
                     {
-                        "name": "Inquisition of Kozilek",
-                        "quantity": 2
+                        "name": "Metallic Rebuke",
+                        "quantity": 1
                     },
                     {
-                        "name": "Fatal Push",
-                        "quantity": 3
+                        "name": "Inventors' Fair",
+                        "quantity": 1
                     },
                     {
-                        "name": "Drown in the Loch",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Dismember",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Death's Shadow",
+                        "name": "Gilded Goose",
                         "quantity": 4
+                    },
+                    {
+                        "name": "Engineered Explosives",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Emry, Lurker of the Loch",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Darksteel Citadel",
+                        "quantity": 1
                     },
                     {
                         "name": "Breeding Pool",
                         "quantity": 1
                     },
                     {
-                        "name": "Blood Crypt",
-                        "quantity": 1
+                        "name": "Arcum's Astrolabe",
+                        "quantity": 4
                     }
                 ],
                 "sb": [
                     {
-                        "name": "Yixlid Jailer",
-                        "quantity": 1
-                    },
-                    {
                         "name": "Veil of Summer",
                         "quantity": 2
-                    },
-                    {
-                        "name": "Plague Engineer",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Oko, Thief of Crowns",
-                        "quantity": 1
                     },
                     {
                         "name": "Mystical Dispute",
                         "quantity": 2
                     },
                     {
+                        "name": "Ice-Fang Coatl",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Drown in the Loch",
+                        "quantity": 1
+                    },
+                    {
                         "name": "Disdainful Stroke",
                         "quantity": 2
                     },
                     {
-                        "name": "Damping Sphere",
+                        "name": "Dead of Winter",
                         "quantity": 2
                     },
                     {
-                        "name": "Collective Brutality",
+                        "name": "Battle at the Bridge",
                         "quantity": 2
                     },
                     {
                         "name": "Assassin's Trophy",
                         "quantity": 2
-                    }
-                ]
-            }
-        },
-        {
-            "archetype_name": "Humans",
-            "top_cards": [
-                "Aether Vial",
-                "Phantasmal Image",
-                "Cavern of Souls",
-                "Unclaimed Territory",
-                "Ancient Ziggurat",
-                "Noble Hierarch",
-                "Meddling Mage",
-                "Waterlogged Grove",
-                "Horizon Canopy",
-                "Reflector Mage",
-                "Kitesail Freebooter",
-                "Mantis Rider",
-                "Champion of the Parish",
-                "Thalia, Guardian of Thraben",
-                "Thalia's Lieutenant",
-                "Deputy of Detention",
-                "Militia Bugler",
-                "Charming Prince",
-                "Snow-Covered Island",
-                "Seachrome Coast"
-            ],
-            "metagame_percentage": "4.42%",
-            "best_fit_deck": {
-                "main": [
-                    {
-                        "name": "Waterlogged Grove",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Unclaimed Territory",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Thalia, Guardian of Thraben",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Thalia's Lieutenant",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Snow-Covered Plains",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Snow-Covered Island",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Reflector Mage",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Phantasmal Image",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Noble Hierarch",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Militia Bugler",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Meddling Mage",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Mantis Rider",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Kitesail Freebooter",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Horizon Canopy",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Deputy of Detention",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Champion of the Parish",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Cavern of Souls",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Ancient Ziggurat",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Aether Vial",
-                        "quantity": 4
-                    }
-                ],
-                "sb": [
-                    {
-                        "name": "Plague Engineer",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Mirran Crusader",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Dismember",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Deputy of Detention",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Damping Sphere",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Collector Ouphe",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Auriok Champion",
-                        "quantity": 3
                     }
                 ]
             }
@@ -1632,6 +1650,7 @@
                 "Warlord's Fury",
                 "Goblin Rabblemaster"
             ],
+            "instances": 13,
             "metagame_percentage": "4.10%",
             "best_fit_deck": {
                 "main": [
@@ -1721,6 +1740,489 @@
             }
         },
         {
+            "archetype_name": "Temur Snow Control",
+            "top_cards": [
+                "Arcum's Astrolabe",
+                "Snow-Covered Island",
+                "Misty Rainforest",
+                "Breeding Pool",
+                "Oko, Thief of Crowns",
+                "Snow-Covered Forest",
+                "Snow-Covered Mountain",
+                "Ice-Fang Coatl",
+                "Steam Vents",
+                "Wrenn and Six",
+                "Stomping Ground",
+                "Snapcaster Mage",
+                "Jace, the Mind Sculptor",
+                "Force of Negation",
+                "Scalding Tarn",
+                "Lightning Bolt",
+                "Cryptic Command",
+                "Prismatic Vista",
+                "Magmatic Sinkhole",
+                "Blood Moon"
+            ],
+            "instances": 12,
+            "metagame_percentage": "3.79%",
+            "best_fit_deck": {
+                "main": [
+                    {
+                        "name": "Wrenn and Six",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Stomping Ground",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Steam Vents",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Spell Snare",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Spell Pierce",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Snow-Covered Mountain",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Snow-Covered Island",
+                        "quantity": 5
+                    },
+                    {
+                        "name": "Snow-Covered Forest",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Snapcaster Mage",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Scalding Tarn",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Oko, Thief of Crowns",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Misty Rainforest",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Mana Leak",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Magmatic Sinkhole",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Lightning Bolt",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Jace, the Mind Sculptor",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Ice-Fang Coatl",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Force of Negation",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Field of Ruin",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Cryptic Command",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Breeding Pool",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Blood Moon",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Arcum's Astrolabe",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Archmage's Charm",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Abrade",
+                        "quantity": 1
+                    }
+                ],
+                "sb": [
+                    {
+                        "name": "Weather the Storm",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Veil of Summer",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Tireless Tracker",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Surgical Extraction",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Mystical Dispute",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Disdainful Stroke",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Ceremonious Rejection",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Anger of the Gods",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Ancient Grudge",
+                        "quantity": 1
+                    }
+                ]
+            }
+        },
+        {
+            "archetype_name": "Tron",
+            "top_cards": [
+                "Urza's Tower",
+                "Blast Zone",
+                "Urza's Power Plant",
+                "Karn, the Great Creator",
+                "Urza's Mine",
+                "Wurmcoil Engine",
+                "Ugin, the Spirit Dragon",
+                "Expedition Map",
+                "Walking Ballista",
+                "Oblivion Stone",
+                "Ulamog, the Ceaseless Hunger",
+                "Chromatic Sphere",
+                "Sylvan Scrying",
+                "Karn Liberated",
+                "Sanctum of Ugin",
+                "Chromatic Star",
+                "Ghost Quarter",
+                "Ancient Stirrings",
+                "Thragtusk",
+                "Emrakul, the Promised End"
+            ],
+            "instances": 11,
+            "metagame_percentage": "3.47%",
+            "best_fit_deck": {
+                "main": [
+                    {
+                        "name": "Wurmcoil Engine",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Walking Ballista",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Urza's Tower",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Urza's Power Plant",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Urza's Mine",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Ulamog, the Ceaseless Hunger",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Ugin, the Spirit Dragon",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Thragtusk",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Sylvan Scrying",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Sanctum of Ugin",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Oblivion Stone",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Karn, the Great Creator",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Karn Liberated",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Ghost Quarter",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Forest",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Expedition Map",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Emrakul, the Promised End",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Chromatic Star",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Chromatic Sphere",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Blast Zone",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Ancient Stirrings",
+                        "quantity": 4
+                    }
+                ],
+                "sb": [
+                    {
+                        "name": "Wurmcoil Engine",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Oblivion Stone",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Nature's Claim",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Mycosynth Lattice",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Liquimetal Coating",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Leyline of Sanctity",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Grafdigger's Cage",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Ensnaring Bridge",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Dismember",
+                        "quantity": 3
+                    }
+                ]
+            }
+        },
+        {
+            "archetype_name": "Titan Shift",
+            "top_cards": [
+                "Cinder Glade",
+                "Summoner's Pact",
+                "Stomping Ground",
+                "Sakura-Tribe Elder",
+                "Primeval Titan",
+                "Valakut, the Molten Pinnacle",
+                "Farseek",
+                "Snow-Covered Forest",
+                "Snow-Covered Mountain",
+                "Wooded Foothills",
+                "Field of the Dead",
+                "Search for Tomorrow",
+                "Sheltered Thicket",
+                "Windswept Heath",
+                "Castle Garenbrig",
+                "Scapeshift",
+                "Misty Rainforest",
+                "Verdant Catacombs",
+                "Once Upon a Time",
+                "Arboreal Grazer"
+            ],
+            "instances": 11,
+            "metagame_percentage": "3.47%",
+            "best_fit_deck": {
+                "main": [
+                    {
+                        "name": "Wooded Foothills",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Windswept Heath",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Verdant Catacombs",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Valakut, the Molten Pinnacle",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Summoner's Pact",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Stomping Ground",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Snow-Covered Mountain",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Snow-Covered Forest",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Sheltered Thicket",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Search for Tomorrow",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Scapeshift",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Sakura-Tribe Elder",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Primeval Titan",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Once Upon a Time",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Mountain",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Misty Rainforest",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Forest",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Field of the Dead",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Farseek",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Cinder Glade",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Castle Garenbrig",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Arboreal Grazer",
+                        "quantity": 4
+                    }
+                ],
+                "sb": [
+                    {
+                        "name": "Veil of Summer",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Thragtusk",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Reclamation Sage",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Obstinate Baloth",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Melira, Sylvok Outcast",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Lightning Bolt",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Dismember",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Damping Sphere",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Chameleon Colossus",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Anger of the Gods",
+                        "quantity": 1
+                    }
+                ]
+            }
+        },
+        {
             "archetype_name": "Blue-Green Eldrazi",
             "top_cards": [
                 "Reality Smasher",
@@ -1744,6 +2246,7 @@
                 "Misty Rainforest",
                 "Eldrazi Skyspawner"
             ],
+            "instances": 10,
             "metagame_percentage": "3.15%",
             "best_fit_deck": {
                 "main": [
@@ -1885,158 +2388,31 @@
             }
         },
         {
-            "archetype_name": "CrabVine",
-            "top_cards": [
-                "Overgrown Tomb",
-                "Polluted Delta",
-                "Watery Grave",
-                "Stitcher's Supplier",
-                "Hedron Crab",
-                "Vengevine",
-                "Prized Amalgam",
-                "Narcomoeba",
-                "Merfolk Secretkeeper // Venture Deeper",
-                "Gravecrawler",
-                "Creeping Chill",
-                "Glimpse the Unthinkable",
-                "Marsh Flats",
-                "Bloodstained Mire",
-                "Gurmag Angler",
-                "Once Upon a Time",
-                "Memory Sluice",
-                "Verdant Catacombs",
-                "Darkslick Shores",
-                "Breeding Pool"
-            ],
-            "metagame_percentage": "2.52%",
-            "best_fit_deck": {
-                "main": [
-                    {
-                        "name": "Watery Grave",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Vengevine",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Swamp",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Stitcher's Supplier",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Prized Amalgam",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Polluted Delta",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Overgrown Tomb",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Once Upon a Time",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Narcomoeba",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Merfolk Secretkeeper // Venture Deeper",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Memory Sluice",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Marsh Flats",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Hedron Crab",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Gurmag Angler",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Gravecrawler",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Glimpse the Unthinkable",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Darkslick Shores",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Creeping Chill",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Bloodstained Mire",
-                        "quantity": 4
-                    }
-                ],
-                "sb": [
-                    {
-                        "name": "Nature's Claim",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Leyline of the Void",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Fatal Push",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Duress",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Damping Sphere",
-                        "quantity": 2
-                    }
-                ]
-            }
-        },
-        {
             "archetype_name": "Eldrazi & Taxes",
             "top_cards": [
                 "Path to Exile",
-                "Ghost Quarter",
-                "Giver of Runes",
-                "Silent Clearing",
-                "Thalia, Guardian of Thraben",
-                "Leonin Arbiter",
                 "Aether Vial",
                 "Flickerwisp",
                 "Charming Prince",
-                "Thought-Knot Seer",
-                "Eldrazi Temple",
-                "Eldrazi Displacer",
-                "Snow-Covered Plains",
-                "Blade Splicer",
-                "Caves of Koilos",
+                "Thalia, Guardian of Thraben",
                 "Wasteland Strangler",
                 "Tidehollow Sculler",
+                "Teferi, Time Raveler",
+                "Silent Clearing",
+                "Blade Splicer",
+                "Giver of Runes",
+                "Hallowed Fountain",
+                "Leonin Arbiter",
+                "Ghost Quarter",
+                "Spell Queller",
+                "Thought-Knot Seer",
                 "Concealed Courtyard",
-                "Thraben Inspector",
-                "Batterskull"
+                "Caves of Koilos",
+                "Eldrazi Temple",
+                "Eldrazi Displacer"
             ],
-            "metagame_percentage": "2.52%",
+            "instances": 9,
+            "metagame_percentage": "2.84%",
             "best_fit_deck": {
                 "main": [
                     {
@@ -2157,410 +2533,79 @@
             }
         },
         {
-            "archetype_name": "Grixis Death's Shadow",
+            "archetype_name": "WRG",
             "top_cards": [
-                "Death's Shadow",
-                "Polluted Delta",
-                "Street Wraith",
-                "Thoughtseize",
-                "Stubborn Denial",
-                "Gurmag Angler",
-                "Fatal Push",
-                "Snapcaster Mage",
-                "Thought Scour",
-                "Steam Vents",
-                "Bloodstained Mire",
-                "Temur Battle Rage",
-                "Dismember",
-                "Inquisition of Kozilek",
-                "Blood Crypt",
-                "Watery Grave",
-                "Mishra's Bauble",
-                "The Royal Scions",
-                "Scalding Tarn",
-                "Serum Visions"
-            ],
-            "metagame_percentage": "2.52%",
-            "best_fit_deck": {
-                "main": [
-                    {
-                        "name": "Watery Grave",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Thoughtseize",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Thought Scour",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "The Royal Scions",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Temur Battle Rage",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Swamp",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Stubborn Denial",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Street Wraith",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Steam Vents",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Snapcaster Mage",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Serum Visions",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Scalding Tarn",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Polluted Delta",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Mishra's Bauble",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Island",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Inquisition of Kozilek",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Gurmag Angler",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Fatal Push",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Drown in the Loch",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Dismember",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Death's Shadow",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Bloodstained Mire",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Blood Crypt",
-                        "quantity": 2
-                    }
-                ],
-                "sb": [
-                    {
-                        "name": "Plague Engineer",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Liliana of the Veil",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Leyline of the Void",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Kolaghan's Command",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Drown in the Loch",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Disdainful Stroke",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Collective Brutality",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Ceremonious Rejection",
-                        "quantity": 2
-                    }
-                ]
-            }
-        },
-        {
-            "archetype_name": "Gifts Storm",
-            "top_cards": [
-                "Steam Vents",
-                "Opt",
-                "Serum Visions",
-                "Remand",
-                "Baral, Chief of Compliance",
-                "Manamorphose",
-                "Pyretic Ritual",
-                "Spirebluff Canal",
-                "Gifts Ungiven",
-                "Goblin Electromancer",
-                "Grapeshot",
-                "Past in Flames",
-                "Sleight of Hand",
-                "Snow-Covered Island",
-                "Desperate Ritual",
-                "Scalding Tarn",
-                "Repeal",
-                "Polluted Delta",
-                "Misty Rainforest",
-                "Fiery Islet"
-            ],
-            "metagame_percentage": "2.21%",
-            "best_fit_deck": {
-                "main": [
-                    {
-                        "name": "Steam Vents",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Spirebluff Canal",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Snow-Covered Mountain",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Snow-Covered Island",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Sleight of Hand",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Serum Visions",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Scalding Tarn",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Repeal",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Remand",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Pyretic Ritual",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Polluted Delta",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Past in Flames",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Opt",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Misty Rainforest",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Manamorphose",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Island",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Grapeshot",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Goblin Electromancer",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Gifts Ungiven",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Empty the Warrens",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Desperate Ritual",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Breeding Pool",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Baral, Chief of Compliance",
-                        "quantity": 4
-                    }
-                ],
-                "sb": [
-                    {
-                        "name": "Veil of Summer",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Shenanigans",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Mystical Dispute",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Lightning Bolt",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Fact or Fiction",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Empty the Warrens",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Dismember",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Burst Lightning",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Aria of Flame",
-                        "quantity": 4
-                    }
-                ]
-            }
-        },
-        {
-            "archetype_name": "Blue-Red Control",
-            "top_cards": [
+                "Noble Hierarch",
+                "Once Upon a Time",
+                "Windswept Heath",
+                "Wooded Foothills",
+                "Stomping Ground",
+                "Magus of the Moon",
+                "Birds of Paradise",
                 "Lightning Bolt",
-                "Opt",
-                "Serum Visions",
-                "Snapcaster Mage",
-                "Magmatic Sinkhole",
-                "Mystic Sanctuary",
-                "Steam Vents",
-                "Force of Negation",
-                "Scalding Tarn",
-                "Cryptic Command",
-                "Blood Moon",
-                "Archmage's Charm",
-                "Remand",
-                "Polluted Delta",
-                "Spell Pierce",
-                "Spell Snare",
-                "Flooded Strand",
-                "Thing in the Ice // Awoken Horror",
-                "Mana Leak",
-                "Abrade"
+                "Bonecrusher Giant // Stomp",
+                "Misty Rainforest",
+                "Copperline Gorge",
+                "Kessig Wolf Run",
+                "Devoted Druid",
+                "Temple Garden",
+                "Impervious Greatwurm",
+                "Strangleroot Geist",
+                "Cragganwick Cremator",
+                "Steel Leaf Champion",
+                "Verdant Catacombs",
+                "Bloodbraid Elf"
             ],
+            "instances": 7,
             "metagame_percentage": "2.21%",
             "best_fit_deck": {
                 "main": [
                     {
-                        "name": "Thing in the Ice // Awoken Horror",
+                        "name": "Wooded Foothills",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Windswept Heath",
                         "quantity": 2
                     },
                     {
-                        "name": "Sulfur Falls",
-                        "quantity": 3
+                        "name": "Temple Garden",
+                        "quantity": 1
                     },
                     {
-                        "name": "Steam Vents",
+                        "name": "Surrak, the Hunt Caller",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Strangleroot Geist",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Stomping Ground",
                         "quantity": 2
                     },
                     {
-                        "name": "Spell Snare",
+                        "name": "Steel Leaf Champion",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Questing Beast",
                         "quantity": 1
                     },
                     {
-                        "name": "Spell Pierce",
-                        "quantity": 1
+                        "name": "Once Upon a Time",
+                        "quantity": 2
                     },
                     {
-                        "name": "Snapcaster Mage",
+                        "name": "Noble Hierarch",
                         "quantity": 4
-                    },
-                    {
-                        "name": "Serum Visions",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Scalding Tarn",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Remand",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Ral, Izzet Viceroy",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Polluted Delta",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Opt",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Mystic Sanctuary",
-                        "quantity": 1
                     },
                     {
                         "name": "Mountain",
                         "quantity": 1
                     },
                     {
-                        "name": "Mana Leak",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Magmatic Sinkhole",
+                        "name": "Magus of the Moon",
                         "quantity": 1
                     },
                     {
@@ -2568,353 +2613,238 @@
                         "quantity": 4
                     },
                     {
-                        "name": "Island",
-                        "quantity": 7
-                    },
-                    {
-                        "name": "Force of Negation",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Flame Slash",
+                        "name": "Kessig Wolf Run",
                         "quantity": 1
                     },
                     {
-                        "name": "Cryptic Command",
-                        "quantity": 3
+                        "name": "Impervious Greatwurm",
+                        "quantity": 4
                     },
                     {
-                        "name": "Blood Moon",
+                        "name": "Forest",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Fire-Lit Thicket",
                         "quantity": 2
                     },
                     {
-                        "name": "Archmage's Charm",
+                        "name": "Fauna Shaman",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Eldritch Evolution",
                         "quantity": 3
                     },
                     {
-                        "name": "Abrade",
+                        "name": "Cragganwick Cremator",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Copperline Gorge",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Bonecrusher Giant // Stomp",
                         "quantity": 1
+                    },
+                    {
+                        "name": "Birds of Paradise",
+                        "quantity": 2
                     }
                 ],
                 "sb": [
                     {
-                        "name": "Spell Pierce",
+                        "name": "Shattering Spree",
                         "quantity": 1
                     },
                     {
-                        "name": "Roast",
+                        "name": "Scavenging Ooze",
                         "quantity": 1
                     },
                     {
                         "name": "Relic of Progenitus",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Mystical Dispute",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Flusterstorm",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Engineered Explosives",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Disdainful Stroke",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Ceremonious Rejection",
                         "quantity": 3
                     },
                     {
-                        "name": "Blood Moon",
+                        "name": "Reclamation Sage",
                         "quantity": 1
                     },
                     {
-                        "name": "Anger of the Gods",
-                        "quantity": 2
+                        "name": "Obstinate Baloth",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Nullhide Ferox",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Kitchen Finks",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Eidolon of Rhetoric",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Damping Sphere",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Collector Ouphe",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Cavern of Souls",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Caldera Hellion",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Alpine Moon",
+                        "quantity": 1
                     }
                 ]
             }
         },
         {
-            "archetype_name": "Sultai Death's Shadow",
+            "archetype_name": "Blue-Green(-Black) Artifacts",
             "top_cards": [
-                "Fatal Push",
+                "Engineered Explosives",
+                "Snow-Covered Island",
+                "Arcum's Astrolabe",
+                "Misty Rainforest",
+                "Mox Opal",
+                "Urza, Lord High Artificer",
+                "Gilded Goose",
+                "Ice-Fang Coatl",
+                "Oko, Thief of Crowns",
                 "Mishra's Bauble",
-                "Death's Shadow",
-                "Thoughtseize",
-                "Verdant Catacombs",
-                "Tarmogoyf",
-                "Street Wraith",
-                "Inquisition of Kozilek",
-                "Traverse the Ulvenwald",
-                "Overgrown Tomb",
-                "Blood Crypt",
-                "Temur Battle Rage",
-                "Dismember",
-                "Watery Grave",
+                "Cryptic Command",
+                "Archmage's Charm",
+                "Flooded Strand",
                 "Polluted Delta",
-                "Bloodstained Mire",
+                "Metallic Rebuke",
+                "Mystic Sanctuary",
                 "Breeding Pool",
-                "Stubborn Denial",
-                "Once Upon a Time",
-                "Ghor-Clan Rampager"
+                "Snow-Covered Forest",
+                "Scalding Tarn",
+                "Emry, Lurker of the Loch"
             ],
-            "metagame_percentage": "2.21%",
+            "instances": 6,
+            "metagame_percentage": "1.89%",
             "best_fit_deck": {
                 "main": [
                     {
-                        "name": "Wooded Foothills",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Watery Grave",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Verdant Catacombs",
+                        "name": "Urza, Lord High Artificer",
                         "quantity": 4
                     },
                     {
-                        "name": "Traverse the Ulvenwald",
-                        "quantity": 3
+                        "name": "Snow-Covered Island",
+                        "quantity": 5
                     },
                     {
-                        "name": "Thoughtseize",
-                        "quantity": 4
+                        "name": "Snow-Covered Forest",
+                        "quantity": 1
                     },
                     {
-                        "name": "Temur Battle Rage",
+                        "name": "Scalding Tarn",
                         "quantity": 2
-                    },
-                    {
-                        "name": "Tarmogoyf",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Swamp",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Stubborn Denial",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Street Wraith",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Stomping Ground",
-                        "quantity": 1
                     },
                     {
                         "name": "Polluted Delta",
                         "quantity": 3
                     },
                     {
-                        "name": "Overgrown Tomb",
+                        "name": "Pithing Needle",
                         "quantity": 1
                     },
                     {
-                        "name": "Once Upon a Time",
-                        "quantity": 3
+                        "name": "Oko, Thief of Crowns",
+                        "quantity": 4
                     },
                     {
-                        "name": "Nurturing Peatland",
+                        "name": "Mystic Sanctuary",
                         "quantity": 2
+                    },
+                    {
+                        "name": "Mox Opal",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Misty Rainforest",
+                        "quantity": 4
                     },
                     {
                         "name": "Mishra's Bauble",
                         "quantity": 4
                     },
                     {
-                        "name": "Inquisition of Kozilek",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Ghor-Clan Rampager",
+                        "name": "Metallic Rebuke",
                         "quantity": 1
                     },
                     {
-                        "name": "Fatal Push",
+                        "name": "Ice-Fang Coatl",
                         "quantity": 4
                     },
                     {
-                        "name": "Dismember",
+                        "name": "Gilded Goose",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Flooded Strand",
                         "quantity": 2
                     },
                     {
-                        "name": "Death's Shadow",
-                        "quantity": 4
+                        "name": "Engineered Explosives",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Emry, Lurker of the Loch",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Cryptic Command",
+                        "quantity": 3
                     },
                     {
                         "name": "Breeding Pool",
                         "quantity": 1
                     },
                     {
-                        "name": "Bloodstained Mire",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Blood Crypt",
-                        "quantity": 1
-                    }
-                ],
-                "sb": [
-                    {
-                        "name": "Yixlid Jailer",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Veil of Summer",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Plague Engineer",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Oko, Thief of Crowns",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Mystical Dispute",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Kolaghan's Command",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Delay",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Collective Brutality",
-                        "quantity": 3
-                    }
-                ]
-            }
-        },
-        {
-            "archetype_name": "UR",
-            "top_cards": [
-                "Blood Moon",
-                "Snow-Covered Island",
-                "Lightning Bolt",
-                "Snapcaster Mage",
-                "Scalding Tarn",
-                "Serum Visions",
-                "Opt",
-                "Cryptic Command",
-                "Steam Vents",
-                "Mystic Sanctuary",
-                "Force of Negation",
-                "Remand",
-                "Archmage's Charm",
-                "Flooded Strand",
-                "Brazen Borrower // Petty Theft",
-                "Polluted Delta",
-                "Spreading Seas",
-                "Cascade Bluffs",
-                "Bonecrusher Giant // Stomp",
-                "Magmatic Sinkhole"
-            ],
-            "metagame_percentage": "1.26%",
-            "best_fit_deck": {
-                "main": [
-                    {
-                        "name": "Steam Vents",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Spreading Seas",
+                        "name": "Arcum's Astrolabe",
                         "quantity": 4
-                    },
-                    {
-                        "name": "Snow-Covered Island",
-                        "quantity": 8
-                    },
-                    {
-                        "name": "Snapcaster Mage",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Serum Visions",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Scalding Tarn",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Remand",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Opt",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Mystic Sanctuary",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Lightning Bolt",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Force of Negation",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Flooded Strand",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Cryptic Command",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Cascade Bluffs",
-                        "quantity": 1
-                    },
-                    {
-                        "name": "Brazen Borrower // Petty Theft",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Bonecrusher Giant // Stomp",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Blood Moon",
-                        "quantity": 2
                     },
                     {
                         "name": "Archmage's Charm",
-                        "quantity": 3
+                        "quantity": 4
                     }
                 ],
                 "sb": [
                     {
-                        "name": "Spell Snare",
+                        "name": "Veil of Summer",
                         "quantity": 2
                     },
                     {
-                        "name": "Relic of Progenitus",
+                        "name": "Nature's Claim",
                         "quantity": 2
                     },
                     {
                         "name": "Mystical Dispute",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Grafdigger's Cage",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Dismember",
                         "quantity": 3
                     },
                     {
-                        "name": "Flusterstorm",
+                        "name": "Damping Sphere",
                         "quantity": 2
                     },
                     {
@@ -2924,54 +2854,44 @@
                     {
                         "name": "Ashiok, Dream Render",
                         "quantity": 2
-                    },
-                    {
-                        "name": "Anger of the Gods",
-                        "quantity": 2
                     }
                 ]
             }
         },
         {
-            "archetype_name": "WUB",
+            "archetype_name": "Death&amp;Taxes",
             "top_cards": [
-                "Charming Prince",
-                "Aether Vial",
-                "Thalia, Guardian of Thraben",
-                "Tidehollow Sculler",
-                "Flickerwisp",
-                "Godless Shrine",
-                "Hallowed Fountain",
-                "Wasteland Strangler",
+                "Snow-Covered Plains",
                 "Path to Exile",
-                "Watery Grave",
-                "Watcher for Tomorrow",
-                "Spell Queller",
-                "Creeping Tar Pit",
-                "Fallen Shinobi",
-                "Marsh Flats",
-                "Snow-Covered Swamp",
-                "Teferi, Time Raveler",
-                "Snow-Covered Island",
-                "Shambling Vent"
+                "Ghost Quarter",
+                "Giver of Runes",
+                "Thalia, Guardian of Thraben",
+                "Silent Clearing",
+                "Force of Virtue",
+                "Batterskull",
+                "Sword of Fire and Ice",
+                "Eldrazi Temple",
+                "Stoneforge Mystic",
+                "Aether Vial",
+                "Leonin Arbiter",
+                "Thought-Knot Seer",
+                "Eldrazi Displacer",
+                "Sunbaked Canyon",
+                "Shefet Dunes",
+                "Thraben Inspector",
+                "Field of Ruin",
+                "Flickerwisp"
             ],
-            "metagame_percentage": "0.63%",
+            "instances": 4,
+            "metagame_percentage": "1.26%",
             "best_fit_deck": {
                 "main": [
                     {
-                        "name": "Watery Grave",
-                        "quantity": 4
+                        "name": "Thraben Inspector",
+                        "quantity": 2
                     },
                     {
-                        "name": "Watcher for Tomorrow",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Wasteland Strangler",
-                        "quantity": 4
-                    },
-                    {
-                        "name": "Tidehollow Sculler",
+                        "name": "Thought-Knot Seer",
                         "quantity": 4
                     },
                     {
@@ -2979,43 +2899,47 @@
                         "quantity": 4
                     },
                     {
-                        "name": "Teferi, Time Raveler",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Spell Queller",
-                        "quantity": 3
-                    },
-                    {
-                        "name": "Snow-Covered Swamp",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Snow-Covered Island",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Shambling Vent",
+                        "name": "Sunbaked Canyon",
                         "quantity": 1
                     },
                     {
-                        "name": "Plains",
-                        "quantity": 3
+                        "name": "Spellskite",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Snow-Covered Plains",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Silent Clearing",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Shefet Dunes",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Phyrexian Revoker",
+                        "quantity": 2
                     },
                     {
                         "name": "Path to Exile",
                         "quantity": 4
                     },
                     {
-                        "name": "Marsh Flats",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Hallowed Fountain",
+                        "name": "Leonin Arbiter",
                         "quantity": 4
                     },
                     {
-                        "name": "Godless Shrine",
+                        "name": "Horizon Canopy",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Giver of Runes",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Ghost Quarter",
                         "quantity": 4
                     },
                     {
@@ -3023,16 +2947,16 @@
                         "quantity": 4
                     },
                     {
-                        "name": "Fallen Shinobi",
+                        "name": "Field of Ruin",
                         "quantity": 2
                     },
                     {
-                        "name": "Creeping Tar Pit",
-                        "quantity": 1
+                        "name": "Eldrazi Temple",
+                        "quantity": 4
                     },
                     {
-                        "name": "Charming Prince",
-                        "quantity": 3
+                        "name": "Eldrazi Displacer",
+                        "quantity": 4
                     },
                     {
                         "name": "Aether Vial",
@@ -3041,32 +2965,175 @@
                 ],
                 "sb": [
                     {
+                        "name": "Winds of Abandon",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Stony Silence",
+                        "quantity": 3
+                    },
+                    {
                         "name": "Rest in Peace",
                         "quantity": 3
                     },
                     {
-                        "name": "Phyrexian Revoker",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Hurkyl's Recall",
+                        "name": "Leonin Relic-Warder",
                         "quantity": 1
                     },
                     {
-                        "name": "Deputy of Detention",
+                        "name": "Grafdigger's Cage",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Gideon, Ally of Zendikar",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Gideon of the Trials",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Disenchant",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Burrenton Forge-Tender",
+                        "quantity": 2
+                    }
+                ]
+            }
+        },
+        {
+            "archetype_name": "Hardened Scales",
+            "top_cards": [
+                "Once Upon a Time",
+                "Ancient Stirrings",
+                "Arcbound Worker",
+                "Welding Jar",
+                "Darksteel Citadel",
+                "Mox Opal",
+                "Hangarback Walker",
+                "Walking Ballista",
+                "Inkmoth Nexus",
+                "Arcbound Ravager",
+                "Hardened Scales",
+                "Animation Module",
+                "Llanowar Reborn",
+                "Metallic Mimic",
+                "Pendelhaven",
+                "Throne of Geth",
+                "Blinkmoth Nexus",
+                "Karn's Bastion"
+            ],
+            "instances": 3,
+            "metagame_percentage": "0.95%",
+            "best_fit_deck": {
+                "main": [
+                    {
+                        "name": "Welding Jar",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Walking Ballista",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Throne of Geth",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Pendelhaven",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Once Upon a Time",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Mox Opal",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Metallic Mimic",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Llanowar Reborn",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Karn's Bastion",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Inkmoth Nexus",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Hardened Scales",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Hangarback Walker",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Forest",
+                        "quantity": 7
+                    },
+                    {
+                        "name": "Darksteel Citadel",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Arcbound Worker",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Arcbound Ravager",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Animation Module",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Ancient Stirrings",
+                        "quantity": 4
+                    }
+                ],
+                "sb": [
+                    {
+                        "name": "Veil of Summer",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Spatial Contortion",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Pithing Needle",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Nature's Claim",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Grafdigger's Cage",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Evolutionary Leap",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Dismember",
                         "quantity": 2
                     },
                     {
                         "name": "Damping Sphere",
                         "quantity": 3
-                    },
-                    {
-                        "name": "Celestial Purge",
-                        "quantity": 2
-                    },
-                    {
-                        "name": "Ashiok, Dream Render",
-                        "quantity": 2
                     }
                 ]
             }
@@ -3076,23 +3143,25 @@
         {
             "card_name": "Once Upon a Time",
             "common_archetypes": [
+                "Titan Shift",
                 "Eldrazi Tron",
                 "Blue-Green Eldrazi",
                 "Sultai Death's Shadow",
-                "Amulet Titan",
                 "Infect",
-                "CrabVine",
-                "Sultai Death's Shadow"
+                "Tron",
+                "Amulet Titan",
+                "WRG",
+                "Hardened Scales",
+                "Humans"
             ],
             "cards_found_with": [
-                "Blast Zone",
-                "Urza's Power Plant",
-                "Urza's Tower",
-                "Urza's Power Plant",
-                "Urza's Mine",
-                "Expedition Map",
-                "Expedition Map",
-                "Urza's Tower"
+                "Vizier of Remedies",
+                "Ghor-Clan Rampager",
+                "Shalai, Voice of Plenty",
+                "Razorverge Thicket",
+                "Tarfire",
+                "Botanical Sanctum",
+                "Devoted Druid"
             ],
             "total_instances": 307,
             "percentage_of_total_cards": "4.68%"
@@ -3100,26 +3169,25 @@
         {
             "card_name": "Lightning Bolt",
             "common_archetypes": [
-                "Blue-Green Eldrazi",
                 "Untitled",
-                "Blue-Green(-Black) Artifacts",
-                "Burn",
-                "Infect",
                 "Jund",
-                "Untitled",
-                "Grixis Death's Shadow",
-                "Blue-Red Control",
-                "UR"
+                "Titan Shift",
+                "Blue-Green Eldrazi",
+                "Sultai Death's Shadow",
+                "WRG",
+                "Burn",
+                "Humans",
+                "Blue-Red Tempo",
+                "Temur Snow Control"
             ],
             "cards_found_with": [
-                "Urza's Tower",
-                "Blast Zone",
-                "Urza's Mine",
-                "Blast Zone",
-                "Urza's Tower",
-                "Urza's Mine",
-                "Urza's Power Plant",
-                "Urza's Mine"
+                "Sunbaked Canyon",
+                "Fiery Islet",
+                "Stomping Ground",
+                "Sacred Foundry",
+                "Wooded Foothills",
+                "Arid Mesa",
+                "Bloodbraid Elf"
             ],
             "total_instances": 294,
             "percentage_of_total_cards": "4.48%"
@@ -3127,23 +3195,23 @@
         {
             "card_name": "Oko, Thief of Crowns",
             "common_archetypes": [
+                "Sultai Urza",
                 "Blue-Green Eldrazi",
-                "Untitled",
-                "Blue-Green(-Black) Artifacts",
-                "Amulet Titan",
-                "Infect",
                 "Sultai Death's Shadow",
-                "Bant Snow Control"
+                "Infect",
+                "Blue-Green(-Black) Artifacts",
+                "Bant Snow Control",
+                "Amulet Titan",
+                "Temur Snow Control"
             ],
             "cards_found_with": [
-                "Blast Zone",
-                "Urza's Power Plant",
-                "Urza's Tower",
-                "Urza's Tower",
-                "Urza's Power Plant",
-                "Urza's Mine",
-                "Urza's Tower",
-                "Blast Zone"
+                "Breeding Pool",
+                "Misty Rainforest",
+                "Prismatic Vista",
+                "Flooded Strand",
+                "Spell Queller",
+                "Supreme Verdict",
+                "Gilded Goose"
             ],
             "total_instances": 280,
             "percentage_of_total_cards": "4.27%"
@@ -3151,24 +3219,26 @@
         {
             "card_name": "Misty Rainforest",
             "common_archetypes": [
+                "Sultai Urza",
+                "Titan Shift",
                 "Blue-Green Eldrazi",
-                "Untitled",
-                "Blue-Green(-Black) Artifacts",
-                "Amulet Titan",
-                "Burn",
+                "Sultai Death's Shadow",
                 "Infect",
-                "Gifts Storm",
-                "Bant Snow Control"
+                "Blue-Green(-Black) Artifacts",
+                "Bant Snow Control",
+                "WRG",
+                "Humans",
+                "Blue-Red Tempo",
+                "Temur Snow Control"
             ],
             "cards_found_with": [
-                "Blast Zone",
-                "Expedition Map",
-                "Urza's Power Plant",
-                "Blast Zone",
-                "Urza's Mine",
-                "Blast Zone",
-                "Expedition Map",
-                "Expedition Map"
+                "Prismatic Vista",
+                "Oko, Thief of Crowns",
+                "Gilded Goose",
+                "Spell Queller",
+                "Flooded Strand",
+                "Sword of Feast and Famine",
+                "Stoneforge Mystic"
             ],
             "total_instances": 258,
             "percentage_of_total_cards": "3.93%"
@@ -3176,25 +3246,21 @@
         {
             "card_name": "Polluted Delta",
             "common_archetypes": [
-                "Untitled",
+                "Sultai Urza",
                 "Sultai Death's Shadow",
                 "Blue-Green(-Black) Artifacts",
-                "CrabVine",
-                "Grixis Death's Shadow",
-                "Gifts Storm",
-                "Blue-Red Control",
-                "UR",
-                "Sultai Death's Shadow"
+                "Humans",
+                "Blue-Red Tempo",
+                "Temur Snow Control"
             ],
             "cards_found_with": [
-                "Urza's Tower",
-                "Expedition Map",
-                "Urza's Mine",
-                "Urza's Power Plant",
-                "Urza's Tower",
-                "Expedition Map",
-                "Blast Zone",
-                "Urza's Mine"
+                "Watery Grave",
+                "Gurmag Angler",
+                "Drown in the Loch",
+                "Overgrown Tomb",
+                "Steam Vents",
+                "Scalding Tarn",
+                "The Royal Scions"
             ],
             "total_instances": 243,
             "percentage_of_total_cards": "3.71%"
@@ -3203,21 +3269,19 @@
             "card_name": "Noble Hierarch",
             "common_archetypes": [
                 "Blue-Green Eldrazi",
-                "Humans",
-                "Blue-Green(-Black) Artifacts",
-                "Burn",
                 "Infect",
-                "Bant Snow Control"
+                "Bant Snow Control",
+                "WRG",
+                "Humans"
             ],
             "cards_found_with": [
-                "Blast Zone",
-                "Urza's Tower",
-                "Urza's Power Plant",
-                "Blast Zone",
-                "Urza's Tower",
-                "Urza's Power Plant",
-                "Urza's Mine",
-                "Blast Zone"
+                "Waterlogged Grove",
+                "Windswept Heath",
+                "Horizon Canopy",
+                "Deputy of Detention",
+                "Botanical Sanctum",
+                "Shalai, Voice of Plenty",
+                "Vizier of Remedies"
             ],
             "total_instances": 232,
             "percentage_of_total_cards": "3.54%"
@@ -3225,21 +3289,20 @@
         {
             "card_name": "Arcum's Astrolabe",
             "common_archetypes": [
-                "Untitled",
+                "Sultai Urza",
                 "Blue-Green(-Black) Artifacts",
-                "CrabVine",
-                "Gifts Storm",
-                "Bant Snow Control"
+                "Bant Snow Control",
+                "Humans",
+                "Temur Snow Control"
             ],
             "cards_found_with": [
-                "Urza's Tower",
-                "Urza's Mine",
-                "Urza's Power Plant",
-                "Urza's Tower",
-                "Expedition Map",
-                "Blast Zone",
-                "Urza's Power Plant",
-                "Urza's Mine"
+                "Flooded Strand",
+                "Supreme Verdict",
+                "Misty Rainforest",
+                "Hallowed Fountain",
+                "Oko, Thief of Crowns",
+                "Mystical Dispute",
+                "Field of Ruin"
             ],
             "total_instances": 223,
             "percentage_of_total_cards": "3.40%"
@@ -3247,22 +3310,20 @@
         {
             "card_name": "Mishra's Bauble",
             "common_archetypes": [
+                "Untitled",
+                "Sultai Urza",
                 "Sultai Death's Shadow",
                 "Blue-Green(-Black) Artifacts",
-                "Burn",
-                "Untitled",
-                "Grixis Death's Shadow",
-                "Sultai Death's Shadow"
+                "Burn"
             ],
             "cards_found_with": [
-                "Urza's Tower",
-                "Expedition Map",
-                "Blast Zone",
-                "Expedition Map",
-                "Blast Zone",
-                "Urza's Tower",
-                "Urza's Power Plant",
-                "Urza's Mine"
+                "Watery Grave",
+                "Polluted Delta",
+                "Drown in the Loch",
+                "Traverse the Ulvenwald",
+                "Thought Scour",
+                "Street Wraith",
+                "Gurmag Angler"
             ],
             "total_instances": 208,
             "percentage_of_total_cards": "3.17%"
@@ -3270,21 +3331,21 @@
         {
             "card_name": "Karn, the Great Creator",
             "common_archetypes": [
+                "Sultai Urza",
                 "Eldrazi Tron",
                 "Blue-Green Eldrazi",
-                "Blue-Green(-Black) Artifacts",
+                "Tron",
                 "Amulet Titan",
-                "Infect"
+                "WRG"
             ],
             "cards_found_with": [
-                "Ice-Fang Coatl",
-                "Ice-Fang Coatl",
-                "Ice-Fang Coatl",
-                "Ice-Fang Coatl",
-                "Ice-Fang Coatl",
-                "Ice-Fang Coatl",
-                "Ice-Fang Coatl",
-                "Ice-Fang Coatl"
+                "Walking Ballista",
+                "Ghost Quarter",
+                "Hangarback Walker",
+                "Wastes",
+                "Eldrazi Temple",
+                "Thought-Knot Seer",
+                "Tectonic Edge"
             ],
             "total_instances": 196,
             "percentage_of_total_cards": "2.99%"
@@ -3292,25 +3353,20 @@
         {
             "card_name": "Path to Exile",
             "common_archetypes": [
-                "WUB",
-                "Eldrazi & Taxes",
-                "Blue-Green Eldrazi",
-                "Untitled",
-                "Humans",
-                "Burn",
-                "Infect",
                 "Jund",
-                "Bant Snow Control"
+                "Bant Snow Control",
+                "Death&amp;Taxes",
+                "Eldrazi & Taxes",
+                "Blue-Red Tempo"
             ],
             "cards_found_with": [
-                "Urza's Tower",
-                "Expedition Map",
-                "Blast Zone",
-                "Urza's Tower",
-                "Urza's Power Plant",
-                "Blast Zone",
-                "Urza's Mine",
-                "Expedition Map"
+                "Teferi, Time Raveler",
+                "Field of Ruin",
+                "Celestial Colonnade",
+                "Hallowed Fountain",
+                "Supreme Verdict",
+                "Spell Queller",
+                "Mystical Dispute"
             ],
             "total_instances": 188,
             "percentage_of_total_cards": "2.87%"
@@ -3318,19 +3374,19 @@
         {
             "card_name": "Eldrazi Temple",
             "common_archetypes": [
-                "Eldrazi & Taxes",
                 "Eldrazi Tron",
-                "Blue-Green Eldrazi"
+                "Blue-Green Eldrazi",
+                "Death&amp;Taxes",
+                "Eldrazi & Taxes"
             ],
             "cards_found_with": [
-                "Urza's Tower",
-                "Urza's Tower",
-                "Expedition Map",
-                "Urza's Tower",
-                "Urza's Power Plant",
-                "Urza's Mine",
-                "Expedition Map",
-                "Blast Zone"
+                "Thought-Knot Seer",
+                "Wastes",
+                "Hangarback Walker",
+                "Karn, the Great Creator",
+                "Walking Ballista",
+                "Tectonic Edge",
+                "Sea Gate Wreckage"
             ],
             "total_instances": 184,
             "percentage_of_total_cards": "2.81%"
@@ -3338,23 +3394,23 @@
         {
             "card_name": "Flooded Strand",
             "common_archetypes": [
-                "Untitled",
-                "Blue-Green(-Black) Artifacts",
+                "Sultai Urza",
+                "Sultai Death's Shadow",
                 "Infect",
-                "Grixis Death's Shadow",
-                "Blue-Red Control",
-                "UR",
-                "Bant Snow Control"
+                "Blue-Green(-Black) Artifacts",
+                "Bant Snow Control",
+                "Eldrazi & Taxes",
+                "Blue-Red Tempo",
+                "Temur Snow Control"
             ],
             "cards_found_with": [
-                "Urza's Power Plant",
-                "Expedition Map",
-                "Expedition Map",
-                "Blast Zone",
-                "Expedition Map",
-                "Urza's Mine",
-                "Urza's Power Plant",
-                "Blast Zone"
+                "Hallowed Fountain",
+                "Teferi, Hero of Dominaria",
+                "Celestial Colonnade",
+                "Field of Ruin",
+                "Cryptic Command",
+                "Spell Queller",
+                "Sword of Feast and Famine"
             ],
             "total_instances": 184,
             "percentage_of_total_cards": "2.81%"
@@ -3362,24 +3418,24 @@
         {
             "card_name": "Wooded Foothills",
             "common_archetypes": [
+                "Jund",
+                "Titan Shift",
                 "Blue-Green Eldrazi",
-                "Untitled",
                 "Sultai Death's Shadow",
-                "Blue-Green(-Black) Artifacts",
-                "Amulet Titan",
-                "Burn",
                 "Infect",
-                "Jund"
+                "WRG",
+                "Burn",
+                "Humans",
+                "Temur Snow Control"
             ],
             "cards_found_with": [
-                "Urza's Mine",
-                "Expedition Map",
-                "Urza's Power Plant",
-                "Urza's Tower",
-                "Urza's Power Plant",
-                "Urza's Mine",
-                "Blast Zone",
-                "Urza's Mine"
+                "Stomping Ground",
+                "Sunbaked Canyon",
+                "Wild Nacatl",
+                "Arid Mesa",
+                "Mutagenic Growth",
+                "Vizier of Remedies",
+                "Devoted Druid"
             ],
             "total_instances": 182,
             "percentage_of_total_cards": "2.78%"
@@ -3387,19 +3443,19 @@
         {
             "card_name": "Thought-Knot Seer",
             "common_archetypes": [
-                "Eldrazi & Taxes",
                 "Eldrazi Tron",
-                "Blue-Green Eldrazi"
+                "Blue-Green Eldrazi",
+                "Death&amp;Taxes",
+                "Eldrazi & Taxes"
             ],
             "cards_found_with": [
-                "Urza's Tower",
-                "Urza's Tower",
-                "Expedition Map",
-                "Urza's Tower",
-                "Urza's Power Plant",
-                "Urza's Mine",
-                "Expedition Map",
-                "Blast Zone"
+                "Eldrazi Temple",
+                "Wastes",
+                "Hangarback Walker",
+                "Karn, the Great Creator",
+                "Walking Ballista",
+                "Tectonic Edge",
+                "Sea Gate Wreckage"
             ],
             "total_instances": 181,
             "percentage_of_total_cards": "2.76%"
@@ -3407,27 +3463,392 @@
         {
             "card_name": "Thoughtseize",
             "common_archetypes": [
-                "Sultai Death's Shadow",
-                "Blue-Green(-Black) Artifacts",
+                "Sultai Urza",
                 "Jund",
-                "Grixis Death's Shadow",
-                "Sultai Death's Shadow"
+                "Sultai Death's Shadow",
+                "Humans"
             ],
             "cards_found_with": [
-                "Urza's Tower",
-                "Urza's Tower",
-                "Urza's Tower",
-                "Urza's Power Plant",
-                "Urza's Mine",
-                "Expedition Map",
-                "Blast Zone",
-                "Urza's Tower"
+                "Fatal Push",
+                "Inquisition of Kozilek",
+                "Blood Crypt",
+                "Tarmogoyf",
+                "Nurturing Peatland",
+                "Verdant Catacombs",
+                "Overgrown Tomb"
             ],
             "total_instances": 178,
             "percentage_of_total_cards": "2.71%"
         }
     ],
-    "format_versatile_cards": [],
+    "format_versatile_cards": [
+        {
+            "card_name": "Breeding Pool",
+            "common_archetypes": [
+                "Sultai Urza",
+                "Blue-Green Eldrazi",
+                "Sultai Death's Shadow",
+                "Infect",
+                "Blue-Green(-Black) Artifacts",
+                "Bant Snow Control",
+                "Amulet Titan",
+                "Humans",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Oko, Thief of Crowns",
+                "Misty Rainforest",
+                "Flooded Strand",
+                "Once Upon a Time",
+                "Prismatic Vista",
+                "Temple Garden",
+                "Spell Pierce"
+            ],
+            "total_instances": 156,
+            "percentage_of_total_cards": "2.38%"
+        },
+        {
+            "card_name": "Windswept Heath",
+            "common_archetypes": [
+                "Jund",
+                "Titan Shift",
+                "Infect",
+                "Bant Snow Control",
+                "WRG",
+                "Humans",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Botanical Sanctum",
+                "Become Immense",
+                "Shalai, Voice of Plenty",
+                "Eladamri's Call",
+                "Misty Rainforest",
+                "Noble Hierarch",
+                "Pendelhaven"
+            ],
+            "total_instances": 138,
+            "percentage_of_total_cards": "2.10%"
+        },
+        {
+            "card_name": "Field of Ruin",
+            "common_archetypes": [
+                "Jund",
+                "Tron",
+                "Bant Snow Control",
+                "Death&amp;Taxes",
+                "Eldrazi & Taxes",
+                "Humans",
+                "Blue-Red Tempo",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Celestial Colonnade",
+                "Teferi, Time Raveler",
+                "Supreme Verdict",
+                "Mystical Dispute",
+                "Path to Exile",
+                "Mana Leak",
+                "Hallowed Fountain"
+            ],
+            "total_instances": 124,
+            "percentage_of_total_cards": "1.89%"
+        },
+        {
+            "card_name": "Stomping Ground",
+            "common_archetypes": [
+                "Jund",
+                "Titan Shift",
+                "Blue-Green Eldrazi",
+                "Sultai Death's Shadow",
+                "WRG",
+                "Burn",
+                "Humans",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Wooded Foothills",
+                "Wrenn and Six",
+                "Abrupt Decay",
+                "Through the Breach",
+                "Mwonvuli Acid-Moss",
+                "Utopia Sprawl",
+                "Arboreal Grazer"
+            ],
+            "total_instances": 110,
+            "percentage_of_total_cards": "1.68%"
+        },
+        {
+            "card_name": "Waterlogged Grove",
+            "common_archetypes": [
+                "Sultai Urza",
+                "Blue-Green Eldrazi",
+                "Infect",
+                "Bant Snow Control",
+                "Eldrazi & Taxes",
+                "WRG",
+                "Humans",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Noble Hierarch",
+                "Horizon Canopy",
+                "Deputy of Detention",
+                "Botanical Sanctum",
+                "Windswept Heath",
+                "Shalai, Voice of Plenty",
+                "Vizier of Remedies"
+            ],
+            "total_instances": 77,
+            "percentage_of_total_cards": "1.17%"
+        },
+        {
+            "card_name": "Hallowed Fountain",
+            "common_archetypes": [
+                "Sultai Urza",
+                "Blue-Green Eldrazi",
+                "Infect",
+                "Blue-Green(-Black) Artifacts",
+                "Bant Snow Control",
+                "Eldrazi & Taxes",
+                "Humans",
+                "Blue-Red Tempo",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Teferi, Time Raveler",
+                "Celestial Colonnade",
+                "Field of Ruin",
+                "Path to Exile",
+                "Temple Garden",
+                "Flooded Strand",
+                "Mana Leak"
+            ],
+            "total_instances": 67,
+            "percentage_of_total_cards": "1.02%"
+        },
+        {
+            "card_name": "Temple Garden",
+            "common_archetypes": [
+                "Jund",
+                "Blue-Green Eldrazi",
+                "Infect",
+                "Bant Snow Control",
+                "Amulet Titan",
+                "Eldrazi & Taxes",
+                "WRG",
+                "Burn",
+                "Humans",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Supreme Verdict",
+                "Teferi, Time Raveler",
+                "Mystical Dispute",
+                "Hallowed Fountain",
+                "Field of Ruin",
+                "Celestial Colonnade",
+                "Path to Exile"
+            ],
+            "total_instances": 53,
+            "percentage_of_total_cards": "0.81%"
+        },
+        {
+            "card_name": "Once Upon a Time",
+            "common_archetypes": [
+                "Titan Shift",
+                "Eldrazi Tron",
+                "Blue-Green Eldrazi",
+                "Sultai Death's Shadow",
+                "Infect",
+                "Tron",
+                "Amulet Titan",
+                "WRG",
+                "Hardened Scales",
+                "Humans"
+            ],
+            "cards_found_with": [
+                "Vizier of Remedies",
+                "Ghor-Clan Rampager",
+                "Shalai, Voice of Plenty",
+                "Razorverge Thicket",
+                "Tarfire",
+                "Botanical Sanctum",
+                "Devoted Druid"
+            ],
+            "total_instances": 0,
+            "percentage_of_total_cards": "0.00%"
+        },
+        {
+            "card_name": "Wooded Foothills",
+            "common_archetypes": [
+                "Jund",
+                "Titan Shift",
+                "Blue-Green Eldrazi",
+                "Sultai Death's Shadow",
+                "Infect",
+                "WRG",
+                "Burn",
+                "Humans",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Stomping Ground",
+                "Sunbaked Canyon",
+                "Wild Nacatl",
+                "Arid Mesa",
+                "Mutagenic Growth",
+                "Vizier of Remedies",
+                "Devoted Druid"
+            ],
+            "total_instances": 0,
+            "percentage_of_total_cards": "0.00%"
+        },
+        {
+            "card_name": "Flooded Strand",
+            "common_archetypes": [
+                "Sultai Urza",
+                "Sultai Death's Shadow",
+                "Infect",
+                "Blue-Green(-Black) Artifacts",
+                "Bant Snow Control",
+                "Eldrazi & Taxes",
+                "Blue-Red Tempo",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Hallowed Fountain",
+                "Teferi, Hero of Dominaria",
+                "Celestial Colonnade",
+                "Field of Ruin",
+                "Cryptic Command",
+                "Spell Queller",
+                "Sword of Feast and Famine"
+            ],
+            "total_instances": 0,
+            "percentage_of_total_cards": "0.00%"
+        },
+        {
+            "card_name": "Misty Rainforest",
+            "common_archetypes": [
+                "Sultai Urza",
+                "Titan Shift",
+                "Blue-Green Eldrazi",
+                "Sultai Death's Shadow",
+                "Infect",
+                "Blue-Green(-Black) Artifacts",
+                "Bant Snow Control",
+                "WRG",
+                "Humans",
+                "Blue-Red Tempo",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Prismatic Vista",
+                "Oko, Thief of Crowns",
+                "Gilded Goose",
+                "Spell Queller",
+                "Flooded Strand",
+                "Sword of Feast and Famine",
+                "Stoneforge Mystic"
+            ],
+            "total_instances": 0,
+            "percentage_of_total_cards": "0.00%"
+        },
+        {
+            "card_name": "Oko, Thief of Crowns",
+            "common_archetypes": [
+                "Sultai Urza",
+                "Blue-Green Eldrazi",
+                "Sultai Death's Shadow",
+                "Infect",
+                "Blue-Green(-Black) Artifacts",
+                "Bant Snow Control",
+                "Amulet Titan",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Breeding Pool",
+                "Misty Rainforest",
+                "Prismatic Vista",
+                "Flooded Strand",
+                "Spell Queller",
+                "Supreme Verdict",
+                "Gilded Goose"
+            ],
+            "total_instances": 0,
+            "percentage_of_total_cards": "0.00%"
+        },
+        {
+            "card_name": "Path to Exile",
+            "common_archetypes": [
+                "Jund",
+                "Bant Snow Control",
+                "Death&amp;Taxes",
+                "Eldrazi & Taxes",
+                "Blue-Red Tempo"
+            ],
+            "cards_found_with": [
+                "Teferi, Time Raveler",
+                "Field of Ruin",
+                "Celestial Colonnade",
+                "Hallowed Fountain",
+                "Supreme Verdict",
+                "Spell Queller",
+                "Mystical Dispute"
+            ],
+            "total_instances": 0,
+            "percentage_of_total_cards": "0.00%"
+        },
+        {
+            "card_name": "Lightning Bolt",
+            "common_archetypes": [
+                "Untitled",
+                "Jund",
+                "Titan Shift",
+                "Blue-Green Eldrazi",
+                "Sultai Death's Shadow",
+                "WRG",
+                "Burn",
+                "Humans",
+                "Blue-Red Tempo",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Sunbaked Canyon",
+                "Fiery Islet",
+                "Stomping Ground",
+                "Sacred Foundry",
+                "Wooded Foothills",
+                "Arid Mesa",
+                "Bloodbraid Elf"
+            ],
+            "total_instances": 0,
+            "percentage_of_total_cards": "0.00%"
+        },
+        {
+            "card_name": "Polluted Delta",
+            "common_archetypes": [
+                "Sultai Urza",
+                "Sultai Death's Shadow",
+                "Blue-Green(-Black) Artifacts",
+                "Humans",
+                "Blue-Red Tempo",
+                "Temur Snow Control"
+            ],
+            "cards_found_with": [
+                "Watery Grave",
+                "Gurmag Angler",
+                "Drown in the Loch",
+                "Overgrown Tomb",
+                "Steam Vents",
+                "Scalding Tarn",
+                "The Royal Scions"
+            ],
+            "total_instances": 0,
+            "percentage_of_total_cards": "0.00%"
+        }
+    ],
     "total_cards_parsed": 7133,
     "unique_cards_parsed": 624
 }

@@ -20,6 +20,7 @@ export interface Archetype {
 	archetype_name: String;
 	top_cards: Array<String>;
 	metagame_percentage: String;
+	instances: number;
 	best_fit_deck: {
 		main: Array<{
 			name: String;
@@ -49,7 +50,11 @@ export interface VersatileCard {
 }
 
 export type Deck = Array<Card>;
-export type Card = [number, string];
+export type Card = [number, String];
+export type UniqueCard = {
+	card_name: String;
+	quantity: number;
+};
 
 // globals
 const NUM_CLUSTERS: number = 20;
@@ -66,10 +71,7 @@ const IGNORE: Array<String> = [
 var decks: Array<Deck> = [];
 var all_cards: Array<String> = [];
 var cards_w_ignore: Array<String> = [];
-var unique_cards: Array<{
-	card_name: String;
-	quantity: number;
-}> = [];
+var unique_cards: Array<UniqueCard> = [];
 
 function cardNames(deck: Deck): Array<String> {
 	let names: Array<String> = [];
@@ -81,7 +83,7 @@ function cardNames(deck: Deck): Array<String> {
 
 function mostCommonCards(deck: Deck, k: number): Array<String> {
 	deck = deck.sort((a, b) => a[0] - b[0]).reverse();
-	let card_names: Array<string> = [];
+	let card_names: Array<String> = [];
 	for (var card in deck.slice(0, k)) {
 		let card_name = deck[card][1];
 		if (!IGNORE.includes(card_name)) {
@@ -93,7 +95,7 @@ function mostCommonCards(deck: Deck, k: number): Array<String> {
 
 function distance(x: Array<number>, y: Array<number>): number {
 	let d: number = 0.0;
-	for (const [z, elem] of x.entries()) {
+	for (let [z, elem] of x.entries()) {
 		d += (elem - y[z]) * (elem - y[z]);
 	}
 	return Math.sqrt(d);
@@ -115,9 +117,9 @@ function zipDeck(a1: Array<Deck>, a2: Array<number>): Array<[Deck, number]> {
 	return deck_zip;
 }
 
-function set(arr): Array<string> {
+function set(arr: Array<any>): Array<any> {
 	return Object.keys(
-		arr.reduce(function (seen, val) {
+		arr.reduce(function (seen: boolean, val: any) {
 			seen[val] = true;
 			return seen;
 		}, {})
@@ -125,11 +127,11 @@ function set(arr): Array<string> {
 }
 
 fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
-	err: string,
+	err: String,
 	json: string
 ) {
 	var decks_json: JSON = JSON.parse(json);
-	// console.log(JSON.stringify(decks_json));
+	// console.log(JSON.Stringify(decks_json));
 	for (let i of Object.keys(decks_json)) {
 		var deck_of_cards: Deck = [];
 		for (let card of decks_json[i]["main"]) {
@@ -199,11 +201,21 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		return indexes;
 	}
 
-	function apparationRatio(card_name: string): [Array<number>, number] {
+	function quantityOfCard(name: String): number {
+		let q: number = 0;
+		for (const card of unique_cards) {
+			if (card.card_name == name) {
+				q = card.quantity;
+			}
+		}
+		return q;
+	}
+
+	function apparationRatio(card_name: String): [Array<number>, number] {
 		var label_count: Array<number> = Array(NUM_CLUSTERS).fill(0);
 		for (const [label, [deck, id]] of deck_zip.entries()) {
 			for (var card of deck) {
-				if (card[1].includes(card_name)) {
+				if (card[1].includes(card_name.toString())) {
 					label_count[id] += 1;
 				}
 			}
@@ -219,8 +231,9 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	// FOR EACH CLUSTER
 	for (let i in [...Array(NUM_CLUSTERS).keys()]) {
 		// Define cluster - Instead of taking the intersection of all the decks in a cluster, which could lead to archetype staples being excluded due to variance, this method involves taking every deck in the cluster and finding the most common cards (or archetype staples)
-		var card_set: Array<Array<string>> = [];
-		for (let deck_item of decksByIdx(parseInt(i))) {
+		var card_set: Array<Array<String>> = [];
+		var deck_items: Array<[Deck, number]> = decksByIdx(parseInt(i));
+		for (let deck_item of deck_items) {
 			card_set.push(set(mostCommonCards(deck_item[0], 40)));
 		}
 		let card_list: Array<string> = Array.prototype.concat.apply([], card_set);
@@ -239,11 +252,12 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		for (var card_item of sorted_cards.slice(0, 20)) {
 			cluster.push(card_item[0]);
 		}
-		// calculate percentage of meta, deck name, best_fit deck
+		// Calculate percentage of meta, deck name, best_fit deck
 		var instances: number = decksByIdx(parseInt(i)).length;
 		var deck_archetype: Archetype = {
 			archetype_name: "Unknown",
 			top_cards: cluster,
+			instances: deck_items.length,
 			metagame_percentage:
 				((instances / total_instances) * 100).toFixed(2) + "%",
 			best_fit_deck: { main: [], sb: [] }
@@ -265,23 +279,25 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 				}
 			}
 		}
-		// console.log(
-		// 	"\nCluster #" + i + " (" + deck_archetype.archetype_name + ") :"
-		// );
-		// console.log(JSON.stringify(deck_archetype.top_cards));
+		console.log(
+			"\nCluster #" + i + " (" + deck_archetype.archetype_name + ") :"
+		);
+		console.log(JSON.stringify(deck_archetype.top_cards));
 		format_json.archetypes.push(deck_archetype);
 	}
 
-	function closestCards(a_card: string, b: number) {
-		console.log("a_card" + a_card);
+	function closestCards(a_card: String, b: number) {
 		let a_card_app = apparationRatio(a_card)[0];
 		var distances: Array<[String, number]> = [];
+		var temp: Array<String> = [];
 		for (var name of cards_w_ignore) {
-			let dist = distance(apparationRatio(name.toString())[0], a_card_app);
-			distances.push([name, dist]);
+			if (!temp.includes(name)) {
+				let dist = distance(apparationRatio(name.toString())[0], a_card_app);
+				temp.push(name);
+				distances.push([name, dist]);
+			}
 		}
-		distances.sort((a, b) => b[1] - a[1]);
-		console.log(distances);
+		distances.sort((a, b) => a[1] - b[1]);
 		var closest_cards: Array<String> = [];
 		for (const [card_name, dist] of distances.slice(0, b)) {
 			if (card_name != a_card) {
@@ -292,31 +308,34 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	}
 
 	function versatileCards(k: number) {
-		var variances: Array<[string, number]> = [];
-		for (var name in cards_w_ignore) {
-			let versatility = 0;
-			for (var x of apparationRatio(name)) {
-				// for (var x of apparationRatio(name, deck_zip)[0]) {
-				if (x > 0) {
-					versatility += 1;
+		var variances: Array<[String, number]> = [];
+		var temp: Array<String> = [];
+		for (var name of cards_w_ignore) {
+			if (!temp.includes(name)) {
+				temp.push(name);
+				let versatility = 0;
+				for (var x of apparationRatio(name)[0]) {
+					if (x > 0) {
+						versatility += 1;
+					}
 				}
+				variances.push([name, versatility]);
 			}
-			variances.push([name, versatility]);
 		}
 		variances.sort((a, b) => b[1] - a[1]);
 		var versatile_cards: Array<String> = [];
-		for (var [card_name, versatility] of variances.slice(0, k)) {
+		for (const [card_name, versatility] of variances.slice(0, k)) {
 			versatile_cards.push(card_name);
 		}
 		return versatile_cards;
 	}
 
-	function commonDecks(card: string) {
+	function commonDecks(card: String) {
 		var common_decks: Array<String> = [];
 		let apps = apparationRatio(card);
 		let i = 0;
 		while (i < NUM_CLUSTERS) {
-			if (apps[0][i] * 100 > 15) {
+			if (apps[0][i] * 100 > 20) {
 				common_decks.push(format_json["archetypes"][i]["archetype_name"]);
 			}
 			i += 1;
@@ -337,20 +356,23 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 			percentage_of_total_cards:
 				((quantity / cards_w_ignore.length) * 100).toFixed(2) + "%"
 		};
-		console.log(top_card);
 		format_json["format_top_cards"].push(top_card);
 	}
 
-	// # DETERMINE VERSATILE CARDS IN FORMAT
-	// for card in versatile_cards(NUM_TOP_VERS):
-	//     versatile_card = {
-	//         'card_name': card,
-	//         'common_archetypes': common_decks(card),
-	//         'cards_found_with': closest_cards(card, 8),
-	//         'total_instances': apparition_ratio(card)[1]
-	//     }
-
-	//     format_json['format_versatile_cards'].append(versatile_card)
+	//  Determine versatile cards in format
+	for (var v_card of versatileCards(NUM_TOP_VERS)) {
+		let card_name: string = v_card.toString();
+		let quantity = quantityOfCard(card_name);
+		var versatile_card: VersatileCard = {
+			card_name: v_card,
+			common_archetypes: commonDecks(card_name),
+			cards_found_with: closestCards(card_name, 8),
+			total_instances: quantity,
+			percentage_of_total_cards:
+				((quantity / cards_w_ignore.length) * 100).toFixed(2) + "%"
+		};
+		format_json["format_versatile_cards"].push(versatile_card);
+	}
 
 	// Sort JSON
 	format_json["archetypes"].sort(
