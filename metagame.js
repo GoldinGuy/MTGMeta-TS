@@ -4,7 +4,8 @@ var fs = require("fs");
 const skmeans = require("skmeans");
 // globals
 const NUM_CLUSTERS = 20;
-const NUM_TOP_VERS = 15;
+const NUM_VERS = 20;
+const CARD_CUTOFF = 0.3;
 const FORMATS = ["modern", "legacy", "pauper"];
 const IGNORE = [
     "Island",
@@ -115,10 +116,11 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
     }
     var format_json = {
         archetypes: [],
-        format_top_cards: [],
+        format_cards: [],
         format_versatile_cards: [],
         total_cards_parsed: all_cards.length,
-        unique_cards_parsed: unique_cards.length
+        unique_cards_parsed: unique_cards.length,
+        total_decks_parsed: decks.length
     };
     // Determine "deck vectors" - translate mtg decks to a format that can be used for KM++
     function deckToVector(input_deck) {
@@ -247,6 +249,47 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
         }
         return closest_cards;
     }
+    function commonDecks(card) {
+        var common_decks = [];
+        let apps = apparationRatio(card);
+        let i = 0;
+        while (i < NUM_CLUSTERS) {
+            if (apps[0][i] * 100 > 20) {
+                common_decks.push(format_json["archetypes"][i]["archetype_name"]);
+            }
+            i += 1;
+        }
+        return common_decks;
+    }
+    //  Determine top cards in format
+    // unique_cards.sort((a, b) => b.quantity - a.quantity);
+    // for (var card_dict of unique_cards.splice(0, NUM_TOP_VERS)) {
+    // 	let card_name = card_dict.card_name.toString();
+    // 	let quantity = card_dict.quantity;
+    // 	var top_card: FormatCard = {
+    // 		card_name: card_name,
+    // 		common_archetypes: commonDecks(card_name),
+    // 		cards_found_with: closestCards(card_name, 8),
+    // 		total_instances: quantity,
+    // 		percentage_of_total_cards:
+    // 			((quantity / cards_w_ignore.length) * 100).toFixed(2) + "%"
+    // 	};
+    // 	format_json["format_top_cards"].push(top_card);
+    // }
+    //  Determine versatile cards in format
+    // for (var v_card of versatileCards(NUM_TOP_VERS)) {
+    // 	let card_name: string = v_card.toString();
+    // 	let quantity = quantityOfCard(card_name);
+    // 	var versatile_card: FormatCard = {
+    // 		card_name: v_card,
+    // 		common_archetypes: commonDecks(card_name),
+    // 		cards_found_with: closestCards(card_name, 8),
+    // 		total_instances: quantity,
+    // 		percentage_of_total_cards:
+    // 			((quantity / cards_w_ignore.length) * 100).toFixed(2) + "%"
+    // 	};
+    // 	format_json["format_versatile_cards"].push(versatile_card);
+    // }
     function versatileCards(k) {
         var variances = [];
         var temp = [];
@@ -269,49 +312,31 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
         }
         return versatile_cards;
     }
-    function commonDecks(card) {
-        var common_decks = [];
-        let apps = apparationRatio(card);
-        let i = 0;
-        while (i < NUM_CLUSTERS) {
-            if (apps[0][i] * 100 > 20) {
-                common_decks.push(format_json["archetypes"][i]["archetype_name"]);
-            }
-            i += 1;
-        }
-        return common_decks;
-    }
-    //  Determine top cards in format
-    unique_cards.sort((a, b) => b.quantity - a.quantity);
-    for (var card_dict of unique_cards.splice(0, NUM_TOP_VERS)) {
-        let card_name = card_dict.card_name.toString();
-        let quantity = card_dict.quantity;
-        var top_card = {
-            card_name: card_name,
-            common_archetypes: commonDecks(card_name),
-            cards_found_with: closestCards(card_name, 8),
-            total_instances: quantity,
-            percentage_of_total_cards: ((quantity / cards_w_ignore.length) * 100).toFixed(2) + "%"
-        };
-        format_json["format_top_cards"].push(top_card);
-    }
     //  Determine versatile cards in format
-    for (var v_card of versatileCards(NUM_TOP_VERS)) {
-        let card_name = v_card.toString();
-        let quantity = quantityOfCard(card_name);
-        var versatile_card = {
-            card_name: v_card,
-            common_archetypes: commonDecks(card_name),
-            cards_found_with: closestCards(card_name, 8),
-            total_instances: quantity,
-            percentage_of_total_cards: ((quantity / cards_w_ignore.length) * 100).toFixed(2) + "%"
-        };
-        format_json["format_versatile_cards"].push(versatile_card);
+    format_json.format_versatile_cards = versatileCards(NUM_VERS);
+    //  Determine data for cards in format
+    for (const unique_card of unique_cards) {
+        // only use top n % of cards to ensure accuracy
+        if (unique_card.quantity >= unique_cards[0].quantity * CARD_CUTOFF) {
+            var format_card = {
+                card_name: unique_card.card_name,
+                common_archetypes: commonDecks(unique_card.card_name),
+                cards_found_with: closestCards(unique_card.card_name, 7),
+                total_instances: unique_card.quantity,
+                percentage_of_total_cards: ((unique_card.quantity / cards_w_ignore.length) * 100).toFixed(2) +
+                    "%"
+            };
+            format_json["format_cards"].push(format_card);
+        }
     }
     // Sort JSON
-    format_json["archetypes"].sort((a, b) => parseFloat(b.metagame_percentage.replace("%", "")) -
-        parseFloat(a.metagame_percentage.replace("%", "")));
-    format_json["format_versatile_cards"].sort((a, b) => b.total_instances - a.total_instances);
+    // format_json["archetypes"].sort(
+    // 	(a, b) =>
+    // 		parseFloat(b.metagame_percentage.replace("%", "")) -
+    // 		parseFloat(a.metagame_percentage.replace("%", ""))
+    // );
+    format_json["archetypes"].sort((a, b) => b.instances - a.instances);
+    format_json["format_cards"].sort((a, b) => b.total_instances - a.total_instances);
     // Write JSON Output
     fs.writeFile(FORMATS[0] + ".json", JSON.stringify(format_json, null, 4), "utf8", function (err, data) { });
 });
