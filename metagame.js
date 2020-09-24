@@ -35,6 +35,32 @@ function mostCommonCards(deck, k) {
     }
     return card_names;
 }
+// function quantityOfCard(name: String): number {
+// 	let q: number = 0;
+// 	console.log(JSON.stringify(unique_cards));
+// 	for (const card of unique_cards) {
+// 		if (card.card_name == "Lightning Bolt") {
+// 			console.log("bolt");
+// 		}
+// 		if (card.card_name.includes(name.toString())) {
+// 			q = card.quantity;
+// 		}
+// 	}
+// 	return q;
+// }
+function quantityOfCard(name) {
+    let q = 0;
+    console.log(JSON.stringify(unique_cards));
+    for (var i in unique_cards) {
+        let card_name = unique_cards[i].card_name;
+        if (card_name == name) {
+            if (card_name.includes(name.toString())) {
+                q = unique_cards[i].quantity;
+            }
+        }
+    }
+    return q;
+}
 function distance(x, y) {
     let d = 0.0;
     for (let [z, elem] of x.entries()) {
@@ -42,13 +68,13 @@ function distance(x, y) {
     }
     return Math.sqrt(d);
 }
-function intersect(a1, a2) {
-    let a3 = [...a1, ...a2];
-    console.log(a3);
-    return a1.filter(function (n) {
-        return a2.indexOf(n) !== -1;
-    });
-}
+// function intersect(a1, a2) {
+// 	let a3 = [...a1, ...a2];
+// 	// console.log(a3);
+// 	return a1.filter(function (n) {
+// 		return a2.indexOf(n) !== -1;
+// 	});
+// }
 function zipDeck(a1, a2) {
     var deck_zip = [];
     for (var j = 0; j < a1.length; j++) {
@@ -65,17 +91,17 @@ function set(arr) {
 fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, json) {
     var decks_json = JSON.parse(json);
     // console.log(JSON.Stringify(decks_json));
-    for (let i of Object.keys(decks_json)) {
+    for (const i of Object.keys(decks_json)) {
         var deck_of_cards = [];
-        for (let card of decks_json[i]["main"]) {
+        for (const card of decks_json[i]["main"]) {
             // initialize deck dict, determine card data
             deck_of_cards.push([card["quantity"], card["name"]]);
             all_cards.push(card["name"]);
             if (!IGNORE.some(c => card["name"].includes(c))) {
                 cards_w_ignore.push(card["name"]);
             }
-            let idx = unique_cards.findIndex(c => c.card_name == card.name);
-            if (idx == -1) {
+            let idx = unique_cards.findIndex(c => c.card_name.includes(card.name));
+            if (idx === -1) {
                 unique_cards.push({
                     card_name: card["name"],
                     quantity: card["quantity"]
@@ -131,15 +157,6 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
         }
         return indexes;
     }
-    function quantityOfCard(name) {
-        let q = 0;
-        for (const card of unique_cards) {
-            if (card.card_name == name) {
-                q = card.quantity;
-            }
-        }
-        return q;
-    }
     function apparationRatio(card_name) {
         var label_count = Array(NUM_CLUSTERS).fill(0);
         for (const [label, [deck, id]] of deck_zip.entries()) {
@@ -157,7 +174,7 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
         return [labels, total_apps];
     }
     // FOR EACH CLUSTER
-    for (let i in [...Array(NUM_CLUSTERS).keys()]) {
+    for (const i in [...Array(NUM_CLUSTERS).keys()]) {
         // Define cluster - Instead of taking the intersection of all the decks in a cluster, which could lead to archetype staples being excluded due to variance, this method involves taking every deck in the cluster and finding the most common cards (or archetype staples)
         var card_set = [];
         var deck_items = decksByIdx(parseInt(i));
