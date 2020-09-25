@@ -5,7 +5,7 @@ const skmeans = require("skmeans");
 // globals
 const NUM_CLUSTERS = 20;
 const NUM_VERS = 20;
-const CARD_CUTOFF = 0.3;
+const CARD_CUTOFF = 0.32;
 const FORMATS = ["modern", "legacy", "pauper"];
 const IGNORE = [
     "Island",
@@ -25,6 +25,18 @@ function cardNames(deck) {
     }
     return names;
 }
+function quantityOfCard(name) {
+    let q = 0;
+    for (var i in unique_cards) {
+        let card_name = unique_cards[i].card_name;
+        if (card_name == name) {
+            if (card_name.includes(name.toString())) {
+                q = unique_cards[i].quantity;
+            }
+        }
+    }
+    return q;
+}
 function mostCommonCards(deck, k) {
     deck = deck.sort((a, b) => a[0] - b[0]).reverse();
     let card_names = [];
@@ -36,32 +48,6 @@ function mostCommonCards(deck, k) {
     }
     return card_names;
 }
-// function quantityOfCard(name: String): number {
-// 	let q: number = 0;
-// 	console.log(JSON.stringify(unique_cards));
-// 	for (const card of unique_cards) {
-// 		if (card.card_name == "Lightning Bolt") {
-// 			console.log("bolt");
-// 		}
-// 		if (card.card_name.includes(name.toString())) {
-// 			q = card.quantity;
-// 		}
-// 	}
-// 	return q;
-// }
-function quantityOfCard(name) {
-    let q = 0;
-    console.log(JSON.stringify(unique_cards));
-    for (var i in unique_cards) {
-        let card_name = unique_cards[i].card_name;
-        if (card_name == name) {
-            if (card_name.includes(name.toString())) {
-                q = unique_cards[i].quantity;
-            }
-        }
-    }
-    return q;
-}
 function distance(x, y) {
     let d = 0.0;
     for (let [z, elem] of x.entries()) {
@@ -69,13 +55,6 @@ function distance(x, y) {
     }
     return Math.sqrt(d);
 }
-// function intersect(a1, a2) {
-// 	let a3 = [...a1, ...a2];
-// 	// console.log(a3);
-// 	return a1.filter(function (n) {
-// 		return a2.indexOf(n) !== -1;
-// 	});
-// }
 function zipDeck(a1, a2) {
     var deck_zip = [];
     for (var j = 0; j < a1.length; j++) {
@@ -89,7 +68,7 @@ function set(arr) {
         return seen;
     }, {}));
 }
-fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, json) {
+fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, json) {
     var decks_json = JSON.parse(json);
     // console.log(JSON.Stringify(decks_json));
     for (const i of Object.keys(decks_json)) {
@@ -105,11 +84,13 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
             if (idx === -1) {
                 unique_cards.push({
                     card_name: card["name"],
-                    quantity: card["quantity"]
+                    quantity: card["quantity"],
+                    decks_in: 1
                 });
             }
             else if (!IGNORE.some(c => card.name.includes(c))) {
                 unique_cards[idx].quantity += card.quantity;
+                unique_cards[idx].decks_in += 1;
             }
         }
         decks.push(deck_of_cards);
@@ -168,7 +149,7 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
                 }
             }
         }
-        let total_apps = set(label_count).length;
+        let total_apps = label_count.reduce((a, b) => a + b, 0);
         let labels = [];
         for (var count of label_count) {
             labels.push(count / total_apps);
@@ -225,9 +206,9 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
                 }
             }
         }
+        format_json.archetypes.push(deck_archetype);
         console.log("\nCluster #" + i + " (" + deck_archetype.archetype_name + ") :");
         console.log(JSON.stringify(deck_archetype.top_cards));
-        format_json.archetypes.push(deck_archetype);
     }
     function closestCards(a_card, b) {
         let a_card_app = apparationRatio(a_card)[0];
@@ -244,6 +225,7 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
         var closest_cards = [];
         for (const [card_name, dist] of distances.slice(0, b)) {
             if (card_name != a_card) {
+                console.log(dist);
                 closest_cards.push(card_name);
             }
         }
@@ -254,42 +236,16 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
         let apps = apparationRatio(card);
         let i = 0;
         while (i < NUM_CLUSTERS) {
-            if (apps[0][i] * 100 > 20) {
-                common_decks.push(format_json["archetypes"][i]["archetype_name"]);
+            if (apps[0][i] * 100 > CARD_CUTOFF * 100) {
+                common_decks.push([
+                    format_json["archetypes"][i]["archetype_name"],
+                    Math.min(apps[0][i] * 100, 100).toFixed(2) + "%"
+                ]);
             }
             i += 1;
         }
         return common_decks;
     }
-    //  Determine top cards in format
-    // unique_cards.sort((a, b) => b.quantity - a.quantity);
-    // for (var card_dict of unique_cards.splice(0, NUM_TOP_VERS)) {
-    // 	let card_name = card_dict.card_name.toString();
-    // 	let quantity = card_dict.quantity;
-    // 	var top_card: FormatCard = {
-    // 		card_name: card_name,
-    // 		common_archetypes: commonDecks(card_name),
-    // 		cards_found_with: closestCards(card_name, 8),
-    // 		total_instances: quantity,
-    // 		percentage_of_total_cards:
-    // 			((quantity / cards_w_ignore.length) * 100).toFixed(2) + "%"
-    // 	};
-    // 	format_json["format_top_cards"].push(top_card);
-    // }
-    //  Determine versatile cards in format
-    // for (var v_card of versatileCards(NUM_TOP_VERS)) {
-    // 	let card_name: string = v_card.toString();
-    // 	let quantity = quantityOfCard(card_name);
-    // 	var versatile_card: FormatCard = {
-    // 		card_name: v_card,
-    // 		common_archetypes: commonDecks(card_name),
-    // 		cards_found_with: closestCards(card_name, 8),
-    // 		total_instances: quantity,
-    // 		percentage_of_total_cards:
-    // 			((quantity / cards_w_ignore.length) * 100).toFixed(2) + "%"
-    // 	};
-    // 	format_json["format_versatile_cards"].push(versatile_card);
-    // }
     function versatileCards(k) {
         var variances = [];
         var temp = [];
@@ -324,19 +280,15 @@ fs.readFile("decks_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
                 cards_found_with: closestCards(unique_card.card_name, 7),
                 total_instances: unique_card.quantity,
                 percentage_of_total_cards: ((unique_card.quantity / cards_w_ignore.length) * 100).toFixed(2) +
-                    "%"
+                    "%",
+                percentage_of_total_decks: ((unique_card.decks_in / decks.length) * 100).toFixed(2) + "%"
             };
             format_json["format_cards"].push(format_card);
         }
     }
     // Sort JSON
-    // format_json["archetypes"].sort(
-    // 	(a, b) =>
-    // 		parseFloat(b.metagame_percentage.replace("%", "")) -
-    // 		parseFloat(a.metagame_percentage.replace("%", ""))
-    // );
     format_json["archetypes"].sort((a, b) => b.instances - a.instances);
     format_json["format_cards"].sort((a, b) => b.total_instances - a.total_instances);
     // Write JSON Output
-    fs.writeFile(FORMATS[0] + ".json", JSON.stringify(format_json, null, 4), "utf8", function (err, data) { });
+    fs.writeFile("output_json/" + FORMATS[0] + ".json", JSON.stringify(format_json, null, 4), "utf8", function (err, data) { });
 });

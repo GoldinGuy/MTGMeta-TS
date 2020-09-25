@@ -1,3 +1,5 @@
+// TEST FUNCTIONALITY
+
 var fs = require("fs");
 
 fs.readFile("decks_json/decks-modern.json", "utf8", function (err, json) {
