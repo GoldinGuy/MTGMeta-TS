@@ -249,13 +249,12 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 			cluster.push(card_item[0]);
 		}
 		// Calculate percentage of meta, deck name, best_fit deck
-		var instances: number = decksByIdx(parseInt(i)).length;
 		var deck_archetype: Archetype = {
 			archetype_name: "Unknown",
 			top_cards: cluster,
 			instances: deck_items.length,
 			metagame_percentage:
-				((instances / total_instances) * 100).toFixed(2) + "%",
+				((deck_items.length / total_instances) * 100).toFixed(2) + "%",
 			best_fit_deck: { main: [], sb: [] }
 		};
 		let max_similar: number = 0;
@@ -297,28 +296,88 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		var closest_cards: Array<String> = [];
 		for (const [card_name, dist] of distances.slice(0, b)) {
 			if (card_name != a_card) {
-				console.log(dist);
+				// console.log(dist);
 				closest_cards.push(card_name);
 			}
 		}
 		return closest_cards;
 	}
 
-	function commonDecks(card: String) {
+	function numberOfDecks(card_name: String, decks: DeckZip): number {
+		var decks_w_card: number = 0;
+		// let i = 0;
+		// while (i < deck_zip.length) {
+		// 	if (deck_zip[i][0].find(card => card[1].includes(card_name.toString()))) {
+		// 		decks_w_card += 1;
+		// 	}
+		// }
+		for (const i in decks) {
+			if (deck_zip[i][0].find(card => card[1].includes(card_name.toString()))) {
+				decks_w_card += 1;
+			}
+		}
+		// console.log(decks_w_card);
+		return decks_w_card;
+	}
+
+	function commonDecks(card_name: String) {
 		var common_decks: Array<[String, String]> = [];
-		let apps = apparationRatio(card);
+		var decks_w_card: number = 0;
+		let apps = apparationRatio(card_name);
 		let i = 0;
 		while (i < NUM_CLUSTERS) {
-			if (apps[0][i] * 100 > CARD_CUTOFF * 100) {
+			let decks = decksByIdx(i);
+			for (var deck of decks) {
+				if (deck[0].some(card => card[1] === card_name)) {
+					decks_w_card += 1;
+					break;
+				}
+			}
+			// console.log(apps);
+			console.log(decks_w_card, decks.length);
+			let percent: number = Math.min((decks_w_card / decks.length) * 100, 100);
+			if (percent > CARD_CUTOFF * 100) {
+				// if (apps[0][i] * 100 > CARD_CUTOFF * 100) {
 				common_decks.push([
 					format_json["archetypes"][i]["archetype_name"],
-					Math.min(apps[0][i] * 100, 100).toFixed(2) + "%"
+					percent.toFixed(2) + "%"
 				]);
 			}
 			i += 1;
 		}
+		common_decks.sort(
+			(a, b) =>
+				parseFloat(b[1].replace("%", "")) - parseFloat(a[1].replace("%", ""))
+		);
 		return common_decks;
 	}
+
+	// function commonDecks(card: String) {
+	// 	var common_decks: Array<[String, String]> = [];
+	// 	// let apps = apparationRatio(card);
+	// 	let i = 0;
+	// 	while (i < NUM_CLUSTERS) {
+	// 		let percent: number = Math.min(
+	// 			(numberOfDecks(card, decksByIdx(i)) /
+	// 				format_json["archetypes"][i]["instances"]) *
+	// 				100,
+	// 			100
+	// 		);
+	// 		// if (percent > CARD_CUTOFF * 100) {
+	// 		// if (apps[0][i] * 100 > CARD_CUTOFF * 100) {
+	// 		common_decks.push([
+	// 			format_json["archetypes"][i]["archetype_name"],
+	// 			percent.toFixed(2) + "%"
+	// 		]);
+	// 		// }
+	// 		i += 1;
+	// 	}
+	// 	common_decks.sort(
+	// 		(a, b) =>
+	// 			parseFloat(b[1].replace("%", "")) - parseFloat(a[1].replace("%", ""))
+	// 	);
+	// 	return common_decks.splice(0, 2);
+	// }
 
 	function versatileCards(k: number) {
 		var variances: Array<[String, number]> = [];
