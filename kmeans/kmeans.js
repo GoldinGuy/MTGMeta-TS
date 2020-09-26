@@ -32,14 +32,12 @@ function kmeans(data, k, type, max_it, fn_dist) {
         cents = Cluster.k_means_pp(data, k, fn_dist);
     }
     do {
-        // Reset k count
         init(k, 0, count);
-        // For each value in data, find the nearest centroid
+        // For each value in data, find the nearest centroid (Custom, multidimensional or unidimensional)
         for (const i in data) {
             let min = Infinity;
             let idx = 0;
             for (let j = 0; j < k; j++) {
-                // Custom, Multidimensional or unidimensional
                 let dist = fn_dist
                     ? fn_dist(data[i], cents[j])
                     : data[0].length > 0
@@ -50,8 +48,8 @@ function kmeans(data, k, type, max_it, fn_dist) {
                     idx = j;
                 }
             }
-            indexes[i] = idx; // Index of the selected centroid for that value
-            count[idx]++; // Number of values for this centroid
+            indexes[i] = idx; // Index of selected centroid
+            count[idx]++; // Num values for centroid
         }
         // Recalculate centroids
         let sum = [];
@@ -68,14 +66,12 @@ function kmeans(data, k, type, max_it, fn_dist) {
                 old[j] = cents[j];
             }
         }
-        // If multidimensional
+        // If multidimensional, sum values and accumulate value on the centroid for current vector for each centroid
         if (data[0].length > 0) {
             for (let j = 0; j < k; j++) {
                 cents[j] = [];
             }
-            // Sum values and count for each centroid
             for (const i in data) {
-                // Accumulate value on the centroid for current vector
                 for (let h = 0; h < data[0].length; h++) {
                     sum[indexes[i]][h] += data[i][h]; // Sum values for current centroid + Current vector
                 }
@@ -89,11 +85,9 @@ function kmeans(data, k, type, max_it, fn_dist) {
                 count[j] | Number of elements for this centroid
                 */
                 let cent_j = cents[j]; // Current centroid
-                // Get new average
                 for (let h = 0; h < data[0].length; h++) {
-                    cent_j[h] = sum[j][h] / count[j] || 0; // New centroid
+                    cent_j[h] = sum[j][h] / count[j] || 0; // New avg from new centroid
                 }
-                // Determine if centroids moved
                 if (cent_moved) {
                     for (let h = 0; h < data[0].length; h++) {
                         if (old[j][h] != cent_j[h]) {
@@ -104,19 +98,15 @@ function kmeans(data, k, type, max_it, fn_dist) {
                 }
             }
         }
-        // If unidimensional
+        // If unidimensional, sum values and for each centroid, calculate avg, then determine if centroids moved
         else {
-            // Sum values and count for each centroid
             for (const i in data) {
                 let idx = indexes[i];
                 sum[idx] += data[i];
             }
-            let avg_cents = Array(cents.length).fill(0);
-            // For each centroid, calculate avg
             for (let j = 0; j < k; j++) {
-                cents[j] = [sum[j] / count[j]] || [0]; // New centroid
+                cents[j] = [sum[j] / count[j]] || [0];
             }
-            // Determine if centroids moved
             cent_moved = true;
             for (let j = 0; j < k; j++) {
                 if (old[j] != cents[j]) {
@@ -150,8 +140,9 @@ class Cluster {
                 cents.push(d);
             }
         }
-        if (cents.length < k)
+        if (cents.length < k) {
             throw Error("Error initializing clusters");
+        }
         else
             return cents;
     }
