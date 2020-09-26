@@ -213,13 +213,12 @@ class Cluster {
 			for (const i in data) {
 				d_sum += distances[i];
 			}
-			// Probabilities and cumulative prob
+			// Probabilities/cumulative prob
 			for (const i in data) {
 				prs[i] = { i: i, v: data[i], pr: distances[i] / d_sum, cs: 0 };
 			}
-			// Sort Probabilities
 			prs.sort((a, b) => a.pr - b.pr);
-			// Cumulative Probabilities
+			// Cumulative probabilities
 			prs[0].cs = prs[0].pr;
 			for (let i = 1; i < data.length; i++) {
 				prs[i].cs = prs[i - 1].cs + prs[i].pr;
@@ -235,6 +234,7 @@ class Cluster {
 }
 
 class Distance {
+	// The "ordinary" straight-line distance between two points in Euclidean space
 	// ed((x1, y1), (x2, y2)) = || (x1, y1) – (x2, y2) ||
 	static euclideanDist(x: Centroid, y: Centroid): number {
 		let sum: number = 0;
@@ -245,6 +245,7 @@ class Distance {
 		return sum;
 	}
 
+	// The distance between two points measured along axes at right angles
 	// md((x1, y1), (x2, y2)) = | x1 – x2 | + | y1 – y2 |
 	static manhattanDist(x: Centroid, y: Centroid): number {
 		let sum: number = 0;
@@ -256,6 +257,7 @@ class Distance {
 		return sum;
 	}
 
+	// Absolute distance between two values
 	// d(x, y, z) = z ? || x - y || : || x - y || * || x - y ||
 	static dist(x: number, y: number, sqrt?: number): number {
 		const d: number = Math.abs(x - y);

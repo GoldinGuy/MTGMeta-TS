@@ -1,6 +1,6 @@
 var fs = require("fs");
-const KMEANS: Function = require("./kmeans/kmeans.js");
 import { KMeans } from "./kmeans/kmeans";
+const KMEANS: Function = require("./kmeans/kmeans.js");
 
 export interface FormatJson {
 	archetypes: Array<Archetype>;
@@ -103,8 +103,8 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	function deckToVector(input_deck: Deck): Vector {
 		let v: Vector = Array(all_cards.length).fill(0);
 		for (const [x, name] of all_cards.entries()) {
-			for (const [idx, card] of input_deck.entries()) {
-				if (card[1] == name) {
+			for (const card of input_deck.entries()) {
+				if (card[1][1] == name) {
 					v[x] += card[0];
 				}
 			}
@@ -142,9 +142,9 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 
 	function decksByIdx(idx: number): DeckZip {
 		let indexes: DeckZip = [];
-		for (const [label, [deck, index]] of deck_zip.entries()) {
-			if (index == idx) {
-				indexes.push([deck, index]);
+		for (const deck of deck_zip.entries()) {
+			if (deck[1][1] == idx) {
+				indexes.push([deck[1][0], deck[1][1]]);
 			}
 		}
 		return indexes;
@@ -152,10 +152,10 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 
 	function apparationRatio(card_name: String): [Array<number>, number] {
 		let label_count: Array<number> = Array(NUM_CLUSTERS).fill(0);
-		for (const [label, [deck, id]] of deck_zip.entries()) {
-			for (const card of deck) {
+		for (const deck of deck_zip.entries()) {
+			for (const card of deck[1][0]) {
 				if (card[1].includes(card_name.toString())) {
-					label_count[id] += 1;
+					label_count[deck[1][1]] += 1;
 				}
 			}
 		}
@@ -238,9 +238,9 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		}
 		distances.sort((a, b) => a[1] - b[1]);
 		let closest_cards: CardNames = [];
-		for (const [card_name, dist] of distances.slice(0, b)) {
-			if (card_name != a_card) {
-				closest_cards.push(card_name);
+		for (const dist of distances.slice(0, b)) {
+			if (dist[0] != a_card) {
+				closest_cards.push(dist[0]);
 			}
 		}
 		return closest_cards;
@@ -261,7 +261,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 			if (percent > CARD_CUTOFF * 100) {
 				common_decks.push([
 					format_json["archetypes"][i]["archetype_name"],
-					percent.toFixed(2) + "%"
+					percent.toFixed(2) + "% of " + decks.length + " decks"
 				]);
 			}
 			i += 1;
