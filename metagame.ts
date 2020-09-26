@@ -1,10 +1,10 @@
 var fs = require("fs");
-const skmeans = require("skmeans");
-
+// const skmeans = require("skmeans");
+const KMEANS: Function = require("./kmeans/kmeans.js");
 export interface Kmeans {
 	it: number;
 	k: number;
-	idxs: Array<number>;
+	indexes: Array<number>;
 	centroids: Array<number>;
 }
 
@@ -51,54 +51,6 @@ export type UniqueCard = {
 	quantity: number;
 	decks_in: number;
 };
-
-class Utils {
-	static cardNames(deck: Deck): Array<String> {
-		let names: Array<String> = [];
-		for (const card in deck) {
-			names.push(card[1]);
-		}
-		return names;
-	}
-
-	static quantityOfCard(name: String): number {
-		let q: number = 0;
-		for (const i in unique_cards) {
-			let card_name: String = unique_cards[i].card_name;
-			if (card_name == name) {
-				if (card_name.includes(name.toString())) {
-					q = unique_cards[i].quantity;
-				}
-			}
-		}
-		return q;
-	}
-
-	static distance(x: Array<number>, y: Array<number>): number {
-		let d: number = 0.0;
-		for (let [z, elem] of x.entries()) {
-			d += (elem - y[z]) * (elem - y[z]);
-		}
-		return Math.sqrt(d);
-	}
-
-	static zipDeck(a1: Array<Deck>, a2: Array<number>): DeckZip {
-		let deck_zip: DeckZip = [];
-		for (let j = 0; j < a1.length; j++) {
-			deck_zip.push([a1[j], a2[j]]);
-		}
-		return deck_zip;
-	}
-
-	static set(arr: Array<any>): Array<any> {
-		return Object.keys(
-			arr.reduce(function (seen: boolean, val: any) {
-				seen[val] = true;
-				return seen;
-			}, {})
-		);
-	}
-}
 
 // globals
 const NUM_CLUSTERS: number = 20;
@@ -173,9 +125,11 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	for (const deck of decks) {
 		deck_vectors.push(deckToVector(deck));
 	}
+	// console.log(deck_vectors);
 	// Determine meta using K-Means++ clustering
-	const kmeans: Kmeans = skmeans(deck_vectors, NUM_CLUSTERS, "kmpp");
-	const deck_zip: DeckZip = Utils.zipDeck(decks, kmeans.idxs);
+	const kmeans: Kmeans = KMEANS(deck_vectors, NUM_CLUSTERS, "kmeans++");
+	// console.log(JSON.stringify(kmeans));
+	const deck_zip: DeckZip = Utils.zipDeck(decks, kmeans.indexes);
 	// Translate K-Means data to a format that can be parsed
 	let card_counts: Array<[number, number]> = [];
 	for (const i in [...Array(NUM_CLUSTERS).keys()]) {
@@ -239,9 +193,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 			return a;
 		}, {});
 		let sorted_cards = Object.keys(count_cards)
-			.map(function (k) {
-				return [k, count_cards[k]];
-			})
+			.map(k => [k, count_cards[k]])
 			.sort(function (a, b) {
 				return b[1] - a[1];
 			});
@@ -392,3 +344,51 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		function (err: String, data: String) {}
 	);
 });
+
+class Utils {
+	static cardNames(deck: Deck): Array<String> {
+		let names: Array<String> = [];
+		for (const card in deck) {
+			names.push(card[1]);
+		}
+		return names;
+	}
+
+	static quantityOfCard(name: String): number {
+		let q: number = 0;
+		for (const i in unique_cards) {
+			let card_name: String = unique_cards[i].card_name;
+			if (card_name == name) {
+				if (card_name.includes(name.toString())) {
+					q = unique_cards[i].quantity;
+				}
+			}
+		}
+		return q;
+	}
+
+	static distance(x: Array<number>, y: Array<number>): number {
+		let d: number = 0.0;
+		for (let [z, elem] of x.entries()) {
+			d += (elem - y[z]) * (elem - y[z]);
+		}
+		return Math.sqrt(d);
+	}
+
+	static zipDeck(a1: Array<Deck>, a2: Array<number>): DeckZip {
+		let deck_zip: DeckZip = [];
+		for (let j = 0; j < a1.length; j++) {
+			deck_zip.push([a1[j], a2[j]]);
+		}
+		return deck_zip;
+	}
+
+	static set(arr: Array<any>): Array<any> {
+		return Object.keys(
+			arr.reduce(function (seen: boolean, val: any) {
+				seen[val] = true;
+				return seen;
+			}, {})
+		);
+	}
+}
