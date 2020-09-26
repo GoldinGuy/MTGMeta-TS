@@ -1,40 +1,55 @@
-# skmeans
+# K-Means-TS
 
-Super fast simple k-means and [k-means++](https://en.wikipedia.org/wiki/K-means%2B%2B) implementation for unidimiensional and multidimensional data. Works on nodejs and browser.
+[K-means](https://en.wikipedia.org/wiki/K-means_clustering) and [k-means++](https://en.wikipedia.org/wiki/K-means%2B%2B) clustering implementation for multiple dimensions of data. A Typescript rewrite of [Skmeans-JS](https://github.com/solzimer/skmeans#readme)
 
-## Installation
+## Development setup
+
+Simply clone the repository, then run
+
 ```
-npm install skmeans
+--ts-config init
 ```
+
+This will create a `tsconfig.json` file. Ensure you have the following settings:
+
+```
+"target": "ES6"
+"module": "commonjs"
+"downlevelIteration": true
+```
+
+If you are using VSCode, click `Ctrl-Shift-B` and then `tsc:watch`, which will auto-compile TS to JS
 
 ## Usage
-### NodeJS
-```javascript
-const skmeans = require("skmeans");
 
-var data = [1,12,13,4,25,21,22,3,14,5,11,2,23,24,15];
-var res = skmeans(data,3);
+### In this project - Node.js
+
+You can use this K-Means implementation by compiling it to JS, and then running it in the terminal with `node FileName.js`
+
+Alternatively, you can install the awesome VSCode extension [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner), which is very convenient
+
+### In other projects
+
+Simply import it using the following
+
+```typescript
+const KMEANS: Function = require("./kmeans/kmeans.js");
+import { KMeans } from "./kmeans/kmeans";
 ```
 
-### Browser
-```html
-<!doctype html>
-<html>
-<head>
-	<script src="skmeans.js"></script>
-</head>
-<body>
-	<script>
-		var data = [1,12,13,4,25,21,22,3,14,5,11,2,23,24,15];
-		var res = skmeans(data,3);
+Then test it!
 
-		console.log(res);
-	</script>
-</body>
-</html>
+```javascript
+var input_data: Array<Array<number>> = [
+	[1, 12, 14, 4, 25, 35, 22, 3, 14, 5, 51, 2, 23, 24, 15],
+	[7, 34, 15, 34, 17, 11, 34, 2, 35, 18, 52, 34, 33, 21],
+	[5, 19, 35, 17, 35, 18, 12, 45, 23, 56, 23, 45, 16, 3]
+];
+var output: Array<Array<number>> = KMEANS(input_data, 5, "kmeans");
 ```
 
 ## Results
+
 ```javascript
 {
 	it: 2,
@@ -45,46 +60,51 @@ var res = skmeans(data,3);
 ```
 
 ## API
-### skmeans(data,k,[centroids],[iterations])
-Calculates unidimiensional and multidimensional k-means clustering on *data*. Parameters are:
-* **data** Unidimiensional or multidimensional array of values to be clustered. for unidimiensional data, takes the form of a simple array *[1,2,3.....,n]*. For multidimensional data, takes a
-NxM array *[[1,2],[2,3]....[n,m]]*
-* **k** Number of clusters
-* **centroids** Optional. Initial centroid values. If not provided, the algorith will try to choose an apropiate ones. Alternative values can be:
-  * **"kmrand"** Cluster initialization will be random, but with extra checking, so there will no be two equal initial centroids.
-  * **"kmpp"** The algorythm will use the [k-means++](https://en.wikipedia.org/wiki/K-means%2B%2B) cluster initialization method.
-* **iterations** Optional. Maximum number of iterations. If not provided, it will be set to 10000.
-* **distance function** Optional. Custom distance function. Takes two points as arguments and returns a scalar number.
+
+### KMEANS(input_data, k, [centroids], [iterations])
+
+Calculates unidimiensional and multidimensional k-means clustering on _data_. Parameters are:
+
+- **data** Unidimiensional or multidimensional array of values to be clustered. for unidimiensional data, takes the form of a simple array _[1,2,3.....,n]_. For multidimensional data, takes a
+  NxM array _[[1,2],[2,3]....[n,m]]_
+- **k** Number of clusters
+- **centroids** Optional. Initial centroid values. If not provided, the algorith will try to choose an apropiate ones. Alternative values can be:
+  - **"kmrand"** Cluster initialization will be random, but with extra checking, so there will no be two equal initial centroids.
+  - **"kmpp"** The algorythm will use the [k-means++](https://en.wikipedia.org/wiki/K-means%2B%2B) cluster initialization method.
+- **iterations** Optional. Maximum number of iterations. If not provided, it will be set to 10000.
+- **distance function** Optional. Custom distance function. Takes two points as arguments and returns a scalar number.
 
 The function will return an object with the following data:
-* **it** The number of iterations performed until the algorithm has converged
-* **k** The cluster size
-* **centroids** The value for each centroid of the cluster
-* **idxs** The index to the centroid corresponding to each value of the data array
-* **test** Function to test new point membership
+
+- **it** The number of iterations performed until the algorithm has converged
+- **k** The cluster size
+- **centroids** The value for each centroid of the cluster
+- **idxs** The index to the centroid corresponding to each value of the data array
+- **test** Function to test new point membership
 
 ## Examples
+
 ```javascript
 // k-means with 3 clusters. Random initialization
-var res = skmeans(data,3);
+var res = skmeans(data, 3);
 
 // k-means with 3 clusters. Initial centroids provided
-var res = skmeans(data,3,[1,5,9]);
+var res = skmeans(data, 3, [1, 5, 9]);
 
 // k-means with 3 clusters. k-means++ cluster initialization
-var res = skmeans(data,3,"kmpp");
+var res = skmeans(data, 3, "kmpp");
 
 // k-means with 3 clusters. Random initialization. 10 max iterations
-var res = skmeans(data,3,null,10);
+var res = skmeans(data, 3, null, 10);
 
 // k-means with 3 clusters. Custom distance function
-var res = skmeans(data,3,null,null,(x1,x2)=>Math.abs(x1-x2));
+var res = skmeans(data, 3, null, null, (x1, x2) => Math.abs(x1 - x2));
 
 // Test new point
-var res = skmeans(data,3,null,10);
+var res = skmeans(data, 3, null, 10);
 res.test(6);
 
 // Test new point with custom distance
-var res = skmeans(data,3,null,10);
-res.test(6,(x1,x2)=>Math.abs(x1-x2));
+var res = skmeans(data, 3, null, 10);
+res.test(6, (x1, x2) => Math.abs(x1 - x2));
 ```
