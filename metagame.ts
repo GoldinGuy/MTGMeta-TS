@@ -1,17 +1,11 @@
 var fs = require("fs");
-// const skmeans = require("skmeans");
 const KMEANS: Function = require("./kmeans/kmeans.js");
-export interface Kmeans {
-	it: number;
-	k: number;
-	indexes: Array<number>;
-	centroids: Array<number>;
-}
+import { KMeans } from "./kmeans/kmeans";
 
 export interface FormatJson {
 	archetypes: Array<Archetype>;
 	format_cards: Array<FormatCard>;
-	format_versatile_cards: Array<String>;
+	format_versatile_cards: CardNames;
 	total_cards_parsed: number;
 	unique_cards_parsed: number;
 	total_decks_parsed: number;
@@ -19,7 +13,7 @@ export interface FormatJson {
 
 export interface Archetype {
 	archetype_name: String;
-	top_cards: Array<String>;
+	top_cards: CardNames;
 	metagame_percentage: String;
 	instances: number;
 	best_fit_deck: {
@@ -37,15 +31,18 @@ export interface Archetype {
 export interface FormatCard {
 	card_name: String;
 	common_archetypes: Array<[String, String]>;
-	cards_found_with: Array<String>;
+	cards_found_with: CardNames;
 	total_instances: number;
 	percentage_of_total_cards: String;
 	percentage_of_total_decks: String;
 }
 
+export type Vector = Array<number>;
 export type DeckZip = Array<[Deck, number]>;
+export type Decks = Array<Deck>;
 export type Deck = Array<Card>;
 export type Card = [number, String];
+export type CardNames = Array<String>;
 export type UniqueCard = {
 	card_name: String;
 	quantity: number;
@@ -57,17 +54,11 @@ const NUM_CLUSTERS: number = 20;
 const NUM_VERS: number = 20;
 const CARD_CUTOFF: number = 0.32;
 const FORMATS: Array<String> = ["modern", "legacy", "pauper"];
-const IGNORE: Array<String> = [
-	"Island",
-	"Forest",
-	"Mountain",
-	"Swamp",
-	"Plains"
-];
+const IGNORE: CardNames = ["Island", "Forest", "Mountain", "Swamp", "Plains"];
 
-var decks: Array<Deck> = [];
-var all_cards: Array<String> = [];
-var cards_w_ignore: Array<String> = [];
+var decks: Decks = [];
+var all_cards: CardNames = [];
+var cards_w_ignore: CardNames = [];
 var unique_cards: Array<UniqueCard> = [];
 
 fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
@@ -75,7 +66,6 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	json: string
 ) {
 	const decks_json: JSON = JSON.parse(json);
-	// console.log(JSON.Stringify(decks_json));
 	for (const i of Object.keys(decks_json)) {
 		let deck_of_cards: Deck = [];
 		for (const card of decks_json[i]["main"]) {
@@ -110,8 +100,8 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	};
 
 	// Determine "deck vectors" - translate mtg decks to a format that can be used for KM++
-	function deckToVector(input_deck: Deck): Array<number> {
-		let v: Array<number> = Array(all_cards.length).fill(0);
+	function deckToVector(input_deck: Deck): Vector {
+		let v: Vector = Array(all_cards.length).fill(0);
 		for (const [x, name] of all_cards.entries()) {
 			for (const [idx, card] of input_deck.entries()) {
 				if (card[1] == name) {
@@ -121,14 +111,12 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		}
 		return v;
 	}
-	let deck_vectors: Array<Array<number>> = [];
+	let deck_vectors: Array<Vector> = [];
 	for (const deck of decks) {
 		deck_vectors.push(deckToVector(deck));
 	}
-	// console.log(deck_vectors);
 	// Determine meta using K-Means++ clustering
-	const kmeans: Kmeans = KMEANS(deck_vectors, NUM_CLUSTERS, "kmeans++");
-	// console.log(JSON.stringify(kmeans));
+	const kmeans: KMeans = KMEANS(deck_vectors, NUM_CLUSTERS, "kmeans++");
 	const deck_zip: DeckZip = Utils.zipDeck(decks, kmeans.indexes);
 	// Translate K-Means data to a format that can be parsed
 	let card_counts: Array<[number, number]> = [];
@@ -140,9 +128,9 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		total_instances += a[1];
 	});
 
-	function mostCommonCards(deck: Deck, k: number): Array<String> {
+	function mostCommonCards(deck: Deck, k: number): CardNames {
 		deck = deck.sort((a, b) => a[0] - b[0]).reverse();
-		let card_names: Array<String> = [];
+		let card_names: CardNames = [];
 		for (const card in deck.slice(0, k)) {
 			let card_name = deck[card][1];
 			if (!IGNORE.includes(card_name)) {
@@ -182,14 +170,14 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	// FOR EACH CLUSTER
 	for (const i in [...Array(NUM_CLUSTERS).keys()]) {
 		// Define cluster - Instead of taking the intersection of all the decks in a cluster, which could lead to archetype staples being excluded due to variance, this method involves taking every deck in the cluster and finding the most common cards (or archetype staples)
-		let card_set: Array<Array<String>> = [];
+		let card_set: Array<CardNames> = [];
 		let deck_items: Array<[Deck, number]> = decksByIdx(parseInt(i));
 		for (const deck_item of deck_items) {
 			card_set.push(Utils.set(mostCommonCards(deck_item[0], 40)));
 		}
-		let card_list: Array<string> = Array.prototype.concat.apply([], card_set);
+		let card_list: CardNames = Array.prototype.concat.apply([], card_set);
 		let count_cards = card_list.reduce((a, b) => {
-			a[b] = (a[b] || 0) + 1;
+			a[b.toString()] = (a[b.toString()] || 0) + 1;
 			return a;
 		}, {});
 		let sorted_cards = Object.keys(count_cards)
@@ -197,7 +185,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 			.sort(function (a, b) {
 				return b[1] - a[1];
 			});
-		let cluster: Array<String> = [];
+		let cluster: CardNames = [];
 		for (const card_item of sorted_cards.slice(0, 20)) {
 			cluster.push(card_item[0]);
 		}
@@ -237,19 +225,19 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	function closestCards(a_card: String, b: number) {
 		const a_card_app = apparationRatio(a_card)[0];
 		let distances: Array<[String, number]> = [];
-		let temp: Array<String> = [];
+		let seen: CardNames = [];
 		for (const name of cards_w_ignore) {
-			if (!temp.includes(name)) {
+			if (!seen.includes(name)) {
 				let dist = Utils.distance(
 					apparationRatio(name.toString())[0],
 					a_card_app
 				);
-				temp.push(name);
+				seen.push(name);
 				distances.push([name, dist]);
 			}
 		}
 		distances.sort((a, b) => a[1] - b[1]);
-		let closest_cards: Array<String> = [];
+		let closest_cards: CardNames = [];
 		for (const [card_name, dist] of distances.slice(0, b)) {
 			if (card_name != a_card) {
 				closest_cards.push(card_name);
@@ -287,10 +275,10 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 
 	function versatileCards(k: number) {
 		let variances: Array<[String, number]> = [];
-		let temp: Array<String> = [];
+		let seen: CardNames = [];
 		for (const name of cards_w_ignore) {
-			if (!temp.includes(name)) {
-				temp.push(name);
+			if (!seen.includes(name)) {
+				seen.push(name);
 				let versatility = 0;
 				for (let x of apparationRatio(name)[0]) {
 					if (x > 0) {
@@ -301,7 +289,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 			}
 		}
 		variances.sort((a, b) => b[1] - a[1]);
-		let versatile_cards: Array<String> = [];
+		let versatile_cards: CardNames = [];
 		for (const [card_name, versatility] of variances.slice(0, k)) {
 			versatile_cards.push(card_name);
 		}
@@ -346,8 +334,8 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 });
 
 class Utils {
-	static cardNames(deck: Deck): Array<String> {
-		let names: Array<String> = [];
+	static cardNames(deck: Deck): CardNames {
+		let names: CardNames = [];
 		for (const card in deck) {
 			names.push(card[1]);
 		}
@@ -375,7 +363,7 @@ class Utils {
 		return Math.sqrt(d);
 	}
 
-	static zipDeck(a1: Array<Deck>, a2: Array<number>): DeckZip {
+	static zipDeck(a1: Decks, a2: Array<number>): DeckZip {
 		let deck_zip: DeckZip = [];
 		for (let j = 0; j < a1.length; j++) {
 			deck_zip.push([a1[j], a2[j]]);

@@ -1,27 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
-// const skmeans = require("skmeans");
 const KMEANS = require("./kmeans/kmeans.js");
 // globals
 const NUM_CLUSTERS = 20;
 const NUM_VERS = 20;
 const CARD_CUTOFF = 0.32;
 const FORMATS = ["modern", "legacy", "pauper"];
-const IGNORE = [
-    "Island",
-    "Forest",
-    "Mountain",
-    "Swamp",
-    "Plains"
-];
+const IGNORE = ["Island", "Forest", "Mountain", "Swamp", "Plains"];
 var decks = [];
 var all_cards = [];
 var cards_w_ignore = [];
 var unique_cards = [];
 fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, json) {
     const decks_json = JSON.parse(json);
-    // console.log(JSON.Stringify(decks_json));
     for (const i of Object.keys(decks_json)) {
         let deck_of_cards = [];
         for (const card of decks_json[i]["main"]) {
@@ -70,10 +62,8 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
     for (const deck of decks) {
         deck_vectors.push(deckToVector(deck));
     }
-    // console.log(deck_vectors);
     // Determine meta using K-Means++ clustering
     const kmeans = KMEANS(deck_vectors, NUM_CLUSTERS, "kmeans++");
-    // console.log(JSON.stringify(kmeans));
     const deck_zip = Utils.zipDeck(decks, kmeans.indexes);
     // Translate K-Means data to a format that can be parsed
     let card_counts = [];
@@ -130,7 +120,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
         }
         let card_list = Array.prototype.concat.apply([], card_set);
         let count_cards = card_list.reduce((a, b) => {
-            a[b] = (a[b] || 0) + 1;
+            a[b.toString()] = (a[b.toString()] || 0) + 1;
             return a;
         }, {});
         let sorted_cards = Object.keys(count_cards)
@@ -174,11 +164,11 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
     function closestCards(a_card, b) {
         const a_card_app = apparationRatio(a_card)[0];
         let distances = [];
-        let temp = [];
+        let seen = [];
         for (const name of cards_w_ignore) {
-            if (!temp.includes(name)) {
+            if (!seen.includes(name)) {
                 let dist = Utils.distance(apparationRatio(name.toString())[0], a_card_app);
-                temp.push(name);
+                seen.push(name);
                 distances.push([name, dist]);
             }
         }
@@ -216,10 +206,10 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
     }
     function versatileCards(k) {
         let variances = [];
-        let temp = [];
+        let seen = [];
         for (const name of cards_w_ignore) {
-            if (!temp.includes(name)) {
-                temp.push(name);
+            if (!seen.includes(name)) {
+                seen.push(name);
                 let versatility = 0;
                 for (let x of apparationRatio(name)[0]) {
                     if (x > 0) {
