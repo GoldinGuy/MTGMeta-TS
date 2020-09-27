@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
-const KMEANS = require("./kmeans/kmeans.js");
+const KMEANS = require("./K-Means-TS/kmeans");
 // globals
 const NUM_CLUSTERS = 20;
 const NUM_VERS = 20;

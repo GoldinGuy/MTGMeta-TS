@@ -1,6 +1,6 @@
 var fs = require("fs");
-import { KMeans } from "./kmeans/kmeans";
-const KMEANS: Function = require("./kmeans/kmeans.js");
+import { KMeans } from "./K-Means-TS/kmeans";
+const KMEANS: Function = require("./K-Means-TS/kmeans");
 
 export interface FormatJson {
 	archetypes: Array<Archetype>;
