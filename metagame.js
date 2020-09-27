@@ -221,8 +221,8 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
         }
         variances.sort((a, b) => b[1] - a[1]);
         let versatile_cards = [];
-        for (const [card_name, versatility] of variances.slice(0, k)) {
-            versatile_cards.push(card_name);
+        for (const vers_card of variances.slice(0, k)) {
+            versatile_cards.push(vers_card[0]);
         }
         return versatile_cards;
     }
