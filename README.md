@@ -1,4 +1,5 @@
 # MTGMeta-TS
+
 🃏 Determine the MTG metagame using [k-means++](https://en.wikipedia.org/wiki/K-means%2B%2B) clustering
 
 Uses [K-Means-TS](https://github.com/GoldinGuy/K-Means-TS) as a submodule
@@ -29,12 +30,12 @@ Alternatively, you can install the awesome VSCode extension [Code Runner](https:
 
 ## Contributing
 
-1. Fork K-Means-TS [here](https://github.com/GoldinGuy/K-Means-TS/fork)
+1. Fork K-Means-TS [here](https://github.com/GoldinGuy/MTGMeta-TS/fork)
 2. Create a feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request 
+5. Create a new Pull Request
 
 ## Meta
 
-Adapted from [MTGMeta-PY](https://github.com/GoldinGuy/MTGMeta-PY) (which itself is based on [@StrikingLoo's](https://github.com/StrikingLoo) [MTG-Recommender](https://github.com/StrikingLoo/MtGRecommender) by [@GoldinGuy](https://github.com/GoldinGuy)
+Adapted from [MTGMeta-PY](https://github.com/GoldinGuy/MTGMeta-PY) by [@GoldinGuy](https://github.com/GoldinGuy) (which itself is based on [@StrikingLoo's](https://github.com/StrikingLoo) [MTG-Recommender](https://github.com/StrikingLoo/MtGRecommender)
