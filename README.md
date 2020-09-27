@@ -1,6 +1,8 @@
 # MTGMeta-TS
 🃏 Determine the MTG metagame using [k-means++](https://en.wikipedia.org/wiki/K-means%2B%2B) clustering
 
+Uses [K-Means-TS](https://github.com/GoldinGuy/K-Means-TS) as a submodule
+
 ## Development setup
 
 Simply clone the repository, then run
