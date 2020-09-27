@@ -33,7 +33,7 @@ Alternatively, you can install the awesome VSCode extension [Code Runner](https:
 2. Create a feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request -->
+5. Create a new Pull Request 
 
 ## Meta
 
