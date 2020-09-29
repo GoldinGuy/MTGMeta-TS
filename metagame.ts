@@ -7,6 +7,7 @@ export interface FormatJson {
 	format_cards: Array<FormatCard>;
 	format_versatile_cards: CardNames;
 	total_cards_parsed: number;
+	cards_parsed_by_deck: number;
 	unique_cards_parsed: number;
 	total_decks_parsed: number;
 }
@@ -50,16 +51,17 @@ export type UniqueCard = {
 };
 
 // globals
-const NUM_CLUSTERS: number = 20;
+// const NUM_CLUSTERS: number = 20;
 const NUM_VERS: number = 20;
 const CARD_CUTOFF: number = 0.32;
-const FORMATS: Array<String> = ["modern", "legacy", "pauper"];
+const FORMATS: Array<String> = ["legacy", "modern", "pauper"];
 const IGNORE: CardNames = ["Island", "Forest", "Mountain", "Swamp", "Plains"];
 
+var NUM_CLUSTERS: number = 20;
 var decks: Decks = [];
-var all_cards: CardNames = [];
-var cards_w_ignore: CardNames = [];
+var vectored_card_names: CardNames = [];
 var unique_cards: Array<UniqueCard> = [];
+var total_cards: number = 0;
 
 fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	err: String,
@@ -71,20 +73,20 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		for (const card of decks_json[i]["main"]) {
 			// initialize deck dict, determine card data
 			deck_of_cards.push([card["quantity"], card["name"]]);
-			all_cards.push(card["name"]);
+			total_cards += card["quantity"];
+			vectored_card_names.push(card["name"]);
 			if (!IGNORE.some(c => card["name"].includes(c))) {
-				cards_w_ignore.push(card["name"]);
-			}
-			let idx = unique_cards.findIndex(c => c.card_name.includes(card.name));
-			if (idx === -1) {
-				unique_cards.push({
-					card_name: card["name"],
-					quantity: card["quantity"],
-					decks_in: 1
-				});
-			} else if (!IGNORE.some(c => card.name.includes(c))) {
-				unique_cards[idx].quantity += card.quantity;
-				unique_cards[idx].decks_in += 1;
+				let idx = unique_cards.findIndex(c => c.card_name.includes(card.name));
+				if (idx === -1) {
+					unique_cards.push({
+						card_name: card["name"],
+						quantity: card["quantity"],
+						decks_in: 1
+					});
+				} else {
+					unique_cards[idx].quantity += card["quantity"];
+					unique_cards[idx].decks_in += 1;
+				}
 			}
 		}
 		decks.push(deck_of_cards);
@@ -94,15 +96,16 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		archetypes: [],
 		format_cards: [],
 		format_versatile_cards: [],
-		total_cards_parsed: all_cards.length,
+		total_cards_parsed: total_cards,
+		cards_parsed_by_deck: vectored_card_names.length,
 		unique_cards_parsed: unique_cards.length,
 		total_decks_parsed: decks.length
 	};
 
 	// Determine "deck vectors" - translate mtg decks to a format that can be used for KM++
 	function deckToVector(input_deck: Deck): Vector {
-		let v: Vector = Array(all_cards.length).fill(0);
-		for (const [x, name] of all_cards.entries()) {
+		let v: Vector = Array(vectored_card_names.length).fill(0);
+		for (const [x, name] of vectored_card_names.entries()) {
 			for (const card of input_deck.entries()) {
 				if (card[1][1] == name) {
 					v[x] += card[0];
@@ -114,6 +117,14 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	let deck_vectors: Array<Vector> = [];
 	for (const deck of decks) {
 		deck_vectors.push(deckToVector(deck));
+	}
+
+	let vectored_k: number = Math.round(
+		vectored_card_names.length / decks.length
+	);
+	if (vectored_k > 3) {
+		NUM_CLUSTERS = vectored_k;
+		console.log(NUM_CLUSTERS);
 	}
 	// Determine meta using K-Means++ clustering
 	const kmeans: KMeans = KMEANS(deck_vectors, NUM_CLUSTERS, "kmeans++");
@@ -225,16 +236,12 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	function closestCards(a_card: String, b: number) {
 		const a_card_app = apparationRatio(a_card)[0];
 		let distances: Array<[String, number]> = [];
-		let seen: CardNames = [];
-		for (const name of cards_w_ignore) {
-			if (!seen.includes(name)) {
-				let dist = Utils.distance(
-					apparationRatio(name.toString())[0],
-					a_card_app
-				);
-				seen.push(name);
-				distances.push([name, dist]);
-			}
+		for (const unique_card of unique_cards) {
+			let dist = Utils.distance(
+				apparationRatio(unique_card.card_name)[0],
+				a_card_app
+			);
+			distances.push([unique_card.card_name, dist]);
 		}
 		distances.sort((a, b) => a[1] - b[1]);
 		let closest_cards: CardNames = [];
@@ -275,18 +282,14 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 
 	function versatileCards(k: number) {
 		let variances: Array<[String, number]> = [];
-		let seen: CardNames = [];
-		for (const name of cards_w_ignore) {
-			if (!seen.includes(name)) {
-				seen.push(name);
-				let versatility = 0;
-				for (let x of apparationRatio(name)[0]) {
-					if (x > 0) {
-						versatility += 1;
-					}
+		for (const unique_card of unique_cards) {
+			let versatility = 0;
+			for (let x of apparationRatio(unique_card.card_name)[0]) {
+				if (x > 0) {
+					versatility += 1;
 				}
-				variances.push([name, versatility]);
 			}
+			variances.push([unique_card.card_name, versatility]);
 		}
 		variances.sort((a, b) => b[1] - a[1]);
 		let versatile_cards: CardNames = [];
@@ -308,11 +311,10 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 				common_archetypes: commonDecks(unique_card.card_name),
 				cards_found_with: closestCards(unique_card.card_name, 7),
 				total_instances: unique_card.quantity,
-				percentage_of_total_cards:
-					((unique_card.quantity / cards_w_ignore.length) * 100).toFixed(2) +
-					"%",
 				percentage_of_total_decks:
-					((unique_card.decks_in / decks.length) * 100).toFixed(2) + "%"
+					((unique_card.decks_in / decks.length) * 100).toFixed(2) + "%",
+				percentage_of_total_cards:
+					((unique_card.quantity / total_cards) * 100).toFixed(2) + "%"
 			};
 			format_json["format_cards"].push(format_card);
 		}
