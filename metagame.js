@@ -60,6 +60,11 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
     for (const deck of decks) {
         deck_vectors.push(deckToVector(deck));
     }
+    let vectored_k = Math.round(unique_cards.length / 30);
+    if (vectored_k > 3) {
+        NUM_CLUSTERS = vectored_k;
+        console.log(NUM_CLUSTERS);
+    }
     const kmeans = KMEANS(deck_vectors, NUM_CLUSTERS, "kmeans++");
     const deck_zip = Utils.zipDeck(decks, kmeans.indexes);
     let card_counts = [];

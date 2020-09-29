@@ -119,9 +119,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		deck_vectors.push(deckToVector(deck));
 	}
 
-	let vectored_k: number = Math.round(
-		vectored_card_names.length / decks.length
-	);
+	let vectored_k: number = Math.round(unique_cards.length / 30);
 	if (vectored_k > 3) {
 		NUM_CLUSTERS = vectored_k;
 		console.log(NUM_CLUSTERS);
