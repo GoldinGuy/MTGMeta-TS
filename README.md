@@ -38,4 +38,4 @@ Alternatively, you can install the awesome VSCode extension [Code Runner](https:
 
 ## Meta
 
-Adapted from [MTGMeta-PY](https://github.com/GoldinGuy/MTGMeta-PY) by [@GoldinGuy](https://github.com/GoldinGuy) (which itself is based on [@StrikingLoo's](https://github.com/StrikingLoo) [MTG-Recommender](https://github.com/StrikingLoo/MtGRecommender)
+Adapted from [MTGMeta-PY](https://github.com/GoldinGuy/MTGMeta-PY) by [@GoldinGuy](https://github.com/GoldinGuy) (which itself is based on [@StrikingLoo's](https://github.com/StrikingLoo) [MTG-Recommender](https://github.com/StrikingLoo/MtGRecommender))
