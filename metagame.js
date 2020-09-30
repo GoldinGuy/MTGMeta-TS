@@ -4,7 +4,13 @@ var fs = require("fs");
 const KMEANS = require("./K-Means-TS/kmeans");
 const NUM_VERS = 20;
 const CARD_CUTOFF = 0.32;
-const FORMATS = ["legacy", "modern", "pauper"];
+const FORMATS = [
+    "pioneer",
+    "standard",
+    "pauper",
+    "legacy",
+    "modern"
+];
 const IGNORE = ["Island", "Forest", "Mountain", "Swamp", "Plains"];
 var NUM_CLUSTERS = 20;
 var decks = [];
@@ -16,21 +22,23 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
     for (const i of Object.keys(decks_json)) {
         let deck_of_cards = [];
         for (const card of decks_json[i]["main"]) {
-            deck_of_cards.push([card["quantity"], card["name"]]);
-            total_cards += card["quantity"];
-            vectored_card_names.push(card["name"]);
-            if (!IGNORE.some(c => card["name"].includes(c))) {
-                let idx = unique_cards.findIndex(c => c.card_name.includes(card.name));
-                if (idx === -1) {
-                    unique_cards.push({
-                        card_name: card["name"],
-                        quantity: card["quantity"],
-                        decks_in: 1
-                    });
-                }
-                else {
-                    unique_cards[idx].quantity += card["quantity"];
-                    unique_cards[idx].decks_in += 1;
+            if (card["name"] != null) {
+                deck_of_cards.push([card["quantity"], card["name"]]);
+                total_cards += card["quantity"];
+                vectored_card_names.push(card["name"]);
+                if (!IGNORE.some(c => card["name"].includes(c))) {
+                    let idx = unique_cards.findIndex(c => c.card_name.includes(card.name));
+                    if (idx === -1) {
+                        unique_cards.push({
+                            card_name: card["name"],
+                            quantity: card["quantity"],
+                            decks_in: 1
+                        });
+                    }
+                    else {
+                        unique_cards[idx].quantity += card["quantity"];
+                        unique_cards[idx].decks_in += 1;
+                    }
                 }
             }
         }

@@ -1,3 +1,5 @@
+// set NODE_OPTIONS = "--max-old-space-size=6144"; // increase to 6gb
+
 var fs = require("fs");
 import { KMeans } from "./K-Means-TS/kmeans";
 const KMEANS: Function = require("./K-Means-TS/kmeans");
@@ -54,7 +56,13 @@ export type UniqueCard = {
 // const NUM_CLUSTERS: number = 20;
 const NUM_VERS: number = 20;
 const CARD_CUTOFF: number = 0.32;
-const FORMATS: Array<String> = ["legacy", "modern", "pauper"];
+const FORMATS: Array<String> = [
+	"pioneer",
+	"standard",
+	"pauper",
+	"legacy",
+	"modern"
+];
 const IGNORE: CardNames = ["Island", "Forest", "Mountain", "Swamp", "Plains"];
 
 var NUM_CLUSTERS: number = 20;
@@ -72,20 +80,24 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		let deck_of_cards: Deck = [];
 		for (const card of decks_json[i]["main"]) {
 			// initialize deck dict, determine card data
-			deck_of_cards.push([card["quantity"], card["name"]]);
-			total_cards += card["quantity"];
-			vectored_card_names.push(card["name"]);
-			if (!IGNORE.some(c => card["name"].includes(c))) {
-				let idx = unique_cards.findIndex(c => c.card_name.includes(card.name));
-				if (idx === -1) {
-					unique_cards.push({
-						card_name: card["name"],
-						quantity: card["quantity"],
-						decks_in: 1
-					});
-				} else {
-					unique_cards[idx].quantity += card["quantity"];
-					unique_cards[idx].decks_in += 1;
+			if (card["name"] != null) {
+				deck_of_cards.push([card["quantity"], card["name"]]);
+				total_cards += card["quantity"];
+				vectored_card_names.push(card["name"]);
+				if (!IGNORE.some(c => card["name"].includes(c))) {
+					let idx = unique_cards.findIndex(c =>
+						c.card_name.includes(card.name)
+					);
+					if (idx === -1) {
+						unique_cards.push({
+							card_name: card["name"],
+							quantity: card["quantity"],
+							decks_in: 1
+						});
+					} else {
+						unique_cards[idx].quantity += card["quantity"];
+						unique_cards[idx].decks_in += 1;
+					}
 				}
 			}
 		}
