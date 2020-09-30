@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
-const NUM_VERS = 20;
-const CARD_CUTOFF = 0.32;
+const TOP_VERS = 25;
 const FORMATS = ["commander", "brawl"];
 const IGNORE = ["Island", "Forest", "Mountain", "Swamp", "Plains"];
 var multiplayer_decks = [];
@@ -77,11 +76,25 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
     }
     commanders.sort((a, b) => b.instances - a.instances);
     console.log(JSON.stringify(commanders));
+    function getTopCards(commander) {
+        let topCards = [];
+        for (const card of commander.cards.slice(0, 40)) {
+            topCards.push([
+                card.card_name,
+                ((card.quantity / commander.instances) * 100).toFixed(2) +
+                    "%" +
+                    " of " +
+                    commander.instances +
+                    " decks"
+            ]);
+        }
+        return topCards;
+    }
     for (const commander of commanders) {
         commander.cards.sort((a, b) => b.quantity - a.quantity);
         let multiplayerDeck = {
             commander: commander.card_name,
-            top_cards: commander.cards.slice(0, 40),
+            top_cards: getTopCards(commander),
             metagame_percentage: ((commander.instances / total_decks) * 100).toFixed(2) + "%",
             instances: commander.instances,
             best_fit_deck: { main: [], sb: [] }
@@ -104,13 +117,38 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (err, j
                 }
             }
         }
+        multiplayer_decks.push(multiplayerDeck);
     }
-    let format_json = {
-        commanders: [],
-        format_cards: [],
-        format_versatile_cards: [],
+    function versatileCards(k) {
+        let versatile_cards = [];
+        let unique = unique_cards.sort((a, b) => b.decks_in - a.decks_in);
+        for (const unique_card of unique.splice(0, k)) {
+            versatile_cards.push(unique_card.card_name);
+        }
+        return versatile_cards;
+    }
+    function formatCards(k) {
+        let formatCards = [];
+        let unique = unique_cards.sort((a, b) => b.quantity - a.quantity);
+        for (const unique_card of unique.splice(0, k)) {
+            formatCards.push({
+                card_name: unique_card.card_name,
+                total_instances: unique_card.quantity,
+                percentage_of_total_cards: ((unique_card.quantity / total_cards) * 100).toFixed(2) + "%",
+                percentage_of_total_decks: ((unique_card.quantity / total_decks) * 100).toFixed(2) + "%"
+            });
+        }
+        return formatCards;
+    }
+    let multiplayer_format_json = {
+        commander_decks: multiplayer_decks,
+        format_top_cards: formatCards(TOP_VERS),
+        format_versatile_cards: versatileCards(TOP_VERS),
         total_cards_parsed: total_cards,
         unique_cards_parsed: unique_cards.length,
-        total_decks_parsed: decks.length
+        total_decks_parsed: total_decks
     };
+    multiplayer_format_json["commander_decks"].sort((a, b) => b.instances - a.instances);
+    multiplayer_format_json["format_top_cards"].sort((a, b) => b.total_instances - a.total_instances);
+    fs.writeFile("output_json/" + FORMATS[0] + ".json", JSON.stringify(multiplayer_format_json, null, 4), "utf8", function (err, data) { });
 });
