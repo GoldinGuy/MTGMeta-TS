@@ -243,7 +243,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		console.log(JSON.stringify(deck_archetype.top_cards));
 	}
 
-	function closestCards(a_card: String, b: number) {
+	function closestCards(a_card: String, b: number): CardNames {
 		const a_card_app = apparationRatio(a_card)[0];
 		let distances: Array<[String, number]> = [];
 		for (const unique_card of unique_cards) {
@@ -263,7 +263,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		return closest_cards;
 	}
 
-	function commonDecks(card_name: String) {
+	function commonDecks(card_name: String): Array<[String, String]> {
 		let common_decks: Array<[String, String]> = [];
 		let i: number = 0;
 		while (i < NUM_CLUSTERS) {
@@ -290,7 +290,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		return common_decks.slice(0, 3);
 	}
 
-	function versatileCards(k: number) {
+	function versatileCards(k: number): CardNames {
 		let variances: Array<[String, number]> = [];
 		for (const unique_card of unique_cards) {
 			let versatility = 0;
