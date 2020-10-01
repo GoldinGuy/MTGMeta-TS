@@ -57,7 +57,7 @@ fs.readFile("../output_json/" + FORMAT + ".json", "utf8", async function (
 		}
 	];
 	await inquirer.prompt(confirm_update_json).then(confirm => {
-		if (confirm.toUpperCase() === "Y") {
+		if (confirm.toString().toUpperCase() === "Y") {
 			fs.writeFile(
 				"output_json/" + FORMAT + ".json",
 				JSON.stringify(format_json, null, 4),

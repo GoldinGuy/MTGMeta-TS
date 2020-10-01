@@ -1,5 +1,4 @@
 // set NODE_OPTIONS = "--max-old-space-size=6144"; // increase to 6gb
-
 var fs = require("fs");
 import { KMeans } from "./K-Means-TS/kmeans";
 const KMEANS: Function = require("./K-Means-TS/kmeans");
@@ -15,39 +14,39 @@ export interface FormatJson {
 }
 
 export interface Archetype {
-	archetype_name: String;
+	archetype_name: string;
 	top_cards: CardNames;
-	metagame_percentage: String;
+	metagame_percentage: string;
 	instances: number;
 	best_fit_deck: {
 		main: Array<{
-			name: String;
+			name: string;
 			quantity: number;
 		}>;
 		sb: Array<{
-			name: String;
+			name: string;
 			quantity: number;
 		}>;
 	};
 }
 
 export interface FormatCard {
-	card_name: String;
-	common_archetypes: Array<[String, String]>;
+	card_name: string;
+	common_archetypes: Array<[string, string]>;
 	cards_found_with: CardNames;
 	total_instances: number;
-	percentage_of_total_cards: String;
-	percentage_of_total_decks: String;
+	percentage_of_total_cards: string;
+	percentage_of_total_decks: string;
 }
 
 export type Vector = Array<number>;
 export type DeckZip = Array<[Deck, number]>;
 export type Decks = Array<Deck>;
 export type Deck = Array<Card>;
-export type Card = [number, String];
-export type CardNames = Array<String>;
+export type Card = [number, string];
+export type CardNames = Array<string>;
 export type UniqueCard = {
-	card_name: String;
+	card_name: string;
 	quantity: number;
 	decks_in: number;
 };
@@ -56,7 +55,7 @@ export type UniqueCard = {
 // const NUM_CLUSTERS: number = 20;
 const NUM_VERS: number = 20;
 const CARD_CUTOFF: number = 0.32;
-const FORMATS: Array<String> = [
+const FORMATS: Array<string> = [
 	"pioneer",
 	"standard",
 	"pauper",
@@ -72,7 +71,7 @@ var unique_cards: Array<UniqueCard> = [];
 var total_cards: number = 0;
 
 fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
-	err: String,
+	err: string,
 	json: string
 ) {
 	const decks_json: JSON = JSON.parse(json);
@@ -171,11 +170,11 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		return indexes;
 	}
 
-	function apparationRatio(card_name: String): [Array<number>, number] {
+	function apparationRatio(card_name: string): [Array<number>, number] {
 		let label_count: Array<number> = Array(NUM_CLUSTERS).fill(0);
 		for (const deck of deck_zip.entries()) {
 			for (const card of deck[1][0]) {
-				if (card[1].includes(card_name.toString())) {
+				if (card[1].includes(card_name)) {
 					label_count[deck[1][1]] += 1;
 				}
 			}
@@ -198,7 +197,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		}
 		let card_list: CardNames = Array.prototype.concat.apply([], card_set);
 		let count_cards = card_list.reduce((a, b) => {
-			a[b.toString()] = (a[b.toString()] || 0) + 1;
+			a[b] = (a[b] || 0) + 1;
 			return a;
 		}, {});
 		let sorted_cards = Object.keys(count_cards)
@@ -243,9 +242,9 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		console.log(JSON.stringify(deck_archetype.top_cards));
 	}
 
-	function closestCards(a_card: String, b: number): CardNames {
+	function closestCards(a_card: string, b: number): CardNames {
 		const a_card_app = apparationRatio(a_card)[0];
-		let distances: Array<[String, number]> = [];
+		let distances: Array<[string, number]> = [];
 		for (const unique_card of unique_cards) {
 			let dist = Utils.distance(
 				apparationRatio(unique_card.card_name)[0],
@@ -263,8 +262,8 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		return closest_cards;
 	}
 
-	function commonDecks(card_name: String): Array<[String, String]> {
-		let common_decks: Array<[String, String]> = [];
+	function commonDecks(card_name: string): Array<[string, string]> {
+		let common_decks: Array<[string, string]> = [];
 		let i: number = 0;
 		while (i < NUM_CLUSTERS) {
 			let decks_w_card: number = 0;
@@ -291,7 +290,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	}
 
 	function versatileCards(k: number): CardNames {
-		let variances: Array<[String, number]> = [];
+		let variances: Array<[string, number]> = [];
 		for (const unique_card of unique_cards) {
 			let versatility = 0;
 			for (let x of apparationRatio(unique_card.card_name)[0]) {
@@ -341,7 +340,7 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		"output_json/" + FORMATS[0] + ".json",
 		JSON.stringify(format_json, null, 4),
 		"utf8",
-		function (err: String, data: String) {}
+		function (err: string, data: string) {}
 	);
 });
 
@@ -354,12 +353,12 @@ class Utils {
 		return names;
 	}
 
-	static quantityOfCard(name: String): number {
+	static quantityOfCard(name: string): number {
 		let q: number = 0;
 		for (const i in unique_cards) {
-			let card_name: String = unique_cards[i].card_name;
+			let card_name: string = unique_cards[i].card_name;
 			if (card_name == name) {
-				if (card_name.includes(name.toString())) {
+				if (card_name.includes(name)) {
 					q = unique_cards[i].quantity;
 				}
 			}
