@@ -1,4 +1,3 @@
-// set NODE_OPTIONS = "--max-old-space-size=6144"; // increase to 6gb
 var fs = require("fs");
 
 export interface MultiPlayerFormatJson {
@@ -14,7 +13,7 @@ export interface MultiPlayerDeck {
 	commander: String;
 	metagame_percentage: String;
 	instances: number;
-	top_cards: Array<[String, String]>;
+	top_cards: TopCards;
 	best_fit_deck: {
 		main: Array<{
 			name: String;
@@ -29,8 +28,8 @@ export interface MultiPlayerDeck {
 
 export interface FormatCard {
 	card_name: String;
-	// common_decks: Array<[String, String]>;
-	// cards_found_with: CardNames;
+	common_decks: Array<[String, String]>;
+	cards_found_with: CardNames;
 	total_instances: number;
 	percentage_of_total_cards: String;
 	percentage_of_total_decks: String;
@@ -51,11 +50,12 @@ export type UniqueCard = {
 	quantity: number;
 	decks_in: number;
 };
+export type TopCards = Array<[String, String]>;
 export type CardNames = Array<String>;
 
 // globals
 const NUM_SELECTION: number = 50;
-const FORMATS: Array<String> = ["brawl", "commander"];
+const FORMATS: Array<String> = ["commander", "brawl"];
 const IGNORE: CardNames = ["Island", "Forest", "Mountain", "Swamp", "Plains"];
 
 var multiplayer_decks: Array<MultiPlayerDeck> = [];
@@ -146,8 +146,8 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 	commanders.sort((a, b) => b.instances - a.instances);
 	console.log(JSON.stringify(commanders));
 
-	function getTopCards(commander: Commander): Array<[String, String]> {
-		let topCards: Array<[String, String]> = [];
+	function getTopCards(commander: Commander): TopCards {
+		let topCards: TopCards = [];
 		for (const card of commander.cards.slice(0, NUM_SELECTION)) {
 			if (card.card_name != commander.card_name) {
 				topCards.push([
@@ -195,59 +195,83 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 		multiplayer_decks.push(multiplayerDeck);
 	}
 
-	// function closestCards(a_card: String, b: number): CardNames {
-	// 	const a_card_app = apparationRatio(a_card)[0];
-	// 	let distances: Array<[String, number]> = [];
-	// 	for (const unique_card of unique_cards) {
-	// 		let dist = Utils.distance(
-	// 			apparationRatio(unique_card.card_name)[0],
-	// 			a_card_app
-	// 		);
-	// 		distances.push([unique_card.card_name, dist]);
-	// 	}
-	// 	distances.sort((a, b) => a[1] - b[1]);
-	// 	let closest_cards: CardNames = [];
-	// 	for (const dist of distances.slice(0, b)) {
-	// 		if (dist[0] != a_card) {
-	// 			closest_cards.push(dist[0]);
-	// 		}
-	// 	}
-	// 	return closest_cards;
-	// }
+	function apparationRatio(a_card: String): [Array<number>, number] {
+		let label_count: Array<number> = Array(commanders.length).fill(0);
+		for (let i = 0; i < commanders.length; i++) {
+			for (const card of commanders[i].cards) {
+				if (card.card_name.includes(a_card.toString())) {
+					label_count[i] = card.quantity;
+				}
+			}
+		}
+		let total_apps = label_count.reduce((a, b) => a + b, 0);
+		let labels: Array<number> = [];
+		for (const count of label_count) {
+			labels.push(count / total_apps);
+		}
+		return [labels, total_apps];
+	}
 
-	// function commonDecks(card_name: String): Array<[String, String]> {
-	// 	let common_decks: Array<[String, String]> = [];
-	// 	let i: number = 0;
-	// 	while (i < multiplayer_decks.length) {
-	// 		let decks_w_card: number = 0;
-	// 		if (multiplayer_decks[i].top_cards.some(card => card[0] === card_name)) {
-	// 			decks_w_card += 1;
-	// 		}
-	// 		let percent: number = Math.min(
-	// 			(decks_w_card / multiplayer_decks.length) * 100,
-	// 			100
-	// 		);
-	// 		if (percent > CARD_CUTOFF * 100) {
-	// 			common_decks.push([
-	// 				format_json["archetypes"][i]["archetype_name"],
-	// 				percent.toFixed(2) + "% of " + decks.length + " decks"
-	// 			]);
-	// 		}
-	// 		i += 1;
-	// 	}
-	// 	common_decks.sort(
-	// 		(a, b) =>
-	// 			parseFloat(b[1].replace("%", "")) - parseFloat(a[1].replace("%", ""))
-	// 	);
-	// 	return common_decks.slice(0, 3);
-	// }
+	function distance(x: Array<number>, y: Array<number>): number {
+		let d: number = 0.0;
+		for (let [z, elem] of x.entries()) {
+			d += (elem - y[z]) * (elem - y[z]);
+		}
+		return Math.sqrt(d);
+	}
+
+	function closestCards(a_card: String, b: number): CardNames {
+		const a_card_app = apparationRatio(a_card)[0];
+		let distances: Array<[String, number]> = [];
+		for (const unique_card of unique_cards) {
+			let dist = distance(
+				apparationRatio(unique_card.card_name)[0],
+				a_card_app
+			);
+			distances.push([unique_card.card_name, dist]);
+		}
+		distances.sort((a, b) => a[1] - b[1]);
+		let closest_cards: CardNames = [];
+		for (const dist of distances.slice(0, b)) {
+			if (dist[0] != a_card) {
+				closest_cards.push(dist[0]);
+			}
+		}
+		return closest_cards;
+	}
+
+	function commonDecks(card_name: String): Array<[String, String]> {
+		let common_decks: Array<[String, String]> = [];
+		for (const commander of commanders) {
+			let idx = commander.cards.findIndex(c =>
+				c.card_name.includes(card_name.toString())
+			);
+			if (idx != -1) {
+				let percent: number = Math.min(
+					(commander.cards[idx].quantity / commander.instances) * 100,
+					100
+				);
+				if (percent > 40 && commander.instances > 3) {
+					common_decks.push([
+						commander.card_name,
+						percent.toFixed(2) + "% of " + commander.instances + " decks"
+					]);
+				}
+			}
+		}
+		common_decks.sort(
+			(a, b) =>
+				parseFloat(b[1].replace("%", "")) - parseFloat(a[1].replace("%", ""))
+		);
+		return common_decks.slice(0, 3);
+	}
 
 	function versatileCards(k: number): CardNames {
 		let versatile_cards: CardNames = [];
-		let unique: Array<UniqueCard> = unique_cards.sort(
+		let cards: Array<UniqueCard> = unique_cards.sort(
 			(a, b) => b.decks_in - a.decks_in
 		);
-		for (const unique_card of unique.splice(0, k)) {
+		for (const unique_card of cards.splice(0, k)) {
 			versatile_cards.push(unique_card.card_name);
 		}
 		return versatile_cards;
@@ -255,13 +279,14 @@ fs.readFile("input_json/decks-" + FORMATS[0] + ".json", "utf8", function (
 
 	function formatCards(k: number): Array<FormatCard> {
 		let formatCards: Array<FormatCard> = [];
-		let unique: Array<UniqueCard> = unique_cards.sort(
+		let cards: Array<UniqueCard> = unique_cards.sort(
 			(a, b) => b.quantity - a.quantity
 		);
-		for (const unique_card of unique.splice(0, k)) {
+		for (const unique_card of cards.splice(0, k)) {
 			formatCards.push({
 				card_name: unique_card.card_name,
-				// common_decks: ,
+				common_decks: commonDecks(unique_card.card_name),
+				cards_found_with: closestCards(unique_card.card_name, 5),
 				total_instances: unique_card.quantity,
 				percentage_of_total_cards:
 					((unique_card.quantity / total_cards_no_basics) * 100).toFixed(2) +

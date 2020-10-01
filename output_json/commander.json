@@ -26592,300 +26592,1350 @@
     "format_top_cards": [
         {
             "card_name": "Flooded Strand",
+            "common_decks": [
+                [
+                    "Maelstrom Wanderer",
+                    "100.00% of 17 decks"
+                ],
+                [
+                    "Leovold, Emissary of Trest",
+                    "100.00% of 140 decks"
+                ],
+                [
+                    "Breya, Etherium Shaper",
+                    "100.00% of 128 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Spell Snare",
+                "Ancestral Vision",
+                "Liliana of the Veil",
+                "Emrakul, the Promised End"
+            ],
             "total_instances": 799,
             "percentage_of_total_cards": "0.99%",
             "percentage_of_total_decks": "89.57%"
         },
         {
             "card_name": "Polluted Delta",
+            "common_decks": [
+                [
+                    "Maelstrom Wanderer",
+                    "100.00% of 17 decks"
+                ],
+                [
+                    "Leovold, Emissary of Trest",
+                    "100.00% of 140 decks"
+                ],
+                [
+                    "Breya, Etherium Shaper",
+                    "100.00% of 128 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Spell Snare",
+                "Ancestral Vision",
+                "Liliana of the Veil",
+                "Emrakul, the Promised End"
+            ],
             "total_instances": 797,
             "percentage_of_total_cards": "0.99%",
             "percentage_of_total_decks": "89.35%"
         },
         {
             "card_name": "Misty Rainforest",
+            "common_decks": [
+                [
+                    "Maelstrom Wanderer",
+                    "100.00% of 17 decks"
+                ],
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Breya, Etherium Shaper",
+                    "100.00% of 128 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Spell Snare",
+                "Liliana of the Veil",
+                "Hymn to Tourach",
+                "Tainted Pact"
+            ],
             "total_instances": 789,
             "percentage_of_total_cards": "0.98%",
             "percentage_of_total_decks": "88.45%"
         },
         {
             "card_name": "Scalding Tarn",
+            "common_decks": [
+                [
+                    "Maelstrom Wanderer",
+                    "100.00% of 17 decks"
+                ],
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Spell Snare",
+                "Liliana of the Veil",
+                "Hymn to Tourach",
+                "Tainted Pact"
+            ],
             "total_instances": 730,
             "percentage_of_total_cards": "0.90%",
             "percentage_of_total_decks": "81.84%"
         },
         {
             "card_name": "Wooded Foothills",
+            "common_decks": [
+                [
+                    "Maelstrom Wanderer",
+                    "100.00% of 17 decks"
+                ],
+                [
+                    "Leovold, Emissary of Trest",
+                    "100.00% of 140 decks"
+                ],
+                [
+                    "Breya, Etherium Shaper",
+                    "100.00% of 128 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Liliana of the Veil",
+                "Hymn to Tourach",
+                "Tainted Pact",
+                "Sunken Ruins"
+            ],
             "total_instances": 719,
             "percentage_of_total_cards": "0.89%",
             "percentage_of_total_decks": "80.61%"
         },
         {
             "card_name": "Wasteland",
+            "common_decks": [
+                [
+                    "Narset, Enlightened Master",
+                    "100.00% of 14 decks"
+                ],
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Captain Lannery Storm",
+                    "100.00% of 5 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Liliana of the Veil",
+                "Hymn to Tourach",
+                "Spell Snare",
+                "Tainted Pact"
+            ],
             "total_instances": 703,
             "percentage_of_total_cards": "0.87%",
             "percentage_of_total_decks": "78.81%"
         },
         {
             "card_name": "Gitaxian Probe",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Keranos, God of Storms",
+                    "100.00% of 16 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Spell Snare",
+                "Karn, Scion of Urza",
+                "Liliana of the Veil",
+                "Ancestral Vision",
+                "Hymn to Tourach"
+            ],
             "total_instances": 694,
             "percentage_of_total_cards": "0.86%",
             "percentage_of_total_decks": "77.80%"
         },
         {
             "card_name": "Jace, the Mind Sculptor",
+            "common_decks": [
+                [
+                    "Leovold, Emissary of Trest",
+                    "100.00% of 140 decks"
+                ],
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Spell Snare",
+                "Ancestral Vision",
+                "Emrakul, the Promised End",
+                "Liliana of the Veil"
+            ],
             "total_instances": 690,
             "percentage_of_total_cards": "0.85%",
             "percentage_of_total_decks": "77.35%"
         },
         {
             "card_name": "Command Tower",
+            "common_decks": [
+                [
+                    "Keranos, God of Storms",
+                    "100.00% of 16 decks"
+                ],
+                [
+                    "Leovold, Emissary of Trest",
+                    "100.00% of 140 decks"
+                ],
+                [
+                    "Breya, Etherium Shaper",
+                    "100.00% of 128 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Karn, Scion of Urza",
+                "Hymn to Tourach",
+                "Sunken Ruins",
+                "Tainted Pact"
+            ],
             "total_instances": 690,
             "percentage_of_total_cards": "0.85%",
             "percentage_of_total_decks": "77.35%"
         },
         {
             "card_name": "Snapcaster Mage",
+            "common_decks": [
+                [
+                    "Tasigur, the Golden Fang",
+                    "100.00% of 27 decks"
+                ],
+                [
+                    "Teferi, Temporal Archmage",
+                    "100.00% of 119 decks"
+                ],
+                [
+                    "Kraum, Ludevic's Opus",
+                    "100.00% of 10 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Spell Snare",
+                "Ancestral Vision",
+                "Emrakul, the Promised End",
+                "Liliana of the Veil"
+            ],
             "total_instances": 689,
             "percentage_of_total_cards": "0.85%",
             "percentage_of_total_decks": "77.24%"
         },
         {
             "card_name": "Bloodstained Mire",
+            "common_decks": [
+                [
+                    "Keranos, God of Storms",
+                    "100.00% of 16 decks"
+                ],
+                [
+                    "Leovold, Emissary of Trest",
+                    "100.00% of 140 decks"
+                ],
+                [
+                    "Breya, Etherium Shaper",
+                    "100.00% of 128 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Karn, Scion of Urza",
+                "Hymn to Tourach",
+                "Sunken Ruins",
+                "Tainted Pact"
+            ],
             "total_instances": 676,
             "percentage_of_total_cards": "0.84%",
             "percentage_of_total_decks": "75.78%"
         },
         {
             "card_name": "Force of Will",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Kraum, Ludevic's Opus",
+                    "100.00% of 10 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Spell Snare",
+                "Karn, Scion of Urza",
+                "Mystical Tutor",
+                "Ancestral Vision",
+                "Serum Visions"
+            ],
             "total_instances": 658,
             "percentage_of_total_cards": "0.81%",
             "percentage_of_total_decks": "73.77%"
         },
         {
             "card_name": "Verdant Catacombs",
+            "common_decks": [
+                [
+                    "Azusa, Lost but Seeking",
+                    "100.00% of 25 decks"
+                ],
+                [
+                    "The Gitrog Monster",
+                    "100.00% of 8 decks"
+                ],
+                [
+                    "Thrasios, Triton Hero",
+                    "100.00% of 95 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Tainted Pact",
+                "Hymn to Tourach",
+                "Karn, Scion of Urza",
+                "Darkslick Shores"
+            ],
             "total_instances": 657,
             "percentage_of_total_cards": "0.81%",
             "percentage_of_total_decks": "73.65%"
         },
         {
             "card_name": "Sol Ring",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Captain Lannery Storm",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Trinket Mage",
+                "Karn, Scion of Urza",
+                "Pithing Needle",
+                "Emrakul, the Promised End",
+                "Ancestral Vision"
+            ],
             "total_instances": 654,
             "percentage_of_total_cards": "0.81%",
             "percentage_of_total_decks": "73.32%"
         },
         {
             "card_name": "Marsh Flats",
+            "common_decks": [
+                [
+                    "Tasigur, the Golden Fang",
+                    "100.00% of 27 decks"
+                ],
+                [
+                    "Leovold, Emissary of Trest",
+                    "100.00% of 140 decks"
+                ],
+                [
+                    "Breya, Etherium Shaper",
+                    "100.00% of 128 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Karn, Scion of Urza",
+                "Hymn to Tourach",
+                "Sunken Ruins",
+                "Tainted Pact"
+            ],
             "total_instances": 646,
             "percentage_of_total_cards": "0.80%",
             "percentage_of_total_decks": "72.42%"
         },
         {
             "card_name": "Cavern of Souls",
+            "common_decks": [
+                [
+                    "Narset, Enlightened Master",
+                    "100.00% of 14 decks"
+                ],
+                [
+                    "Captain Lannery Storm",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Marath, Will of the Wild",
+                    "100.00% of 7 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Karn, Scion of Urza",
+                "Hymn to Tourach",
+                "Sunken Ruins",
+                "Pithing Needle"
+            ],
             "total_instances": 645,
             "percentage_of_total_cards": "0.80%",
             "percentage_of_total_decks": "72.31%"
         },
         {
             "card_name": "Spell Pierce",
+            "common_decks": [
+                [
+                    "Tasigur, the Golden Fang",
+                    "100.00% of 27 decks"
+                ],
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Spell Snare",
+                "Ancestral Vision",
+                "Emrakul, the Promised End",
+                "Liliana of the Veil"
+            ],
             "total_instances": 643,
             "percentage_of_total_cards": "0.80%",
             "percentage_of_total_decks": "72.09%"
         },
         {
             "card_name": "Mental Misstep",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Kraum, Ludevic's Opus",
+                    "100.00% of 10 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Spell Snare",
+                "Liliana of the Veil",
+                "Tainted Pact",
+                "Hymn to Tourach"
+            ],
             "total_instances": 639,
             "percentage_of_total_cards": "0.79%",
             "percentage_of_total_decks": "71.64%"
         },
         {
             "card_name": "Counterspell",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Temporal Archmage",
+                    "100.00% of 119 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Ancestral Vision",
+                "Spell Snare",
+                "Trinket Mage",
+                "Liliana of the Veil"
+            ],
             "total_instances": 634,
             "percentage_of_total_cards": "0.78%",
             "percentage_of_total_decks": "71.08%"
         },
         {
             "card_name": "Mana Crypt",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Captain Lannery Storm",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Emrakul, the Promised End",
+                "Pithing Needle",
+                "Trinket Mage",
+                "Chrome Mox"
+            ],
             "total_instances": 632,
             "percentage_of_total_cards": "0.78%",
             "percentage_of_total_decks": "70.85%"
         },
         {
             "card_name": "Daze",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Kraum, Ludevic's Opus",
+                    "100.00% of 10 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Spell Snare",
+                "Ancestral Vision",
+                "Emrakul, the Promised End",
+                "Liliana of the Veil"
+            ],
             "total_instances": 629,
             "percentage_of_total_cards": "0.78%",
             "percentage_of_total_decks": "70.52%"
         },
         {
             "card_name": "Force Spike",
+            "common_decks": [
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Tasigur, the Golden Fang",
+                    "100.00% of 27 decks"
+                ],
+                [
+                    "Kraum, Ludevic's Opus",
+                    "100.00% of 10 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Spell Snare",
+                "Karn, Scion of Urza",
+                "Ancestral Vision",
+                "Emrakul, the Promised End",
+                "Liliana of the Veil"
+            ],
             "total_instances": 603,
             "percentage_of_total_cards": "0.75%",
             "percentage_of_total_decks": "67.60%"
         },
         {
             "card_name": "Thoughtseize",
+            "common_decks": [
+                [
+                    "Kess, Dissident Mage",
+                    "100.00% of 139 decks"
+                ],
+                [
+                    "Thrasios, Triton Hero",
+                    "100.00% of 95 decks"
+                ],
+                [
+                    "Tasigur, the Golden Fang",
+                    "100.00% of 27 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Hymn to Tourach",
+                "Karn, Scion of Urza",
+                "Sunken Ruins",
+                "Tainted Pact"
+            ],
             "total_instances": 603,
             "percentage_of_total_cards": "0.75%",
             "percentage_of_total_decks": "67.60%"
         },
         {
             "card_name": "Mana Confluence",
+            "common_decks": [
+                [
+                    "Tasigur, the Golden Fang",
+                    "100.00% of 27 decks"
+                ],
+                [
+                    "Marath, Will of the Wild",
+                    "100.00% of 7 decks"
+                ],
+                [
+                    "Najeela, the Blade-Blossom",
+                    "100.00% of 52 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Karn, Scion of Urza",
+                "Hymn to Tourach",
+                "Sunken Ruins",
+                "Tainted Pact"
+            ],
             "total_instances": 603,
             "percentage_of_total_cards": "0.75%",
             "percentage_of_total_decks": "67.60%"
         },
         {
             "card_name": "Duress",
+            "common_decks": [
+                [
+                    "Kess, Dissident Mage",
+                    "100.00% of 139 decks"
+                ],
+                [
+                    "Thrasios, Triton Hero",
+                    "100.00% of 95 decks"
+                ],
+                [
+                    "Tasigur, the Golden Fang",
+                    "100.00% of 27 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Hymn to Tourach",
+                "Karn, Scion of Urza",
+                "Sunken Ruins",
+                "Tainted Pact"
+            ],
             "total_instances": 595,
             "percentage_of_total_cards": "0.74%",
             "percentage_of_total_decks": "66.70%"
         },
         {
             "card_name": "Underground Sea",
+            "common_decks": [
+                [
+                    "Leovold, Emissary of Trest",
+                    "100.00% of 140 decks"
+                ],
+                [
+                    "Kess, Dissident Mage",
+                    "100.00% of 139 decks"
+                ],
+                [
+                    "Breya, Etherium Shaper",
+                    "100.00% of 128 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Sunken Ruins",
+                "Hymn to Tourach",
+                "Karn, Scion of Urza",
+                "Tainted Pact"
+            ],
             "total_instances": 590,
             "percentage_of_total_cards": "0.73%",
             "percentage_of_total_decks": "66.14%"
         },
         {
             "card_name": "Inquisition of Kozilek",
+            "common_decks": [
+                [
+                    "Tasigur, the Golden Fang",
+                    "100.00% of 27 decks"
+                ],
+                [
+                    "Sidisi, Undead Vizier",
+                    "100.00% of 11 decks"
+                ],
+                [
+                    "The Gitrog Monster",
+                    "100.00% of 8 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Hymn to Tourach",
+                "Sunken Ruins",
+                "Karn, Scion of Urza",
+                "Tainted Pact"
+            ],
             "total_instances": 590,
             "percentage_of_total_cards": "0.73%",
             "percentage_of_total_decks": "66.14%"
         },
         {
             "card_name": "Brainstorm",
+            "common_decks": [
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Keranos, God of Storms",
+                    "93.75% of 16 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Pithing Needle",
+                "Trinket Mage",
+                "Sunken Ruins",
+                "Karn, Scion of Urza",
+                "Hymn to Tourach"
+            ],
             "total_instances": 580,
             "percentage_of_total_cards": "0.72%",
             "percentage_of_total_decks": "65.02%"
         },
         {
             "card_name": "Mana Drain",
+            "common_decks": [
+                [
+                    "Tasigur, the Golden Fang",
+                    "100.00% of 27 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Pithing Needle",
+                "Trinket Mage",
+                "Sunken Ruins",
+                "Karn, Scion of Urza",
+                "Phyrexian Furnace"
+            ],
             "total_instances": 579,
             "percentage_of_total_cards": "0.72%",
             "percentage_of_total_decks": "64.91%"
         },
         {
             "card_name": "Mana Leak",
+            "common_decks": [
+                [
+                    "Narset, Enlightened Master",
+                    "100.00% of 14 decks"
+                ],
+                [
+                    "Kraum, Ludevic's Opus",
+                    "100.00% of 10 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Ancestral Vision",
+                "Spell Snare",
+                "Trinket Mage",
+                "Liliana of the Veil"
+            ],
             "total_instances": 577,
             "percentage_of_total_cards": "0.71%",
             "percentage_of_total_decks": "64.69%"
         },
         {
             "card_name": "Watery Grave",
+            "common_decks": [
+                [
+                    "Leovold, Emissary of Trest",
+                    "100.00% of 140 decks"
+                ],
+                [
+                    "Kess, Dissident Mage",
+                    "100.00% of 139 decks"
+                ],
+                [
+                    "Breya, Etherium Shaper",
+                    "100.00% of 128 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Sunken Ruins",
+                "Hymn to Tourach",
+                "Karn, Scion of Urza",
+                "River of Tears"
+            ],
             "total_instances": 575,
             "percentage_of_total_cards": "0.71%",
             "percentage_of_total_decks": "64.46%"
         },
         {
             "card_name": "Ponder",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Tasigur, the Golden Fang",
+                    "96.30% of 27 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Pithing Needle",
+                "Trinket Mage",
+                "Sunken Ruins",
+                "Karn, Scion of Urza",
+                "Mystical Tutor"
+            ],
             "total_instances": 571,
             "percentage_of_total_cards": "0.71%",
             "percentage_of_total_decks": "64.01%"
         },
         {
             "card_name": "City of Brass",
+            "common_decks": [
+                [
+                    "Najeela, the Blade-Blossom",
+                    "100.00% of 52 decks"
+                ],
+                [
+                    "Leovold, Emissary of Trest",
+                    "96.43% of 140 decks"
+                ],
+                [
+                    "Thrasios, Triton Hero",
+                    "95.79% of 95 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Karn, Scion of Urza",
+                "Sunken Ruins",
+                "Hymn to Tourach",
+                "Tainted Pact"
+            ],
             "total_instances": 566,
             "percentage_of_total_cards": "0.70%",
             "percentage_of_total_decks": "63.45%"
         },
         {
             "card_name": "Preordain",
+            "common_decks": [
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Tasigur, the Golden Fang",
+                    "96.30% of 27 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Pithing Needle",
+                "Trinket Mage",
+                "Mystical Tutor",
+                "Sunken Ruins",
+                "Karn, Scion of Urza"
+            ],
             "total_instances": 561,
             "percentage_of_total_cards": "0.69%",
             "percentage_of_total_decks": "62.89%"
         },
         {
             "card_name": "Windswept Heath",
+            "common_decks": [
+                [
+                    "Maelstrom Wanderer",
+                    "100.00% of 17 decks"
+                ],
+                [
+                    "Leovold, Emissary of Trest",
+                    "100.00% of 140 decks"
+                ],
+                [
+                    "Thrasios, Triton Hero",
+                    "100.00% of 95 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Spell Snare",
+                "Fatal Push",
+                "Chart a Course",
+                "Chrome Mox"
+            ],
             "total_instances": 559,
             "percentage_of_total_cards": "0.69%",
             "percentage_of_total_decks": "62.67%"
         },
         {
             "card_name": "Remand",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Temporal Archmage",
+                    "97.48% of 119 decks"
+                ],
+                [
+                    "Kess, Dissident Mage",
+                    "93.53% of 139 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Ancestral Vision",
+                "Spell Snare",
+                "Trinket Mage",
+                "Serum Visions"
+            ],
             "total_instances": 552,
             "percentage_of_total_cards": "0.68%",
             "percentage_of_total_decks": "61.88%"
         },
         {
             "card_name": "Miscalculation",
+            "common_decks": [
+                [
+                    "Keranos, God of Storms",
+                    "100.00% of 16 decks"
+                ],
+                [
+                    "Kraum, Ludevic's Opus",
+                    "100.00% of 10 decks"
+                ],
+                [
+                    "Teferi, Temporal Archmage",
+                    "98.32% of 119 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Ancestral Vision",
+                "Karn, Scion of Urza",
+                "Spell Snare",
+                "Trinket Mage",
+                "Serum Visions"
+            ],
             "total_instances": 531,
             "percentage_of_total_cards": "0.66%",
             "percentage_of_total_decks": "59.53%"
         },
         {
             "card_name": "Ancient Tomb",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Najeela, the Blade-Blossom",
+                    "100.00% of 52 decks"
+                ],
+                [
+                    "Captain Lannery Storm",
+                    "100.00% of 5 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Emrakul, the Promised End",
+                "Ancestral Vision",
+                "Relic of Progenitus",
+                "Chrome Mox",
+                "Karn, Scion of Urza"
+            ],
             "total_instances": 527,
             "percentage_of_total_cards": "0.65%",
             "percentage_of_total_decks": "59.08%"
         },
         {
             "card_name": "Dig Through Time",
+            "common_decks": [
+                [
+                    "Keranos, God of Storms",
+                    "93.75% of 16 decks"
+                ],
+                [
+                    "Narset, Enlightened Master",
+                    "92.86% of 14 decks"
+                ],
+                [
+                    "Kess, Dissident Mage",
+                    "92.81% of 139 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Trinket Mage",
+                "Pithing Needle",
+                "Sunken Ruins",
+                "Phyrexian Furnace",
+                "Karn, Scion of Urza"
+            ],
             "total_instances": 524,
             "percentage_of_total_cards": "0.65%",
             "percentage_of_total_decks": "58.74%"
         },
         {
             "card_name": "Arid Mesa",
+            "common_decks": [
+                [
+                    "Keranos, God of Storms",
+                    "100.00% of 16 decks"
+                ],
+                [
+                    "Kess, Dissident Mage",
+                    "100.00% of 139 decks"
+                ],
+                [
+                    "Thrasios, Triton Hero",
+                    "100.00% of 95 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Karn, Scion of Urza",
+                "Painful Truths",
+                "Liliana of the Veil",
+                "Pyroblast",
+                "Abrade"
+            ],
             "total_instances": 515,
             "percentage_of_total_cards": "0.64%",
             "percentage_of_total_decks": "57.74%"
         },
         {
             "card_name": "Underground River",
+            "common_decks": [
+                [
+                    "Kess, Dissident Mage",
+                    "100.00% of 139 decks"
+                ],
+                [
+                    "Tasigur, the Golden Fang",
+                    "100.00% of 27 decks"
+                ],
+                [
+                    "Leovold, Emissary of Trest",
+                    "98.57% of 140 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana of the Veil",
+                "Sunken Ruins",
+                "Hymn to Tourach",
+                "Pithing Needle",
+                "River of Tears"
+            ],
             "total_instances": 511,
             "percentage_of_total_cards": "0.63%",
             "percentage_of_total_decks": "57.29%"
         },
         {
             "card_name": "Demonic Tutor",
+            "common_decks": [
+                [
+                    "Najeela, the Blade-Blossom",
+                    "100.00% of 52 decks"
+                ],
+                [
+                    "The Gitrog Monster",
+                    "100.00% of 8 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Pithing Needle",
+                "Sunken Ruins",
+                "Drowned Catacomb",
+                "Hymn to Tourach",
+                "Trinket Mage"
+            ],
             "total_instances": 476,
             "percentage_of_total_cards": "0.59%",
             "percentage_of_total_decks": "53.36%"
         },
         {
             "card_name": "Vampiric Tutor",
+            "common_decks": [
+                [
+                    "Najeela, the Blade-Blossom",
+                    "100.00% of 52 decks"
+                ],
+                [
+                    "The Gitrog Monster",
+                    "100.00% of 8 decks"
+                ],
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Pithing Needle",
+                "Sunken Ruins",
+                "Drowned Catacomb",
+                "Hymn to Tourach",
+                "Trinket Mage"
+            ],
             "total_instances": 469,
             "percentage_of_total_cards": "0.58%",
             "percentage_of_total_decks": "52.58%"
         },
         {
             "card_name": "Memory Lapse",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Temporal Archmage",
+                    "94.96% of 119 decks"
+                ],
+                [
+                    "Kraum, Ludevic's Opus",
+                    "90.00% of 10 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Ancestral Vision",
+                "Spell Snare",
+                "Karn, Scion of Urza",
+                "Serum Visions",
+                "Mystic Confluence"
+            ],
             "total_instances": 468,
             "percentage_of_total_cards": "0.58%",
             "percentage_of_total_decks": "52.47%"
         },
         {
             "card_name": "Dark Confidant",
+            "common_decks": [
+                [
+                    "Lazav, the Multifarious",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Tasigur, the Golden Fang",
+                    "96.30% of 27 decks"
+                ],
+                [
+                    "Najeela, the Blade-Blossom",
+                    "96.15% of 52 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Chart a Course",
+                "Birds of Paradise",
+                "Fatal Push",
+                "Spell Snare",
+                "Karn, Scion of Urza"
+            ],
             "total_instances": 436,
             "percentage_of_total_cards": "0.54%",
             "percentage_of_total_decks": "48.88%"
         },
         {
             "card_name": "Toxic Deluge",
+            "common_decks": [
+                [
+                    "The Gitrog Monster",
+                    "100.00% of 8 decks"
+                ],
+                [
+                    "Breya, Etherium Shaper",
+                    "96.88% of 128 decks"
+                ],
+                [
+                    "Kess, Dissident Mage",
+                    "94.24% of 139 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Pithing Needle",
+                "Sunken Ruins",
+                "Drowned Catacomb",
+                "Hymn to Tourach",
+                "Trinket Mage"
+            ],
             "total_instances": 432,
             "percentage_of_total_cards": "0.53%",
             "percentage_of_total_decks": "48.43%"
         },
         {
             "card_name": "Treasure Cruise",
+            "common_decks": [
+                [
+                    "Surrak Dragonclaw",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Keranos, God of Storms",
+                    "93.75% of 16 decks"
+                ],
+                [
+                    "Breya, Etherium Shaper",
+                    "86.72% of 128 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Trinket Mage",
+                "Pithing Needle",
+                "Sunken Ruins",
+                "Karn, Scion of Urza",
+                "Drowned Catacomb"
+            ],
             "total_instances": 425,
             "percentage_of_total_cards": "0.53%",
             "percentage_of_total_decks": "47.65%"
         },
         {
             "card_name": "Fact or Fiction",
+            "common_decks": [
+                [
+                    "Keranos, God of Storms",
+                    "100.00% of 16 decks"
+                ],
+                [
+                    "Narset, Enlightened Master",
+                    "100.00% of 14 decks"
+                ],
+                [
+                    "Kess, Dissident Mage",
+                    "97.12% of 139 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Trinket Mage",
+                "Chandra, Torch of Defiance",
+                "Fiery Confluence",
+                "Steam Vents",
+                "Dack Fayden"
+            ],
             "total_instances": 411,
             "percentage_of_total_cards": "0.51%",
             "percentage_of_total_decks": "46.08%"
         },
         {
             "card_name": "Reflecting Pool",
+            "common_decks": [
+                [
+                    "Breya, Etherium Shaper",
+                    "96.09% of 128 decks"
+                ],
+                [
+                    "Kess, Dissident Mage",
+                    "94.96% of 139 decks"
+                ],
+                [
+                    "Tasigur, the Golden Fang",
+                    "88.89% of 27 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Sunken Ruins",
+                "Drowned Catacomb",
+                "Trinket Mage",
+                "Hymn to Tourach",
+                "River of Tears"
+            ],
             "total_instances": 408,
             "percentage_of_total_cards": "0.50%",
             "percentage_of_total_decks": "45.74%"
         },
         {
             "card_name": "Search for Azcanta // Azcanta, the Sunken Ruin",
+            "common_decks": [
+                [
+                    "Keranos, God of Storms",
+                    "100.00% of 16 decks"
+                ],
+                [
+                    "Narset, Enlightened Master",
+                    "100.00% of 14 decks"
+                ],
+                [
+                    "Kraum, Ludevic's Opus",
+                    "100.00% of 10 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Trinket Mage",
+                "Sunken Ruins",
+                "River of Tears",
+                "Chandra, Torch of Defiance",
+                "Hymn to Tourach"
+            ],
             "total_instances": 400,
             "percentage_of_total_cards": "0.49%",
             "percentage_of_total_decks": "44.84%"

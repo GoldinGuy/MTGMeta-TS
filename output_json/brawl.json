@@ -11240,300 +11240,1230 @@
     "format_top_cards": [
         {
             "card_name": "Field of Ruin",
+            "common_decks": [
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "100.00% of 9 decks"
+                ],
+                [
+                    "Ghalta, Primal Hunger",
+                    "100.00% of 7 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Sorcerous Spyglass",
+                "The Immortal Sun",
+                "In Bolas's Clutches",
+                "Hornswoggle",
+                "Grasping Dunes"
+            ],
             "total_instances": 98,
             "percentage_of_total_cards": "1.89%",
             "percentage_of_total_decks": "81.67%"
         },
         {
             "card_name": "Arch of Orazca",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "93.02% of 43 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "83.33% of 6 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "80.00% of 5 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Sorcerous Spyglass",
+                "Hornswoggle",
+                "Hostile Desert",
+                "Nimble Obstructionist",
+                "Baral's Expertise"
+            ],
             "total_instances": 77,
             "percentage_of_total_cards": "1.48%",
             "percentage_of_total_decks": "64.17%"
         },
         {
             "card_name": "Negate",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "100.00% of 43 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "100.00% of 4 decks"
+                ],
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "88.89% of 9 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Nimble Obstructionist",
+                "Baral's Expertise",
+                "Metallic Rebuke",
+                "Kefnet's Last Word"
+            ],
             "total_instances": 69,
             "percentage_of_total_cards": "1.33%",
             "percentage_of_total_decks": "57.50%"
         },
         {
             "card_name": "Supreme Will",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "100.00% of 43 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "100.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Nimble Obstructionist",
+                "Baral's Expertise",
+                "Metallic Rebuke",
+                "Hostile Desert"
+            ],
             "total_instances": 69,
             "percentage_of_total_cards": "1.33%",
             "percentage_of_total_decks": "57.50%"
         },
         {
             "card_name": "Treasure Map // Treasure Cove",
+            "common_decks": [
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "100.00% of 9 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "100.00% of 4 decks"
+                ],
+                [
+                    "Baral, Chief of Compliance",
+                    "81.40% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Sorcerous Spyglass",
+                "Metallic Rebuke",
+                "Hostile Desert",
+                "Nimble Obstructionist"
+            ],
             "total_instances": 67,
             "percentage_of_total_cards": "1.29%",
             "percentage_of_total_decks": "55.83%"
         },
         {
             "card_name": "Search for Azcanta // Azcanta, the Sunken Ruin",
+            "common_decks": [
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "100.00% of 9 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "100.00% of 5 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Nimble Obstructionist",
+                "Metallic Rebuke",
+                "Sorcerous Spyglass",
+                "Kefnet's Last Word"
+            ],
             "total_instances": 65,
             "percentage_of_total_cards": "1.25%",
             "percentage_of_total_decks": "54.17%"
         },
         {
             "card_name": "Disallow",
+            "common_decks": [
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "100.00% of 4 decks"
+                ],
+                [
+                    "Baral, Chief of Compliance",
+                    "95.35% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Nimble Obstructionist",
+                "Baral's Expertise",
+                "Kefnet's Last Word",
+                "Metallic Rebuke"
+            ],
             "total_instances": 65,
             "percentage_of_total_cards": "1.25%",
             "percentage_of_total_decks": "54.17%"
         },
         {
             "card_name": "Glimmer of Genius",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "100.00% of 43 decks"
+                ],
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "100.00% of 9 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Nimble Obstructionist",
+                "Primal Amulet // Primal Wellspring",
+                "Divination",
+                "Baral's Expertise"
+            ],
             "total_instances": 65,
             "percentage_of_total_cards": "1.25%",
             "percentage_of_total_decks": "54.17%"
         },
         {
             "card_name": "Blink of an Eye",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "100.00% of 43 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "83.33% of 6 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "75.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Nimble Obstructionist",
+                "Hornswoggle",
+                "Baral's Expertise",
+                "Divination",
+                "Kefnet's Last Word"
+            ],
             "total_instances": 64,
             "percentage_of_total_cards": "1.23%",
             "percentage_of_total_decks": "53.33%"
         },
         {
             "card_name": "Syncopate",
+            "common_decks": [
+                [
+                    "Tezzeret the Schemer",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "100.00% of 4 decks"
+                ],
+                [
+                    "Baral, Chief of Compliance",
+                    "95.35% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Metallic Rebuke",
+                "Divination",
+                "Nimble Obstructionist",
+                "Kefnet's Last Word"
+            ],
             "total_instances": 61,
             "percentage_of_total_cards": "1.17%",
             "percentage_of_total_decks": "50.83%"
         },
         {
             "card_name": "Censor",
+            "common_decks": [
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "100.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Nimble Obstructionist",
+                "Kefnet's Last Word",
+                "Hornswoggle",
+                "Baral's Expertise",
+                "Metallic Rebuke"
+            ],
             "total_instances": 60,
             "percentage_of_total_cards": "1.15%",
             "percentage_of_total_decks": "50.00%"
         },
         {
             "card_name": "Memorial to Genius",
+            "common_decks": [
+                [
+                    "Tezzeret the Schemer",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "100.00% of 4 decks"
+                ],
+                [
+                    "Baral, Chief of Compliance",
+                    "90.70% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Nimble Obstructionist",
+                "Kefnet's Last Word",
+                "Metallic Rebuke",
+                "Divination"
+            ],
             "total_instances": 59,
             "percentage_of_total_cards": "1.14%",
             "percentage_of_total_decks": "49.17%"
         },
         {
             "card_name": "Commit // Memory",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "90.70% of 43 decks"
+                ],
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "88.89% of 9 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "83.33% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Nimble Obstructionist",
+                "Baral's Expertise",
+                "Primal Amulet // Primal Wellspring",
+                "Metallic Rebuke"
+            ],
             "total_instances": 59,
             "percentage_of_total_cards": "1.14%",
             "percentage_of_total_decks": "49.17%"
         },
         {
             "card_name": "Pull from Tomorrow",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "100.00% of 43 decks"
+                ],
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "77.78% of 9 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "75.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Divination",
+                "Primal Amulet // Primal Wellspring",
+                "Nimble Obstructionist",
+                "Kefnet's Last Word"
+            ],
             "total_instances": 58,
             "percentage_of_total_cards": "1.12%",
             "percentage_of_total_decks": "48.33%"
         },
         {
             "card_name": "Hieroglyphic Illumination",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "90.70% of 43 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "80.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "75.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Divination",
+                "Primal Amulet // Primal Wellspring",
+                "Nimble Obstructionist",
+                "Kefnet's Last Word"
+            ],
             "total_instances": 55,
             "percentage_of_total_cards": "1.06%",
             "percentage_of_total_decks": "45.83%"
         },
         {
             "card_name": "Admiral's Order",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "100.00% of 43 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "60.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "50.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Divination",
+                "Confiscation Coup",
+                "Secrets of the Golden City",
+                "As Foretold",
+                "Nimble Obstructionist"
+            ],
             "total_instances": 52,
             "percentage_of_total_cards": "1.00%",
             "percentage_of_total_decks": "43.33%"
         },
         {
             "card_name": "Essence Scatter",
+            "common_decks": [
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "100.00% of 4 decks"
+                ],
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "88.89% of 9 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Sorcerous Spyglass",
+                "Hornswoggle",
+                "Nimble Obstructionist",
+                "Hostile Desert",
+                "Thaumatic Compass // Spires of Orazca"
+            ],
             "total_instances": 50,
             "percentage_of_total_cards": "0.96%",
             "percentage_of_total_decks": "41.67%"
         },
         {
             "card_name": "Torrential Gearhulk",
+            "common_decks": [
+                [
+                    "The Scarab God",
+                    "83.33% of 6 decks"
+                ],
+                [
+                    "Baral, Chief of Compliance",
+                    "79.07% of 43 decks"
+                ],
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "66.67% of 9 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Nimble Obstructionist",
+                "Baral's Expertise",
+                "Divination",
+                "Primal Amulet // Primal Wellspring"
+            ],
             "total_instances": 50,
             "percentage_of_total_cards": "0.96%",
             "percentage_of_total_decks": "41.67%"
         },
         {
             "card_name": "Scavenger Grounds",
+            "common_decks": [
+                [
+                    "Ghalta, Primal Hunger",
+                    "100.00% of 7 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "100.00% of 4 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "66.67% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Sorcerous Spyglass",
+                "The Immortal Sun",
+                "Grasping Dunes",
+                "In Bolas's Clutches",
+                "Hostile Desert"
+            ],
             "total_instances": 50,
             "percentage_of_total_cards": "0.96%",
             "percentage_of_total_decks": "41.67%"
         },
         {
             "card_name": "Wizard's Retort",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "95.35% of 43 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "60.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "50.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Divination",
+                "Secrets of the Golden City",
+                "As Foretold",
+                "Confiscation Coup",
+                "Primal Amulet // Primal Wellspring"
+            ],
             "total_instances": 49,
             "percentage_of_total_cards": "0.94%",
             "percentage_of_total_decks": "40.83%"
         },
         {
             "card_name": "Nezahal, Primal Tide",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "88.37% of 43 decks"
+                ],
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "55.56% of 9 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Primal Amulet // Primal Wellspring",
+                "Divination",
+                "Hornswoggle",
+                "As Foretold",
+                "Confiscation Coup"
+            ],
             "total_instances": 48,
             "percentage_of_total_cards": "0.92%",
             "percentage_of_total_decks": "40.00%"
         },
         {
             "card_name": "Mox Amber",
+            "common_decks": [
+                [
+                    "Oviya Pashiri, Sage Lifecrafter",
+                    "100.00% of 4 decks"
+                ],
+                [
+                    "Baral, Chief of Compliance",
+                    "83.72% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Blackblade Reforged",
+                "Divination",
+                "Nimble Obstructionist",
+                "Baral's Expertise",
+                "Primal Amulet // Primal Wellspring"
+            ],
             "total_instances": 48,
             "percentage_of_total_cards": "0.92%",
             "percentage_of_total_decks": "40.00%"
         },
         {
             "card_name": "Spell Swindle",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "88.37% of 43 decks"
+                ],
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "66.67% of 9 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Primal Amulet // Primal Wellspring",
+                "Divination",
+                "Hornswoggle",
+                "As Foretold",
+                "Confiscation Coup"
+            ],
             "total_instances": 48,
             "percentage_of_total_cards": "0.92%",
             "percentage_of_total_decks": "40.00%"
         },
         {
             "card_name": "Ipnu Rivulet",
+            "common_decks": [
+                [
+                    "Tezzeret the Schemer",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Baral, Chief of Compliance",
+                    "79.07% of 43 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "75.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Kefnet's Last Word",
+                "Nimble Obstructionist",
+                "Hornswoggle",
+                "Metallic Rebuke",
+                "Divination"
+            ],
             "total_instances": 48,
             "percentage_of_total_cards": "0.92%",
             "percentage_of_total_decks": "40.00%"
         },
         {
             "card_name": "Metallurgic Summonings",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "93.02% of 43 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "80.00% of 5 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Divination",
+                "As Foretold",
+                "Primal Amulet // Primal Wellspring",
+                "Confiscation Coup",
+                "Secrets of the Golden City"
+            ],
             "total_instances": 47,
             "percentage_of_total_cards": "0.90%",
             "percentage_of_total_decks": "39.17%"
         },
         {
             "card_name": "Cancel",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "95.35% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "As Foretold",
+                "Confiscation Coup",
+                "Divination",
+                "Primal Amulet // Primal Wellspring",
+                "Secrets of the Golden City"
+            ],
             "total_instances": 47,
             "percentage_of_total_cards": "0.90%",
             "percentage_of_total_decks": "39.17%"
         },
         {
             "card_name": "Countervailing Winds",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "93.02% of 43 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "60.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "50.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Secrets of the Golden City",
+                "Confiscation Coup",
+                "As Foretold",
+                "Divination",
+                "Perilous Voyage"
+            ],
             "total_instances": 46,
             "percentage_of_total_cards": "0.89%",
             "percentage_of_total_decks": "38.33%"
         },
         {
             "card_name": "Chart a Course",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "88.37% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Divination",
+                "As Foretold",
+                "Confiscation Coup",
+                "Secrets of the Golden City",
+                "Primal Amulet // Primal Wellspring"
+            ],
             "total_instances": 45,
             "percentage_of_total_cards": "0.87%",
             "percentage_of_total_decks": "37.50%"
         },
         {
             "card_name": "Baral, Chief of Compliance",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "100.00% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "As Foretold",
+                "Cryptic Serpent",
+                "Fraying Sanity",
+                "Leave in the Dust",
+                "Kefnet the Mindful"
+            ],
             "total_instances": 45,
             "percentage_of_total_cards": "0.87%",
             "percentage_of_total_decks": "37.50%"
         },
         {
             "card_name": "Evolving Wilds",
+            "common_decks": [
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "100.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Duress",
+                "Never // Return",
+                "Arguel's Blood Fast // Temple of Aclazotz",
+                "Cast Down",
+                "Doomfall"
+            ],
             "total_instances": 45,
             "percentage_of_total_cards": "0.87%",
             "percentage_of_total_decks": "37.50%"
         },
         {
             "card_name": "Revolutionary Rebuff",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "81.40% of 43 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "60.00% of 5 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "50.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Divination",
+                "Nimble Obstructionist",
+                "Kefnet's Last Word",
+                "Confiscation Coup",
+                "Primal Amulet // Primal Wellspring"
+            ],
             "total_instances": 45,
             "percentage_of_total_cards": "0.87%",
             "percentage_of_total_decks": "37.50%"
         },
         {
             "card_name": "River's Rebuke",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "76.74% of 43 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "60.00% of 5 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Divination",
+                "Hornswoggle",
+                "Primal Amulet // Primal Wellspring",
+                "Kefnet's Last Word",
+                "Metallic Rebuke"
+            ],
             "total_instances": 44,
             "percentage_of_total_cards": "0.85%",
             "percentage_of_total_decks": "36.67%"
         },
         {
             "card_name": "Unwind",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "88.37% of 43 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "60.00% of 5 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "As Foretold",
+                "Secrets of the Golden City",
+                "Confiscation Coup",
+                "Strategic Planning",
+                "Cryptic Serpent"
+            ],
             "total_instances": 42,
             "percentage_of_total_cards": "0.81%",
             "percentage_of_total_decks": "35.00%"
         },
         {
             "card_name": "Opt",
+            "common_decks": [
+                [
+                    "Teferi, Hero of Dominaria",
+                    "100.00% of 4 decks"
+                ],
+                [
+                    "Baral, Chief of Compliance",
+                    "69.77% of 43 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "50.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Hornswoggle",
+                "Divination",
+                "Nimble Obstructionist",
+                "Primal Amulet // Primal Wellspring",
+                "Baral's Expertise"
+            ],
             "total_instances": 42,
             "percentage_of_total_cards": "0.81%",
             "percentage_of_total_decks": "35.00%"
         },
         {
             "card_name": "Aether Hub",
+            "common_decks": [
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "66.67% of 9 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "66.67% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Sorcerous Spyglass",
+                "Thaumatic Compass // Spires of Orazca",
+                "The Immortal Sun",
+                "Hostile Desert",
+                "Hornswoggle"
+            ],
             "total_instances": 40,
             "percentage_of_total_cards": "0.77%",
             "percentage_of_total_decks": "33.33%"
         },
         {
             "card_name": "Spell Pierce",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "76.74% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Divination",
+                "Confiscation Coup",
+                "Secrets of the Golden City",
+                "As Foretold",
+                "Primal Amulet // Primal Wellspring"
+            ],
             "total_instances": 40,
             "percentage_of_total_cards": "0.77%",
             "percentage_of_total_decks": "33.33%"
         },
         {
             "card_name": "Expel from Orazca",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "81.40% of 43 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "50.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Secrets of the Golden City",
+                "As Foretold",
+                "Confiscation Coup",
+                "Galestrike",
+                "Perilous Voyage"
+            ],
             "total_instances": 39,
             "percentage_of_total_cards": "0.75%",
             "percentage_of_total_decks": "32.50%"
         },
         {
             "card_name": "Lookout's Dispersal",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "81.40% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "As Foretold",
+                "Secrets of the Golden City",
+                "Confiscation Coup",
+                "Drag Under",
+                "Cryptic Serpent"
+            ],
             "total_instances": 38,
             "percentage_of_total_cards": "0.73%",
             "percentage_of_total_decks": "31.67%"
         },
         {
             "card_name": "Fatal Push",
+            "common_decks": [
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "100.00% of 9 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "80.00% of 5 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Never // Return",
+                "Duress",
+                "Arguel's Blood Fast // Temple of Aclazotz",
+                "Doomfall",
+                "Gonti, Lord of Luxury"
+            ],
             "total_instances": 37,
             "percentage_of_total_cards": "0.71%",
             "percentage_of_total_decks": "30.83%"
         },
         {
             "card_name": "Zhalfirin Void",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "62.79% of 43 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "50.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Divination",
+                "Nimble Obstructionist",
+                "Secrets of the Golden City",
+                "Baral's Expertise",
+                "Confiscation Coup"
+            ],
             "total_instances": 35,
             "percentage_of_total_cards": "0.67%",
             "percentage_of_total_decks": "29.17%"
         },
         {
             "card_name": "Desert of the Mindful",
+            "common_decks": [
+                [
+                    "Tezzeret the Schemer",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "83.33% of 6 decks"
+                ],
+                [
+                    "Teferi, Hero of Dominaria",
+                    "75.00% of 4 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Kefnet's Last Word",
+                "Nimble Obstructionist",
+                "Metallic Rebuke",
+                "Sorcerous Spyglass",
+                "Hostile Desert"
+            ],
             "total_instances": 35,
             "percentage_of_total_cards": "0.67%",
             "percentage_of_total_decks": "29.17%"
         },
         {
             "card_name": "Jace's Defeat",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "74.42% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "As Foretold",
+                "Cryptic Serpent",
+                "Fraying Sanity",
+                "Leave in the Dust",
+                "Kefnet the Mindful"
+            ],
             "total_instances": 33,
             "percentage_of_total_cards": "0.63%",
             "percentage_of_total_decks": "27.50%"
         },
         {
             "card_name": "Dynavolt Tower",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "72.09% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Drag Under",
+                "Leave in the Dust",
+                "Insidious Will",
+                "Fraying Sanity",
+                "Sphinx of Magosi"
+            ],
             "total_instances": 31,
             "percentage_of_total_cards": "0.60%",
             "percentage_of_total_decks": "25.83%"
         },
         {
             "card_name": "Entrancing Melody",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "69.77% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Secrets of the Golden City",
+                "Galestrike",
+                "Kefnet the Mindful",
+                "Insidious Will",
+                "Perilous Voyage"
+            ],
             "total_instances": 31,
             "percentage_of_total_cards": "0.60%",
             "percentage_of_total_decks": "25.83%"
         },
         {
             "card_name": "Vraska's Contempt",
+            "common_decks": [
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "100.00% of 5 decks"
+                ],
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "88.89% of 9 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Arguel's Blood Fast // Temple of Aclazotz",
+                "Doomfall",
+                "Never // Return",
+                "Duress",
+                "Fetid Pools"
+            ],
             "total_instances": 30,
             "percentage_of_total_cards": "0.58%",
             "percentage_of_total_decks": "25.00%"
         },
         {
             "card_name": "Karn's Temporal Sundering",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "60.47% of 43 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Secrets of the Golden City",
+                "As Foretold",
+                "Confiscation Coup",
+                "Drag Under",
+                "Perilous Voyage"
+            ],
             "total_instances": 29,
             "percentage_of_total_cards": "0.56%",
             "percentage_of_total_decks": "24.17%"
         },
         {
             "card_name": "Karn, Scion of Urza",
+            "common_decks": [
+                [
+                    "Oviya Pashiri, Sage Lifecrafter",
+                    "50.00% of 4 decks"
+                ],
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "44.44% of 9 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Walking Ballista",
+                "Aethersphere Harvester",
+                "Duress",
+                "Cast Out",
+                "Shefet Dunes"
+            ],
             "total_instances": 28,
             "percentage_of_total_cards": "0.54%",
             "percentage_of_total_decks": "23.33%"
         },
         {
             "card_name": "Azor's Gateway // Sanctum of the Sun",
+            "common_decks": [
+                [
+                    "Baral, Chief of Compliance",
+                    "51.16% of 43 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "50.00% of 6 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Divination",
+                "Primal Amulet // Primal Wellspring",
+                "Nimble Obstructionist",
+                "Confiscation Coup",
+                "As Foretold"
+            ],
             "total_instances": 28,
             "percentage_of_total_cards": "0.54%",
             "percentage_of_total_decks": "23.33%"
         },
         {
             "card_name": "Ifnir Deadlands",
+            "common_decks": [
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "55.56% of 9 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Liliana, Death's Majesty",
+                "Ravenous Chupacabra",
+                "Glint-Sleeve Siphoner",
+                "Duress",
+                "Gonti, Lord of Luxury"
+            ],
             "total_instances": 27,
             "percentage_of_total_cards": "0.52%",
             "percentage_of_total_decks": "22.50%"
         },
         {
             "card_name": "Drowned Catacomb",
+            "common_decks": [
+                [
+                    "Nicol Bolas, God-Pharaoh",
+                    "100.00% of 9 decks"
+                ],
+                [
+                    "The Scarab God",
+                    "100.00% of 6 decks"
+                ],
+                [
+                    "Tezzeret the Schemer",
+                    "100.00% of 5 decks"
+                ]
+            ],
+            "cards_found_with": [
+                "Fetid Pools",
+                "Submerged Boneyard",
+                "Never // Return",
+                "Cruel Reality",
+                "Doomfall"
+            ],
             "total_instances": 24,
             "percentage_of_total_cards": "0.46%",
             "percentage_of_total_decks": "20.00%"
