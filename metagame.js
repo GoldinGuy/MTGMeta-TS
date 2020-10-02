@@ -121,8 +121,8 @@ if (vectored_k > 3) {
 const kmeans = KMEANS(deck_vectors, NUM_CLUSTERS, "kmeans++");
 const deck_zip = Utils.zipDeck(decks, kmeans.indexes);
 let card_counts = [];
-for (const i in [...Array(NUM_CLUSTERS).keys()]) {
-    card_counts.push([parseInt(i), decksByIdx(parseInt(i)).length]);
+for (let i = 0; i < NUM_CLUSTERS; i++) {
+    card_counts.push([i, decksByIdx(i).length]);
 }
 let total_instances = 0;
 for (const count of card_counts) {
@@ -188,7 +188,7 @@ for (let i = 0; i < NUM_CLUSTERS; i++) {
         archetype_name: "Unknown",
         top_cards: cluster,
         instances: deck_items.length,
-        metagame_percentage: (deck_items.length / total_instances) * 100,
+        metagame_percentage: Utils.round((deck_items.length / total_instances) * 100, 2),
         best_fit_deck: { main: [], sb: [] }
     };
     let max_similar = 0;
@@ -239,7 +239,7 @@ function commonDecks(card_name, limit = 3) {
                 decks_w_card += 1;
             }
         }
-        let percent = Math.min((decks_w_card / decks.length) * 100, 100);
+        let percent = Utils.round((decks_w_card / decks.length) * 100, 2);
         if (percent > CARD_CUTOFF * 100) {
             common_decks.push({
                 archetype: outputJson.archetypes[i].archetype_name,
