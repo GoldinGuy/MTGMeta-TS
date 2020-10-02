@@ -1,5 +1,6 @@
 [
   {
+    "id": "43a300bd-2b15-4a59-b145-8e532388ebc4",
     "name": "Oviya Pashiri, Sage Lifecrafter",
     "format": "brawl",
     "command": [],
@@ -164,6 +165,7 @@
     "sb": []
   },
   {
+    "id": "d71d4606-9a5c-49d2-bd9b-14c5cd805fb6",
     "name": "The Scarab God",
     "format": "brawl",
     "command": [],
@@ -336,6 +338,7 @@
     "sb": []
   },
   {
+    "id": "8804d6c1-c416-4c90-9c63-d78566859989",
     "name": "Kambal, Consul of Allocation",
     "format": "brawl",
     "command": [],
@@ -532,6 +535,7 @@
     "sb": []
   },
   {
+    "id": "5108a628-4423-4895-bf4f-b19ba7fe6716",
     "name": "Lyra Dawnbringer",
     "format": "brawl",
     "command": [],
@@ -696,6 +700,7 @@
     "sb": []
   },
   {
+    "id": "7e5cb339-862c-480b-a843-6994e3acb9e5",
     "name": "Teferi, Hero of Dominaria",
     "format": "brawl",
     "command": [],
@@ -884,6 +889,7 @@
     "sb": []
   },
   {
+    "id": "179e2cff-c167-437b-9469-142dbe416b26",
     "name": "Tezzeret the Schemer",
     "format": "brawl",
     "command": [],
@@ -1068,6 +1074,7 @@
     "sb": []
   },
   {
+    "id": "9506002e-c36a-4b5d-9094-16fddf923afa",
     "name": "Kari Zev, Skyship Raider",
     "format": "brawl",
     "command": [],
@@ -1244,6 +1251,7 @@
     "sb": []
   },
   {
+    "id": "9338eabf-abaf-4505-b4d8-10d3496d2974",
     "name": "Shalai, Voice of Plenty",
     "format": "brawl",
     "command": [],
@@ -1452,6 +1460,7 @@
     "sb": []
   },
   {
+    "id": "7c996a3f-6680-43a8-ba10-7f55b8045208",
     "name": "Tezzeret the Schemer",
     "format": "brawl",
     "command": [],
@@ -1668,6 +1677,7 @@
     "sb": []
   },
   {
+    "id": "3ef43c37-1407-4d39-96a2-bcb334fd4ff0",
     "name": "Nicol Bolas, God-Pharaoh",
     "format": "brawl",
     "command": [],
@@ -1868,6 +1878,7 @@
     "sb": []
   },
   {
+    "id": "542a9d6c-a6e1-47ba-a274-46a556df6bc5",
     "name": "Ghalta, Primal Hunger",
     "format": "brawl",
     "command": [],
@@ -2048,6 +2059,7 @@
     "sb": []
   },
   {
+    "id": "ce82e18c-ab9b-4885-a4f5-f796a1640a54",
     "name": "Hapatra, Vizier of Poisons",
     "format": "brawl",
     "command": [],
@@ -2232,6 +2244,7 @@
     "sb": []
   },
   {
+    "id": "3800704b-d47f-43d5-b94a-2100d7ca964f",
     "name": "Sram, Senior Edificer",
     "format": "brawl",
     "command": [],
@@ -2420,6 +2433,7 @@
     "sb": []
   },
   {
+    "id": "631bf1ae-5848-4804-b1e6-c24897f8dd63",
     "name": "Huatli, Warrior Poet",
     "format": "brawl",
     "command": [],
@@ -2620,6 +2634,7 @@
     "sb": []
   },
   {
+    "id": "3c4a40da-b2a7-46ff-b655-ef7dddf8b83e",
     "name": "Hazoret the Fervent",
     "format": "brawl",
     "command": [],
@@ -2772,6 +2787,7 @@
     "sb": []
   },
   {
+    "id": "48b94b94-480f-4cff-a3b9-e4810a73c59d",
     "name": "Kambal, Consul of Allocation",
     "format": "brawl",
     "command": [],
@@ -2968,6 +2984,7 @@
     "sb": []
   },
   {
+    "id": "493b8a05-d2b5-46e0-b892-fc939abcb46a",
     "name": "Vraska, Relic Seeker",
     "format": "brawl",
     "command": [],
@@ -3156,6 +3173,7 @@
     "sb": []
   },
   {
+    "id": "105422b6-7780-432f-a5ad-60af26e082d8",
     "name": "Kumena, Tyrant of Orazca",
     "format": "brawl",
     "command": [],
@@ -3344,6 +3362,7 @@
     "sb": []
   },
   {
+    "id": "2a1e3cb5-d411-476f-a7f8-8a1ff887d83d",
     "name": "Oviya Pashiri, Sage Lifecrafter",
     "format": "brawl",
     "command": [],
@@ -3512,6 +3531,7 @@
     "sb": []
   },
   {
+    "id": "0f583b83-c622-467c-ad30-2ed8589b387e",
     "name": "Shalai, Voice of Plenty",
     "format": "brawl",
     "command": [],
@@ -3696,6 +3716,7 @@
     "sb": []
   },
   {
+    "id": "6eb50834-3948-47c0-9109-c4327d356ae9",
     "name": "Kari Zev, Skyship Raider",
     "format": "brawl",
     "command": [],
@@ -3872,6 +3893,7 @@
     "sb": []
   },
   {
+    "id": "4824687e-8f6a-4a01-8807-8101a2b9d391",
     "name": "Shanna, Sisay's Legacy",
     "format": "brawl",
     "command": [],
@@ -4048,6 +4070,7 @@
     "sb": []
   },
   {
+    "id": "fb8481b7-eaa9-4208-a6f6-7c1c75a213e2",
     "name": "Kambal, Consul of Allocation",
     "format": "brawl",
     "command": [],
@@ -4244,6 +4267,7 @@
     "sb": []
   },
   {
+    "id": "a25e007a-7d60-4748-9526-184e684dd603",
     "name": "Aryel, Knight of Windgrace",
     "format": "brawl",
     "command": [],
@@ -4452,6 +4476,7 @@
     "sb": []
   },
   {
+    "id": "170d398a-cdad-4ebb-a046-6f1c7952897c",
     "name": "Lyra Dawnbringer",
     "format": "brawl",
     "command": [],
@@ -4640,6 +4665,7 @@
     "sb": []
   },
   {
+    "id": "d0042b8c-cb6f-4ce7-bce4-b04ecf8341a8",
     "name": "Gonti, Lord of Luxury",
     "format": "brawl",
     "command": [],
@@ -4808,6 +4834,7 @@
     "sb": []
   },
   {
+    "id": "649658c5-9913-4de0-843e-b19cc870414a",
     "name": "Teferi, Hero of Dominaria",
     "format": "brawl",
     "command": [],
@@ -5000,6 +5027,7 @@
     "sb": []
   },
   {
+    "id": "55aabc75-4164-4744-9c02-766053a5f012",
     "name": "Huatli, Radiant Champion",
     "format": "brawl",
     "command": [],
@@ -5184,6 +5212,7 @@
     "sb": []
   },
   {
+    "id": "14d3122e-1f9e-497d-8883-612625fb38da",
     "name": "Angrath, the Flame-Chained",
     "format": "brawl",
     "command": [],
@@ -5368,6 +5397,7 @@
     "sb": []
   },
   {
+    "id": "0f7fc123-bd8d-4f26-89db-5a0de801b176",
     "name": "Zacama, Primal Calamity",
     "format": "brawl",
     "command": [],
@@ -5588,6 +5618,7 @@
     "sb": []
   },
   {
+    "id": "36f2e18d-aade-4a52-bbe8-b1dd233021e7",
     "name": "Hapatra, Vizier of Poisons",
     "format": "brawl",
     "command": [],
@@ -5796,6 +5827,7 @@
     "sb": []
   },
   {
+    "id": "b4239ee3-c4eb-4d49-8e54-f317a7a61473",
     "name": "Angrath, the Flame-Chained",
     "format": "brawl",
     "command": [],
@@ -5984,6 +6016,7 @@
     "sb": []
   },
   {
+    "id": "06bffe5c-11e4-401d-b1f4-63821b10acc1",
     "name": "Huatli, Radiant Champion",
     "format": "brawl",
     "command": [],
@@ -6172,6 +6205,7 @@
     "sb": []
   },
   {
+    "id": "6c324b50-4b52-438a-be6a-e68a21400dc3",
     "name": "Shanna, Sisay's Legacy",
     "format": "brawl",
     "command": [],
@@ -6348,6 +6382,7 @@
     "sb": []
   },
   {
+    "id": "0355f964-5685-476d-95fe-ab611d6cae28",
     "name": "Adeliz, the Cinder Wind",
     "format": "brawl",
     "command": [],
@@ -6532,6 +6567,7 @@
     "sb": []
   },
   {
+    "id": "9f514841-5a51-4aa3-a59b-cf8a0ba5e036",
     "name": "Hapatra, Vizier of Poisons",
     "format": "brawl",
     "command": [],
@@ -6720,6 +6756,7 @@
     "sb": []
   },
   {
+    "id": "ff56c69c-ce4d-4aae-9b3b-842698f48b29",
     "name": "Hazoret the Fervent",
     "format": "brawl",
     "command": [],
@@ -6876,6 +6913,7 @@
     "sb": []
   },
   {
+    "id": "0c6f5985-2a27-489f-a08a-3ef5f749b8ba",
     "name": "Huatli, Radiant Champion",
     "format": "brawl",
     "command": [],
@@ -7084,6 +7122,7 @@
     "sb": []
   },
   {
+    "id": "bcf5012d-5019-4bed-8669-929539761832",
     "name": "Jace, Cunning Castaway",
     "format": "brawl",
     "command": [],
@@ -7248,6 +7287,7 @@
     "sb": []
   },
   {
+    "id": "964212d2-83d3-4b52-b3de-8bc34a2cfecf",
     "name": "Kari Zev, Skyship Raider",
     "format": "brawl",
     "command": [],
@@ -7428,6 +7468,7 @@
     "sb": []
   },
   {
+    "id": "a472ae4b-8055-4fab-b490-44386465dd86",
     "name": "Tezzeret the Schemer",
     "format": "brawl",
     "command": [],
@@ -7624,6 +7665,7 @@
     "sb": []
   },
   {
+    "id": "a1a21205-e490-41f6-b3ee-1f1db1323b4a",
     "name": "Ghalta, Primal Hunger",
     "format": "brawl",
     "command": [],
@@ -7804,6 +7846,7 @@
     "sb": []
   },
   {
+    "id": "b4a683a0-2bdf-47c0-9db6-faa19077658b",
     "name": "Gideon of the Trials",
     "format": "brawl",
     "command": [],
@@ -7992,6 +8035,7 @@
     "sb": []
   },
   {
+    "id": "3ba517b4-88c7-41db-aa52-4f1fd92802a4",
     "name": "Admiral Beckett Brass",
     "format": "brawl",
     "command": [],
@@ -8192,6 +8236,7 @@
     "sb": []
   },
   {
+    "id": "65aab0eb-859f-4165-bd62-b7e51741d947",
     "name": "Teferi, Hero of Dominaria",
     "format": "brawl",
     "command": [],
@@ -8408,6 +8453,7 @@
     "sb": []
   },
   {
+    "id": "05b23528-0209-40d5-953e-0e05b9cdd46a",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -8588,6 +8634,7 @@
     "sb": []
   },
   {
+    "id": "b5362a0c-adb1-4150-98b2-fa4c9b6b9521",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -8776,6 +8823,7 @@
     "sb": []
   },
   {
+    "id": "ccecc3d3-f795-46b6-87e5-5a8e9fdca8f4",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -8952,6 +9000,7 @@
     "sb": []
   },
   {
+    "id": "cbc90409-5987-442c-86cf-4fc7bdceea5b",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -9160,6 +9209,7 @@
     "sb": []
   },
   {
+    "id": "0718d8c9-55b5-4506-a49b-1fdbfd1a9efd",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -9332,6 +9382,7 @@
     "sb": []
   },
   {
+    "id": "d80e9ab0-69e0-4d59-94eb-c8424c0183c0",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -9508,6 +9559,7 @@
     "sb": []
   },
   {
+    "id": "3e709c85-b8b5-4bf8-9d60-38059ddd2876",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -9676,6 +9728,7 @@
     "sb": []
   },
   {
+    "id": "477855aa-151d-4c65-9aa9-82cebc3637fe",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -9876,6 +9929,7 @@
     "sb": []
   },
   {
+    "id": "82a5984a-2493-422b-8dd3-b56459d25dd8",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -10056,6 +10110,7 @@
     "sb": []
   },
   {
+    "id": "458a0813-0ea5-4d8a-9204-6ce80ee683cf",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -10232,6 +10287,7 @@
     "sb": []
   },
   {
+    "id": "c1baf05e-4097-4799-82be-b5f2828bd214",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -10420,6 +10476,7 @@
     "sb": []
   },
   {
+    "id": "fd5d0011-b4ce-4501-b992-19d83e034348",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -10600,6 +10657,7 @@
     "sb": []
   },
   {
+    "id": "2886bdaf-bdbf-46b1-85d9-e68a8c8caa14",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -10780,6 +10838,7 @@
     "sb": []
   },
   {
+    "id": "843fc04b-9060-46cf-ba32-458a15410c26",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -10960,6 +11019,7 @@
     "sb": []
   },
   {
+    "id": "c741e369-073f-4e9e-9ce6-ab123ec672e3",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -11144,6 +11204,7 @@
     "sb": []
   },
   {
+    "id": "804a3a0b-3152-4d21-8c86-47e08f9d9e25",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -11324,6 +11385,7 @@
     "sb": []
   },
   {
+    "id": "c5671719-d05c-48ee-9ab8-04f8dbc8f08f",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -11500,6 +11562,7 @@
     "sb": []
   },
   {
+    "id": "f75c0dfa-b477-4647-ae8c-adee20802197",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -11680,6 +11743,7 @@
     "sb": []
   },
   {
+    "id": "82a3caad-12d0-494e-b87b-826f77bd77d7",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -11864,6 +11928,7 @@
     "sb": []
   },
   {
+    "id": "8202d403-7516-48c5-b550-edd1fd6c35c4",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -12088,6 +12153,7 @@
     "sb": []
   },
   {
+    "id": "6ffd0f82-5a63-41b0-ae60-dc6bd0e2eb36",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -12276,6 +12342,7 @@
     "sb": []
   },
   {
+    "id": "ffe3083d-0cd1-4e35-9b4b-0b4e4dc7b58d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -12484,6 +12551,7 @@
     "sb": []
   },
   {
+    "id": "e9e86323-b410-4cff-ae40-97ec499cf3a7",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -12664,6 +12732,7 @@
     "sb": []
   },
   {
+    "id": "612a1e45-5fbc-4dd5-8525-4fb6d286bcee",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -12836,6 +12905,7 @@
     "sb": []
   },
   {
+    "id": "d6f14c27-64ff-4ccc-8a02-850df9135160",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -13016,6 +13086,7 @@
     "sb": []
   },
   {
+    "id": "e6f14db6-ceba-43a8-8705-d2c661440f14",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -13196,6 +13267,7 @@
     "sb": []
   },
   {
+    "id": "1f61b9ad-b4f1-400c-a24f-2e9f8cb25e10",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -13384,6 +13456,7 @@
     "sb": []
   },
   {
+    "id": "dec55a91-c6f3-4c5b-a72f-8b11bcf8630c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -13560,6 +13633,7 @@
     "sb": []
   },
   {
+    "id": "85b6972f-b376-45a7-bbb5-999f76dc648a",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -13748,6 +13822,7 @@
     "sb": []
   },
   {
+    "id": "86c0fe30-b888-4a6b-af64-fddfe627fe96",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -13932,6 +14007,7 @@
     "sb": []
   },
   {
+    "id": "91f841e8-151f-419b-b37e-c060f4f5e52c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -14120,6 +14196,7 @@
     "sb": []
   },
   {
+    "id": "87d5636e-ae2b-402a-918d-16cc785cb24e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -14300,6 +14377,7 @@
     "sb": []
   },
   {
+    "id": "cbb77e00-82f8-4ad9-8bc0-4f5e1664f37e",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -14484,6 +14562,7 @@
     "sb": []
   },
   {
+    "id": "28b3b714-de06-4be6-92fe-1ebbe63fae94",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -14668,6 +14747,7 @@
     "sb": []
   },
   {
+    "id": "a71d1548-bcb1-491b-9f0b-3b11554fa7e1",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -14856,6 +14936,7 @@
     "sb": []
   },
   {
+    "id": "56b8f3f3-4029-4923-b36e-8f93f50ebd3f",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -15040,6 +15121,7 @@
     "sb": []
   },
   {
+    "id": "0f406865-21cc-485f-b74c-c2ed8a49501c",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -15224,6 +15306,7 @@
     "sb": []
   },
   {
+    "id": "66863052-8b3f-4ee2-9d11-1665085b4eb7",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -15408,6 +15491,7 @@
     "sb": []
   },
   {
+    "id": "7ed5b41f-3da1-44d1-9a0f-bffe87107b33",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -15588,6 +15672,7 @@
     "sb": []
   },
   {
+    "id": "747a316a-a133-4a93-94c0-a66ae33354b9",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -15772,6 +15857,7 @@
     "sb": []
   },
   {
+    "id": "27df0293-b880-469d-8752-9ba6c77d7845",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -15940,6 +16026,7 @@
     "sb": []
   },
   {
+    "id": "cf400a02-06d5-41a9-9539-2166d1efb456",
     "name": "Vraska, Relic Seeker",
     "format": "brawl",
     "command": [],
@@ -16144,6 +16231,7 @@
     "sb": []
   },
   {
+    "id": "b4df809e-0aa3-496c-a7dc-6a4da166a710",
     "name": "Nicol Bolas, God-Pharaoh",
     "format": "brawl",
     "command": [],
@@ -16368,6 +16456,7 @@
     "sb": []
   },
   {
+    "id": "5ec699d6-d2c0-4768-9816-cd554339cad9",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -16548,6 +16637,7 @@
     "sb": []
   },
   {
+    "id": "9a1126f1-ea35-4a13-bde8-ca596a2f7f40",
     "name": "Admiral Beckett Brass",
     "format": "brawl",
     "command": [],
@@ -16756,6 +16846,7 @@
     "sb": []
   },
   {
+    "id": "76c68e79-6166-463f-9cf6-b1106f9c779b",
     "name": "Tezzeret the Schemer",
     "format": "brawl",
     "command": [],
@@ -16952,6 +17043,7 @@
     "sb": []
   },
   {
+    "id": "7c24ac60-05e8-4074-9fac-484e2553216b",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -17132,6 +17224,7 @@
     "sb": []
   },
   {
+    "id": "6003bdbb-5739-4aba-a004-f93703f65117",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -17316,6 +17409,7 @@
     "sb": []
   },
   {
+    "id": "1b0ed782-5a2d-477b-99fc-fa4d72bd4979",
     "name": "Ghalta, Primal Hunger",
     "format": "brawl",
     "command": [],
@@ -17484,6 +17578,7 @@
     "sb": []
   },
   {
+    "id": "a5885c4c-26e2-4572-a321-dce337c2f85a",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -17672,6 +17767,7 @@
     "sb": []
   },
   {
+    "id": "3c8283c1-5c36-4fe5-bb5d-d73f717004e4",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -17852,6 +17948,7 @@
     "sb": []
   },
   {
+    "id": "75f8e220-b575-46cd-8d25-a57b9e80e2ba",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -18036,6 +18133,7 @@
     "sb": []
   },
   {
+    "id": "d6b2c658-8b77-4a20-8d6a-d24f3dad5091",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -18200,6 +18298,7 @@
     "sb": []
   },
   {
+    "id": "bcbb739c-50d8-4a95-a5a4-f7ae006431e9",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -18384,6 +18483,7 @@
     "sb": []
   },
   {
+    "id": "4f86a21d-d551-4381-9193-75b7bd634bcd",
     "name": "Muldrotha, the Gravetide",
     "format": "brawl",
     "command": [],
@@ -18592,6 +18692,7 @@
     "sb": []
   },
   {
+    "id": "b9250a52-499a-41f6-93b8-a51e3e68055e",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -18776,6 +18877,7 @@
     "sb": []
   },
   {
+    "id": "fc252201-9268-49d9-9a48-8e41ada1f8fe",
     "name": "Ghalta, Primal Hunger",
     "format": "brawl",
     "command": [],
@@ -18948,6 +19050,7 @@
     "sb": []
   },
   {
+    "id": "06da2a2b-2c9d-47ce-a4ea-0fc3cf821c78",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -19128,6 +19231,7 @@
     "sb": []
   },
   {
+    "id": "3d80f057-d5ad-4954-98d6-9cc72d30e90b",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -19316,6 +19420,7 @@
     "sb": []
   },
   {
+    "id": "858598e8-4ba9-4571-81af-08a1988a0e94",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -19504,6 +19609,7 @@
     "sb": []
   },
   {
+    "id": "f9e62bab-9b86-4a17-bb71-9e9d4607dd98",
     "name": "The Scarab God",
     "format": "brawl",
     "command": [],
@@ -19696,6 +19802,7 @@
     "sb": []
   },
   {
+    "id": "eaab0f18-dca0-439c-a508-76684a081203",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -19880,6 +19987,7 @@
     "sb": []
   },
   {
+    "id": "9f596cc3-e4b2-4726-bf4f-0934a3cd72b1",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -20056,6 +20164,7 @@
     "sb": []
   },
   {
+    "id": "2596f6eb-7a0a-4375-bb7a-af2f13964448",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -20236,6 +20345,7 @@
     "sb": []
   },
   {
+    "id": "c61d32da-6cf7-42b8-9c57-0208deabe453",
     "name": "Kumena, Tyrant of Orazca",
     "format": "brawl",
     "command": [],
@@ -20428,6 +20538,7 @@
     "sb": []
   },
   {
+    "id": "1af929f8-0a9c-4b46-930a-2e3a08de185f",
     "name": "Teferi, Hero of Dominaria",
     "format": "brawl",
     "command": [],
@@ -20612,6 +20723,7 @@
     "sb": []
   },
   {
+    "id": "e9e33de8-f0e3-4d68-9d45-713262120e5f",
     "name": "The Scarab God",
     "format": "brawl",
     "command": [],
@@ -20812,6 +20924,7 @@
     "sb": []
   },
   {
+    "id": "4ff8e45e-c7c1-42e6-98c2-131ef0fcf980",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -21000,6 +21113,7 @@
     "sb": []
   },
   {
+    "id": "b8560c85-fcb4-4ca8-8419-0257c734c30b",
     "name": "Jace, Cunning Castaway",
     "format": "brawl",
     "command": [],
@@ -21160,6 +21274,7 @@
     "sb": []
   },
   {
+    "id": "26631fad-8705-4583-a57f-edcb004bef2f",
     "name": "Ghalta, Primal Hunger",
     "format": "brawl",
     "command": [],
@@ -21332,6 +21447,7 @@
     "sb": []
   },
   {
+    "id": "07bf5f7a-4360-4414-83d5-6f5d4a0517ee",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -21508,6 +21624,7 @@
     "sb": []
   },
   {
+    "id": "2663b671-26c9-4ef6-a3b6-54366749c9a0",
     "name": "Oviya Pashiri, Sage Lifecrafter",
     "format": "brawl",
     "command": [],
@@ -21676,6 +21793,7 @@
     "sb": []
   },
   {
+    "id": "21d9c662-f4ed-4655-be41-f783aa979d62",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -21860,6 +21978,7 @@
     "sb": []
   },
   {
+    "id": "82a135d1-8276-481c-b4d8-c0c77001ef03",
     "name": "Oviya Pashiri, Sage Lifecrafter",
     "format": "brawl",
     "command": [],
@@ -22020,6 +22139,7 @@
     "sb": []
   },
   {
+    "id": "d1d6d76d-b640-4974-99e8-efcd52407471",
     "name": "Gonti, Lord of Luxury",
     "format": "brawl",
     "command": [],
@@ -22216,6 +22336,7 @@
     "sb": []
   },
   {
+    "id": "9e9771cc-415c-4208-baa3-73a8581977d8",
     "name": "Nicol Bolas, God-Pharaoh",
     "format": "brawl",
     "command": [],
@@ -22440,6 +22561,7 @@
     "sb": []
   },
   {
+    "id": "eae1d191-d0a6-4eef-aba0-89df91bc7b5e",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -22620,6 +22742,7 @@
     "sb": []
   },
   {
+    "id": "fac0d372-132b-4e67-8b06-4ffc89fcaad0",
     "name": "Nicol Bolas, God-Pharaoh",
     "format": "brawl",
     "command": [],
@@ -22844,6 +22967,7 @@
     "sb": []
   },
   {
+    "id": "bbd1c68a-a217-40e2-8f1b-6f0df2e607e9",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -23024,6 +23148,7 @@
     "sb": []
   },
   {
+    "id": "cba7c105-abe7-48ef-95fe-fc87325faa37",
     "name": "The Scarab God",
     "format": "brawl",
     "command": [],
@@ -23216,6 +23341,7 @@
     "sb": []
   },
   {
+    "id": "6c19c423-a6ca-4471-9341-3114e0e69d18",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -23400,6 +23526,7 @@
     "sb": []
   },
   {
+    "id": "c339ab16-1c85-4721-a270-02e9a6eb64b6",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -23580,6 +23707,7 @@
     "sb": []
   },
   {
+    "id": "3edc0de3-ceb4-4fc0-898e-7f778a923888",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -23752,6 +23880,7 @@
     "sb": []
   },
   {
+    "id": "4b7ed800-8fda-48a9-a38a-f086fdb2c564",
     "name": "Nicol Bolas, God-Pharaoh",
     "format": "brawl",
     "command": [],
@@ -23964,6 +24093,7 @@
     "sb": []
   },
   {
+    "id": "95488170-7c90-44fb-829e-26ca8f2e2110",
     "name": "Nicol Bolas, God-Pharaoh",
     "format": "brawl",
     "command": [],
@@ -24180,6 +24310,7 @@
     "sb": []
   },
   {
+    "id": "ea74b240-c98e-4012-a952-908bb321bfdc",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -24364,6 +24495,7 @@
     "sb": []
   },
   {
+    "id": "63766fe6-fbc1-4673-a73a-3c0a65dca351",
     "name": "Admiral Beckett Brass",
     "format": "brawl",
     "command": [],
@@ -24568,6 +24700,7 @@
     "sb": []
   },
   {
+    "id": "d2bc6d8e-60e1-45de-8d2d-331adcf5154f",
     "name": "Padeem, Consul of Innovation",
     "format": "brawl",
     "command": [],
@@ -24756,6 +24889,7 @@
     "sb": []
   },
   {
+    "id": "3934f750-bbe5-41ed-882e-925f7d1fb487",
     "name": "Ghalta, Primal Hunger",
     "format": "brawl",
     "command": [],
@@ -24936,6 +25070,7 @@
     "sb": []
   },
   {
+    "id": "f9407c54-27d8-4922-a1d2-44d85fecbdb7",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -25120,6 +25255,7 @@
     "sb": []
   },
   {
+    "id": "4f023ae9-ea25-4a16-8a95-6cfce74ce858",
     "name": "Nicol Bolas, God-Pharaoh",
     "format": "brawl",
     "command": [],
@@ -25328,6 +25464,7 @@
     "sb": []
   },
   {
+    "id": "64fbe892-e915-440a-819a-a2dc92908857",
     "name": "The Scarab God",
     "format": "brawl",
     "command": [],
@@ -25528,6 +25665,7 @@
     "sb": []
   },
   {
+    "id": "2b6cd833-3120-4faa-9d49-475583379154",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -25716,6 +25854,7 @@
     "sb": []
   },
   {
+    "id": "2393bc58-abea-43c4-a4e4-b14d02024fb3",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -25904,6 +26043,7 @@
     "sb": []
   },
   {
+    "id": "4aae6f0b-ced3-4cf7-b53f-2977b2575b66",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -26084,6 +26224,7 @@
     "sb": []
   },
   {
+    "id": "39f0b5ab-0de3-4310-b27c-95d354d5c117",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -26264,6 +26405,7 @@
     "sb": []
   },
   {
+    "id": "a388a812-bbe9-46ea-8589-b28511b0a205",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -26432,6 +26574,7 @@
     "sb": []
   },
   {
+    "id": "9ab1ee4a-c0cf-4984-831b-49c383b678a4",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -26616,6 +26759,7 @@
     "sb": []
   },
   {
+    "id": "ac0ad04a-0efc-4a6b-9dbf-9040924966a3",
     "name": "Tezzeret the Schemer",
     "format": "brawl",
     "command": [],
@@ -26812,6 +26956,7 @@
     "sb": []
   },
   {
+    "id": "a8125f74-e9e5-439a-bf73-cfe102e47b26",
     "name": "Nicol Bolas, God-Pharaoh",
     "format": "brawl",
     "command": [],
@@ -27028,6 +27173,7 @@
     "sb": []
   },
   {
+    "id": "2119bbd9-717a-4cf3-a5cd-77466bd5d4bb",
     "name": "Ghalta, Primal Hunger",
     "format": "brawl",
     "command": [],
@@ -27200,6 +27346,7 @@
     "sb": []
   },
   {
+    "id": "58b9a929-0fa4-4aad-8d7b-3582b876050b",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -27384,6 +27531,7 @@
     "sb": []
   },
   {
+    "id": "def0bd0f-a1f3-4b12-9865-08a91fd9a0fa",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -27572,6 +27720,7 @@
     "sb": []
   },
   {
+    "id": "35b83a04-d037-4c71-9e97-b83a78ce265d",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -27752,6 +27901,7 @@
     "sb": []
   },
   {
+    "id": "d701ddc6-bd70-4d93-9d0c-d0a8ccb29a59",
     "name": "Nicol Bolas, God-Pharaoh",
     "format": "brawl",
     "command": [],
@@ -27976,6 +28126,7 @@
     "sb": []
   },
   {
+    "id": "1e6d2e5f-aa71-44af-addf-641d7a440b74",
     "name": "Muldrotha, the Gravetide",
     "format": "brawl",
     "command": [],
@@ -28200,6 +28351,7 @@
     "sb": []
   },
   {
+    "id": "b9440cde-4dc4-40be-a54f-a494b071d33d",
     "name": "Baral, Chief of Compliance",
     "format": "brawl",
     "command": [],
@@ -28376,6 +28528,7 @@
     "sb": []
   },
   {
+    "id": "2b68fdff-df2e-45df-ab7e-8fb589dd7d0b",
     "name": "The Scarab God",
     "format": "brawl",
     "command": [],
@@ -28576,6 +28729,7 @@
     "sb": []
   },
   {
+    "id": "8411e6ee-7f7d-435c-aff0-951d710403c8",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -28733,6 +28887,7 @@
     ]
   },
   {
+    "id": "2eebd4ee-03e2-4773-b5e9-642dab914bed",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -28894,6 +29049,7 @@
     ]
   },
   {
+    "id": "5cc8e9a8-b9d0-495e-97c2-1d4b2e278b28",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -29047,6 +29203,7 @@
     ]
   },
   {
+    "id": "906319b5-ff6c-458b-b5b7-a8f569819c7a",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -29224,6 +29381,7 @@
     ]
   },
   {
+    "id": "4cb385ae-49c7-4d2c-abd9-92625449e659",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -29397,6 +29555,7 @@
     ]
   },
   {
+    "id": "121af093-e8c4-417f-8ea3-56e3eced4892",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -29610,6 +29769,7 @@
     ]
   },
   {
+    "id": "4783cc1b-f65f-4d88-a4dd-59ea11f8292d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -29771,6 +29931,7 @@
     ]
   },
   {
+    "id": "e600e852-02eb-4b44-b850-b6d5bc435f0b",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -29924,6 +30085,7 @@
     ]
   },
   {
+    "id": "ec3a05c6-25dc-4067-a934-349858986d7f",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -30077,6 +30239,7 @@
     ]
   },
   {
+    "id": "4dbb616e-7f03-460d-9db2-18f58a458eef",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -30286,6 +30449,7 @@
     ]
   },
   {
+    "id": "353c3ede-e2f2-4e04-8410-231d036c3a53",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -30487,6 +30651,7 @@
     ]
   },
   {
+    "id": "9a63db6d-9cc6-4ff3-86c7-306d59188ed8",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -30648,6 +30813,7 @@
     ]
   },
   {
+    "id": "7f9cf3ae-1f4b-44fd-8425-2017058fb8a6",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -30785,6 +30951,7 @@
     ]
   },
   {
+    "id": "feb1debe-ad2b-408c-b469-0d14f9d9609b",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -30966,6 +31133,7 @@
     ]
   },
   {
+    "id": "cf596dba-4820-4353-9977-4f12208d885c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -31135,6 +31303,7 @@
     ]
   },
   {
+    "id": "25881e15-0282-45eb-ab29-79ce259ef0ec",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -31292,6 +31461,7 @@
     ]
   },
   {
+    "id": "4aebd2b4-2eba-4d20-817c-1de7bf38ac6a",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -31489,6 +31659,7 @@
     ]
   },
   {
+    "id": "2098fc1b-fd41-42f5-95e3-9cfa9270447c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -31686,6 +31857,7 @@
     ]
   },
   {
+    "id": "b83f2c7a-9ce6-49b2-8322-466fabeccbc1",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -31899,6 +32071,7 @@
     ]
   },
   {
+    "id": "e728e531-09f9-4bfd-bbb8-1b38f20a2e0e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -32060,6 +32233,7 @@
     ]
   },
   {
+    "id": "09d16e28-614b-415c-926f-d0a1da318c56",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -32257,6 +32431,7 @@
     ]
   },
   {
+    "id": "bba91234-4671-44ba-9a1b-cf90ca02aff4",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -32418,6 +32593,7 @@
     ]
   },
   {
+    "id": "51506491-b7a4-41bb-b7a7-379b39e048ff",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -32575,6 +32751,7 @@
     ]
   },
   {
+    "id": "c8f0408b-8613-47de-9e01-7c541acc30ed",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -32751,6 +32928,7 @@
     "sb": []
   },
   {
+    "id": "864190ab-7c2c-40f5-880d-b0af3658a308",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -32964,6 +33142,7 @@
     ]
   },
   {
+    "id": "bbf80d19-0128-4117-a9ec-da2ebfa2b3e9",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -33129,6 +33308,7 @@
     ]
   },
   {
+    "id": "86a76a92-bb09-485b-b06f-3bffb090fbcd",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -33286,6 +33466,7 @@
     ]
   },
   {
+    "id": "9470d5f6-2825-435b-9b04-6a57f88d9839",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -33447,6 +33628,7 @@
     ]
   },
   {
+    "id": "248adca2-47b7-457f-9e6a-4c8a67f3fa2e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -33648,6 +33830,7 @@
     ]
   },
   {
+    "id": "41bbf11d-3773-4417-be89-4448387858a2",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -33793,6 +33976,7 @@
     ]
   },
   {
+    "id": "34713bf4-32b8-4d18-a4c3-2a9498a40ec9",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -33962,6 +34146,7 @@
     ]
   },
   {
+    "id": "df38830a-0f8d-4964-9b32-4c30c6149188",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -34119,6 +34304,7 @@
     ]
   },
   {
+    "id": "95fbb350-c728-4cd8-be2c-01228a0c739d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -34300,6 +34486,7 @@
     ]
   },
   {
+    "id": "6aa2f919-1ccc-4d42-8f0b-0fe0cdf18112",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -34485,6 +34672,7 @@
     ]
   },
   {
+    "id": "298b96b5-160d-44f2-bcad-e4fda4672f01",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -34666,6 +34854,7 @@
     ]
   },
   {
+    "id": "a2c79af1-239f-4d8c-823c-5c7af74f13bd",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -34847,6 +35036,7 @@
     ]
   },
   {
+    "id": "e30321e1-3d41-474a-8bc8-e82f9ea3df0d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -35032,6 +35222,7 @@
     ]
   },
   {
+    "id": "10c2b369-3fde-406c-9838-12a82c9c8269",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -35257,6 +35448,7 @@
     ]
   },
   {
+    "id": "8452c5be-7824-4401-a135-d116d932f78c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -35430,6 +35622,7 @@
     ]
   },
   {
+    "id": "99a0f8ab-a8d5-4d5f-955e-d4a6d2462094",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -35631,6 +35824,7 @@
     ]
   },
   {
+    "id": "47d343cc-48cb-4aec-aca8-ba9719c30213",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -35812,6 +36006,7 @@
     ]
   },
   {
+    "id": "ed944075-32ca-4ef2-b9ab-435530841e8d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -36009,6 +36204,7 @@
     ]
   },
   {
+    "id": "ac8179d7-9c41-4ed9-886a-46ef149d20ac",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -36234,6 +36430,7 @@
     ]
   },
   {
+    "id": "f8b76006-d8ae-48c3-83dc-1ae0b8de9f37",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -36443,6 +36640,7 @@
     ]
   },
   {
+    "id": "8483877e-0cac-4508-8aa8-5f3408f9d035",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -36624,6 +36822,7 @@
     ]
   },
   {
+    "id": "b0ae5f31-e9a9-49f2-8881-17ce417fdf9f",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -36805,6 +37004,7 @@
     ]
   },
   {
+    "id": "aa0512ee-41a1-4f57-a944-9c986b07b120",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -36994,6 +37194,7 @@
     ]
   },
   {
+    "id": "200cb91c-2aef-4c5e-8ca7-284f11fea84b",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -37163,6 +37364,7 @@
     ]
   },
   {
+    "id": "1bd0a5c2-1bf1-4efa-b31b-2f741b37e867",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -37336,6 +37538,7 @@
     ]
   },
   {
+    "id": "40d372f6-9da5-4d9a-bea8-25380a69f18b",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -37537,6 +37740,7 @@
     ]
   },
   {
+    "id": "86aa8b02-c2fb-42a6-b234-17a0819fcc01",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -37742,6 +37946,7 @@
     ]
   },
   {
+    "id": "a257fe74-a2e7-4d70-95e6-94099fd931aa",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -37959,6 +38164,7 @@
     ]
   },
   {
+    "id": "531dfc40-b580-47df-89c4-3fba9d54967f",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -38148,6 +38354,7 @@
     ]
   },
   {
+    "id": "91dae663-d12c-4766-a3e3-80f86a285c32",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -38333,6 +38540,7 @@
     ]
   },
   {
+    "id": "2c534315-f785-4bb4-a9fb-4917f644284e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -38518,6 +38726,7 @@
     ]
   },
   {
+    "id": "471c6357-4dd1-4387-a7b3-4c3489270644",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -38699,6 +38908,7 @@
     ]
   },
   {
+    "id": "b53b234c-ea4e-4c89-89c9-471ba8865bb4",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -38876,6 +39086,7 @@
     ]
   },
   {
+    "id": "8a86a43d-26f2-41ec-a733-f9295659d16f",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -39101,6 +39312,7 @@
     ]
   },
   {
+    "id": "c011e151-77e6-4b8c-9903-e4a8ec91cf40",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -39314,6 +39526,7 @@
     ]
   },
   {
+    "id": "fc23dc9d-5138-4abc-b4a2-98ba4e725feb",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -39503,6 +39716,7 @@
     ]
   },
   {
+    "id": "e6b70191-2d85-4c6d-a79c-3395563a5c60",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -39688,6 +39902,7 @@
     ]
   },
   {
+    "id": "99b0fb08-be7a-4333-85ae-974c255f18ad",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -39905,6 +40120,7 @@
     ]
   },
   {
+    "id": "fe93482b-69d6-4697-ac98-f601e356aaad",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -40098,6 +40314,7 @@
     ]
   },
   {
+    "id": "b1f5e402-ec30-4ab5-b0d1-970df01bd33b",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -40287,6 +40504,7 @@
     ]
   },
   {
+    "id": "cab1f6e8-7923-479d-8dc9-9fd679f6d49f",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -40424,6 +40642,7 @@
     ]
   },
   {
+    "id": "9d592d08-42f9-48e6-97f7-7663f28458cc",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -40600,6 +40819,7 @@
     "sb": []
   },
   {
+    "id": "69c10ecf-4a27-42e9-b8eb-f85755b95e1e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -40777,6 +40997,7 @@
     ]
   },
   {
+    "id": "c7665f96-cad1-492a-84df-d80d2e92b5a0",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -40934,6 +41155,7 @@
     ]
   },
   {
+    "id": "edb17d2a-9344-4f4f-910a-24948a996c22",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -41103,6 +41325,7 @@
     ]
   },
   {
+    "id": "c024665e-3523-4a37-bdeb-dde2e38c54a5",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -41260,6 +41483,7 @@
     ]
   },
   {
+    "id": "e8086d80-43f4-48ac-a3f8-f51bed43c244",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -41421,6 +41645,7 @@
     ]
   },
   {
+    "id": "b907927a-231f-4678-a8ba-7fb0d02b9e3c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -41578,6 +41803,7 @@
     ]
   },
   {
+    "id": "b715cf78-92be-4eac-9e76-866edc0049fa",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -41787,6 +42013,7 @@
     ]
   },
   {
+    "id": "985625ec-f641-41e8-bbac-0309e9267646",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -41944,6 +42171,7 @@
     ]
   },
   {
+    "id": "5c3aabf9-1221-4de3-9990-994d5c925e6e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -42097,6 +42325,7 @@
     ]
   },
   {
+    "id": "43059f0c-a0db-4451-a3b1-e37364b7e035",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -42310,6 +42539,7 @@
     ]
   },
   {
+    "id": "bc31fbff-f674-4386-95eb-e594ea2da5e9",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -42471,6 +42701,7 @@
     ]
   },
   {
+    "id": "1fe9cc34-8e75-44c3-9fdf-7d88e4c0c03e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -42684,6 +42915,7 @@
     ]
   },
   {
+    "id": "4785bd60-2429-41b6-97f2-b640234087fb",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -42845,6 +43077,7 @@
     ]
   },
   {
+    "id": "63b94582-2ed9-4427-9cb1-42a034cb5930",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -42990,6 +43223,7 @@
     ]
   },
   {
+    "id": "88b5fe00-1e4e-4fc8-8e8d-c5da3fbad522",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -43187,6 +43421,7 @@
     ]
   },
   {
+    "id": "0805fabb-52db-4e2e-b81d-faaba3e200e5",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -43340,6 +43575,7 @@
     ]
   },
   {
+    "id": "71c5ce2d-1336-4dff-b797-0273b75e8220",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -43497,6 +43733,7 @@
     ]
   },
   {
+    "id": "d597a351-c3f3-4cba-978c-fdcf857a4679",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -43658,6 +43895,7 @@
     ]
   },
   {
+    "id": "b480b93f-066f-4203-a0ee-8594f187f8ac",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -43855,6 +44093,7 @@
     ]
   },
   {
+    "id": "817e1a18-f9f1-48f2-9773-0f81a2072b6c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -44016,6 +44255,7 @@
     ]
   },
   {
+    "id": "832a2d6c-0f41-4d26-bdf5-25c668f9e855",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -44229,6 +44469,7 @@
     ]
   },
   {
+    "id": "3de15386-6bf6-4f9d-9210-455447bdba73",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -44402,6 +44643,7 @@
     ]
   },
   {
+    "id": "ad7f67b4-ef86-4694-a668-c1e736cb564b",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -44571,6 +44813,7 @@
     ]
   },
   {
+    "id": "08dfff29-a9fa-4ac4-be1a-7f40cfa47908",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -44752,6 +44995,7 @@
     ]
   },
   {
+    "id": "cdbf917d-71c7-4808-827d-a7b581dff876",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -44913,6 +45157,7 @@
     ]
   },
   {
+    "id": "13e8da08-0250-4842-80ac-fae3a7814bf9",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -45066,6 +45311,7 @@
     ]
   },
   {
+    "id": "6cea4d9e-76bf-428e-81e3-2239bc424d5e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -45263,6 +45509,7 @@
     ]
   },
   {
+    "id": "50644592-750f-4379-8757-1bdbb6b7734e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -45428,6 +45675,7 @@
     ]
   },
   {
+    "id": "2479f22d-8bca-4252-b8d2-335f92026629",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -45629,6 +45877,7 @@
     ]
   },
   {
+    "id": "d3b5d6a6-6191-4501-bba9-74fbc9bb7123",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -45830,6 +46079,7 @@
     ]
   },
   {
+    "id": "3a978fb3-4698-4f56-9802-1e9d29bf1bec",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -46015,6 +46265,7 @@
     ]
   },
   {
+    "id": "3dba97f0-81c4-46de-992b-3e88911d2358",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -46200,6 +46451,7 @@
     ]
   },
   {
+    "id": "56d73ef0-06db-4907-997a-a3e189e4247d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -46377,6 +46629,7 @@
     ]
   },
   {
+    "id": "d0d2caa0-106c-434f-889a-23ce393df951",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -46582,6 +46835,7 @@
     ]
   },
   {
+    "id": "01b87ead-02a2-43f1-81bf-e7b412aa1b69",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -46771,6 +47025,7 @@
     ]
   },
   {
+    "id": "a10dc25a-9ba2-4690-accb-906a32d1465c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -46940,6 +47195,7 @@
     ]
   },
   {
+    "id": "5c6f2329-9dbb-4bf7-bba5-c1d41acdb9d9",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -47121,6 +47377,7 @@
     ]
   },
   {
+    "id": "3380f71d-2aba-4fe4-81b2-ffce29ea3324",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -47322,6 +47579,7 @@
     ]
   },
   {
+    "id": "3c6a046f-ed5f-4fec-97e0-6bfa6344d049",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -47503,6 +47761,7 @@
     ]
   },
   {
+    "id": "b9732e8c-027c-4e39-9c32-1fd40462acae",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -47696,6 +47955,7 @@
     ]
   },
   {
+    "id": "397857e2-25cd-4e30-a1a5-d046df4583c8",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -47885,6 +48145,7 @@
     ]
   },
   {
+    "id": "9fc13af7-bfbd-4d1b-abea-8b002ba7c801",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -48058,6 +48319,7 @@
     ]
   },
   {
+    "id": "3f837478-f36a-4d3f-80cd-3d6e4be33978",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -48275,6 +48537,7 @@
     ]
   },
   {
+    "id": "cef3bc26-1a2c-4290-95c9-6ead9496a265",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -48472,6 +48735,7 @@
     ]
   },
   {
+    "id": "d16f50ad-fae1-4b34-8a64-983970a5d726",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -48653,6 +48917,7 @@
     ]
   },
   {
+    "id": "65d8c2e8-e7b6-49cb-aec6-214248ebea2b",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -48854,6 +49119,7 @@
     ]
   },
   {
+    "id": "0f388816-e942-4e91-9cbd-3761200f1ad2",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -49043,6 +49309,7 @@
     ]
   },
   {
+    "id": "bccbe46a-02f8-432c-88bc-1bd305410221",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -49268,6 +49535,7 @@
     ]
   },
   {
+    "id": "00fb883a-b95e-4e3a-8551-90ec934aadde",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -49449,6 +49717,7 @@
     ]
   },
   {
+    "id": "03ef05f3-29e0-4a34-9bc8-2cf13196aef8",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -49630,6 +49899,7 @@
     ]
   },
   {
+    "id": "bfdf8ce1-1f93-4304-9f39-8852635463ca",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -49811,6 +50081,7 @@
     ]
   },
   {
+    "id": "3af37386-5f61-4721-a2f0-10c2d4eda2e4",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -50036,6 +50307,7 @@
     ]
   },
   {
+    "id": "7fd47c1d-e3b0-454e-9072-34f742dd164b",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -50217,6 +50489,7 @@
     ]
   },
   {
+    "id": "f4f77baf-bbf9-4cf4-9b6c-ea1daae17757",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -50406,6 +50679,7 @@
     ]
   },
   {
+    "id": "140ef763-e341-4a20-ba3c-6ba5ad86e1e3",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -50623,6 +50897,7 @@
     ]
   },
   {
+    "id": "cf8b7c28-9894-4c72-b70f-a1ecade5c99e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -50796,6 +51071,7 @@
     ]
   },
   {
+    "id": "7aef3264-0a27-4814-a1d2-f815e32117cf",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -50981,6 +51257,7 @@
     ]
   },
   {
+    "id": "641177d1-90fc-4800-a2f3-088b62734c39",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -51206,6 +51483,7 @@
     ]
   },
   {
+    "id": "6c633958-e707-46c9-9a88-1d2292c833ce",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -51391,6 +51669,7 @@
     ]
   },
   {
+    "id": "b0a4f396-2ebd-40c9-b97a-646a5bc99721",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -51576,6 +51855,7 @@
     ]
   },
   {
+    "id": "ccc91406-f554-4ee5-af6c-71fbe0ca0aaf",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -51789,6 +52069,7 @@
     ]
   },
   {
+    "id": "bae484cb-ccd5-4579-a3d2-dd52584cc38d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -51998,6 +52279,7 @@
     ]
   },
   {
+    "id": "982a37ec-b929-412b-a82f-7a166fa2a58c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -52203,6 +52485,7 @@
     ]
   },
   {
+    "id": "ce8c0065-6d7d-4dd0-84dc-f39e09446504",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -52392,6 +52675,7 @@
     ]
   },
   {
+    "id": "a3c70161-f8ca-484a-a200-57a1cae08031",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -52585,6 +52869,7 @@
     ]
   },
   {
+    "id": "df77d54d-2284-4fa8-8372-f9c44bdc41b3",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -52770,6 +53055,7 @@
     ]
   },
   {
+    "id": "477315bb-6d8f-4a77-927a-cabf172562a0",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -52959,6 +53245,7 @@
     ]
   },
   {
+    "id": "b23827eb-3c97-486e-831e-8a44f2291b3f",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -53184,6 +53471,7 @@
     ]
   },
   {
+    "id": "7773ded2-4862-467a-a6a5-109c2fcf7b97",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -53401,6 +53689,7 @@
     ]
   },
   {
+    "id": "05eac1d3-49d4-4b0a-a31c-1664907e2df4",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -53618,6 +53907,7 @@
     ]
   },
   {
+    "id": "29465927-0d49-4026-b9e6-a221c39c063e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -53799,6 +54089,7 @@
     ]
   },
   {
+    "id": "f613f1e6-86d0-4ce1-b2ac-052e8fd16335",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -53984,6 +54275,7 @@
     ]
   },
   {
+    "id": "0f4a2b2d-6b96-4bfa-a44b-0bee1db55d1a",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -54169,6 +54461,7 @@
     ]
   },
   {
+    "id": "f97f2060-3a11-458b-93dd-16dc2ec42214",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -54350,6 +54643,7 @@
     ]
   },
   {
+    "id": "6bc0b943-3e86-4c99-a77c-adaccc1fd7bb",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -54559,6 +54853,7 @@
     ]
   },
   {
+    "id": "2901bb54-79e0-40c2-be14-fbe580a3a75a",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -54740,6 +55035,7 @@
     ]
   },
   {
+    "id": "3fcd556e-f24a-44fb-a396-c4140236006d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -54965,6 +55261,7 @@
     ]
   },
   {
+    "id": "5becdc53-ad51-49d6-8cde-268ae9b75dab",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -55146,6 +55443,7 @@
     ]
   },
   {
+    "id": "c93f1260-992e-4428-889e-12568100cfbf",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -55347,6 +55645,7 @@
     ]
   },
   {
+    "id": "5c3c6c4c-eecb-45b0-a49a-02cf952b3420",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -55532,6 +55831,7 @@
     ]
   },
   {
+    "id": "a304a9b0-6443-49ac-b3f3-d9441325f4df",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -55701,6 +56001,7 @@
     ]
   },
   {
+    "id": "d3bdcaba-db61-42a5-8cb0-9929674017e5",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -55890,6 +56191,7 @@
     ]
   },
   {
+    "id": "9b1d4360-45ec-4c96-a158-be14dc6bf03c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -56091,6 +56393,7 @@
     ]
   },
   {
+    "id": "71762d70-5f58-4015-b873-89a82ef6ff77",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -56272,6 +56575,7 @@
     ]
   },
   {
+    "id": "b2315ef4-c4ca-46ad-b57c-37d6daf904f2",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -56457,6 +56761,7 @@
     ]
   },
   {
+    "id": "f1b054c6-f9e1-4c56-9775-050da8f06b91",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -56630,6 +56935,7 @@
     ]
   },
   {
+    "id": "65d2a720-56e5-4f02-9f10-f953a044b94c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -56819,6 +57125,7 @@
     ]
   },
   {
+    "id": "5143f43b-9553-4940-a59a-96dfa6271b7c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -56996,6 +57303,7 @@
     ]
   },
   {
+    "id": "9a230fd3-c215-40ec-a0e5-261c4f80461a",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -57177,6 +57485,7 @@
     ]
   },
   {
+    "id": "5632390c-363c-4572-8f8e-55f12828b8bf",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -57402,6 +57711,7 @@
     ]
   },
   {
+    "id": "d59e8950-4f5b-405d-b984-799fd5e15720",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -57575,6 +57885,7 @@
     ]
   },
   {
+    "id": "1d87dddb-7fd6-4408-b2af-9635e4e10292",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -57756,6 +58067,7 @@
     ]
   },
   {
+    "id": "299c7c45-de73-41f9-b4e1-93320aeb9cdb",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -57953,6 +58265,7 @@
     ]
   },
   {
+    "id": "2b82e461-1ce0-48ce-abdf-45790a2d0f72",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -58166,6 +58479,7 @@
     ]
   },
   {
+    "id": "1ab7a0d9-1149-4e16-a271-2f2d37d25db3",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -58339,6 +58653,7 @@
     ]
   },
   {
+    "id": "17e37ab2-6e4c-4233-9476-ff53458c9c3d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -58552,6 +58867,7 @@
     ]
   },
   {
+    "id": "b9ea0edc-8ec9-4cc7-9db1-4b0b984a209c",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -58728,6 +59044,7 @@
     "sb": []
   },
   {
+    "id": "0d8321a7-65d0-4717-bb4f-8efe8fd354ae",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -58881,6 +59198,7 @@
     ]
   },
   {
+    "id": "ae820347-b48e-4042-b281-907d964d84ee",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -59042,6 +59360,7 @@
     ]
   },
   {
+    "id": "886aac8c-fe75-4128-bd21-367bc7514661",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -59239,6 +59558,7 @@
     ]
   },
   {
+    "id": "3c2f32cd-014b-4049-8fe8-3066e8cd4d60",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -59440,6 +59760,7 @@
     ]
   },
   {
+    "id": "206e8d5d-d400-409e-8fcc-7d50fec7a820",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -59601,6 +59922,7 @@
     ]
   },
   {
+    "id": "04e21b3d-f0d3-447d-93a4-7117ee404f65",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -59802,6 +60124,7 @@
     ]
   },
   {
+    "id": "6de26d25-8b27-45ed-8b4e-3b605c58aaa9",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -59971,6 +60294,7 @@
     ]
   },
   {
+    "id": "38c8ede8-f5e2-4a38-b6f0-4b065498fd54",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -60140,6 +60464,7 @@
     ]
   },
   {
+    "id": "aebd876d-335d-487e-bcf3-c74f209658e6",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -60337,6 +60662,7 @@
     ]
   },
   {
+    "id": "8ca21a9f-9f6f-4ea1-a03e-2fc789182ace",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -60494,6 +60820,7 @@
     ]
   },
   {
+    "id": "07a5a63e-a4cd-4e59-9034-e944094cfe3e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -60675,6 +61002,7 @@
     ]
   },
   {
+    "id": "52ba9440-8db5-4589-a27c-6534c813d2a3",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -60832,6 +61160,7 @@
     ]
   },
   {
+    "id": "4e32691a-be3f-43a1-a86f-6dd0aadd4cb5",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -60993,6 +61322,7 @@
     ]
   },
   {
+    "id": "810c7c7d-0173-495e-ba0f-1f8ebce92b54",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -61150,6 +61480,7 @@
     ]
   },
   {
+    "id": "9fff6add-e064-4a98-ac4f-3e560df48d3a",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -61359,6 +61690,7 @@
     ]
   },
   {
+    "id": "137be2d0-2082-46bf-9ee7-ca974977c43e",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -61536,6 +61868,7 @@
     ]
   },
   {
+    "id": "7d17dc08-c7bb-4acd-aac8-5d46cd52eefd",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -61693,6 +62026,7 @@
     ]
   },
   {
+    "id": "c95ecb29-a00e-4987-8e52-ec85f8f6957d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -61830,6 +62164,7 @@
     ]
   },
   {
+    "id": "6c817784-da44-45a8-b2ba-93787c8b2844",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -62043,6 +62378,7 @@
     ]
   },
   {
+    "id": "b40ec362-c054-4271-9bd7-255024adc9a8",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -62204,6 +62540,7 @@
     ]
   },
   {
+    "id": "a4bbd820-9fd2-4e14-8ba4-ce55f7b35d91",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -62361,6 +62698,7 @@
     ]
   },
   {
+    "id": "7249d35b-3819-40b1-83c7-d855f00103f5",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -62558,6 +62896,7 @@
     ]
   },
   {
+    "id": "1c851e04-00ed-4f4a-be0c-de5e2c150ea7",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -62719,6 +63058,7 @@
     ]
   },
   {
+    "id": "1129bdd0-746a-4da7-8927-02cc531b5f4b",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -62884,6 +63224,7 @@
     ]
   },
   {
+    "id": "937d23dd-b713-4874-ace8-ad6e4925c39d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -63037,6 +63378,7 @@
     ]
   },
   {
+    "id": "f91db9d4-4466-4437-8a37-bcdec3f24a2d",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -63182,6 +63524,7 @@
     ]
   },
   {
+    "id": "6a2ecda4-0abb-43d0-9768-4ec6c546c3e0",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -63395,6 +63738,7 @@
     ]
   },
   {
+    "id": "e5b733c9-c462-4921-b454-7930a0df3412",
     "name": "Unknown",
     "format": "brawl",
     "command": [],
@@ -63548,6 +63892,7 @@
     ]
   },
   {
+    "id": "ecab3ae1-8497-4510-be71-b928e0120f40",
     "name": "Unknown",
     "format": "brawl",
     "command": [],

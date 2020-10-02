@@ -1,0 +1,1254 @@
+[
+  {
+    "id": "b64cff9a-c79c-461c-9746-01baf9d50682",
+    "name": "Rogues",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Tyrant's Choice",
+        "quantity": 4
+      },
+      {
+        "name": "Swamp",
+        "quantity": 16
+      },
+      {
+        "name": "Sovereign's Bite",
+        "quantity": 4
+      },
+      {
+        "name": "Sign in Blood",
+        "quantity": 4
+      },
+      {
+        "name": "Prickly Boggart",
+        "quantity": 4
+      },
+      {
+        "name": "Night Market Lookout",
+        "quantity": 4
+      },
+      {
+        "name": "Morsel Theft",
+        "quantity": 4
+      },
+      {
+        "name": "Guul Draz Vampire",
+        "quantity": 4
+      },
+      {
+        "name": "Fruit of Tizerus",
+        "quantity": 2
+      },
+      {
+        "name": "Duress",
+        "quantity": 2
+      },
+      {
+        "name": "Dragonskull Summit",
+        "quantity": 4
+      },
+      {
+        "name": "Changeling Outcast",
+        "quantity": 4
+      },
+      {
+        "name": "Bump in the Night",
+        "quantity": 4
+      }
+    ],
+    "sb": [
+      {
+        "name": "Soul-Guide Lantern",
+        "quantity": 3
+      },
+      {
+        "name": "Noggin Whack",
+        "quantity": 3
+      },
+      {
+        "name": "Grasp of Darkness",
+        "quantity": 2
+      },
+      {
+        "name": "Duress",
+        "quantity": 2
+      },
+      {
+        "name": "Cling to Dust",
+        "quantity": 2
+      },
+      {
+        "name": "Choking Sands",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "id": "4e4bbe57-b417-40cf-a05d-91bed373e54d",
+    "name": "Mono White Tokens",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Triplicate Spirits",
+        "quantity": 2
+      },
+      {
+        "name": "Secluded Steppe",
+        "quantity": 4
+      },
+      {
+        "name": "Rally for the Throne",
+        "quantity": 4
+      },
+      {
+        "name": "Raise the Alarm",
+        "quantity": 4
+      },
+      {
+        "name": "Plains",
+        "quantity": 18
+      },
+      {
+        "name": "Orim's Chant",
+        "quantity": 3
+      },
+      {
+        "name": "Launch the Fleet",
+        "quantity": 4
+      },
+      {
+        "name": "Intangible Virtue",
+        "quantity": 4
+      },
+      {
+        "name": "Hour of Reckoning",
+        "quantity": 1
+      },
+      {
+        "name": "Honor of the Pure",
+        "quantity": 4
+      },
+      {
+        "name": "Even the Odds",
+        "quantity": 3
+      },
+      {
+        "name": "Doomed Traveler",
+        "quantity": 2
+      },
+      {
+        "name": "Conclave Tribunal",
+        "quantity": 1
+      },
+      {
+        "name": "Collective Effort",
+        "quantity": 2
+      },
+      {
+        "name": "Beckon Apparition",
+        "quantity": 4
+      }
+    ],
+    "sb": [
+      {
+        "name": "Teyo, the Shieldmage",
+        "quantity": 1
+      },
+      {
+        "name": "Soul-Guide Lantern",
+        "quantity": 3
+      },
+      {
+        "name": "Slaughter the Strong",
+        "quantity": 2
+      },
+      {
+        "name": "Hour of Reckoning",
+        "quantity": 1
+      },
+      {
+        "name": "Even the Odds",
+        "quantity": 1
+      },
+      {
+        "name": "Conclave Tribunal",
+        "quantity": 3
+      },
+      {
+        "name": "Anointer Priest",
+        "quantity": 2
+      },
+      {
+        "name": "Angelic Ascension",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": "66b72b6c-21f7-413f-82bc-231219474a60",
+    "name": "Five Color Control",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Vitu-Ghazi, the City-Tree",
+        "quantity": 2
+      },
+      {
+        "name": "Utter End",
+        "quantity": 4
+      },
+      {
+        "name": "Urza's Factory",
+        "quantity": 1
+      },
+      {
+        "name": "Temple of Silence",
+        "quantity": 4
+      },
+      {
+        "name": "Temple of Malady",
+        "quantity": 1
+      },
+      {
+        "name": "Solar Blaze",
+        "quantity": 4
+      },
+      {
+        "name": "Radiant Flames",
+        "quantity": 2
+      },
+      {
+        "name": "Power Sink",
+        "quantity": 2
+      },
+      {
+        "name": "Plains",
+        "quantity": 4
+      },
+      {
+        "name": "Mystic Monastery",
+        "quantity": 4
+      },
+      {
+        "name": "Merciless Eviction",
+        "quantity": 2
+      },
+      {
+        "name": "Island",
+        "quantity": 4
+      },
+      {
+        "name": "Frontier Bivouac",
+        "quantity": 4
+      },
+      {
+        "name": "Forbid",
+        "quantity": 2
+      },
+      {
+        "name": "Field of Ruin",
+        "quantity": 2
+      },
+      {
+        "name": "Fact or Fiction",
+        "quantity": 4
+      },
+      {
+        "name": "Erebos's Intervention",
+        "quantity": 2
+      },
+      {
+        "name": "Elixir of Immortality",
+        "quantity": 1
+      },
+      {
+        "name": "Decree of Justice",
+        "quantity": 2
+      },
+      {
+        "name": "Crumbling Necropolis",
+        "quantity": 4
+      },
+      {
+        "name": "Condemn",
+        "quantity": 4
+      },
+      {
+        "name": "Burst Lightning",
+        "quantity": 1
+      }
+    ],
+    "sb": [
+      {
+        "name": "Vindicate",
+        "quantity": 2
+      },
+      {
+        "name": "Summary Dismissal",
+        "quantity": 2
+      },
+      {
+        "name": "Soul-Guide Lantern",
+        "quantity": 2
+      },
+      {
+        "name": "Radiant Flames",
+        "quantity": 2
+      },
+      {
+        "name": "Overwhelming Denial",
+        "quantity": 1
+      },
+      {
+        "name": "Nezahal, Primal Tide",
+        "quantity": 1
+      },
+      {
+        "name": "Lazotep Plating",
+        "quantity": 2
+      },
+      {
+        "name": "Dovin's Veto",
+        "quantity": 1
+      },
+      {
+        "name": "Counterflux",
+        "quantity": 1
+      },
+      {
+        "name": "Cling to Dust",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "3c87e476-d643-497b-8de3-73bb792d640b",
+    "name": "Dimir Midrange",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Tyrant's Scorn",
+        "quantity": 1
+      },
+      {
+        "name": "Tymaret, Chosen from Death",
+        "quantity": 1
+      },
+      {
+        "name": "Thought Erasure",
+        "quantity": 4
+      },
+      {
+        "name": "Swamp",
+        "quantity": 7
+      },
+      {
+        "name": "Pteramander",
+        "quantity": 4
+      },
+      {
+        "name": "Nightveil Specter",
+        "quantity": 4
+      },
+      {
+        "name": "Negate",
+        "quantity": 1
+      },
+      {
+        "name": "Memory Lapse",
+        "quantity": 4
+      },
+      {
+        "name": "Mana Leak",
+        "quantity": 1
+      },
+      {
+        "name": "Lochmere Serpent",
+        "quantity": 1
+      },
+      {
+        "name": "Jorubai Murk Lurker",
+        "quantity": 1
+      },
+      {
+        "name": "Island",
+        "quantity": 9
+      },
+      {
+        "name": "Hieroglyphic Illumination",
+        "quantity": 3
+      },
+      {
+        "name": "Heartless Act",
+        "quantity": 2
+      },
+      {
+        "name": "Gonti, Lord of Luxury",
+        "quantity": 1
+      },
+      {
+        "name": "Field of Ruin",
+        "quantity": 2
+      },
+      {
+        "name": "Enter the God-Eternals",
+        "quantity": 1
+      },
+      {
+        "name": "Duress",
+        "quantity": 1
+      },
+      {
+        "name": "Drown in the Loch",
+        "quantity": 3
+      },
+      {
+        "name": "Dismal Backwater",
+        "quantity": 4
+      },
+      {
+        "name": "Dimir Guildgate",
+        "quantity": 2
+      },
+      {
+        "name": "Desecration Demon",
+        "quantity": 1
+      },
+      {
+        "name": "Cling to Dust",
+        "quantity": 1
+      },
+      {
+        "name": "Circu, Dimir Lobotomist",
+        "quantity": 1
+      }
+    ],
+    "sb": [
+      {
+        "name": "Soul-Guide Lantern",
+        "quantity": 2
+      },
+      {
+        "name": "Moment of Craving",
+        "quantity": 3
+      },
+      {
+        "name": "Lost Legacy",
+        "quantity": 3
+      },
+      {
+        "name": "Hostage Taker",
+        "quantity": 3
+      },
+      {
+        "name": "Duress",
+        "quantity": 1
+      },
+      {
+        "name": "Curse of Death's Hold",
+        "quantity": 1
+      },
+      {
+        "name": "Cry of the Carnarium",
+        "quantity": 1
+      },
+      {
+        "name": "Consume the Meek",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "0f700614-abfa-4658-a425-1949d7ef6dab",
+    "name": "Midrange",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Vryn Wingmare",
+        "quantity": 4
+      },
+      {
+        "name": "Plains",
+        "quantity": 13
+      },
+      {
+        "name": "Mistmeadow Witch",
+        "quantity": 3
+      },
+      {
+        "name": "Mentor of the Meek",
+        "quantity": 3
+      },
+      {
+        "name": "Jubilant Skybonder",
+        "quantity": 3
+      },
+      {
+        "name": "Island",
+        "quantity": 3
+      },
+      {
+        "name": "Grand Arbiter Augustin IV",
+        "quantity": 2
+      },
+      {
+        "name": "Forbidding Spirit",
+        "quantity": 2
+      },
+      {
+        "name": "Fiendslayer Paladin",
+        "quantity": 2
+      },
+      {
+        "name": "Fiend Hunter",
+        "quantity": 4
+      },
+      {
+        "name": "Field of Ruin",
+        "quantity": 3
+      },
+      {
+        "name": "Encroaching Wastes",
+        "quantity": 3
+      },
+      {
+        "name": "Dryad Militant",
+        "quantity": 3
+      },
+      {
+        "name": "Dovin, Hand of Control",
+        "quantity": 1
+      },
+      {
+        "name": "Deafening Silence",
+        "quantity": 4
+      },
+      {
+        "name": "Council of the Absolute",
+        "quantity": 3
+      },
+      {
+        "name": "Aven Mindcensor",
+        "quantity": 4
+      }
+    ],
+    "sb": [
+      {
+        "name": "True Believer",
+        "quantity": 2
+      },
+      {
+        "name": "The Wanderer",
+        "quantity": 2
+      },
+      {
+        "name": "Teferi's Moat",
+        "quantity": 3
+      },
+      {
+        "name": "Soul-Guide Lantern",
+        "quantity": 3
+      },
+      {
+        "name": "Rambunctious Mutt",
+        "quantity": 1
+      },
+      {
+        "name": "Enlightened Ascetic",
+        "quantity": 3
+      },
+      {
+        "name": "Dovin, Hand of Control",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "f748239a-c1e8-4b4b-8e84-94abf61ee043",
+    "name": "Rogues",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Vicious Rumors",
+        "quantity": 4
+      },
+      {
+        "name": "Swamp",
+        "quantity": 18
+      },
+      {
+        "name": "Raven's Crime",
+        "quantity": 4
+      },
+      {
+        "name": "Quest for the Nihil Stone",
+        "quantity": 4
+      },
+      {
+        "name": "Noggin Whack",
+        "quantity": 4
+      },
+      {
+        "name": "Nezumi Shortfang // Stabwhisker the Odious",
+        "quantity": 4
+      },
+      {
+        "name": "Liliana's Triumph",
+        "quantity": 4
+      },
+      {
+        "name": "Kitesail Freebooter",
+        "quantity": 4
+      },
+      {
+        "name": "Guul Draz Vampire",
+        "quantity": 4
+      },
+      {
+        "name": "Elspeth's Nightmare",
+        "quantity": 2
+      },
+      {
+        "name": "Duress",
+        "quantity": 1
+      },
+      {
+        "name": "Davriel, Rogue Shadowmage",
+        "quantity": 3
+      },
+      {
+        "name": "Asylum Visitor",
+        "quantity": 4
+      }
+    ],
+    "sb": [
+      {
+        "name": "Underworld Dreams",
+        "quantity": 4
+      },
+      {
+        "name": "Elspeth's Nightmare",
+        "quantity": 2
+      },
+      {
+        "name": "Duress",
+        "quantity": 3
+      },
+      {
+        "name": "Choking Sands",
+        "quantity": 4
+      },
+      {
+        "name": "Call of the Death-Dweller",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": "72ef415d-ea28-4c97-bd56-1ff2ea019213",
+    "name": "Heroic",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Wind-Scarred Crag",
+        "quantity": 4
+      },
+      {
+        "name": "Temple of Triumph",
+        "quantity": 4
+      },
+      {
+        "name": "Sentinel's Eyes",
+        "quantity": 4
+      },
+      {
+        "name": "Selfless Savior",
+        "quantity": 2
+      },
+      {
+        "name": "Plains",
+        "quantity": 7
+      },
+      {
+        "name": "Mountain",
+        "quantity": 6
+      },
+      {
+        "name": "Karametra's Blessing",
+        "quantity": 4
+      },
+      {
+        "name": "Hero of Iroas",
+        "quantity": 4
+      },
+      {
+        "name": "Frenzied Rage",
+        "quantity": 4
+      },
+      {
+        "name": "Favored Hoplite",
+        "quantity": 4
+      },
+      {
+        "name": "Dragon Mantle",
+        "quantity": 4
+      },
+      {
+        "name": "Dauntless Bodyguard",
+        "quantity": 1
+      },
+      {
+        "name": "Angelic Gift",
+        "quantity": 4
+      },
+      {
+        "name": "Akroan Skyguard",
+        "quantity": 4
+      },
+      {
+        "name": "Adanto Vanguard",
+        "quantity": 4
+      }
+    ],
+    "sb": [
+      {
+        "name": "Release the Gremlins",
+        "quantity": 4
+      },
+      {
+        "name": "Pyroclasm",
+        "quantity": 4
+      },
+      {
+        "name": "Nevermore",
+        "quantity": 4
+      },
+      {
+        "name": "Chain Lightning",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": "11a4b1be-e58b-4a12-b206-81537b32c6c5",
+    "name": "High Tide",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Uncovered Clues",
+        "quantity": 4
+      },
+      {
+        "name": "Twincast",
+        "quantity": 3
+      },
+      {
+        "name": "Turnabout",
+        "quantity": 4
+      },
+      {
+        "name": "Thawing Glaciers",
+        "quantity": 2
+      },
+      {
+        "name": "Shimmer of Possibility",
+        "quantity": 4
+      },
+      {
+        "name": "Peer Through Depths",
+        "quantity": 4
+      },
+      {
+        "name": "Mystic Sanctuary",
+        "quantity": 3
+      },
+      {
+        "name": "Island",
+        "quantity": 16
+      },
+      {
+        "name": "High Tide",
+        "quantity": 4
+      },
+      {
+        "name": "Frantic Search",
+        "quantity": 4
+      },
+      {
+        "name": "Epiphany at the Drownyard",
+        "quantity": 1
+      },
+      {
+        "name": "Dizzy Spell",
+        "quantity": 3
+      },
+      {
+        "name": "Commit // Memory",
+        "quantity": 3
+      },
+      {
+        "name": "Braingeyser",
+        "quantity": 1
+      },
+      {
+        "name": "Bond of Insight",
+        "quantity": 4
+      }
+    ],
+    "sb": [
+      {
+        "name": "Teferi, Mage of Zhalfir",
+        "quantity": 2
+      },
+      {
+        "name": "Swan Song",
+        "quantity": 4
+      },
+      {
+        "name": "Stern Dismissal",
+        "quantity": 3
+      },
+      {
+        "name": "Repeal",
+        "quantity": 2
+      },
+      {
+        "name": "Kiora's Dismissal",
+        "quantity": 2
+      },
+      {
+        "name": "Engulf the Shore",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": "f34bd3f0-2891-406b-b179-43d9869f74b8",
+    "name": "Mono White Heroic",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Sentinel's Eyes",
+        "quantity": 4
+      },
+      {
+        "name": "Secluded Steppe",
+        "quantity": 2
+      },
+      {
+        "name": "Plains",
+        "quantity": 16
+      },
+      {
+        "name": "Phalanx Leader",
+        "quantity": 2
+      },
+      {
+        "name": "Ordeal of Heliod",
+        "quantity": 2
+      },
+      {
+        "name": "Launch the Fleet",
+        "quantity": 2
+      },
+      {
+        "name": "Hero of Iroas",
+        "quantity": 4
+      },
+      {
+        "name": "Gods Willing",
+        "quantity": 4
+      },
+      {
+        "name": "Glaring Aegis",
+        "quantity": 4
+      },
+      {
+        "name": "Gird for Battle",
+        "quantity": 4
+      },
+      {
+        "name": "Favored Hoplite",
+        "quantity": 4
+      },
+      {
+        "name": "Defiant Strike",
+        "quantity": 2
+      },
+      {
+        "name": "Dauntless Bodyguard",
+        "quantity": 4
+      },
+      {
+        "name": "Benevolent Bodyguard",
+        "quantity": 2
+      },
+      {
+        "name": "Angelic Gift",
+        "quantity": 2
+      },
+      {
+        "name": "Ajani's Presence",
+        "quantity": 2
+      }
+    ],
+    "sb": [
+      {
+        "name": "Teyo, the Shieldmage",
+        "quantity": 2
+      },
+      {
+        "name": "Terra Eternal",
+        "quantity": 1
+      },
+      {
+        "name": "Soul-Guide Lantern",
+        "quantity": 2
+      },
+      {
+        "name": "Silver Knight",
+        "quantity": 2
+      },
+      {
+        "name": "Sacred Ground",
+        "quantity": 1
+      },
+      {
+        "name": "Knight of Glory",
+        "quantity": 2
+      },
+      {
+        "name": "Disenchant",
+        "quantity": 2
+      },
+      {
+        "name": "Deafening Silence",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "id": "9833c20f-29ab-470f-879c-fc22c7348ed0",
+    "name": "Elves",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Talara's Battalion",
+        "quantity": 4
+      },
+      {
+        "name": "Mul Daya Channelers",
+        "quantity": 1
+      },
+      {
+        "name": "Marwyn, the Nurturer",
+        "quantity": 1
+      },
+      {
+        "name": "Llanowar Visionary",
+        "quantity": 2
+      },
+      {
+        "name": "Lead the Stampede",
+        "quantity": 4
+      },
+      {
+        "name": "Imperious Perfect",
+        "quantity": 4
+      },
+      {
+        "name": "Genesis Wave",
+        "quantity": 2
+      },
+      {
+        "name": "Fyndhorn Elves",
+        "quantity": 4
+      },
+      {
+        "name": "Forest",
+        "quantity": 19
+      },
+      {
+        "name": "Elvish Mystic",
+        "quantity": 4
+      },
+      {
+        "name": "Elvish Champion",
+        "quantity": 4
+      },
+      {
+        "name": "Elvish Archdruid",
+        "quantity": 4
+      },
+      {
+        "name": "Dwynen, Gilt-Leaf Daen",
+        "quantity": 3
+      },
+      {
+        "name": "Arbor Elf",
+        "quantity": 4
+      }
+    ],
+    "sb": [
+      {
+        "name": "Viridian Zealot",
+        "quantity": 3
+      },
+      {
+        "name": "Soul-Guide Lantern",
+        "quantity": 3
+      },
+      {
+        "name": "Setessan Petitioner",
+        "quantity": 3
+      },
+      {
+        "name": "Darkwatch Elves",
+        "quantity": 3
+      },
+      {
+        "name": "Autumn's Veil",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "id": "cc34395c-6a91-47cb-9ed3-9d6bd836478c",
+    "name": "Temur Neoform",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Wall of Blossoms",
+        "quantity": 4
+      },
+      {
+        "name": "Vraska, Swarm's Eminence",
+        "quantity": 2
+      },
+      {
+        "name": "Vithian Stinger",
+        "quantity": 2
+      },
+      {
+        "name": "Triskelion",
+        "quantity": 2
+      },
+      {
+        "name": "Temple of Mystery",
+        "quantity": 3
+      },
+      {
+        "name": "Tandem Lookout",
+        "quantity": 2
+      },
+      {
+        "name": "Springbloom Druid",
+        "quantity": 2
+      },
+      {
+        "name": "Sage of Ancient Lore // Werewolf of Ancient Hunger",
+        "quantity": 1
+      },
+      {
+        "name": "Rootbound Crag",
+        "quantity": 4
+      },
+      {
+        "name": "Niv-Mizzet, the Firemind",
+        "quantity": 1
+      },
+      {
+        "name": "Nightshade Peddler",
+        "quantity": 4
+      },
+      {
+        "name": "Neoform",
+        "quantity": 4
+      },
+      {
+        "name": "Mountain",
+        "quantity": 4
+      },
+      {
+        "name": "Mimic Vat",
+        "quantity": 3
+      },
+      {
+        "name": "Kessig Wolf Run",
+        "quantity": 1
+      },
+      {
+        "name": "Island",
+        "quantity": 3
+      },
+      {
+        "name": "Goblin Dark-Dwellers",
+        "quantity": 1
+      },
+      {
+        "name": "Forest",
+        "quantity": 8
+      },
+      {
+        "name": "Flametongue Kavu",
+        "quantity": 2
+      },
+      {
+        "name": "Dagger Caster",
+        "quantity": 2
+      },
+      {
+        "name": "Conclave Naturalists",
+        "quantity": 1
+      },
+      {
+        "name": "Birds of Paradise",
+        "quantity": 4
+      }
+    ],
+    "sb": [
+      {
+        "name": "Vexing Shusher",
+        "quantity": 2
+      },
+      {
+        "name": "Thrashing Brontodon",
+        "quantity": 1
+      },
+      {
+        "name": "Soul-Guide Lantern",
+        "quantity": 3
+      },
+      {
+        "name": "Ruric Thar, the Unbowed",
+        "quantity": 1
+      },
+      {
+        "name": "Ravenous Baloth",
+        "quantity": 1
+      },
+      {
+        "name": "Mindsparker",
+        "quantity": 4
+      },
+      {
+        "name": "Loaming Shaman",
+        "quantity": 1
+      },
+      {
+        "name": "Goblin Settler",
+        "quantity": 1
+      },
+      {
+        "name": "Caldera Hellion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "bee4c6bb-1143-4c50-a5f5-d3aa1b498ca8",
+    "name": "Zombies",
+    "format": "penny dreadful",
+    "command": [],
+    "main": [
+      {
+        "name": "Undead Augur",
+        "quantity": 4
+      },
+      {
+        "name": "Swamp",
+        "quantity": 17
+      },
+      {
+        "name": "Skinrender",
+        "quantity": 4
+      },
+      {
+        "name": "Scarab Feast",
+        "quantity": 1
+      },
+      {
+        "name": "Sarcomancy",
+        "quantity": 4
+      },
+      {
+        "name": "Putrid Goblin",
+        "quantity": 1
+      },
+      {
+        "name": "Liliana's Mastery",
+        "quantity": 4
+      },
+      {
+        "name": "Lake of the Dead",
+        "quantity": 3
+      },
+      {
+        "name": "Duress",
+        "quantity": 2
+      },
+      {
+        "name": "Diregraf Ghoul",
+        "quantity": 4
+      },
+      {
+        "name": "Death Baron",
+        "quantity": 4
+      },
+      {
+        "name": "Dark Salvation",
+        "quantity": 4
+      },
+      {
+        "name": "Dark Ritual",
+        "quantity": 4
+      },
+      {
+        "name": "Cemetery Reaper",
+        "quantity": 4
+      }
+    ],
+    "sb": [
+      {
+        "name": "Stillmoon Cavalier",
+        "quantity": 1
+      },
+      {
+        "name": "Soul-Guide Lantern",
+        "quantity": 2
+      },
+      {
+        "name": "Scarab Feast",
+        "quantity": 2
+      },
+      {
+        "name": "Lifebane Zombie",
+        "quantity": 2
+      },
+      {
+        "name": "Grasp of Darkness",
+        "quantity": 3
+      },
+      {
+        "name": "Duress",
+        "quantity": 2
+      },
+      {
+        "name": "Cry of the Carnarium",
+        "quantity": 3
+      }
+    ]
+  }
+]

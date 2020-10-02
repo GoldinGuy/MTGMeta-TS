@@ -122,8 +122,7 @@ class Utils {
 	}
 }
 
-// START THE WORK
-
+// GLOBALS
 const NUM_VERS: number = 20;
 const CARD_CUTOFF: number = 0.32; // percent / 100
 const FORMATS: Array<string> = [
@@ -135,8 +134,8 @@ const FORMATS: Array<string> = [
 ];
 const IGNORE: CardNames = ["Island", "Forest", "Mountain", "Swamp", "Plains"];
 
-var NUM_CLUSTERS: number = 20;
 var decks: Decks = [];
+var deck_zip: DeckZip;
 var vectored_card_names: CardNames = [];
 var unique_cards: Array<UniqueCard> = [];
 var total_cards: number = 0;
@@ -172,53 +171,6 @@ for (const deck of decks_json) {
 		}
 	}
 	decks.push(deck_of_cards);
-}
-
-let outputJson: FormatJson = {
-	archetypes: [],
-	format_cards: [],
-	format_versatile_cards: [],
-	total_cards_parsed: total_cards,
-	cards_parsed_by_deck: vectored_card_names.length,
-	unique_cards_parsed: unique_cards.length,
-	total_decks_parsed: decks.length
-};
-
-// Determine "deck vectors" - translate mtg decks to a format that can be used for KM++
-function deckToVector(input_deck: Deck): Vector {
-	let v: Vector = Array(vectored_card_names.length).fill(0);
-	for (const [x, name] of vectored_card_names.entries()) {
-		for (const card of input_deck.entries()) {
-			if (card[1][1] == name) {
-				v[x] += card[0];
-			}
-		}
-	}
-	return v;
-}
-
-let deck_vectors: Array<Vector> = [];
-for (const deck of decks) {
-	deck_vectors.push(deckToVector(deck));
-}
-
-let vectored_k: number = Math.round(unique_cards.length / 30);
-if (vectored_k > 3) {
-	NUM_CLUSTERS = vectored_k;
-	console.log(NUM_CLUSTERS);
-}
-// Determine meta using K-Means++ clustering
-const kmeans: KMeans = KMEANS(deck_vectors, NUM_CLUSTERS, "kmeans++");
-const deck_zip: DeckZip = Utils.zipDeck(decks, kmeans.indexes);
-// Translate K-Means data to a format that can be parsed
-let card_counts: Array<[number, number]> = [];
-for (let i = 0; i < NUM_CLUSTERS; i++) {
-	card_counts.push([i, decksByIdx(i).length]);
-}
-
-let total_instances: number = 0;
-for (const count of card_counts) {
-	total_instances += count[1];
 }
 
 function mostCommonCards(deck: Deck, k: number): CardNames {
@@ -260,63 +212,141 @@ function cardAppearanceRatio(card_name: string): [Array<number>, number] {
 	return [labels, total_apps];
 }
 
-// FOR EACH CLUSTER
-for (let i = 0; i < NUM_CLUSTERS; i++) {
-	// Define cluster - Instead of taking the intersection of all the decks in a cluster, which could lead to archetype staples being excluded due to variance, this method involves taking every deck in the cluster and finding the most common cards (or archetype staples)
-	let card_set: Array<CardNames> = [];
-	let deck_items: DeckZip = decksByIdx(i);
-	for (const deck_item of deck_items) {
-		card_set.push(Utils.set(mostCommonCards(deck_item[0], 40)));
-	}
-	let card_list: CardNames = Array.prototype.concat.apply([], card_set);
-	let count_cards = card_list.reduce((a, b) => {
-		a[b] = (a[b] || 0) + 1;
-		return a;
-	}, {});
-	let sorted_cards = Object.keys(count_cards)
-		.map(k => [k, count_cards[k]])
-		.sort(function (a, b) {
-			return b[1] - a[1];
-		});
-	let cluster: CardNames = [];
-	for (const card_item of sorted_cards.slice(0, 20)) {
-		cluster.push(card_item[0]);
-	}
-
-	// Calculate percentage of meta, deck name, best_fit deck
-	let deck_archetype: Archetype = {
-		archetype_name: "Unknown",
-		top_cards: cluster,
-		instances: deck_items.length,
-		metagame_percentage: Utils.round(
-			(deck_items.length / total_instances) * 100,
-			2
-		),
-		best_fit_deck: { main: [], sb: [] }
-	};
-
-	let max_similar: number = 0;
-	for (const deck_obj of decks_json) {
-		let similar: number = 0;
-		for (const card of deck_obj.main) {
-			if (cluster.includes(card.name)) {
-				similar += 1;
-			}
-			if (similar > max_similar) {
-				max_similar = similar;
-				deck_archetype.archetype_name = deck_obj.name;
-				deck_archetype.best_fit_deck = {
-					main: deck_obj.main,
-					sb: deck_obj.sb
-				};
+// Determine "deck vectors" - translate mtg decks to a format that can be used for KM++
+function deckToVector(input_deck: Deck): Vector {
+	let v: Vector = Array(vectored_card_names.length).fill(0);
+	for (const [x, name] of vectored_card_names.entries()) {
+		for (const card of input_deck.entries()) {
+			if (card[1][1] == name) {
+				v[x] += card[0];
 			}
 		}
 	}
-
-	outputJson.archetypes.push(deck_archetype);
-	console.log("\nCluster #" + i + " (" + deck_archetype.archetype_name + ") :");
-	console.log(JSON.stringify(deck_archetype.top_cards));
+	return v;
 }
+
+let deck_vectors: Array<Vector> = [];
+for (const deck of decks) {
+	deck_vectors.push(deckToVector(deck));
+}
+
+let NUM_CLUSTERS: number = Math.max(Math.round(unique_cards.length / 30), 1);
+let it = 10;
+
+let archetypes: Array<Archetype>;
+do {
+	console.log(NUM_CLUSTERS);
+	// Determine meta using K-Means++ clustering
+	const kmeans: KMeans = KMEANS(deck_vectors, NUM_CLUSTERS, "kmeans++");
+	deck_zip = Utils.zipDeck(decks, kmeans.indexes);
+	// Translate K-Means data to a format that can be parsed
+	let card_counts: Array<[number, number]> = [];
+	for (let i = 0; i < NUM_CLUSTERS; i++) {
+		card_counts.push([i, decksByIdx(i).length]);
+	}
+
+	let total_instances: number = 0;
+	for (const count of card_counts) {
+		total_instances += count[1];
+	}
+
+	archetypes = [];
+	// FOR EACH CLUSTER
+	for (let i = 0; i < NUM_CLUSTERS; i++) {
+		// Define cluster - Instead of taking the intersection of all the decks in a cluster, which could lead to archetype staples being excluded due to variance, this method involves taking every deck in the cluster and finding the most common cards (or archetype staples)
+		let card_set: Array<CardNames> = [];
+		let deck_items: DeckZip = decksByIdx(i);
+		for (const deck_item of deck_items) {
+			card_set.push(Utils.set(mostCommonCards(deck_item[0], 40)));
+		}
+		let card_list: CardNames = Array.prototype.concat.apply([], card_set);
+		let count_cards = card_list.reduce((a, b) => {
+			a[b] = (a[b] || 0) + 1;
+			return a;
+		}, {});
+		let sorted_cards = Object.keys(count_cards)
+			.map(k => [k, count_cards[k]])
+			.sort(function (a, b) {
+				return b[1] - a[1];
+			});
+		let cluster: CardNames = [];
+		for (const card_item of sorted_cards.slice(0, 20)) {
+			cluster.push(card_item[0]);
+		}
+		// clusters.push(cluster);
+
+		// Calculate percentage of meta, deck name, best_fit deck
+		let deck_archetype: Archetype = {
+			archetype_name: "Unknown",
+			top_cards: cluster,
+			instances: deck_items.length,
+			metagame_percentage: Utils.round(
+				(deck_items.length / total_instances) * 100,
+				2
+			),
+			best_fit_deck: { main: [], sb: [] }
+		};
+
+		let max_similar: number = 0;
+		for (const deck_obj of decks_json) {
+			let similar: number = 0;
+			for (const card of deck_obj.main) {
+				if (cluster.includes(card.name)) {
+					similar += 1;
+				}
+				if (similar > max_similar) {
+					max_similar = similar;
+					deck_archetype.archetype_name = deck_obj.name;
+					deck_archetype.best_fit_deck = {
+						main: deck_obj.main,
+						sb: deck_obj.sb
+					};
+				}
+			}
+		}
+
+		archetypes.push(deck_archetype);
+		console.log(
+			"\nCluster #" + i + " (" + deck_archetype.archetype_name + ") :"
+		);
+		console.log(JSON.stringify(deck_archetype.top_cards));
+	}
+
+	for (const archetype of archetypes) {
+		let diff: number = 0;
+		let same: number = 0;
+		for (const arch_card of archetype.best_fit_deck.main) {
+			archetype.top_cards.forEach(card => {
+				if (!arch_card.name.includes(card)) {
+					diff += 1;
+				}
+			});
+		}
+		NUM_CLUSTERS += Math.round(Math.pow(diff, 2) / 100);
+
+		if (diff <= archetype.top_cards.length / 3) {
+			for (let j = 0; j < archetypes.length; j++) {
+				archetype.top_cards.forEach(card => {
+					if (archetypes[j].top_cards.includes(card)) {
+						same += 1;
+					}
+				});
+			}
+			NUM_CLUSTERS -= Math.round(Math.pow(same, 2) / 100);
+		}
+	}
+	it++;
+} while (NUM_CLUSTERS != archetypes.length && it < 10);
+
+let outputJson: FormatJson = {
+	archetypes: archetypes,
+	format_cards: [],
+	format_versatile_cards: [],
+	total_cards_parsed: total_cards,
+	cards_parsed_by_deck: vectored_card_names.length,
+	unique_cards_parsed: unique_cards.length,
+	total_decks_parsed: decks.length
+};
 
 /**
  * Calculate and return the cards most commonly seen with a given card name.

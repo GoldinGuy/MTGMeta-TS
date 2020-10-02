@@ -1,5 +1,6 @@
 [
   {
+    "id": "2cffc47c-09fb-4763-935f-920c6f83ee5a",
     "name": "Untitled",
     "format": "frontier",
     "command": [],
@@ -113,6 +114,7 @@
     ]
   },
   {
+    "id": "606c86cb-9e57-4c02-8aae-c1d17fd0a67e",
     "name": "WUB Control",
     "format": "frontier",
     "command": [],
@@ -226,6 +228,7 @@
     ]
   },
   {
+    "id": "9a210e51-94fd-4478-9d3e-d80e624d0ace",
     "name": "Bant",
     "format": "frontier",
     "command": [],
@@ -339,6 +342,7 @@
     ]
   },
   {
+    "id": "f6468e96-a05e-47ea-a7c9-eedd35b39590",
     "name": "BR Aggro",
     "format": "frontier",
     "command": [],
@@ -464,6 +468,7 @@
     ]
   },
   {
+    "id": "c05946cc-2708-4bc0-8fba-4556eff5582e",
     "name": "Aetherflux Reservoir",
     "format": "frontier",
     "command": [],
@@ -561,6 +566,7 @@
     ]
   },
   {
+    "id": "d6a9947b-7b4a-457e-a15e-8e40fd53e79a",
     "name": "Aetherworks Marvel",
     "format": "frontier",
     "command": [],
@@ -710,6 +716,7 @@
     ]
   },
   {
+    "id": "ba251ac2-7c95-4392-a228-aefcab2aa28e",
     "name": "Mono Red",
     "format": "frontier",
     "command": [],
@@ -807,6 +814,7 @@
     ]
   },
   {
+    "id": "2e75d202-3166-4a89-9397-faf9a693af49",
     "name": "UR Prowess",
     "format": "frontier",
     "command": [],
@@ -920,6 +928,7 @@
     ]
   },
   {
+    "id": "325dd831-8a8a-4b98-87f6-1000890091d5",
     "name": "Eldrazi",
     "format": "frontier",
     "command": [],
@@ -1017,6 +1026,7 @@
     ]
   },
   {
+    "id": "116c16ec-422a-445c-b200-263bee40fd20",
     "name": "WUB Control",
     "format": "frontier",
     "command": [],
@@ -1170,6 +1180,7 @@
     ]
   },
   {
+    "id": "d6d73b9f-b837-4466-ad60-2615eace5b92",
     "name": "WBR Aggro",
     "format": "frontier",
     "command": [],
@@ -1283,6 +1294,7 @@
     ]
   },
   {
+    "id": "17428434-bd7e-4db2-b46e-b562c3538d85",
     "name": "Mono Red",
     "format": "frontier",
     "command": [],
@@ -1388,6 +1400,7 @@
     ]
   },
   {
+    "id": "877fa26b-d66c-44a2-ad0f-3b4a3f8c8195",
     "name": "BR Aggro",
     "format": "frontier",
     "command": [],
@@ -1513,6 +1526,7 @@
     ]
   },
   {
+    "id": "f7ba5633-f3c0-4341-95ca-f255f28a421f",
     "name": "UR Prowess",
     "format": "frontier",
     "command": [],
@@ -1630,6 +1644,7 @@
     ]
   },
   {
+    "id": "abf688fd-f440-4cae-9f20-c1f7b2e08b4b",
     "name": "UB Control",
     "format": "frontier",
     "command": [],
@@ -1743,6 +1758,7 @@
     ]
   },
   {
+    "id": "005b5930-383c-4dae-97e9-890974badb4d",
     "name": "WR Control",
     "format": "frontier",
     "command": [],
@@ -1900,6 +1916,7 @@
     ]
   },
   {
+    "id": "7cc49be3-fc02-4d23-baf6-4f0682903407",
     "name": "UBR Control",
     "format": "frontier",
     "command": [],
@@ -2021,6 +2038,7 @@
     ]
   },
   {
+    "id": "74a1e162-b788-4016-8519-96efe86c6652",
     "name": "UR Prowess",
     "format": "frontier",
     "command": [],
@@ -2134,6 +2152,7 @@
     ]
   },
   {
+    "id": "a92b9851-0341-4e14-a522-e7ab3e93233d",
     "name": "WUB Control",
     "format": "frontier",
     "command": [],
@@ -2247,6 +2266,7 @@
     ]
   },
   {
+    "id": "a9277038-0af6-40ea-8b2e-6fca9404f4db",
     "name": "Untitled",
     "format": "frontier",
     "command": [],
@@ -2400,6 +2420,7 @@
     ]
   },
   {
+    "id": "63a50e55-139f-45fb-97e1-9f2b0089206a",
     "name": "BR Aggro",
     "format": "frontier",
     "command": [],
@@ -2533,6 +2554,7 @@
     ]
   },
   {
+    "id": "451e2ef8-d108-4a40-9830-7cac86df5f4a",
     "name": "Untitled",
     "format": "frontier",
     "command": [],
@@ -2650,6 +2672,7 @@
     ]
   },
   {
+    "id": "ed106b02-83dc-48ac-a6e2-727a4d645784",
     "name": "BG Aggro",
     "format": "frontier",
     "command": [],
@@ -2747,6 +2770,7 @@
     ]
   },
   {
+    "id": "be437aa4-32a3-4db9-925d-e6641d17e997",
     "name": "WUB Control",
     "format": "frontier",
     "command": [],
@@ -2896,6 +2920,7 @@
     ]
   },
   {
+    "id": "92682ac2-71e1-4326-8cfa-5850b9dfd14a",
     "name": "Untitled",
     "format": "frontier",
     "command": [],
@@ -3065,6 +3090,7 @@
     ]
   },
   {
+    "id": "35c1a641-73cc-44a0-b7e5-253a7982c2e0",
     "name": "Elves",
     "format": "frontier",
     "command": [],
@@ -3174,6 +3200,7 @@
     ]
   },
   {
+    "id": "556a21fa-f7c4-4608-8834-82ed9f563e9a",
     "name": "WUB Control",
     "format": "frontier",
     "command": [],
@@ -3319,6 +3346,7 @@
     ]
   },
   {
+    "id": "ede90012-e3e5-46b9-a147-028a0aeccec7",
     "name": "UR Prowess",
     "format": "frontier",
     "command": [],
@@ -3432,6 +3460,7 @@
     ]
   },
   {
+    "id": "65bd8b33-17e1-4c5b-b6aa-702832caf1de",
     "name": "Untitled",
     "format": "frontier",
     "command": [],
@@ -3501,6 +3530,7 @@
     ]
   },
   {
+    "id": "45b114a3-93af-47fb-a465-491b8819a630",
     "name": "BR Aggro",
     "format": "frontier",
     "command": [],
@@ -3630,6 +3660,7 @@
     ]
   },
   {
+    "id": "24499dd9-7066-49f7-ab2b-cd4d3134c25a",
     "name": "Untitled",
     "format": "frontier",
     "command": [],
@@ -3775,6 +3806,7 @@
     ]
   },
   {
+    "id": "5e7869a2-5955-42a6-a7f1-7deaad77dbed",
     "name": "Rally Combo",
     "format": "frontier",
     "command": [],
@@ -3896,6 +3928,7 @@
     ]
   },
   {
+    "id": "a1430b47-4a4e-47ab-8582-2148b1368294",
     "name": "Dredge",
     "format": "frontier",
     "command": [],
@@ -4029,6 +4062,7 @@
     ]
   },
   {
+    "id": "d0da4d01-b359-4b0f-8400-5dffa5b38918",
     "name": "Multi Color Control",
     "format": "frontier",
     "command": [],
@@ -4198,6 +4232,7 @@
     ]
   },
   {
+    "id": "36f02f1f-709a-4b24-9433-401331b077f7",
     "name": "Untitled",
     "format": "frontier",
     "command": [],
@@ -4303,6 +4338,7 @@
     ]
   },
   {
+    "id": "1675c605-84f2-4717-98be-dc3760132e22",
     "name": "BR Aggro",
     "format": "frontier",
     "command": [],
@@ -4440,6 +4476,7 @@
     ]
   },
   {
+    "id": "9cf1bca1-535c-469d-864c-f60d1c94e9a3",
     "name": "Jeskai",
     "format": "frontier",
     "command": [],
@@ -4561,6 +4598,7 @@
     ]
   },
   {
+    "id": "ad9af234-32e3-45cb-bd4c-ded709bf0ef6",
     "name": "Elves",
     "format": "frontier",
     "command": [],
@@ -4666,6 +4704,7 @@
     ]
   },
   {
+    "id": "9d21dca6-1bf6-4b5b-8a50-bc7646a4668a",
     "name": "Multi Color Control",
     "format": "frontier",
     "command": [],
@@ -4811,6 +4850,7 @@
     ]
   },
   {
+    "id": "4eef0c05-ae9c-432a-bb8e-3b2f06ed9149",
     "name": "Aetherworks Marvel",
     "format": "frontier",
     "command": [],
@@ -4960,6 +5000,7 @@
     ]
   },
   {
+    "id": "a9acaf03-4419-4b85-9bdb-ee402a020747",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -5089,6 +5130,7 @@
     ]
   },
   {
+    "id": "6e656256-d2b2-467d-8317-7c534451c996",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -5254,6 +5296,7 @@
     ]
   },
   {
+    "id": "fa9c9603-a36d-4f47-afcb-3f1c33df4242",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -5363,6 +5406,7 @@
     ]
   },
   {
+    "id": "e839b4d4-753a-43ca-884c-60f9449a3780",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -5512,6 +5556,7 @@
     ]
   },
   {
+    "id": "6ac30ac3-186b-41ac-9fe5-12420f7a308f",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -5661,6 +5706,7 @@
     ]
   },
   {
+    "id": "33f0b098-6d51-402f-91be-57fe265f8c6b",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -5770,6 +5816,7 @@
     ]
   },
   {
+    "id": "929d56b8-cbef-41fe-812e-802e2e9211a9",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -5887,6 +5934,7 @@
     ]
   },
   {
+    "id": "72c21ca8-1be7-46f5-a545-1450c430c3ac",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -6072,6 +6120,7 @@
     ]
   },
   {
+    "id": "809c308c-3cd4-4ab2-a335-7d2cc0fdbc33",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -6209,6 +6258,7 @@
     ]
   },
   {
+    "id": "984d3079-9c5f-4c0d-84bb-44c39fdd0ecd",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -6346,6 +6396,7 @@
     ]
   },
   {
+    "id": "7ac31754-426f-4bf8-960b-c2f77ccb04b2",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -6487,6 +6538,7 @@
     ]
   },
   {
+    "id": "f75deae6-4ac8-4adc-9110-9e94969e798e",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -6620,6 +6672,7 @@
     ]
   },
   {
+    "id": "571e6586-b8f5-4fac-8e27-1a6af3d971b5",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -6773,6 +6826,7 @@
     ]
   },
   {
+    "id": "e4b12d63-9030-4cc5-ae2a-f74fc5cc1f09",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -6882,6 +6936,7 @@
     ]
   },
   {
+    "id": "cf4d25af-0ab9-4140-8358-e4ed6ba375de",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -7003,6 +7058,7 @@
     ]
   },
   {
+    "id": "9c5eb9a2-a214-4f08-88ac-c01616275b68",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -7108,6 +7164,7 @@
     ]
   },
   {
+    "id": "c23b1227-f289-4c80-8a6b-247153bf61a7",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -7225,6 +7282,7 @@
     ]
   },
   {
+    "id": "80c79bc0-928b-46a1-8f65-88a6f6335c09",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -7342,6 +7400,7 @@
     ]
   },
   {
+    "id": "56a41933-df00-4760-97a0-842fc422f0d9",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -7475,6 +7534,7 @@
     ]
   },
   {
+    "id": "fa8d3e54-153c-4c4d-9465-4589f3a7d459",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -7612,6 +7672,7 @@
     ]
   },
   {
+    "id": "b891435c-1f95-4d09-8026-27b644477769",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -7749,6 +7810,7 @@
     ]
   },
   {
+    "id": "d6e1d33c-a79f-4341-8b2e-17cede0c6572",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -7874,6 +7936,7 @@
     ]
   },
   {
+    "id": "a6ecdd18-4b12-451d-a84d-e7e3ff615c8e",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -7975,6 +8038,7 @@
     ]
   },
   {
+    "id": "5d17f009-8288-4b45-8273-7331bd12d155",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -8128,6 +8192,7 @@
     ]
   },
   {
+    "id": "90f46bae-3970-4594-b9f8-e09da6f7e2b7",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -8269,6 +8334,7 @@
     ]
   },
   {
+    "id": "eddd248a-dedb-4d49-96f7-0d4d0608e5ab",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -8390,6 +8456,7 @@
     ]
   },
   {
+    "id": "bae9c612-b9a1-412e-a46e-939a4c2575f2",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -8503,6 +8570,7 @@
     ]
   },
   {
+    "id": "f9789ead-b9fd-448b-b908-535839b3645a",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -8624,6 +8692,7 @@
     ]
   },
   {
+    "id": "4353887d-5546-4159-859d-143b941ab1c9",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -8737,6 +8806,7 @@
     ]
   },
   {
+    "id": "36efbe74-552b-473d-8136-3f0cd6c956be",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -8882,6 +8952,7 @@
     ]
   },
   {
+    "id": "3a14f801-37fb-430a-968f-797551bd21e1",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -9003,6 +9074,7 @@
     ]
   },
   {
+    "id": "f1b68b2b-fe35-422b-8ac8-c863e9ac4950",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -9100,6 +9172,7 @@
     ]
   },
   {
+    "id": "d0be6ecd-2786-42c7-a122-1b10d9569e8c",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -9245,6 +9318,7 @@
     ]
   },
   {
+    "id": "5f8c406d-e901-4514-8cfb-8e526bda5c89",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -9366,6 +9440,7 @@
     ]
   },
   {
+    "id": "33e1f8d8-d601-4e87-a65d-49625630e51d",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -9503,6 +9578,7 @@
     ]
   },
   {
+    "id": "a694fcdd-db4a-447a-bf07-cd4ab0cd4df5",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -9620,6 +9696,7 @@
     ]
   },
   {
+    "id": "50d65ae2-6fdd-4179-9b0a-b5966e2dee64",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -9725,6 +9802,7 @@
     ]
   },
   {
+    "id": "277be282-244a-43a8-afcb-0b0f89e3e895",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -9882,6 +9960,7 @@
     ]
   },
   {
+    "id": "c1c4690b-b678-4508-8aba-811add820525",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -10039,6 +10118,7 @@
     ]
   },
   {
+    "id": "4ce0661e-8e21-4345-8b9a-339de9040737",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -10180,6 +10260,7 @@
     ]
   },
   {
+    "id": "e5a0d86b-4ca9-4891-8549-64feadeb01cf",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -10293,6 +10374,7 @@
     ]
   },
   {
+    "id": "370b40c9-0043-4e3f-a078-9c4166c0fb10",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -10426,6 +10508,7 @@
     ]
   },
   {
+    "id": "a118db49-93c5-4e5f-81c6-265715b8bbff",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -10547,6 +10630,7 @@
     ]
   },
   {
+    "id": "7ec52775-bc4c-4824-8736-c855d74044ed",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -10652,6 +10736,7 @@
     ]
   },
   {
+    "id": "03b7ac39-e720-4990-973b-3c1d2651b4af",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -10801,6 +10886,7 @@
     ]
   },
   {
+    "id": "0c4ebc8d-ea02-4cec-a567-c416419090f1",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -10946,6 +11032,7 @@
     ]
   },
   {
+    "id": "593cc061-3d92-4abf-bcd0-70a2126bfbb9",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -11059,6 +11146,7 @@
     ]
   },
   {
+    "id": "21d03d88-be2c-4639-a566-70df04449803",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -11172,6 +11260,7 @@
     ]
   },
   {
+    "id": "80c2a44f-23a7-462c-a277-24092b12a1b0",
     "name": "BRG",
     "format": "frontier",
     "command": [],
@@ -11313,6 +11402,7 @@
     ]
   },
   {
+    "id": "bb7319ab-f75f-415d-9ef9-431df5218885",
     "name": "WURG",
     "format": "frontier",
     "command": [],
@@ -11450,6 +11540,7 @@
     ]
   },
   {
+    "id": "311f8e70-9311-41ff-97bb-3e3c04e58e18",
     "name": "Rally Combo",
     "format": "frontier",
     "command": [],
@@ -11571,6 +11662,7 @@
     ]
   },
   {
+    "id": "4b4124af-2723-4da5-9e17-e61661890b6f",
     "name": "BRG",
     "format": "frontier",
     "command": [],
@@ -11700,6 +11792,7 @@
     ]
   },
   {
+    "id": "f57f6f4f-5d16-4d1b-a004-62df93a6e5b1",
     "name": "WBG",
     "format": "frontier",
     "command": [],
@@ -11841,6 +11934,7 @@
     ]
   },
   {
+    "id": "00b049d5-6343-4e4c-a8a5-82f442404a87",
     "name": "UB Control",
     "format": "frontier",
     "command": [],
@@ -11970,6 +12064,7 @@
     ]
   },
   {
+    "id": "e2d8d5ab-416d-4b6c-a3da-30be3e0efba2",
     "name": "WUBRG",
     "format": "frontier",
     "command": [],
@@ -12103,6 +12198,7 @@
     ]
   },
   {
+    "id": "f8fe1769-a69a-4b0e-8570-92f5fdc480f3",
     "name": "WUR",
     "format": "frontier",
     "command": [],
@@ -12224,6 +12320,7 @@
     ]
   },
   {
+    "id": "3fb0177c-54ba-4f09-a86e-737dd18c84ae",
     "name": "WBRG",
     "format": "frontier",
     "command": [],
@@ -12353,6 +12450,7 @@
     ]
   },
   {
+    "id": "27933dcd-5325-49af-ad9b-ee26323c9839",
     "name": "Aetherworks Marvel",
     "format": "frontier",
     "command": [],
@@ -12506,6 +12604,7 @@
     ]
   },
   {
+    "id": "47f64545-a336-4f51-a94b-e4f63b19ebb1",
     "name": "WUBG",
     "format": "frontier",
     "command": [],
@@ -12635,6 +12734,7 @@
     ]
   },
   {
+    "id": "8d106749-564c-4f3d-a642-be49f7ca3e37",
     "name": "Jeskai",
     "format": "frontier",
     "command": [],
@@ -12772,6 +12872,7 @@
     ]
   },
   {
+    "id": "30bed2f8-6122-4cec-a1a0-52c813e1d0b7",
     "name": "UR",
     "format": "frontier",
     "command": [],
@@ -12893,6 +12994,7 @@
     ]
   },
   {
+    "id": "cb49c2b3-8a21-46eb-a4b5-1673cfd65a8e",
     "name": "WUBR",
     "format": "frontier",
     "command": [],
@@ -13042,6 +13144,7 @@
     ]
   },
   {
+    "id": "b868c8ae-a1a7-4f29-8358-081cb7f925be",
     "name": "WU Aggro",
     "format": "frontier",
     "command": [],
@@ -13159,6 +13262,7 @@
     ]
   },
   {
+    "id": "5e04f8c8-2220-492f-b89e-77e9e07b13d2",
     "name": "UB",
     "format": "frontier",
     "command": [],
@@ -13308,6 +13412,7 @@
     ]
   },
   {
+    "id": "5f87b752-705f-4f21-8201-b7587af6e24a",
     "name": "RG",
     "format": "frontier",
     "command": [],
@@ -13433,6 +13538,7 @@
     ]
   },
   {
+    "id": "dac73374-e6c0-4ba7-bbfe-3a969dc7c86e",
     "name": "Mono Red",
     "format": "frontier",
     "command": [],
@@ -13558,6 +13664,7 @@
     ]
   },
   {
+    "id": "f3a725fd-c8f0-4ecf-acb4-cea5b3cc97f4",
     "name": "WUB Aggro",
     "format": "frontier",
     "command": [],
@@ -13703,6 +13810,7 @@
     ]
   },
   {
+    "id": "029e3de1-d480-495e-ac4a-a71068572994",
     "name": "Aetherworks Marvel",
     "format": "frontier",
     "command": [],
@@ -13852,6 +13960,7 @@
     ]
   },
   {
+    "id": "e545a1a3-ca48-4b1a-a1c6-6ec97e8d18df",
     "name": "WUR",
     "format": "frontier",
     "command": [],
@@ -14005,6 +14114,7 @@
     ]
   },
   {
+    "id": "aa34b835-0283-4251-9e12-6417a0262193",
     "name": "URG",
     "format": "frontier",
     "command": [],
@@ -14118,6 +14228,7 @@
     ]
   },
   {
+    "id": "490fbe39-50fa-4f4b-9563-be23085ebda1",
     "name": "BRG",
     "format": "frontier",
     "command": [],
@@ -14219,6 +14330,7 @@
     ]
   },
   {
+    "id": "72d2fb88-b0e6-4e37-941e-b4f50ca8b362",
     "name": "WURG",
     "format": "frontier",
     "command": [],
@@ -14352,6 +14464,7 @@
     ]
   },
   {
+    "id": "856f09ad-3e8e-4988-85f1-82aff95c3936",
     "name": "BR",
     "format": "frontier",
     "command": [],
@@ -14477,6 +14590,7 @@
     ]
   },
   {
+    "id": "5ff9082b-6e2e-411b-adbd-6b05189ea8d0",
     "name": "Human Bant",
     "format": "frontier",
     "command": [],
@@ -14594,6 +14708,7 @@
     ]
   },
   {
+    "id": "e02e38ce-277f-4ef1-be2b-f188f97b118e",
     "name": "Jeskai",
     "format": "frontier",
     "command": [],
@@ -14727,6 +14842,7 @@
     ]
   },
   {
+    "id": "109d940f-c8e8-4eec-a058-d2318786d8e6",
     "name": "WBR Aggro",
     "format": "frontier",
     "command": [],
@@ -14864,6 +14980,7 @@
     ]
   },
   {
+    "id": "c6ebd80a-f505-4db5-af67-7942437a21f6",
     "name": "Jeskai",
     "format": "frontier",
     "command": [],
@@ -15001,6 +15118,7 @@
     ]
   },
   {
+    "id": "6654d503-fbc6-4c7a-a4c4-de038679be86",
     "name": "WU",
     "format": "frontier",
     "command": [],
@@ -15114,6 +15232,7 @@
     ]
   },
   {
+    "id": "3c69e181-c7c5-4245-b3e2-8f5826f8d45b",
     "name": "Jeskai",
     "format": "frontier",
     "command": [],
@@ -15255,6 +15374,7 @@
     ]
   },
   {
+    "id": "aac749e1-b92d-41be-b5a2-39fc9c3a49c0",
     "name": "Aetherworks Marvel",
     "format": "frontier",
     "command": [],
@@ -15408,6 +15528,7 @@
     ]
   },
   {
+    "id": "7b57967c-408c-4cd6-a804-b890bd5b5b06",
     "name": "Aetherworks Marvel",
     "format": "frontier",
     "command": [],
@@ -15549,6 +15670,7 @@
     ]
   },
   {
+    "id": "3fe953f7-d742-48e7-86d2-1a5da4502509",
     "name": "Aetherworks Marvel",
     "format": "frontier",
     "command": [],
@@ -15690,6 +15812,7 @@
     ]
   },
   {
+    "id": "a7519d02-1908-41f1-a0fe-d5f463b0e372",
     "name": "Rally Combo",
     "format": "frontier",
     "command": [],
@@ -15819,6 +15942,7 @@
     ]
   },
   {
+    "id": "85e7fdc8-649d-4427-9584-8a4eadcbca46",
     "name": "Jeskai",
     "format": "frontier",
     "command": [],
@@ -15952,6 +16076,7 @@
     ]
   },
   {
+    "id": "32d8cc14-37bf-4389-b4fc-fc59a56f9af9",
     "name": "WR",
     "format": "frontier",
     "command": [],
@@ -16073,6 +16198,7 @@
     ]
   },
   {
+    "id": "4c7ba35c-75d9-4494-a789-19793aba5583",
     "name": "UBRG",
     "format": "frontier",
     "command": [],
@@ -16206,6 +16332,7 @@
     ]
   },
   {
+    "id": "a60610de-9f08-4116-a99e-836a88f12c87",
     "name": "UBR",
     "format": "frontier",
     "command": [],
@@ -16375,6 +16502,7 @@
     ]
   },
   {
+    "id": "380409db-32d7-4a0a-8530-181a620eda13",
     "name": "Jeskai",
     "format": "frontier",
     "command": [],
@@ -16508,6 +16636,7 @@
     ]
   },
   {
+    "id": "79dbd211-922c-4e7b-b95c-ed431ffe5eae",
     "name": "Human Bant",
     "format": "frontier",
     "command": [],
@@ -16617,6 +16746,7 @@
     ]
   },
   {
+    "id": "8b8b66e8-07c9-4a5d-bcae-d93e5b1eaa71",
     "name": "WUR",
     "format": "frontier",
     "command": [],
@@ -16750,6 +16880,7 @@
     ]
   },
   {
+    "id": "c17f9c62-58a3-4e91-95f7-5eaf30fd4fb7",
     "name": "WBG",
     "format": "frontier",
     "command": [],
@@ -16895,6 +17026,7 @@
     ]
   },
   {
+    "id": "a91a9559-d687-428c-a741-74161e14c5ad",
     "name": "R",
     "format": "frontier",
     "command": [],
@@ -17000,6 +17132,7 @@
     ]
   },
   {
+    "id": "816731af-c8a7-45e7-9633-4539ecd8c80f",
     "name": "WR Control",
     "format": "frontier",
     "command": [],
@@ -17145,6 +17278,7 @@
     ]
   },
   {
+    "id": "f0568216-ff7b-43bf-b7e0-3dde53ac0955",
     "name": "Atarka Red",
     "format": "frontier",
     "command": [],
@@ -17270,6 +17404,7 @@
     ]
   },
   {
+    "id": "cd82ee76-b14c-4798-b7a6-ded882c35a32",
     "name": "Aetherworks Marvel",
     "format": "frontier",
     "command": [],
@@ -17411,6 +17546,7 @@
     ]
   },
   {
+    "id": "82ca60dc-1147-40e5-99c7-df3e7ae2a6cb",
     "name": "WBR",
     "format": "frontier",
     "command": [],
@@ -17548,6 +17684,7 @@
     ]
   },
   {
+    "id": "9dc11b62-dd46-4014-9f8d-dee9ef324688",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -17685,6 +17822,7 @@
     ]
   },
   {
+    "id": "a3fb4786-a971-4e96-8dba-83b52a3a564b",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -17806,6 +17944,7 @@
     ]
   },
   {
+    "id": "4ccee4ad-f37b-453e-a787-dc80782d4027",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -17951,6 +18090,7 @@
     ]
   },
   {
+    "id": "d3474fec-ee53-4a9c-97c5-a45db9f3e36b",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -18068,6 +18208,7 @@
     ]
   },
   {
+    "id": "2d5bc174-2dde-4882-9998-81f10a70682e",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -18189,6 +18330,7 @@
     ]
   },
   {
+    "id": "3ce6ebab-f938-4604-a8f0-d56555a316e2",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -18330,6 +18472,7 @@
     ]
   },
   {
+    "id": "a9b6adae-96ee-4b20-b135-763592fbb457",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -18431,6 +18574,7 @@
     ]
   },
   {
+    "id": "b65b2135-d8e1-4e7d-b8ec-da7d87189fe2",
     "name": "Unknown",
     "format": "frontier",
     "command": [],
@@ -18536,6 +18680,7 @@
     ]
   },
   {
+    "id": "e98d77d6-bbfb-48bb-a025-395bd9634304",
     "name": "Saheeli Combo",
     "format": "frontier",
     "command": [],
@@ -18673,6 +18818,7 @@
     ]
   },
   {
+    "id": "304c774c-0796-4b88-9a91-774b5e098887",
     "name": "Mono Red",
     "format": "frontier",
     "command": [],
@@ -18782,6 +18928,7 @@
     ]
   },
   {
+    "id": "96a953cd-e36a-4b97-89e7-4b095942e2a0",
     "name": "Mono Red",
     "format": "frontier",
     "command": [],
@@ -18899,6 +19046,7 @@
     ]
   },
   {
+    "id": "bd5ec2e8-cbf5-4d6a-8a77-a3c5bd41ae52",
     "name": "Mono Red",
     "format": "frontier",
     "command": [],
@@ -19000,6 +19148,7 @@
     ]
   },
   {
+    "id": "b62584b5-e325-4bf6-99e8-5e4ec8dd4c5e",
     "name": "UBR Control",
     "format": "frontier",
     "command": [],
@@ -19161,6 +19310,7 @@
     ]
   },
   {
+    "id": "ec3bf74e-1c1b-43bb-95cf-5f0970a4fac6",
     "name": "Multi Color Control",
     "format": "frontier",
     "command": [],
@@ -19318,6 +19468,7 @@
     ]
   },
   {
+    "id": "77fee0b7-302a-49ec-8b3e-6d232e8a907d",
     "name": "Saheeli Combo",
     "format": "frontier",
     "command": [],
@@ -19455,6 +19606,7 @@
     ]
   },
   {
+    "id": "7cd37a22-ab88-4f83-bec2-4a19a8abe9c4",
     "name": "Jeskai",
     "format": "frontier",
     "command": [],
@@ -19564,6 +19716,7 @@
     ]
   },
   {
+    "id": "9faa48dd-3f02-43f6-bdaa-ab3e098b3b5b",
     "name": "Saheeli Combo",
     "format": "frontier",
     "command": [],
@@ -19705,6 +19858,7 @@
     ]
   },
   {
+    "id": "91504db2-b420-4c31-88d9-d454d46eae1d",
     "name": "Hardened Scales",
     "format": "frontier",
     "command": [],
@@ -19814,6 +19968,7 @@
     ]
   },
   {
+    "id": "89708ba9-c0ba-4fc2-a9b9-5f259973cab3",
     "name": "Aetherworks Marvel",
     "format": "frontier",
     "command": [],
@@ -19947,6 +20102,7 @@
     ]
   },
   {
+    "id": "27331787-757d-447e-abdc-d13aed38551e",
     "name": "Mono Red",
     "format": "frontier",
     "command": [],
@@ -20036,6 +20192,7 @@
     ]
   },
   {
+    "id": "d9f115f9-aeae-45d3-8305-3deb8227996c",
     "name": "Jeskai",
     "format": "frontier",
     "command": [],
@@ -20145,6 +20302,7 @@
     ]
   },
   {
+    "id": "0681a5f2-61bf-4bfb-a894-b8796703b86a",
     "name": "Multi Color Aggro",
     "format": "frontier",
     "command": [],
@@ -20270,6 +20428,7 @@
     ]
   },
   {
+    "id": "e15fd042-bc95-46a3-ac10-c9b1feca49b6",
     "name": "Bant",
     "format": "frontier",
     "command": [],
@@ -20379,6 +20538,7 @@
     ]
   },
   {
+    "id": "acd8b58b-5d2d-4039-9d1c-24b14efd274d",
     "name": "WUB Aggro",
     "format": "frontier",
     "command": [],
@@ -20508,6 +20668,7 @@
     ]
   },
   {
+    "id": "3c8111bf-e7a9-40a3-bc55-830b6577223c",
     "name": "Multi Color Control",
     "format": "frontier",
     "command": [],
@@ -20665,6 +20826,7 @@
     ]
   },
   {
+    "id": "cc578140-0b96-46ed-b948-54e05c5074d1",
     "name": "Ensoul Aggro",
     "format": "frontier",
     "command": [],
@@ -20778,6 +20940,7 @@
     ]
   },
   {
+    "id": "a9c55e1a-80d6-47af-913b-0ca274bf0db5",
     "name": "Jeskai",
     "format": "frontier",
     "command": [],
@@ -20907,6 +21070,7 @@
     ]
   },
   {
+    "id": "fa867953-3f85-4543-b6ae-bd423ea50220",
     "name": "Saheeli Combo",
     "format": "frontier",
     "command": [],
@@ -21068,6 +21232,7 @@
     ]
   },
   {
+    "id": "93ae62a7-e17a-4b12-be54-dbe86c4300f8",
     "name": "Atarka Red",
     "format": "frontier",
     "command": [],
@@ -21177,6 +21342,7 @@
     ]
   },
   {
+    "id": "12d31ed1-0660-41b2-9df4-1fa94cd2d807",
     "name": "URG",
     "format": "frontier",
     "command": [],
@@ -21302,6 +21468,7 @@
     ]
   },
   {
+    "id": "8260a84c-e364-4c53-8de6-b12c321d31e1",
     "name": "WUB Control",
     "format": "frontier",
     "command": [],
@@ -21439,6 +21606,7 @@
     ]
   },
   {
+    "id": "1f178cbe-8c2d-42ce-b662-c810cc69b8be",
     "name": "Rally Combo",
     "format": "frontier",
     "command": [],
@@ -21568,6 +21736,7 @@
     ]
   },
   {
+    "id": "db062cff-d2fa-4304-8756-c4e96856a38c",
     "name": "Human Bant",
     "format": "frontier",
     "command": [],
@@ -21701,6 +21870,7 @@
     ]
   },
   {
+    "id": "b6be12d0-46d0-4107-afd3-5f9e84d52617",
     "name": "UBR Control",
     "format": "frontier",
     "command": [],
@@ -21882,6 +22052,7 @@
     ]
   },
   {
+    "id": "f0dc9393-ebdb-44c5-bacd-c403fbd22449",
     "name": "UBR Control",
     "format": "frontier",
     "command": [],
@@ -21991,6 +22162,7 @@
     ]
   },
   {
+    "id": "4e25c184-83ed-49b5-87b0-c156aed62ded",
     "name": "Planeswalker Control",
     "format": "frontier",
     "command": [],
@@ -22172,6 +22344,7 @@
     ]
   },
   {
+    "id": "d716fc9d-78f6-4873-91a9-46fa03a6fd5a",
     "name": "Rally Combo",
     "format": "frontier",
     "command": [],
@@ -22297,6 +22470,7 @@
     ]
   },
   {
+    "id": "68ea6952-5c42-42e3-8707-79e9f0e9a503",
     "name": "WR Control",
     "format": "frontier",
     "command": [],
@@ -22446,6 +22620,7 @@
     ]
   },
   {
+    "id": "245701c6-6d19-4425-bfc2-f06aa29424a8",
     "name": "UBR Control",
     "format": "frontier",
     "command": [],
@@ -22595,6 +22770,7 @@
     ]
   },
   {
+    "id": "8749b523-c5fd-4d78-b393-14c7c9a48381",
     "name": "Mono Red",
     "format": "frontier",
     "command": [],
@@ -22700,6 +22876,7 @@
     ]
   },
   {
+    "id": "1670daf0-8802-48f9-b7d3-33c56fa80af0",
     "name": "Multi Color Control",
     "format": "frontier",
     "command": [],
@@ -22833,6 +23010,7 @@
     ]
   },
   {
+    "id": "ff38940d-7546-4e1d-b334-b947522c3081",
     "name": "Rally Combo",
     "format": "frontier",
     "command": [],
@@ -22946,6 +23124,7 @@
     ]
   },
   {
+    "id": "5671df27-6ff2-4031-a4fe-cee2018494d4",
     "name": "UR Prowess",
     "format": "frontier",
     "command": [],
@@ -23059,6 +23238,7 @@
     ]
   },
   {
+    "id": "8848d501-5d4c-4a75-8d2e-b155521de832",
     "name": "Human Bant",
     "format": "frontier",
     "command": [],
@@ -23208,6 +23388,7 @@
     ]
   },
   {
+    "id": "bcd387b0-66ac-4312-8c57-cd06ac32d9a8",
     "name": "Rally Combo",
     "format": "frontier",
     "command": [],
@@ -23333,6 +23514,7 @@
     ]
   },
   {
+    "id": "a571431b-b16d-40c3-8e50-d06ffc039df2",
     "name": "Ensoul Aggro",
     "format": "frontier",
     "command": [],
@@ -23450,6 +23632,7 @@
     ]
   },
   {
+    "id": "a75b8d6c-4ae8-4455-9ecc-f53740e46fda",
     "name": "WUB Control",
     "format": "frontier",
     "command": [],
@@ -23587,6 +23770,7 @@
     ]
   },
   {
+    "id": "ca9eec4f-67c3-4602-b3e8-49fe4f5aa6a2",
     "name": "Mono Red",
     "format": "frontier",
     "command": [],
@@ -23696,6 +23880,7 @@
     ]
   },
   {
+    "id": "c8cc73e8-dd2f-43c2-81f9-4466daea1b94",
     "name": "Multi Color Control",
     "format": "frontier",
     "command": [],
@@ -23857,6 +24042,7 @@
     ]
   },
   {
+    "id": "115212bd-4ec0-49ad-bdac-aaae148dfaac",
     "name": "UBR Control",
     "format": "frontier",
     "command": [],
@@ -23998,6 +24184,7 @@
     ]
   },
   {
+    "id": "56efb4ce-627c-42b2-85dc-50c7e163a769",
     "name": "Ensoul Aggro",
     "format": "frontier",
     "command": [],
@@ -24131,6 +24318,7 @@
     ]
   },
   {
+    "id": "f8f641f1-4701-4635-9c65-ac203334faec",
     "name": "Aetherworks Marvel",
     "format": "frontier",
     "command": [],
@@ -24264,6 +24452,7 @@
     ]
   },
   {
+    "id": "d20df51d-a53b-445b-bea5-81c535ef4d52",
     "name": "Abzan",
     "format": "frontier",
     "command": [],
@@ -24413,6 +24602,7 @@
     ]
   },
   {
+    "id": "6237d522-df95-4179-b94f-a4f651093330",
     "name": "WUB Control",
     "format": "frontier",
     "command": [],
@@ -24562,6 +24752,7 @@
     ]
   },
   {
+    "id": "4a9c5614-9ecb-4708-bd88-cab3d3cca130",
     "name": "Jund",
     "format": "frontier",
     "command": [],
@@ -24715,6 +24906,7 @@
     ]
   },
   {
+    "id": "cf208ea0-1c41-40fd-94f4-e479f724f5bb",
     "name": "UR Prowess",
     "format": "frontier",
     "command": [],
@@ -24832,6 +25024,7 @@
     ]
   },
   {
+    "id": "0002db2b-0a17-47f7-bbc2-b816f3ab7f0e",
     "name": "Atarka Red",
     "format": "frontier",
     "command": [],
@@ -24949,6 +25142,7 @@
     ]
   },
   {
+    "id": "465075cd-446a-4fb3-90bd-9e04efc09695",
     "name": "Aetherworks Marvel",
     "format": "frontier",
     "command": [],
@@ -25090,6 +25284,7 @@
     ]
   },
   {
+    "id": "32677099-be3f-4e7c-b080-68c6caa38317",
     "name": "Mono Red",
     "format": "frontier",
     "command": [],
@@ -25195,6 +25390,7 @@
     ]
   },
   {
+    "id": "3afc0261-f240-4cdf-9f06-80d24bb260de",
     "name": "Mono Red",
     "format": "frontier",
     "command": [],
@@ -25320,6 +25516,7 @@
     ]
   },
   {
+    "id": "6ca5e22f-46e7-4dd4-9888-1f64f45a0e3c",
     "name": "WUB Control",
     "format": "frontier",
     "command": [],
@@ -25465,6 +25662,7 @@
     ]
   },
   {
+    "id": "6e7b3d7d-2be0-4c08-894b-dcd17b35ee3c",
     "name": "WBR Aggro",
     "format": "frontier",
     "command": [],
@@ -25598,6 +25796,7 @@
     ]
   },
   {
+    "id": "85a1f9df-e360-4c64-97f2-6e55490a94bb",
     "name": "Ensoul Aggro",
     "format": "frontier",
     "command": [],
@@ -25731,6 +25930,7 @@
     ]
   },
   {
+    "id": "ba74e4da-6675-4c04-a28d-40bc827d2e72",
     "name": "WUB Control",
     "format": "frontier",
     "command": [],
