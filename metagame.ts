@@ -39,13 +39,6 @@ export interface FormatCard {
 	percentage_of_total_decks: number;
 }
 
-export type Vector = Array<number>;
-export type DeckZip = Array<[Deck, number]>;
-export type Decks = Array<Deck>;
-export type Deck = Array<Card>;
-export type Card = [number, string];
-export type CardNames = Array<string>;
-
 export interface CardArchetypeRef {
 	archetype: string;
 	percent: number;
@@ -59,22 +52,42 @@ export interface UniqueCard {
 	decks_in: number;
 }
 
-export type Zone = {
-	name: string;
-	quantity: number;
-}[];
 export interface InputDeck {
+	id: string;
 	name: string;
+	format: string;
+	command: CardNames;
 	main: Zone;
 	sb: Zone;
 }
 
+export type Zone = {
+	name: string;
+	quantity: number;
+}[];
+
+export type Vector = Array<number>;
+export type DeckZip = Array<[Deck, number]>;
+export type Decks = Array<Deck>;
+export type Deck = Array<Card>;
+export type Card = [number, string];
+export type CardNames = Array<string>;
+
 class Utils {
+	/**
+	 * Rounds value to precision digits
+	 * @param value num to round
+	 * @param precision decimal places
+	 */
 	static round(value: number, precision: number): number {
 		const multiplier = Math.pow(10, precision || 0);
 		return Math.round(value * multiplier) / multiplier;
 	}
 
+	/**
+	 * Get card names from a specific deck
+	 * @param deck
+	 */
 	static cardNames(deck: Deck): CardNames {
 		let names: CardNames = [];
 		for (const card in deck) {
@@ -83,12 +96,16 @@ class Utils {
 		return names;
 	}
 
-	static quantityOfCard(name: string): number {
+	/**
+	 * Find the number of a particular card in the format
+	 * @param cardName
+	 */
+	static quantityOfCard(cardName: string): number {
 		let q: number = 0;
 		for (const i in unique_cards) {
 			let card_name: string = unique_cards[i].card_name;
-			if (card_name == name) {
-				if (card_name.includes(name)) {
+			if (card_name == cardName) {
+				if (card_name.includes(cardName)) {
 					q = unique_cards[i].quantity;
 				}
 			}
@@ -96,6 +113,11 @@ class Utils {
 		return q;
 	}
 
+	/**
+	 * Get the distance between two values
+	 * @param x
+	 * @param y
+	 */
 	static distance(x: Array<number>, y: Array<number>): number {
 		let d: number = 0.0;
 		for (let [z, elem] of x.entries()) {
@@ -104,6 +126,11 @@ class Utils {
 		return Math.sqrt(d);
 	}
 
+	/**
+	 * Zip two arrays of decks and indexes into one array
+	 * @param a1 Array of decks
+	 * @param a2 Array of indexes
+	 */
 	static zipDeck(a1: Decks, a2: Array<number>): DeckZip {
 		let deck_zip: DeckZip = [];
 		for (let j = 0; j < a1.length; j++) {
@@ -112,6 +139,10 @@ class Utils {
 		return deck_zip;
 	}
 
+	/**
+	 * Remove duplicates from an array (turn it into a "Set")
+	 * @param arr
+	 */
 	static set(arr: Array<any>): Array<any> {
 		return Object.keys(
 			arr.reduce(function (seen: boolean, val: any) {
@@ -124,7 +155,7 @@ class Utils {
 
 // GLOBALS
 const NUM_VERS: number = 20;
-const CARD_CUTOFF: number = 0.32; // percent / 100
+const THRESHOLD: number = 0.32; // percent / 100
 const FORMATS: Array<string> = [
 	"modern",
 	"pioneer",
@@ -150,7 +181,6 @@ const decks_json: InputDeck[] = JSON.parse(json);
 for (const deck of decks_json) {
 	let deck_of_cards: Deck = [];
 	for (const card of deck.main) {
-		// initialize deck dict, determine card data
 		if (card.name) {
 			deck_of_cards.push([card.quantity, card.name]);
 			total_cards += card.quantity;
@@ -173,18 +203,27 @@ for (const deck of decks_json) {
 	decks.push(deck_of_cards);
 }
 
+/**
+ * Find most common cards of a particular deck
+ * @param deck
+ * @param k num cards to return
+ */
 function mostCommonCards(deck: Deck, k: number): CardNames {
 	deck = deck.sort((a, b) => a[0] - b[0]).reverse();
 	let card_names: CardNames = [];
 	for (const card in deck.slice(0, k)) {
-		let card_name = deck[card][1];
-		if (!IGNORE.includes(card_name)) {
-			card_names.push(card_name);
+		let cardName = deck[card][1];
+		if (!IGNORE.includes(cardName)) {
+			card_names.push(cardName);
 		}
 	}
 	return card_names;
 }
 
+/**
+ * Get decks of a particular cluster
+ * @param idx Cluster index
+ */
 function decksByIdx(idx: number): DeckZip {
 	let indexes: DeckZip = [];
 	for (const deck of deck_zip.entries()) {
@@ -195,11 +234,15 @@ function decksByIdx(idx: number): DeckZip {
 	return indexes;
 }
 
-function cardAppearanceRatio(card_name: string): [Array<number>, number] {
+/**
+ * Find how often a card appears in each archetype
+ * @param cardName
+ */
+function cardAppearanceRatio(cardName: string): [Array<number>, number] {
 	let label_count: Array<number> = Array(NUM_CLUSTERS).fill(0);
 	for (const deck of deck_zip.entries()) {
 		for (const card of deck[1][0]) {
-			if (card[1].includes(card_name)) {
+			if (card[1].includes(cardName)) {
 				label_count[deck[1][1]] += 1;
 			}
 		}
@@ -212,12 +255,12 @@ function cardAppearanceRatio(card_name: string): [Array<number>, number] {
 	return [labels, total_apps];
 }
 
-// Determine "deck vectors" - translate mtg decks to a format that can be used for KM++
+// Determine "deck vectors" - translate MTG decks to a format that can be used for KM++
 function deckToVector(input_deck: Deck): Vector {
 	let v: Vector = Array(vectored_card_names.length).fill(0);
-	for (const [x, name] of vectored_card_names.entries()) {
+	for (const [x, cardName] of vectored_card_names.entries()) {
 		for (const card of input_deck.entries()) {
-			if (card[1][1] == name) {
+			if (card[1][1] == cardName) {
 				v[x] += card[0];
 			}
 		}
@@ -230,7 +273,7 @@ for (const deck of decks) {
 	deck_vectors.push(deckToVector(deck));
 }
 
-let NUM_CLUSTERS: number = Math.max(Math.round(unique_cards.length / 30), 1);
+let NUM_CLUSTERS: number = Math.max(Math.round(unique_cards.length / 32), 1);
 let it = 10;
 
 let archetypes: Array<Archetype>;
@@ -244,16 +287,15 @@ do {
 	for (let i = 0; i < NUM_CLUSTERS; i++) {
 		card_counts.push([i, decksByIdx(i).length]);
 	}
-
 	let total_instances: number = 0;
 	for (const count of card_counts) {
 		total_instances += count[1];
 	}
 
+	/* FOR EACH CLUSTER
+	 Define cluster - Instead of taking the intersection of all the decks in a cluster, which could lead to archetype staples being excluded due to variance, this method involves taking every deck in the cluster and finding the most common cards (or archetype staples) */
 	archetypes = [];
-	// FOR EACH CLUSTER
 	for (let i = 0; i < NUM_CLUSTERS; i++) {
-		// Define cluster - Instead of taking the intersection of all the decks in a cluster, which could lead to archetype staples being excluded due to variance, this method involves taking every deck in the cluster and finding the most common cards (or archetype staples)
 		let card_set: Array<CardNames> = [];
 		let deck_items: DeckZip = decksByIdx(i);
 		for (const deck_item of deck_items) {
@@ -273,8 +315,6 @@ do {
 		for (const card_item of sorted_cards.slice(0, 20)) {
 			cluster.push(card_item[0]);
 		}
-		// clusters.push(cluster);
-
 		// Calculate percentage of meta, deck name, best_fit deck
 		let deck_archetype: Archetype = {
 			archetype_name: "Unknown",
@@ -338,16 +378,6 @@ do {
 	it++;
 } while (NUM_CLUSTERS != archetypes.length && it < 10);
 
-let outputJson: FormatJson = {
-	archetypes: archetypes,
-	format_cards: [],
-	format_versatile_cards: [],
-	total_cards_parsed: total_cards,
-	cards_parsed_by_deck: vectored_card_names.length,
-	unique_cards_parsed: unique_cards.length,
-	total_decks_parsed: decks.length
-};
-
 /**
  * Calculate and return the cards most commonly seen with a given card name.
  * E.g. "Oko, Thief of Crowns" is often seen with "Misty Rainforest"
@@ -376,21 +406,21 @@ function closestCards(cardName: string, limit: number): CardNames {
 
 /**
  * Get decks a card is commonly found in
- * @param card_name
+ * @param cardName
  */
-function commonDecks(card_name: string, limit: number = 3): CardArchetypeRef[] {
+function commonDecks(cardName: string, limit: number = 3): CardArchetypeRef[] {
 	const common_decks: CardArchetypeRef[] = [];
 	let i: number = 0;
 	while (i < NUM_CLUSTERS) {
 		let decks_w_card: number = 0;
 		const decks = decksByIdx(i);
 		for (const deck of decks) {
-			if (deck[0].some(card => card[1] === card_name)) {
+			if (deck[0].some(card => card[1] === cardName)) {
 				decks_w_card += 1;
 			}
 		}
 		let percent: number = Utils.round((decks_w_card / decks.length) * 100, 2);
-		if (percent > CARD_CUTOFF * 100) {
+		if (percent > THRESHOLD * 100) {
 			common_decks.push({
 				archetype: outputJson.archetypes[i].archetype_name,
 				decksInArchetype: decks_w_card,
@@ -404,6 +434,10 @@ function commonDecks(card_name: string, limit: number = 3): CardArchetypeRef[] {
 	return common_decks.slice(0, limit);
 }
 
+/**
+ * Get "versatile" cards of format (cards that see play in a wide variety of archetypes)
+ * @param k num cards to return
+ */
 function versatileCards(k: number): CardNames {
 	const variances: Array<[string, number]> = [];
 	for (const unique_card of unique_cards) {
@@ -423,13 +457,18 @@ function versatileCards(k: number): CardNames {
 	return versatile_cards;
 }
 
-//  Determine versatile cards in format
-outputJson.format_versatile_cards = versatileCards(NUM_VERS);
+let outputJson: FormatJson = {
+	archetypes: archetypes,
+	format_cards: [],
+	format_versatile_cards: versatileCards(NUM_VERS),
+	total_cards_parsed: total_cards,
+	cards_parsed_by_deck: vectored_card_names.length,
+	unique_cards_parsed: unique_cards.length,
+	total_decks_parsed: decks.length
+};
 
-//  Determine data for cards in format
 for (const unique_card of unique_cards) {
-	// only use top n % of cards to ensure accuracy
-	if (unique_card.quantity >= unique_cards[0].quantity * CARD_CUTOFF) {
+	if (unique_card.quantity >= unique_cards[0].quantity * THRESHOLD) {
 		let format_card: FormatCard = {
 			card_name: unique_card.card_name,
 			common_archetypes: commonDecks(unique_card.card_name),
@@ -448,11 +487,9 @@ for (const unique_card of unique_cards) {
 	}
 }
 
-// Sort JSON
 outputJson.archetypes.sort((a, b) => b.instances - a.instances);
 outputJson.format_cards.sort((a, b) => b.total_instances - a.total_instances);
 
-// Write JSON Output
 fs.writeFileSync(
 	"output_json/" + FORMATS[0] + ".json",
 	JSON.stringify(outputJson, null, 4),

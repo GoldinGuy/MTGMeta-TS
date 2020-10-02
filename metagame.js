@@ -14,12 +14,12 @@ class Utils {
         }
         return names;
     }
-    static quantityOfCard(name) {
+    static quantityOfCard(cardName) {
         let q = 0;
         for (const i in unique_cards) {
             let card_name = unique_cards[i].card_name;
-            if (card_name == name) {
-                if (card_name.includes(name)) {
+            if (card_name == cardName) {
+                if (card_name.includes(cardName)) {
                     q = unique_cards[i].quantity;
                 }
             }
@@ -48,7 +48,7 @@ class Utils {
     }
 }
 const NUM_VERS = 20;
-const CARD_CUTOFF = 0.32;
+const THRESHOLD = 0.32;
 const FORMATS = [
     "modern",
     "pioneer",
@@ -93,9 +93,9 @@ function mostCommonCards(deck, k) {
     deck = deck.sort((a, b) => a[0] - b[0]).reverse();
     let card_names = [];
     for (const card in deck.slice(0, k)) {
-        let card_name = deck[card][1];
-        if (!IGNORE.includes(card_name)) {
-            card_names.push(card_name);
+        let cardName = deck[card][1];
+        if (!IGNORE.includes(cardName)) {
+            card_names.push(cardName);
         }
     }
     return card_names;
@@ -109,11 +109,11 @@ function decksByIdx(idx) {
     }
     return indexes;
 }
-function cardAppearanceRatio(card_name) {
+function cardAppearanceRatio(cardName) {
     let label_count = Array(NUM_CLUSTERS).fill(0);
     for (const deck of deck_zip.entries()) {
         for (const card of deck[1][0]) {
-            if (card[1].includes(card_name)) {
+            if (card[1].includes(cardName)) {
                 label_count[deck[1][1]] += 1;
             }
         }
@@ -127,9 +127,9 @@ function cardAppearanceRatio(card_name) {
 }
 function deckToVector(input_deck) {
     let v = Array(vectored_card_names.length).fill(0);
-    for (const [x, name] of vectored_card_names.entries()) {
+    for (const [x, cardName] of vectored_card_names.entries()) {
         for (const card of input_deck.entries()) {
-            if (card[1][1] == name) {
+            if (card[1][1] == cardName) {
                 v[x] += card[0];
             }
         }
@@ -140,7 +140,7 @@ let deck_vectors = [];
 for (const deck of decks) {
     deck_vectors.push(deckToVector(deck));
 }
-let NUM_CLUSTERS = Math.max(Math.round(unique_cards.length / 30), 1);
+let NUM_CLUSTERS = Math.max(Math.round(unique_cards.length / 32), 1);
 let it = 10;
 let archetypes;
 do {
@@ -228,15 +228,6 @@ do {
     }
     it++;
 } while (NUM_CLUSTERS != archetypes.length && it < 10);
-let outputJson = {
-    archetypes: archetypes,
-    format_cards: [],
-    format_versatile_cards: [],
-    total_cards_parsed: total_cards,
-    cards_parsed_by_deck: vectored_card_names.length,
-    unique_cards_parsed: unique_cards.length,
-    total_decks_parsed: decks.length
-};
 function closestCards(cardName, limit) {
     const a_card_app = cardAppearanceRatio(cardName)[0];
     let distances = [];
@@ -253,19 +244,19 @@ function closestCards(cardName, limit) {
     }
     return closest_cards;
 }
-function commonDecks(card_name, limit = 3) {
+function commonDecks(cardName, limit = 3) {
     const common_decks = [];
     let i = 0;
     while (i < NUM_CLUSTERS) {
         let decks_w_card = 0;
         const decks = decksByIdx(i);
         for (const deck of decks) {
-            if (deck[0].some(card => card[1] === card_name)) {
+            if (deck[0].some(card => card[1] === cardName)) {
                 decks_w_card += 1;
             }
         }
         let percent = Utils.round((decks_w_card / decks.length) * 100, 2);
-        if (percent > CARD_CUTOFF * 100) {
+        if (percent > THRESHOLD * 100) {
             common_decks.push({
                 archetype: outputJson.archetypes[i].archetype_name,
                 decksInArchetype: decks_w_card,
@@ -296,9 +287,17 @@ function versatileCards(k) {
     }
     return versatile_cards;
 }
-outputJson.format_versatile_cards = versatileCards(NUM_VERS);
+let outputJson = {
+    archetypes: archetypes,
+    format_cards: [],
+    format_versatile_cards: versatileCards(NUM_VERS),
+    total_cards_parsed: total_cards,
+    cards_parsed_by_deck: vectored_card_names.length,
+    unique_cards_parsed: unique_cards.length,
+    total_decks_parsed: decks.length
+};
 for (const unique_card of unique_cards) {
-    if (unique_card.quantity >= unique_cards[0].quantity * CARD_CUTOFF) {
+    if (unique_card.quantity >= unique_cards[0].quantity * THRESHOLD) {
         let format_card = {
             card_name: unique_card.card_name,
             common_archetypes: commonDecks(unique_card.card_name),
