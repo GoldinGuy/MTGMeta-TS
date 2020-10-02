@@ -16,11 +16,11 @@ class Utils {
     }
     static quantityOfCard(cardName) {
         let q = 0;
-        for (const i in unique_cards) {
-            let card_name = unique_cards[i].card_name;
+        for (const i in uniqueCards) {
+            let card_name = uniqueCards[i].card_name;
             if (card_name == cardName) {
                 if (card_name.includes(cardName)) {
-                    q = unique_cards[i].quantity;
+                    q = uniqueCards[i].quantity;
                 }
             }
         }
@@ -58,41 +58,41 @@ const FORMATS = [
 ];
 const IGNORE = ["Island", "Forest", "Mountain", "Swamp", "Plains"];
 var decks = [];
-var deck_zip;
-var vectored_card_names = [];
-var unique_cards = [];
-var total_cards = 0;
+var deckZip;
+var vectoredCardNames = [];
+var uniqueCards = [];
+var totalCards = 0;
 const json = fs.readFileSync("input_json/decks-" + FORMATS[0] + ".json", "utf8");
 const decks_json = JSON.parse(json);
 for (const deck of decks_json) {
-    let deck_of_cards = [];
+    let deckOfCards = [];
     for (const card of deck.main) {
         if (card.name) {
-            deck_of_cards.push([card.quantity, card.name]);
-            total_cards += card.quantity;
-            vectored_card_names.push(card.name);
+            deckOfCards.push([card.quantity, card.name]);
+            totalCards += card.quantity;
+            vectoredCardNames.push(card.name);
             if (!IGNORE.some(c => card.name.includes(c))) {
-                let idx = unique_cards.findIndex(c => c.card_name.includes(card.name));
+                let idx = uniqueCards.findIndex(c => c.card_name.includes(card.name));
                 if (idx === -1) {
-                    unique_cards.push({
+                    uniqueCards.push({
                         card_name: card.name,
                         quantity: card.quantity,
                         decks_in: 1
                     });
                 }
                 else {
-                    unique_cards[idx].quantity += card.quantity;
-                    unique_cards[idx].decks_in += 1;
+                    uniqueCards[idx].quantity += card.quantity;
+                    uniqueCards[idx].decks_in += 1;
                 }
             }
         }
     }
-    decks.push(deck_of_cards);
+    decks.push({ id: deck.id, cards: deckOfCards });
 }
 function mostCommonCards(deck, k) {
-    deck = deck.sort((a, b) => a[0] - b[0]).reverse();
+    deck.cards = deck.cards.sort((a, b) => a[0] - b[0]).reverse();
     let card_names = [];
-    for (const card in deck.slice(0, k)) {
+    for (const card in deck.cards.slice(0, k)) {
         let cardName = deck[card][1];
         if (!IGNORE.includes(cardName)) {
             card_names.push(cardName);
@@ -102,7 +102,7 @@ function mostCommonCards(deck, k) {
 }
 function decksByIdx(idx) {
     let indexes = [];
-    for (const deck of deck_zip.entries()) {
+    for (const deck of deckZip.entries()) {
         if (deck[1][1] == idx) {
             indexes.push([deck[1][0], deck[1][1]]);
         }
@@ -110,25 +110,25 @@ function decksByIdx(idx) {
     return indexes;
 }
 function cardAppearanceRatio(cardName) {
-    let label_count = Array(NUM_CLUSTERS).fill(0);
-    for (const deck of deck_zip.entries()) {
-        for (const card of deck[1][0]) {
+    let labelCount = Array(NUM_CLUSTERS).fill(0);
+    for (const deck of deckZip.entries()) {
+        for (const card of deck[1][0].cards) {
             if (card[1].includes(cardName)) {
-                label_count[deck[1][1]] += 1;
+                labelCount[deck[1][1]] += 1;
             }
         }
     }
-    let total_apps = label_count.reduce((a, b) => a + b, 0);
+    let totalApps = labelCount.reduce((a, b) => a + b, 0);
     let labels = [];
-    for (const count of label_count) {
-        labels.push(count / total_apps);
+    for (const count of labelCount) {
+        labels.push(count / totalApps);
     }
-    return [labels, total_apps];
+    return [labels, totalApps];
 }
-function deckToVector(input_deck) {
-    let v = Array(vectored_card_names.length).fill(0);
-    for (const [x, cardName] of vectored_card_names.entries()) {
-        for (const card of input_deck.entries()) {
+function deckToVector(inputDeck) {
+    let v = Array(vectoredCardNames.length).fill(0);
+    for (const [x, cardName] of vectoredCardNames.entries()) {
+        for (const card of inputDeck.cards.entries()) {
             if (card[1][1] == cardName) {
                 v[x] += card[0];
             }
@@ -136,73 +136,73 @@ function deckToVector(input_deck) {
     }
     return v;
 }
-let deck_vectors = [];
+let deckVectors = [];
 for (const deck of decks) {
-    deck_vectors.push(deckToVector(deck));
+    deckVectors.push(deckToVector(deck));
 }
-let NUM_CLUSTERS = Math.max(Math.round(unique_cards.length / 32), 1);
+let NUM_CLUSTERS = Math.max(Math.round(uniqueCards.length / 32), 1);
 let it = 10;
 let archetypes;
 do {
     console.log(NUM_CLUSTERS);
-    const kmeans = KMEANS(deck_vectors, NUM_CLUSTERS, "kmeans++");
-    deck_zip = Utils.zipDeck(decks, kmeans.indexes);
-    let card_counts = [];
+    const kmeans = KMEANS(deckVectors, NUM_CLUSTERS, "kmeans++");
+    deckZip = Utils.zipDeck(decks, kmeans.indexes);
+    let cardCounts = [];
     for (let i = 0; i < NUM_CLUSTERS; i++) {
-        card_counts.push([i, decksByIdx(i).length]);
+        cardCounts.push([i, decksByIdx(i).length]);
     }
-    let total_instances = 0;
-    for (const count of card_counts) {
-        total_instances += count[1];
+    let totalInstances = 0;
+    for (const count of cardCounts) {
+        totalInstances += count[1];
     }
     archetypes = [];
     for (let i = 0; i < NUM_CLUSTERS; i++) {
-        let card_set = [];
-        let deck_items = decksByIdx(i);
-        for (const deck_item of deck_items) {
-            card_set.push(Utils.set(mostCommonCards(deck_item[0], 40)));
+        let cardSet = [];
+        let deckItems = decksByIdx(i);
+        for (const deckItem of deckItems) {
+            cardSet.push(Utils.set(mostCommonCards(deckItem[0], 40)));
         }
-        let card_list = Array.prototype.concat.apply([], card_set);
-        let count_cards = card_list.reduce((a, b) => {
+        let cardList = Array.prototype.concat.apply([], cardSet);
+        let countCards = cardList.reduce((a, b) => {
             a[b] = (a[b] || 0) + 1;
             return a;
         }, {});
-        let sorted_cards = Object.keys(count_cards)
-            .map(k => [k, count_cards[k]])
+        let sorted_cards = Object.keys(countCards)
+            .map(k => [k, countCards[k]])
             .sort(function (a, b) {
             return b[1] - a[1];
         });
         let cluster = [];
-        for (const card_item of sorted_cards.slice(0, 20)) {
-            cluster.push(card_item[0]);
+        for (const cardItem of sorted_cards.slice(0, 20)) {
+            cluster.push(cardItem[0]);
         }
-        let deck_archetype = {
+        let deckArchetype = {
             archetype_name: "Unknown",
             top_cards: cluster,
-            instances: deck_items.length,
-            metagame_percentage: Utils.round((deck_items.length / total_instances) * 100, 2),
+            instances: deckItems.length,
+            metagame_percentage: Utils.round((deckItems.length / totalInstances) * 100, 2),
             best_fit_deck: { main: [], sb: [] }
         };
-        let max_similar = 0;
+        let maxSimilar = 0;
         for (const deck_obj of decks_json) {
             let similar = 0;
             for (const card of deck_obj.main) {
                 if (cluster.includes(card.name)) {
                     similar += 1;
                 }
-                if (similar > max_similar) {
-                    max_similar = similar;
-                    deck_archetype.archetype_name = deck_obj.name;
-                    deck_archetype.best_fit_deck = {
+                if (similar > maxSimilar) {
+                    maxSimilar = similar;
+                    deckArchetype.archetype_name = deck_obj.name;
+                    deckArchetype.best_fit_deck = {
                         main: deck_obj.main,
                         sb: deck_obj.sb
                     };
                 }
             }
         }
-        archetypes.push(deck_archetype);
-        console.log("\nCluster #" + i + " (" + deck_archetype.archetype_name + ") :");
-        console.log(JSON.stringify(deck_archetype.top_cards));
+        archetypes.push(deckArchetype);
+        console.log("\nCluster #" + i + " (" + deckArchetype.archetype_name + ") :");
+        console.log(JSON.stringify(deckArchetype.top_cards));
     }
     for (const archetype of archetypes) {
         let diff = 0;
@@ -229,29 +229,29 @@ do {
     it++;
 } while (NUM_CLUSTERS != archetypes.length && it < 10);
 function closestCards(cardName, limit) {
-    const a_card_app = cardAppearanceRatio(cardName)[0];
+    const cardApp = cardAppearanceRatio(cardName)[0];
     let distances = [];
-    for (const unique_card of unique_cards) {
-        let dist = Utils.distance(cardAppearanceRatio(unique_card.card_name)[0], a_card_app);
+    for (const unique_card of uniqueCards) {
+        let dist = Utils.distance(cardAppearanceRatio(unique_card.card_name)[0], cardApp);
         distances.push([unique_card.card_name, dist]);
     }
     distances.sort((a, b) => a[1] - b[1]);
-    let closest_cards = [];
+    let closestCards = [];
     for (const dist of distances.slice(0, limit)) {
         if (dist[0] != cardName) {
-            closest_cards.push(dist[0]);
+            closestCards.push(dist[0]);
         }
     }
-    return closest_cards;
+    return closestCards;
 }
 function commonDecks(cardName, limit = 3) {
     const common_decks = [];
     let i = 0;
     while (i < NUM_CLUSTERS) {
         let decks_w_card = 0;
-        const decks = decksByIdx(i);
-        for (const deck of decks) {
-            if (deck[0].some(card => card[1] === cardName)) {
+        const decksCluster = decksByIdx(i);
+        for (const deck of decksCluster) {
+            if (deck[0].cards.some(card => card[1] === cardName)) {
                 decks_w_card += 1;
             }
         }
@@ -291,20 +291,20 @@ let outputJson = {
     archetypes: archetypes,
     format_cards: [],
     format_versatile_cards: versatileCards(NUM_VERS),
-    total_cards_parsed: total_cards,
-    cards_parsed_by_deck: vectored_card_names.length,
-    unique_cards_parsed: unique_cards.length,
+    total_cards_parsed: totalCards,
+    cards_parsed_by_deck: vectoredCardNames.length,
+    unique_cards_parsed: uniqueCards.length,
     total_decks_parsed: decks.length
 };
-for (const unique_card of unique_cards) {
-    if (unique_card.quantity >= unique_cards[0].quantity * THRESHOLD) {
+for (const unique_card of uniqueCards) {
+    if (unique_card.quantity >= uniqueCards[0].quantity * THRESHOLD) {
         let format_card = {
             card_name: unique_card.card_name,
             common_archetypes: commonDecks(unique_card.card_name),
             cards_found_with: closestCards(unique_card.card_name, 7),
             total_instances: unique_card.quantity,
             percentage_of_total_decks: Utils.round((unique_card.decks_in / decks.length) * 100, 2),
-            percentage_of_total_cards: Utils.round((unique_card.quantity / total_cards) * 100, 2)
+            percentage_of_total_cards: Utils.round((unique_card.quantity / totalCards) * 100, 2)
         };
         outputJson.format_cards.push(format_card);
     }

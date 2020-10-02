@@ -19,14 +19,8 @@ export interface Archetype {
 	metagame_percentage: number;
 	instances: number;
 	best_fit_deck: {
-		main: Array<{
-			name: string;
-			quantity: number;
-		}>;
-		sb: Array<{
-			name: string;
-			quantity: number;
-		}>;
+		main: Zone;
+		sb: Zone;
 	};
 }
 
@@ -61,6 +55,11 @@ export interface InputDeck {
 	sb: Zone;
 }
 
+export interface Deck {
+	id: string;
+	cards: Array<Card>;
+}
+
 export type Zone = {
 	name: string;
 	quantity: number;
@@ -68,8 +67,6 @@ export type Zone = {
 
 export type Vector = Array<number>;
 export type DeckZip = Array<[Deck, number]>;
-export type Decks = Array<Deck>;
-export type Deck = Array<Card>;
 export type Card = [number, string];
 export type CardNames = Array<string>;
 
@@ -102,11 +99,11 @@ class Utils {
 	 */
 	static quantityOfCard(cardName: string): number {
 		let q: number = 0;
-		for (const i in unique_cards) {
-			let card_name: string = unique_cards[i].card_name;
+		for (const i in uniqueCards) {
+			let card_name: string = uniqueCards[i].card_name;
 			if (card_name == cardName) {
 				if (card_name.includes(cardName)) {
-					q = unique_cards[i].quantity;
+					q = uniqueCards[i].quantity;
 				}
 			}
 		}
@@ -131,7 +128,7 @@ class Utils {
 	 * @param a1 Array of decks
 	 * @param a2 Array of indexes
 	 */
-	static zipDeck(a1: Decks, a2: Array<number>): DeckZip {
+	static zipDeck(a1: Array<Deck>, a2: Array<number>): DeckZip {
 		let deck_zip: DeckZip = [];
 		for (let j = 0; j < a1.length; j++) {
 			deck_zip.push([a1[j], a2[j]]);
@@ -165,11 +162,11 @@ const FORMATS: Array<string> = [
 ];
 const IGNORE: CardNames = ["Island", "Forest", "Mountain", "Swamp", "Plains"];
 
-var decks: Decks = [];
-var deck_zip: DeckZip;
-var vectored_card_names: CardNames = [];
-var unique_cards: Array<UniqueCard> = [];
-var total_cards: number = 0;
+var decks: Array<Deck> = [];
+var deckZip: DeckZip;
+var vectoredCardNames: CardNames = [];
+var uniqueCards: Array<UniqueCard> = [];
+var totalCards: number = 0;
 
 // TODO: reads the first format - this should be a loop or input parameter
 const json = fs.readFileSync(
@@ -179,28 +176,28 @@ const json = fs.readFileSync(
 
 const decks_json: InputDeck[] = JSON.parse(json);
 for (const deck of decks_json) {
-	let deck_of_cards: Deck = [];
+	let deckOfCards: Array<Card> = [];
 	for (const card of deck.main) {
 		if (card.name) {
-			deck_of_cards.push([card.quantity, card.name]);
-			total_cards += card.quantity;
-			vectored_card_names.push(card.name);
+			deckOfCards.push([card.quantity, card.name]);
+			totalCards += card.quantity;
+			vectoredCardNames.push(card.name);
 			if (!IGNORE.some(c => card.name.includes(c))) {
-				let idx = unique_cards.findIndex(c => c.card_name.includes(card.name));
+				let idx = uniqueCards.findIndex(c => c.card_name.includes(card.name));
 				if (idx === -1) {
-					unique_cards.push({
+					uniqueCards.push({
 						card_name: card.name,
 						quantity: card.quantity,
 						decks_in: 1
 					});
 				} else {
-					unique_cards[idx].quantity += card.quantity;
-					unique_cards[idx].decks_in += 1;
+					uniqueCards[idx].quantity += card.quantity;
+					uniqueCards[idx].decks_in += 1;
 				}
 			}
 		}
 	}
-	decks.push(deck_of_cards);
+	decks.push({ id: deck.id, cards: deckOfCards });
 }
 
 /**
@@ -209,9 +206,9 @@ for (const deck of decks_json) {
  * @param k num cards to return
  */
 function mostCommonCards(deck: Deck, k: number): CardNames {
-	deck = deck.sort((a, b) => a[0] - b[0]).reverse();
+	deck.cards = deck.cards.sort((a, b) => a[0] - b[0]).reverse();
 	let card_names: CardNames = [];
-	for (const card in deck.slice(0, k)) {
+	for (const card in deck.cards.slice(0, k)) {
 		let cardName = deck[card][1];
 		if (!IGNORE.includes(cardName)) {
 			card_names.push(cardName);
@@ -226,7 +223,7 @@ function mostCommonCards(deck: Deck, k: number): CardNames {
  */
 function decksByIdx(idx: number): DeckZip {
 	let indexes: DeckZip = [];
-	for (const deck of deck_zip.entries()) {
+	for (const deck of deckZip.entries()) {
 		if (deck[1][1] == idx) {
 			indexes.push([deck[1][0], deck[1][1]]);
 		}
@@ -239,27 +236,27 @@ function decksByIdx(idx: number): DeckZip {
  * @param cardName
  */
 function cardAppearanceRatio(cardName: string): [Array<number>, number] {
-	let label_count: Array<number> = Array(NUM_CLUSTERS).fill(0);
-	for (const deck of deck_zip.entries()) {
-		for (const card of deck[1][0]) {
+	let labelCount: Array<number> = Array(NUM_CLUSTERS).fill(0);
+	for (const deck of deckZip.entries()) {
+		for (const card of deck[1][0].cards) {
 			if (card[1].includes(cardName)) {
-				label_count[deck[1][1]] += 1;
+				labelCount[deck[1][1]] += 1;
 			}
 		}
 	}
-	let total_apps = label_count.reduce((a, b) => a + b, 0);
+	let totalApps = labelCount.reduce((a, b) => a + b, 0);
 	let labels: Array<number> = [];
-	for (const count of label_count) {
-		labels.push(count / total_apps);
+	for (const count of labelCount) {
+		labels.push(count / totalApps);
 	}
-	return [labels, total_apps];
+	return [labels, totalApps];
 }
 
 // Determine "deck vectors" - translate MTG decks to a format that can be used for KM++
-function deckToVector(input_deck: Deck): Vector {
-	let v: Vector = Array(vectored_card_names.length).fill(0);
-	for (const [x, cardName] of vectored_card_names.entries()) {
-		for (const card of input_deck.entries()) {
+function deckToVector(inputDeck: Deck): Vector {
+	let v: Vector = Array(vectoredCardNames.length).fill(0);
+	for (const [x, cardName] of vectoredCardNames.entries()) {
+		for (const card of inputDeck.cards.entries()) {
 			if (card[1][1] == cardName) {
 				v[x] += card[0];
 			}
@@ -268,76 +265,76 @@ function deckToVector(input_deck: Deck): Vector {
 	return v;
 }
 
-let deck_vectors: Array<Vector> = [];
+let deckVectors: Array<Vector> = [];
 for (const deck of decks) {
-	deck_vectors.push(deckToVector(deck));
+	deckVectors.push(deckToVector(deck));
 }
 
-let NUM_CLUSTERS: number = Math.max(Math.round(unique_cards.length / 32), 1);
+let NUM_CLUSTERS: number = Math.max(Math.round(uniqueCards.length / 32), 1);
 let it = 10;
 
 let archetypes: Array<Archetype>;
 do {
 	console.log(NUM_CLUSTERS);
 	// Determine meta using K-Means++ clustering
-	const kmeans: KMeans = KMEANS(deck_vectors, NUM_CLUSTERS, "kmeans++");
-	deck_zip = Utils.zipDeck(decks, kmeans.indexes);
+	const kmeans: KMeans = KMEANS(deckVectors, NUM_CLUSTERS, "kmeans++");
+	deckZip = Utils.zipDeck(decks, kmeans.indexes);
 	// Translate K-Means data to a format that can be parsed
-	let card_counts: Array<[number, number]> = [];
+	let cardCounts: Array<[number, number]> = [];
 	for (let i = 0; i < NUM_CLUSTERS; i++) {
-		card_counts.push([i, decksByIdx(i).length]);
+		cardCounts.push([i, decksByIdx(i).length]);
 	}
-	let total_instances: number = 0;
-	for (const count of card_counts) {
-		total_instances += count[1];
+	let totalInstances: number = 0;
+	for (const count of cardCounts) {
+		totalInstances += count[1];
 	}
 
 	/* FOR EACH CLUSTER
 	 Define cluster - Instead of taking the intersection of all the decks in a cluster, which could lead to archetype staples being excluded due to variance, this method involves taking every deck in the cluster and finding the most common cards (or archetype staples) */
 	archetypes = [];
 	for (let i = 0; i < NUM_CLUSTERS; i++) {
-		let card_set: Array<CardNames> = [];
-		let deck_items: DeckZip = decksByIdx(i);
-		for (const deck_item of deck_items) {
-			card_set.push(Utils.set(mostCommonCards(deck_item[0], 40)));
+		let cardSet: Array<CardNames> = [];
+		let deckItems: DeckZip = decksByIdx(i);
+		for (const deckItem of deckItems) {
+			cardSet.push(Utils.set(mostCommonCards(deckItem[0], 40)));
 		}
-		let card_list: CardNames = Array.prototype.concat.apply([], card_set);
-		let count_cards = card_list.reduce((a, b) => {
+		let cardList: CardNames = Array.prototype.concat.apply([], cardSet);
+		let countCards = cardList.reduce((a, b) => {
 			a[b] = (a[b] || 0) + 1;
 			return a;
 		}, {});
-		let sorted_cards = Object.keys(count_cards)
-			.map(k => [k, count_cards[k]])
+		let sorted_cards = Object.keys(countCards)
+			.map(k => [k, countCards[k]])
 			.sort(function (a, b) {
 				return b[1] - a[1];
 			});
 		let cluster: CardNames = [];
-		for (const card_item of sorted_cards.slice(0, 20)) {
-			cluster.push(card_item[0]);
+		for (const cardItem of sorted_cards.slice(0, 20)) {
+			cluster.push(cardItem[0]);
 		}
 		// Calculate percentage of meta, deck name, best_fit deck
-		let deck_archetype: Archetype = {
+		let deckArchetype: Archetype = {
 			archetype_name: "Unknown",
 			top_cards: cluster,
-			instances: deck_items.length,
+			instances: deckItems.length,
 			metagame_percentage: Utils.round(
-				(deck_items.length / total_instances) * 100,
+				(deckItems.length / totalInstances) * 100,
 				2
 			),
 			best_fit_deck: { main: [], sb: [] }
 		};
 
-		let max_similar: number = 0;
+		let maxSimilar: number = 0;
 		for (const deck_obj of decks_json) {
 			let similar: number = 0;
 			for (const card of deck_obj.main) {
 				if (cluster.includes(card.name)) {
 					similar += 1;
 				}
-				if (similar > max_similar) {
-					max_similar = similar;
-					deck_archetype.archetype_name = deck_obj.name;
-					deck_archetype.best_fit_deck = {
+				if (similar > maxSimilar) {
+					maxSimilar = similar;
+					deckArchetype.archetype_name = deck_obj.name;
+					deckArchetype.best_fit_deck = {
 						main: deck_obj.main,
 						sb: deck_obj.sb
 					};
@@ -345,11 +342,11 @@ do {
 			}
 		}
 
-		archetypes.push(deck_archetype);
+		archetypes.push(deckArchetype);
 		console.log(
-			"\nCluster #" + i + " (" + deck_archetype.archetype_name + ") :"
+			"\nCluster #" + i + " (" + deckArchetype.archetype_name + ") :"
 		);
-		console.log(JSON.stringify(deck_archetype.top_cards));
+		console.log(JSON.stringify(deckArchetype.top_cards));
 	}
 
 	for (const archetype of archetypes) {
@@ -385,23 +382,23 @@ do {
  * @param limit The number of cards to return
  */
 function closestCards(cardName: string, limit: number): CardNames {
-	const a_card_app = cardAppearanceRatio(cardName)[0];
+	const cardApp = cardAppearanceRatio(cardName)[0];
 	let distances: Array<[string, number]> = [];
-	for (const unique_card of unique_cards) {
+	for (const unique_card of uniqueCards) {
 		let dist = Utils.distance(
 			cardAppearanceRatio(unique_card.card_name)[0],
-			a_card_app
+			cardApp
 		);
 		distances.push([unique_card.card_name, dist]);
 	}
 	distances.sort((a, b) => a[1] - b[1]);
-	let closest_cards: CardNames = [];
+	let closestCards: CardNames = [];
 	for (const dist of distances.slice(0, limit)) {
 		if (dist[0] != cardName) {
-			closest_cards.push(dist[0]);
+			closestCards.push(dist[0]);
 		}
 	}
-	return closest_cards;
+	return closestCards;
 }
 
 /**
@@ -413,9 +410,9 @@ function commonDecks(cardName: string, limit: number = 3): CardArchetypeRef[] {
 	let i: number = 0;
 	while (i < NUM_CLUSTERS) {
 		let decks_w_card: number = 0;
-		const decks = decksByIdx(i);
-		for (const deck of decks) {
-			if (deck[0].some(card => card[1] === cardName)) {
+		const decksCluster = decksByIdx(i);
+		for (const deck of decksCluster) {
+			if (deck[0].cards.some(card => card[1] === cardName)) {
 				decks_w_card += 1;
 			}
 		}
@@ -461,14 +458,14 @@ let outputJson: FormatJson = {
 	archetypes: archetypes,
 	format_cards: [],
 	format_versatile_cards: versatileCards(NUM_VERS),
-	total_cards_parsed: total_cards,
-	cards_parsed_by_deck: vectored_card_names.length,
-	unique_cards_parsed: unique_cards.length,
+	total_cards_parsed: totalCards,
+	cards_parsed_by_deck: vectoredCardNames.length,
+	unique_cards_parsed: uniqueCards.length,
 	total_decks_parsed: decks.length
 };
 
-for (const unique_card of unique_cards) {
-	if (unique_card.quantity >= unique_cards[0].quantity * THRESHOLD) {
+for (const unique_card of uniqueCards) {
+	if (unique_card.quantity >= uniqueCards[0].quantity * THRESHOLD) {
 		let format_card: FormatCard = {
 			card_name: unique_card.card_name,
 			common_archetypes: commonDecks(unique_card.card_name),
@@ -479,7 +476,7 @@ for (const unique_card of unique_cards) {
 				2
 			),
 			percentage_of_total_cards: Utils.round(
-				(unique_card.quantity / total_cards) * 100,
+				(unique_card.quantity / totalCards) * 100,
 				2
 			)
 		};
