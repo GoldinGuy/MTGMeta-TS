@@ -1,6 +1,6 @@
 var fs = require("fs");
 import { KMeans } from "./K-Means-TS/kmeans";
-
+var gs = require("gap-stat");
 const KMEANS: Function = require("./K-Means-TS/kmeans");
 
 export interface FormatJson {
@@ -22,19 +22,20 @@ export interface Archetype {
 		main: Zone;
 		sb: Zone;
 	};
+	deck_ids: Array<string>;
 }
 
 export interface FormatCard {
 	card_name: string;
-	common_archetypes: CardArchetypeRef[];
+	common_archetypes: Data[];
 	cards_found_with: CardNames;
 	total_instances: number;
 	percentage_of_total_cards: number;
 	percentage_of_total_decks: number;
 }
 
-export interface CardArchetypeRef {
-	archetype: string;
+export interface Data {
+	name: string;
 	percent: number;
 	seenInDecks: number;
 	decksInArchetype: number;
@@ -43,7 +44,7 @@ export interface CardArchetypeRef {
 export interface UniqueCard {
 	card_name: string;
 	quantity: number;
-	decks_in: number;
+	decks_in?: number;
 }
 
 export interface InputDeck {
@@ -70,7 +71,7 @@ export type DeckZip = Array<[Deck, number]>;
 export type Card = [number, string];
 export type CardNames = Array<string>;
 
-class Utils {
+export class Utils {
 	/**
 	 * Rounds value to precision digits
 	 * @param value num to round
@@ -154,11 +155,11 @@ class Utils {
 const NUM_VERS: number = 20;
 const THRESHOLD: number = 0.32; // percent / 100
 const FORMATS: Array<string> = [
+	"legacy",
 	"modern",
 	"pioneer",
 	"standard",
-	"pauper",
-	"legacy"
+	"pauper"
 ];
 const IGNORE: CardNames = ["Island", "Forest", "Mountain", "Swamp", "Plains"];
 
@@ -174,8 +175,8 @@ const json = fs.readFileSync(
 	"utf8"
 );
 
-const decks_json: InputDeck[] = JSON.parse(json);
-for (const deck of decks_json) {
+const decksJson: InputDeck[] = JSON.parse(json);
+for (const deck of decksJson) {
 	let deckOfCards: Array<Card> = [];
 	for (const card of deck.main) {
 		if (card.name) {
@@ -183,16 +184,16 @@ for (const deck of decks_json) {
 			totalCards += card.quantity;
 			vectoredCardNames.push(card.name);
 			if (!IGNORE.some(c => card.name.includes(c))) {
-				let idx = uniqueCards.findIndex(c => c.card_name.includes(card.name));
-				if (idx === -1) {
+				let i = uniqueCards.findIndex(c => c.card_name.includes(card.name));
+				if (i === -1) {
 					uniqueCards.push({
 						card_name: card.name,
 						quantity: card.quantity,
 						decks_in: 1
 					});
 				} else {
-					uniqueCards[idx].quantity += card.quantity;
-					uniqueCards[idx].decks_in += 1;
+					uniqueCards[i].quantity += card.quantity;
+					uniqueCards[i].decks_in = uniqueCards[i].decks_in || 0 + 1;
 				}
 			}
 		}
@@ -208,8 +209,8 @@ for (const deck of decks_json) {
 function mostCommonCards(deck: Deck, k: number): CardNames {
 	deck.cards = deck.cards.sort((a, b) => a[0] - b[0]).reverse();
 	let card_names: CardNames = [];
-	for (const card in deck.cards.slice(0, k)) {
-		let cardName = deck[card][1];
+	for (const id in deck.cards.slice(0, k)) {
+		let cardName = deck.cards[id][1];
 		if (!IGNORE.includes(cardName)) {
 			card_names.push(cardName);
 		}
@@ -256,9 +257,9 @@ function cardAppearanceRatio(cardName: string): [Array<number>, number] {
 function deckToVector(inputDeck: Deck): Vector {
 	let v: Vector = Array(vectoredCardNames.length).fill(0);
 	for (const [x, cardName] of vectoredCardNames.entries()) {
-		for (const card of inputDeck.cards.entries()) {
-			if (card[1][1] == cardName) {
-				v[x] += card[0];
+		for (const [num, card] of inputDeck.cards.entries()) {
+			if (card[1] == cardName) {
+				v[x] += num;
 			}
 		}
 	}
@@ -269,9 +270,12 @@ let deckVectors: Array<Vector> = [];
 for (const deck of decks) {
 	deckVectors.push(deckToVector(deck));
 }
-
-let NUM_CLUSTERS: number = Math.max(Math.round(uniqueCards.length / 32), 1);
-let it = 10;
+// let NUM_CLUSTERS: number = Math.max(Math.round(uniqueCards.length / 32), 1);
+let NUM_CLUSTERS: number = Math.round(Math.sqrt(deckVectors.length / 2));
+console.log(NUM_CLUSTERS);
+var result = gs.gap_statistic(deckVectors, 1, 25);
+console.log("best cluster size is " + result.cluster_size);
+let it = 0;
 
 let archetypes: Array<Archetype>;
 do {
@@ -294,9 +298,11 @@ do {
 	archetypes = [];
 	for (let i = 0; i < NUM_CLUSTERS; i++) {
 		let cardSet: Array<CardNames> = [];
+		let deckIds: Array<string> = [];
 		let deckItems: DeckZip = decksByIdx(i);
-		for (const deckItem of deckItems) {
-			cardSet.push(Utils.set(mostCommonCards(deckItem[0], 40)));
+		for (const [deckItem, idx] of deckItems) {
+			cardSet.push(Utils.set(mostCommonCards(deckItem, 40)));
+			deckIds.push(deckItem.id);
 		}
 		let cardList: CardNames = Array.prototype.concat.apply([], cardSet);
 		let countCards = cardList.reduce((a, b) => {
@@ -321,11 +327,12 @@ do {
 				(deckItems.length / totalInstances) * 100,
 				2
 			),
-			best_fit_deck: { main: [], sb: [] }
+			best_fit_deck: { main: [], sb: [] },
+			deck_ids: deckIds
 		};
 
 		let maxSimilar: number = 0;
-		for (const deck_obj of decks_json) {
+		for (const deck_obj of decksJson) {
 			let similar: number = 0;
 			for (const card of deck_obj.main) {
 				if (cluster.includes(card.name)) {
@@ -333,7 +340,9 @@ do {
 				}
 				if (similar > maxSimilar) {
 					maxSimilar = similar;
-					deckArchetype.archetype_name = deck_obj.name;
+					if (deck_obj.name != "Untitled") {
+						deckArchetype.archetype_name = deck_obj.name;
+					}
 					deckArchetype.best_fit_deck = {
 						main: deck_obj.main,
 						sb: deck_obj.sb
@@ -348,30 +357,70 @@ do {
 		);
 		console.log(JSON.stringify(deckArchetype.top_cards));
 	}
+	// let over = 0;
+	// let under = 0;
+	// for (const deck of decksJson) {
+	// 	let archMatches = 0;
+	// 	for (const archetype of archetypes) {
+	// 		let matches = 0;
+	// 		for (const card of deck.main) {
+	// 			if (archetype.top_cards.some(c => card.name === c)) {
+	// 				matches += 1;
+	// 			}
+	// 		}
+	// 		if (matches > 0.7 * archetype.top_cards.length) {
+	// 			archMatches += 1;
+	// 		}
+	// 	}
+	// 	if (archMatches > 1) {
+	// 		over += 1;
+	// 	} else if (archMatches < 1) {
+	// 		under += 1;
+	// 	}
+	// }
+	// console.log(over, under, Math.round(over / 60), Math.round(under / 60));
+	// NUM_CLUSTERS -= Math.round(over / 60);
+	// NUM_CLUSTERS += Math.round(under / 60);
 
-	for (const archetype of archetypes) {
-		let diff: number = 0;
-		let same: number = 0;
-		for (const arch_card of archetype.best_fit_deck.main) {
-			archetype.top_cards.forEach(card => {
-				if (!arch_card.name.includes(card)) {
-					diff += 1;
-				}
-			});
-		}
-		NUM_CLUSTERS += Math.round(Math.pow(diff, 2) / 100);
+	// -----------------------------
 
-		if (diff <= archetype.top_cards.length / 3) {
-			for (let j = 0; j < archetypes.length; j++) {
-				archetype.top_cards.forEach(card => {
-					if (archetypes[j].top_cards.includes(card)) {
-						same += 1;
-					}
-				});
-			}
-			NUM_CLUSTERS -= Math.round(Math.pow(same, 2) / 100);
-		}
-	}
+	// for (const archetype of archetypes) {
+	// 	let diff: number = 0;
+	// 	let same: number = 0;
+	// 	for (const arch_card of archetype.best_fit_deck.main) {
+	// 		archetype.top_cards.forEach(card => {
+	// 			if (!arch_card.name.includes(card)) {
+	// 				diff += 1;
+	// 			}
+	// 		});
+	// 	}
+	// 	if (diff > 0.75 * archetype.best_fit_deck.main.length * archetypes.length) {
+	// 		console.log(
+	// 			"diff ",
+	// 			Math.round(Math.pow(diff, 2) / 100),
+	// 			Math.round(diff / 100)
+	// 		);
+	// 		NUM_CLUSTERS += Math.round(diff / 100);
+	// 	}
+
+	// 	if (diff <= archetype.top_cards.length / 3) {
+	// 		for (let j = 0; j < archetypes.length; j++) {
+	// 			archetype.top_cards.forEach(card => {
+	// 				if (archetypes[j].top_cards.includes(card)) {
+	// 					same += 1;
+	// 				}
+	// 			});
+	// 		}
+	// 		if (same > 0.75 * archetype.top_cards.length * archetypes.length) {
+	// 			console.log(
+	// 				"same ",
+	// 				Math.round(Math.pow(same, 2) / 100),
+	// 				Math.round(same / 100)
+	// 			);
+	// 			NUM_CLUSTERS -= Math.round(same / 100);
+	// 		}
+	// 	}
+	// }
 	it++;
 } while (NUM_CLUSTERS != archetypes.length && it < 10);
 
@@ -393,9 +442,9 @@ function closestCards(cardName: string, limit: number): CardNames {
 	}
 	distances.sort((a, b) => a[1] - b[1]);
 	let closestCards: CardNames = [];
-	for (const dist of distances.slice(0, limit)) {
-		if (dist[0] != cardName) {
-			closestCards.push(dist[0]);
+	for (const [name, dist] of distances.slice(0, limit)) {
+		if (name != cardName) {
+			closestCards.push(name);
 		}
 	}
 	return closestCards;
@@ -405,21 +454,21 @@ function closestCards(cardName: string, limit: number): CardNames {
  * Get decks a card is commonly found in
  * @param cardName
  */
-function commonDecks(cardName: string, limit: number = 3): CardArchetypeRef[] {
-	const common_decks: CardArchetypeRef[] = [];
+function commonDecks(cardName: string, limit: number = 3): Data[] {
+	let common_decks: Data[] = [];
 	let i: number = 0;
 	while (i < NUM_CLUSTERS) {
 		let decks_w_card: number = 0;
 		const decksCluster = decksByIdx(i);
-		for (const deck of decksCluster) {
-			if (deck[0].cards.some(card => card[1] === cardName)) {
+		for (const [deck, idx] of decksCluster) {
+			if (deck.cards.some(card => card[1] === cardName)) {
 				decks_w_card += 1;
 			}
 		}
 		let percent: number = Utils.round((decks_w_card / decks.length) * 100, 2);
 		if (percent > THRESHOLD * 100) {
 			common_decks.push({
-				archetype: outputJson.archetypes[i].archetype_name,
+				name: outputJson.archetypes[i].archetype_name,
 				decksInArchetype: decks_w_card,
 				percent,
 				seenInDecks: decks.length
@@ -437,7 +486,7 @@ function commonDecks(cardName: string, limit: number = 3): CardArchetypeRef[] {
  */
 function versatileCards(k: number): CardNames {
 	const variances: Array<[string, number]> = [];
-	for (const unique_card of unique_cards) {
+	for (const unique_card of uniqueCards) {
 		let versatility = 0;
 		for (let x of cardAppearanceRatio(unique_card.card_name)[0]) {
 			if (x > 0) {
@@ -472,7 +521,7 @@ for (const unique_card of uniqueCards) {
 			cards_found_with: closestCards(unique_card.card_name, 7),
 			total_instances: unique_card.quantity,
 			percentage_of_total_decks: Utils.round(
-				(unique_card.decks_in / decks.length) * 100,
+				(unique_card.decks_in || 0 / decks.length) * 100,
 				2
 			),
 			percentage_of_total_cards: Utils.round(
